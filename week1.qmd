@@ -1,0 +1,192 @@
+---
+title: "Week 1: Displacement Vectors"
+---
+
+::: {.hidden}
+
+ \newcommand{\V}[1]{{\overrightarrow{#1}}}
+ \newcommand{\vc}[1]{{\mathbf{#1}}}
+
+:::
+
+The word "vector" can be used to mean slightly different but closely related concepts. Here we use a definition based on physics, and later we will see how this relates to the more general and precise mathematical definition, and also the concept of vectors in computer science.
+
+_Scalars_ are mathematical objects that can be described by a single number. Common examples from physics include temperature, pressure and density. _Vectors_ are defined by two things: a direction and a magnitude. Common examples are displacement, force, acceleration and velocity ^[In common language, we use "speed" and "velocity" interchangeably. In physics, velocity is a vector quantity and speed is a scalar, the magnitude of the velocity.]. 
+
+A _vector space_ is associated with a dimension. They can have any integer number of dimensions or even be infinite-dimensional, but in this module we will consider only two- and three-dimensional vectors, which are the ones that we can easily imagine and draw.
+
+In this section of the course we will examine the mathematics of vectors.
+
+# Displacements
+
+We proceed initially by considering the particular case of _displacement_ vectors.
+
+We begin by using notation for "directed line segments": if we start at $A$ and displace to $B$, we denote this displacement vector by $\V{AB}$. 
+The arrow shows the direction and the length is denoted by $|\V{AB}|$.
+
+
+Note that though these are vectors, there are no numbers in this section.
+Later we will see how this is linked to vector notation, and column vectors, that you may hae seen before.2
+
+An example of a displacement vector is a __distance__ 10 miles in a North-Westerly __direction__. Note that the displacement vector is not located at a position in space (or on the map) but precisely defines a displacement _from any point_. 
+
+We can define what operations we want our displacements to have, like addition and multiplication. How can we do this in a consistent and intuitive way?
+
+## Equality
+Two displacements are equal if their lengths and directions are equal.
+
+In the diagram @fig-parallelogram below,  $\V{AD} = \V{BC}$ because the directions and lengths are the same, even though the endpoints are different. On the other hand, $\V{AD} \ne \V{DA}$ because even though the lengths are the same, $|\V{AD}| = |\V{DA}|$, the directions are not.
+
+**Think:** is $\V{AB}$ equal to $\V{CD}$ or $\V{DC}$? 
+
+::: {.callout-tip collapse="true"}
+## Solution
+
+$\V{CD}$ has the opposite direction. $\V{AB} = \V{DC}$. 
+:::
+
+![A parallelogram $ABCD$](parallelogram.png){width=50% fig-alt="A parallelogram with the letters A, B, C and D at the corners, anticlockwise starting bottom left." #fig-parallelogram}
+
+## Adding displacements 
+Adding displacements is easy when the endpoint of the first displacement is the startpoint of the second. Consider this diagram:
+
+![A triangle $ADF$](vf1.png){width=40% fig-alt="Three arrows form a triangle, one from D to A, one from A to F and one from D to F." #fig-triangle}
+
+Here we see that going from $D$ to $A$ and then from $A$ to $F$ is the same as going directly from $D$ to $F$. So we write $\V{DA} + \V{AF} = \V{DF}$.
+
+Without knowing anything about the points $X$, $Y$ and $Z$, we can say that $\V{XY}+\V{YZ}=\V{XZ}$. We just "cancel" the middle letter.
+
+:::{.callout-note}
+To add two displacements with a common letter in the midddle, just cancel out that letter.
+:::
+
+If there is no common middle letter, then we just need to remember that the displacements do not have a fixed position -- we can "move" them. Sometimes it helps if we know other equivalent displacements. For example, in @fig-parallelogram, $\V{AD} + \V{AB} = \V{AD} + \V{DC} = \V{AC}$.
+
+**Think:** In @fig-parallelogram, what one displacement is equal to $\V{BC} + \V{DB}$?
+
+::: {.callout-tip collapse="true"}
+## Solution
+
+$\V{BC} = \V{AD}$ so $\V{BC} +\V{DB}= \V{AD} + \V{DB} = \V{AB}$
+:::
+
+### Triangle inequality
+When we add displacements, the length of the result is __NOT__ the two lengths added together, in general. It is not true that $|\V{DA}|+|\V{AF}|=|\V{DF}|$. In fact, thinking about @fig-triangle we can see that $|\V{DA}|+|\V{AF}|\geq|\V{DF}|$. This is called the triangle inequality.
+
+### Addition is commutative
+In mathematics we use special words to describe different operations. An operation is _commutative_ if we can swap around the sides and get the same answer. For example, $2+5 = 5+2$, so normal addition of scalars is commutative. That's true of vector addition too!
+
+**Think:** of the other basic operations of scalars, $-$, $\times$ and $\div$, which is commutative and which are not?
+
+::: {.callout-tip collapse="true"}
+## Solution
+
+Multiplication is commutative, but subtraction and division are not: $3-2=1$ but $2-3=-1$ and $10\div2 = 5$ but $2\div10 = 0.2$.
+:::
+
+In @fig-parallelogram, $\V{AD} + \V{DC} = \V{AC}$, and using the fact that $\V{DC} = \V{AB}$ and $\V{AD} = \V{BC}$, we see that $\V{DC} + \V{AD} = \V{AB} + \V{BC} = \V{AC}$, so we have proven that $\V{AD} + \V{DC} = \V{DC} + \V{AB}$.
+
+### Addition is associative
+An operation is _associative_ if it doesn't matter where we write brackets. For example, $(3+2) + 5 = 3 + (2+5)$. For associative operations, we don't need to write the brackets at all, and it's unambiguous to say "three plus five plus two". (This isn't true of subtraction. If someone said "ten minus two minus one" would the answer be 7 or 9? $(10-2)-1$ is not the same as $10-(2-1)$.)
+
+Looking at @fig-parallelogram, we see that $(\V{AB} + \V{BC}) + \V{CD} = \V{AC} + \V{CD} = \V{AD}$, and $\V{AB} + (\V{BC} + \V{CD}) = \V{AB} + \V{BD} = \V{AD}$. Therefore, we have proven that $(\V{AB} + \V{BC}) + \V{CD} = \V{AB} + (\V{BC} + \V{CD})$. Addition of displacements is associative.
+
+### The zero displacement
+With normal scalar numbers, we have the special number $0$ which we can add to anything and not change the answer. $3+0=3$, $0+10=10$, etc.
+
+We define a special displacement, denoted $\vc{0}$, which we can add to any displacement and not change the answer. $\V{AB} + \vc{0} = \V{AB}$, and also, by commutativity, $\vc{0} + \V{AB} = \V{AB}$. We think of this displacement as starting at any point, and then not moving! 
+
+### Negative displacements
+Every normal positive number has a corresponding negative number, and these have the special property that they add together to give $0$. That is to say, $3+(-3) = 0$.
+
+We would like to have the same thing with displacements. What displacement can I add to $\V{AB}$ to get the zero displacement, i.e. to get back to where I started? Obviously, we should choose $\V{BA}$. So, $\V{AB} + \V{BA} = \vc{0}$, and we write that $-\V{BA} = \V{AB}$.
+
+:::{.callout-note}
+To take the negative of a displacement, just swap the letters round.
+:::
+
+### Subtracting displacements
+We define subtraction using the negatives in the obvious way, so $\V{AB} - \V{CB} = \V{AB} + (-\V{CB}) = \V{AB} + \V{BC}$.
+
+## Multiplying displacements
+For now, let's ignore the idea of multiplying two displacements together, and instead concentrate on multiplying displacements by scalars.
+
+We can define multiplication by an integer in an obvious way:
+$$
+3\V{AB} = \V{AB} + \V{AB} + \V{AB}.
+$$
+
+
+:::{.callout-important}
+For normal numbers $ab$, $a\times b$ and $a\cdot b$ are all the same thing.
+For vectors, we save the dot and cross for special meanings, and only ever use the first notation for multiplication of a scalar and a vector.
+:::
+
+Here the result of $3\V{AB}$ is clearly in the same direction as $\V{AB}$, and it has three times the length.
+So in general, multiplying by a scalar results in a displacement in the same direction, but with the length changed.
+
+:::{.callout-note}
+To multiply a displacement by a negative number, first multiply by the positive number and then flip the direction.
+:::
+
+### Scalar multiplication is distributive over vector addition
+Now for some more jargon: an operation are *distributive* over another operation if we can expand out the brackets.
+So for normal multiplication and addition, $3\times(5+2) = 3\times 5+3\times 2$.
+
+What about for displacments?
+$$
+2\V{AB} + 2\V{XY} = \V{AB} + \V{AB} + \V{XY} + \V{XY} = (\V{AB} + \V{XY}) + (\V{AB} + \V{XY}) = 2(\V{AB}+\V{XY}).
+$$
+
+**Think:** which of the other rules have we used in this derivation?
+
+::: {.callout-tip collapse="true"}
+## Solution
+To write $\V{AB} + \V{AB} + \V{XY} + \V{XY} = \V{AB} + \V{XY} + \V{AB} + \V{XY}$, we have used commutativity of addition. 
+To add the brackets in, we used associativity.
+:::
+
+![The vector $\V{AC}$ is twice the length of $\V{AB}$ and in the same direction, so $\V{AC}=2\V{AB}$.](vf-scalmult.png){width=50% fig-alt="An arrow from A to B and another identical arrow from B to C, both labelled with length 10" #fig-scalarmult}
+
+In @fig-scalarmult, we see that $\V{BC}=\V{AB}$, so $\V{AC}=\V{AB}+\V{BC}=2\V{AB}$.
+
+## Dividing by a scalar
+We've defined addition, subtraction and multiplication. What about division? To divide a vector by $2$, just multiply by $\frac{1}{2}$.
+
+## Colinear points
+Three (or more) points are *colinear* (they lie on the same line) if all the vectors between them are in the same or opposite directions, i.e. they can all be written as scalar multiples of each other.
+
+In @fig-scalarmult, points $A$, $B$ and $C$ are colinear because $\V{AC}=2\V{AB}$, or alternatively $\V{CA}=2\V{CB}$.
+
+## Examples for displacements
+
+#### Example: Colinear points
+
+Let $A,B,C$ be colinear, and $\V{AB} = \alpha \V{AC}$, for $0 < \alpha < 1$.
+
+Also, let $|\V{AB}| = \lambda$ and $|\V{BC}| = \mu$.
+
+![](vf5.png){width=50% fig-alt="The points A, B and C lie on a straight line, with the distance between A and B labelled as lambda and the distance between B and C labelled as mu." #fig-ex-colinear}
+
+From @fig-ex-colinear we see that $|\V{AC}| = \lambda+ \mu$. What is $\alpha$?
+
+Now $| \V{AB} | = \alpha |\V{AC}|$, so that
+\begin{displaymath}
+\lambda = \alpha ( \lambda+ \mu) \qquad{\rm or}\qquad \alpha = \frac{\lambda}{ \lambda + \mu}.
+\end{displaymath}
+Thus $\V{AB}= \left(\frac{\lambda}{\lambda+ \mu}\right) \V{AC}$. Similary $\V{BC}= \left(\frac{\mu}{\lambda+ \mu}\right) \V{AC}$.
+
+#### Example: Parallelogram
+
+Let $RSTU$ be a parallelogram (see @fig-ex-parallelogram), and extend $RU$ to $A$ so that 
+$\V{RU} = \V{UA}$. Also let $C$ be the mid-point of $UT$. 
+Prove that $C$ is the midpoint of $SA$.
+
+![](vf6.png){width=50% fig-alt="A parallelogram with vertices labelled anticlockwise from bottom left as R, S, T and U. The top line is split in two with the label C halfway between U and T. There is an extra point A above U on the straight line through R and U." #fig-ex-parallelogram}
+
+
+We have
+$$\V{SA} = \V{SR} + \V{RA} = \V{TU} + \V{RA} = 2\,\V{CU} + 2\, \V{UA} = 2 (\V{CU}+\V{UA})= 2\, \V{CA}.
+$$
+Thus $S,C,A$ are colinear, and $C$ is the mid-point of $SA$.
+

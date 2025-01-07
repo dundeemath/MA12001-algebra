@@ -1,0 +1,10 @@
+---
+title: "MA12001 Algebra"
+---
+
+This webpage contains the lecture notes for the algebra half of the Mathematics 1B (MA12001) module for University of Dundee.
+
+# Introduction
+The module MA12001 is split into two halves. This half, which we call "algebra" basically because it isn't "calculus", covers several areas. First we'll see the idea of vectors, which will be familiar to many of you. Then we'll talk about matrices, which are a way to discuss transformations of vectors. This is a first introduction to a large and important area of mathematics called _linear algebra_. In the final section of the module we'll use what we've learnt to describe different geometric objects like lines, planes and spheres.
+
+These notes all the examinable material within this half of the module, and maybe also some bonus stuff, which will be clearly marked as non-examinable. For details of the organisation of the module this year, please see My Dundee.

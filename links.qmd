@@ -1,0 +1,19 @@
+---
+title: "Helpful links"
+---
+
+- <https://www.3blue1brown.com/topics/linear-algebra>
+
+  These are great videos explaining a lot of the material in this module, along with some stuff you definitely don't need.
+- <https://phet.colorado.edu/en/simulations/vector-addition>
+
+  Some interactive demos to play with vectors.
+- <https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D>
+
+  Classic lectures from MIT which go deeper but are very relevant to the matrix part of this module.
+- <https://www.cs.ox.ac.uk/files/12921/book.pdf>
+
+  A free textbook covering a lot of the module.
+- <https://www.3blue1brown.com/lessons/ldm-complex-numbers> and <https://www.3blue1brown.com/lessons/ldm-eulers-formula>
+
+  Long-form videos relevant to the final part of the module.

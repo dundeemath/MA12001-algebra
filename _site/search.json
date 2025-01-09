@@ -26,7 +26,7 @@
     "href": "index.html",
     "title": "MA12001 Algebra",
     "section": "",
-    "text": "This webpage contains the lecture notes for the algebra half of the Mathematics 1B (MA12001) module for University of Dundee.\n\nIntroduction\nThe module MA12001 is split into two halves. This half, which we call “algebra” basically because it isn’t “calculus”, covers several areas. First we’ll see the idea of vectors, which will be familiar to many of you. Then we’ll talk about matrices, which are a way to discuss transformations of vectors. This is a first introduction to a large and important area of mathematics called linear algebra. In the final section of the module we’ll use what we’ve learnt to describe different geometric objects like lines, planes and spheres.\nThese notes all the examinable material within this half of the module, and maybe also some bonus stuff, which will be clearly marked as non-examinable. For details of the organisation of the module this year, please see My Dundee.",
+    "text": "This webpage contains the lecture notes for the algebra half of the Mathematics 1B (MA12001) module for University of Dundee.\n\nIntroduction\nThe module MA12001 is split into two halves. This half, which we call “algebra” basically because it isn’t “calculus”, covers several areas. First we’ll see the idea of vectors, which will be familiar to many of you. Then we’ll talk about matrices, which are a way to discuss transformations of vectors. This is a first introduction to a large and important area of mathematics called linear algebra. In the final section of the module we’ll use what we’ve learnt to describe different geometric objects like lines, planes and spheres.\nThese notes all the examinable material within this half of the module, and maybe also some bonus stuff, which will be clearly marked as non-examinable. For details of the organisation of the module this year, please see My Dundee.\nI’ll be updating these notes weekly as we go through, and at the end of the semester I’ll make the full set of these notes available as a PDF. If you’d like to read ahead, last year’s full notes are available on MyDundee.",
     "crumbs": [
       "Home"
     ]
@@ -172,6 +172,16 @@
     "crumbs": [
       "Chapter 1: Vectors",
       "Week 2: General Vectors"
+    ]
+  },
+  {
+    "objectID": "links.html",
+    "href": "links.html",
+    "title": "Helpful links",
+    "section": "",
+    "text": "https://www.3blue1brown.com/topics/linear-algebra\nThese are great videos explaining a lot of the material in this module, along with some stuff you definitely don’t need.\nhttps://phet.colorado.edu/en/simulations/vector-addition\nSome interactive demos to play with vectors.\nhttps://www.youtube.com/playlist?list=PL49CF3715CB9EF31D\nClassic lectures from MIT which go deeper but are very relevant to the matrix part of this module.\nhttps://www.cs.ox.ac.uk/files/12921/book.pdf\nA free textbook covering a lot of the module.\nhttps://www.3blue1brown.com/lessons/ldm-complex-numbers and https://www.3blue1brown.com/lessons/ldm-eulers-formula\nLong-form videos relevant to the final part of the module.",
+    "crumbs": [
+      "Helpful links"
     ]
   }
 ]

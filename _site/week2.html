@@ -176,6 +176,15 @@ window.Quarto = {
   <li><a href="#general-vectors" id="toc-general-vectors" class="nav-link active" data-scroll-target="#general-vectors">General vectors</a>
   <ul class="collapse">
   <li><a href="#unit-vectors" id="toc-unit-vectors" class="nav-link" data-scroll-target="#unit-vectors">Unit vectors</a></li>
+  <li><a href="#position-vectors" id="toc-position-vectors" class="nav-link" data-scroll-target="#position-vectors">Position vectors</a></li>
+  <li><a href="#basis-vectors" id="toc-basis-vectors" class="nav-link" data-scroll-target="#basis-vectors">Basis vectors</a></li>
+  <li><a href="#column-vectors" id="toc-column-vectors" class="nav-link" data-scroll-target="#column-vectors">Column vectors</a></li>
+  <li><a href="#pythagorass-rule" id="toc-pythagorass-rule" class="nav-link" data-scroll-target="#pythagorass-rule">Pythagoras’s rule</a></li>
+  <li><a href="#examples-for-general-vectors" id="toc-examples-for-general-vectors" class="nav-link" data-scroll-target="#examples-for-general-vectors">Examples for general vectors</a>
+  <ul class="collapse">
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example 1</a></li>
+  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example 2</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -221,14 +230,225 @@ window.Quarto = {
 <li><span class="math inline">\(|{\mathbf{a}}|\geq 0\)</span>: the magnitude can’t be negative</li>
 <li><span class="math inline">\(|{\mathbf{a}}|=0\)</span> if and only if <span class="math inline">\({\mathbf{a}}={\mathbf{0}}\)</span>: there is only one vector with magnitude 0.</li>
 <li><span class="math inline">\(|\lambda{\mathbf{a}}| = |\lambda| |{\mathbf{a}}|\)</span>: multiplying by a scalar just multiplies the magnitude by that amount (removing the minus sign if necessary).</li>
-<li><span class="math inline">\(|{\mathbf{a}}+{\mathbf{b}}|\leq |{\mathbf{a}}+{\mathbf{b}}|\)</span>: the triangle inequality.</li>
+<li><span class="math inline">\(|{\mathbf{a}}+{\mathbf{b}}|\leq |{\mathbf{a}}|+|{\mathbf{b}}|\)</span>: the triangle inequality.</li>
 </ul>
 <p>That’s a long list! Try not to memorise these by rote, but instead learn the rules through practicing with example questions. Most of them are very intuitive. The last rule, the triangle inequality, isn’t so intuitive to me.</p>
 <section id="unit-vectors" class="level2">
 <h2 class="anchored" data-anchor-id="unit-vectors">Unit vectors</h2>
 <p>A <em>unit vector</em> is a vector with magnitude equal to 1. We sometimes use a little hat to denote unit vectors, like <span class="math inline">\(\hat{{\mathbf{a}}}\)</span>. So <span class="math inline">\(|\hat{{\mathbf{a}}}| = 1\)</span>.</p>
+<p>Suppose you want to find a unit vector <em>in the direction of</em> another vector <span class="math inline">\({\mathbf{a}}\)</span>. Well <span class="math inline">\({\mathbf{b}} = \lambda {\mathbf{a}}\)</span> is a vector in the right direction. Using the rules above, it has magnitude <span class="math inline">\(|{\mathbf{b}}|=|\lambda{\mathbf{a}}| = |\lambda| |{\mathbf{a}}|\)</span>. So if we choose <span class="math inline">\(\lambda = \frac{1}{|{\mathbf{a}}|}\)</span>, we have <span class="math inline">\(|{\mathbf{b}}| = \frac{1}{|{\mathbf{a}}|} |{\mathbf{a}}| = 1\)</span>. So <span class="math inline">\({\mathbf{b}}\)</span> is a unit vector in the direction of <span class="math inline">\({\mathbf{a}}\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To turn any vector into a unit vector, multiply it by <em>one divided by the magnitude</em>.</p>
+</div>
+</div>
+</section>
+<section id="position-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="position-vectors">Position vectors</h2>
+<p>So far we’ve discussed points in space. If we choose a special point, called the origin <span class="math inline">\(O\)</span>, then we can define the position of any other point relative to this.</p>
+<p>So given points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, instead of just thinking about the displacement between them, if we choose an origin we can use vectos <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> to denote their positions relative to the origin.</p>
+<p><img src="vf8.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The position vector of a point is just its displacement from the origin, <span class="math inline">\({\mathbf{a}}={\overrightarrow{OA}}\)</span>.</p>
+</div>
+</div>
+<p><strong>Think:</strong> what is the displacement vector <span class="math inline">\({\overrightarrow{AB}}\)</span> in terms of the position vectors <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We know that <span class="math inline">\({\mathbf{a}}={\overrightarrow{OA}}\)</span> and <span class="math inline">\({\mathbf{b}} = {\overrightarrow{OB}}\)</span>. Remember from our rules for displacements that <span class="math inline">\({\overrightarrow{AB}} = {\overrightarrow{AO}}+{\overrightarrow{OB}} = -{\overrightarrow{OA}} + {\overrightarrow{OB}}\)</span>. So <span class="math inline">\({\overrightarrow{OA}} = -{\mathbf{a}} + {\mathbf{b}} = {\mathbf{b}} - {\mathbf{a}}\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To get the displacement vector in terms of position vectors, subtract the position vector of the start from the position vector of the end.</p>
+</div>
+</div>
+<p>Later in the module, we’ll want to talk about a position vector for a general point in space. For historical reasons, this is usually written as <span class="math inline">\({\mathbf{r}}\)</span>. Think of <span class="math inline">\({\mathbf{r}}\)</span> as an arrow pointing from the origin <span class="math inline">\(O\)</span> to wherever you currently are.</p>
+</section>
+<section id="basis-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="basis-vectors">Basis vectors</h2>
+<p>In two dimensions, you can write any vector as a <em>linear combination</em> of any two other vectors that aren’t parallel.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>That means, if we have <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> and these aren’t parallel, so there is no <span class="math inline">\(\lambda\)</span> such that <span class="math inline">\({\mathbf{a}}=\lambda{\mathbf{b}}\)</span>, then for <em>any</em> vector <span class="math inline">\({\mathbf{c}}\)</span>, we can find <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> such that <span class="math inline">\({\mathbf{c}}=\alpha{\mathbf{a}}+\beta{\mathbf{b}}\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When doing vector problems, choose two non-parallel vectors and write all the other vectors in terms of these.</p>
+</div>
+</div>
+<p>It’s extra helpful if we choose two vectors that are orthogonal (at right angles) and unit vectors. Normally we choose a vector of length 1 in the horizontal direction and call this <span class="math inline">\(\hat{{\mathbf{x}}}\)</span> and a vector of length 1 in the vertical direction and call this <span class="math inline">\(\hat{{\mathbf{y}}}\)</span>.</p>
+<p>Then for any vector <span class="math inline">\({\mathbf{a}}\)</span>, we can find unique scalar numbers <span class="math inline">\(a_1\)</span> and <span class="math inline">\(a_2\)</span> such that <span class="math inline">\({\mathbf{a}} = a_1 \hat{{\mathbf{x}}} + a_2 \hat{{\mathbf{y}}}\)</span>.</p>
+<p>In fact, we do this so often that we introduce a new notation: <span class="math display">\[{\mathbf{a}} = \begin{bmatrix} a_1 \\ a_2 \end{bmatrix}.\]</span> <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>And the unit basis vectors are simply <span class="math display">\[\hat{{\mathbf{x}}} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\]</span> and <span class="math display">\[\hat{{\mathbf{y}}} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}.\]</span></p>
+<p>In three dimensions we write <span class="math display">\[{\mathbf{b}} = b_1 \hat{{\mathbf{x}}} + b_2 \hat{{\mathbf{z}}} + b_3 \hat{{\mathbf{y}}} = \begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix}.\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Vectors are not the same as coordinates! They are related but conceptually different. The position vector for the coordinates <span class="math inline">\((3,4,5)\)</span> is <span class="math inline">\(\begin{bmatrix} 3 \\ 4 \\ 5\end{bmatrix}\)</span>, and we use the two different notations to distinguish them.</p>
+</div>
+</div>
+<p>For the general position vector, the position in 3D space is given by the coordinates <span class="math inline">\((x,y,z)\)</span> so <span class="math inline">\({\mathbf{r}} = \begin{bmatrix} x \\ y \\ z\end{bmatrix}\)</span>.</p>
+</section>
+<section id="column-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="column-vectors">Column vectors</h2>
+<p>With this new notation, everything behaves exactly as you would expect:</p>
+<p><span class="math display">\[\begin{bmatrix} 5 \\ 2 \end{bmatrix} + \begin{bmatrix} 1 \\ -3 \end{bmatrix} = \begin{bmatrix} 5+1 \\ 2-3 \end{bmatrix} = \begin{bmatrix} 6 \\ -1 \end{bmatrix}.\]</span></p>
+<p><span class="math display">\[4\begin{bmatrix} 5 \\ 2 \end{bmatrix} = \begin{bmatrix} 4\times 5 \\ 4\times 2 \end{bmatrix} = \begin{bmatrix} 20 \\ 8 \end{bmatrix}.\]</span></p>
+<p>If you’re unsure about any of these rules, you can rewrite <span class="math inline">\(\begin{bmatrix} 5 \\ 2 \end{bmatrix}\)</span> as <span class="math inline">\(5\hat{{\mathbf{x}}}+2\hat{{\mathbf{y}}}\)</span> etc. and apply the list of rules above.</p>
+<p>Often we use the mathematical notation that <span class="math display">\[\begin{bmatrix} -1 \\ 3 \\ -3\end{bmatrix}\in\mathbb{R}^3.\]</span> This says that the vector lives in the set of obejcts which can be written as three real numbers. Obviously for 2D we write <span class="math inline">\(\mathbb{R}^2\)</span> instead.</p>
+</section>
+<section id="pythagorass-rule" class="level2">
+<h2 class="anchored" data-anchor-id="pythagorass-rule">Pythagoras’s rule</h2>
+<p>We haven’t yet defined the magnitude of a general vector. What is the magnitude of <span class="math inline">\(\begin{bmatrix} 5 \\ 2 \end{bmatrix}\)</span>?</p>
+<p>From the rules so far, we know that <span class="math display">\[ \left|\begin{bmatrix} 5 \\ 2 \end{bmatrix}\right| = \left|5\hat{{\mathbf{x}}}+2\hat{{\mathbf{y}}}\right| \leq |5\hat{{\mathbf{x}}}| + |2\hat{{\mathbf{y}}}| = 5|\hat{{\mathbf{x}}}| + 2|\hat{{\mathbf{y}}} = 5\times1 + 2\times1 = 7\]</span> but that just tells us that <span class="math inline">\(\left|\begin{bmatrix} 5 \\ 2 \end{bmatrix}\right|\leq 7\)</span>. This isn’t enough.</p>
+<p>Actually there are lots of possible choices. In this module, we focus on normal, ‘flat’, <em>Euclidean</em> space: <span class="math display">\[\left|\begin{bmatrix} 5 \\ 2 \end{bmatrix}\right| = \sqrt{5^2 + 2^2} = \sqrt{29}\]</span> which is less than 7, as expected.</p>
+<p>Then general rule is: <span class="math display">\[|{\mathbf{a}}| = \sqrt{a_1^2 + a_2^2}\]</span> and in 3D <span class="math display">\[|{\mathbf{b}}| = \sqrt{b_1^2 + b_2^2 + b_3^2}\]</span>.</p>
+<p>To convince yourself these are good definition, draw a diagram and use Pythagoras’s theorem.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The magnitude of a vector is the square root of the components squared and added up.</p>
+</div>
+</div>
+<p><strong>Think:</strong> what is the magnitude of the vector <span class="math inline">\(\begin{bmatrix} 2 \\ -6 \\ -3\end{bmatrix}\)</span>?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\sqrt{2^2 + (-6)^2 + (-3)^2} = \sqrt{4 + 36 + 9} = \sqrt{49} = 7.\]</span></p>
+<p>Don’t let the negatives confuse you!</p>
+</div>
+</div>
+</div>
+</section>
+<section id="examples-for-general-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="examples-for-general-vectors">Examples for general vectors</h2>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example 1</h3>
+<p>Let <span class="math inline">\(ABCDEF\)</span> be a regular hexagon with sides of length 1. Let <span class="math inline">\(\hat{{\mathbf{v}}}\)</span> and <span class="math inline">\(\hat{{\mathbf{w}}}\)</span> correspond to 2 adjacent sides, <span class="math inline">\({\overrightarrow{AB}} = \hat{{\mathbf{v}}}\)</span>, <span class="math inline">\({\overrightarrow{AF}} = \hat{{\mathbf{w}}}\)</span> (where <span class="math inline">\(A\)</span> is the bottom left point, and <span class="math inline">\(A,B,C....\)</span> proceed anti-clockwise.)</p>
+<p>Express all other sides and the diagonals in terms of <span class="math inline">\(\hat{{\mathbf{v}}}\)</span> and <span class="math inline">\(\hat{{\mathbf{w}}}\)</span>. Also, find a unit vector in the direction <span class="math inline">\(\hat{{\mathbf{w}}}-\hat{{\mathbf{v}}}\)</span>.</p>
+<p><img src="vf7.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sides: <span class="math inline">\({\overrightarrow{AB}}={\overrightarrow{ED}}=\hat{{\mathbf{v}}}\)</span>, <span class="math inline">\(\qquad{\overrightarrow{AF}}= {\overrightarrow{CD}}=\hat{{\mathbf{w}}}\)</span>, <span class="math inline">\(\qquad{\overrightarrow{BC}}= {\overrightarrow{FE}}=\hat{{\mathbf{v}}} + \hat{{\mathbf{w}}}\)</span>.</p>
+<p>Diagonals: <span class="math inline">\({\overrightarrow{FC}}=2\hat{{\mathbf{v}}}\)</span>, <span class="math inline">\(\qquad{\overrightarrow{BE}}=2\hat{{\mathbf{w}}}\)</span>, <span class="math inline">\(\qquad{\overrightarrow{AD}}=2(\hat{{\mathbf{v}}} + \hat{{\mathbf{w}}})\)</span>.</p>
+<p>We have <span class="math inline">\(\hat{{\mathbf{w}}} - \hat{{\mathbf{v}}} = {\overrightarrow{BF}} = {\overrightarrow{CE}}\)</span>.</p>
+<p>The length of <span class="math inline">\(\hat{{\mathbf{w}}} - \hat{{\mathbf{v}}}\)</span> is <span class="math inline">\(\sqrt{3}\)</span>, which can be obtained from triangle <span class="math inline">\(AFB\)</span>. Thus a unit vector in direction of <span class="math inline">\(\hat{{\mathbf{w}}} - \hat{{\mathbf{v}}}\)</span> is <span class="math display">\[\frac{1}{\sqrt{3}} ( \hat{{\mathbf{w}}} - \hat{{\mathbf{v}}}).\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="example-2" class="level3">
+<h3 class="anchored" data-anchor-id="example-2">Example 2</h3>
+<p>Let the points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have position vectors <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>. Find the position vector of the midpoint of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The midpoint of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is halfway along the line <span class="math inline">\(AB\)</span>. Call this point <span class="math inline">\(C\)</span>, and it must satisfy <span class="math inline">\({\overrightarrow{AC}}=\frac{1}{2}{\overrightarrow{AB}}\)</span>.</p>
+<p>To get to C from the origin, we can go via <span class="math inline">\(A\)</span>. So the position vector is <span class="math display">\[{\overrightarrow{OC}} ={\overrightarrow{OA}} + {\overrightarrow{AC}} = {\mathbf{a}} + \frac{1}{2}{\overrightarrow{AB}}.\]</span></p>
+<p>Recall that <span class="math inline">\({\overrightarrow{AB}} = {\mathbf{b}}-{\mathbf{a}}\)</span> (remember this rule!), so finally <span class="math display">\[{\overrightarrow{OC}} = {\mathbf{a}} + \frac{1}{2}\left({\mathbf{b}}-{\mathbf{a}}\right) = \frac{1}{2}{\mathbf{a}} + \frac{1}{2}{\mathbf{b}}.\]</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The position vector of the midpoint of two points is the average of the position vectors of the two points.</p>
+</div>
+</div>
 
 
+</section>
 </section>
 </section>
 
@@ -237,6 +457,8 @@ window.Quarto = {
 
 <ol>
 <li id="fn1"><p>When writing vectors with pen and paper or on the board, bold is difficult, but there are various other possibilities and different people like different things. I use an underline. Whatever you choose, it’s very helpful to distinguish between vectors and scalars in your handwriting.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>In three dimensions, we need to choose three vectors and so on.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Different people write these vectors vertically or horizontally, with round or square brackets. It doesn’t really matter but it’s good to be consistent.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

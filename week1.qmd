@@ -166,8 +166,13 @@ Let $A,B,C$ be colinear, and $\V{AB} = \alpha \V{AC}$, for $0 < \alpha < 1$.
 
 Also, let $|\V{AB}| = \lambda$ and $|\V{BC}| = \mu$.
 
+Find $\alpha$ in terms of $\lambda$ and $\mu$.
+
 ![](vf5.png){width=50% fig-alt="The points A, B and C lie on a straight line, with the distance between A and B labelled as lambda and the distance between B and C labelled as mu." #fig-ex-colinear}
 
+
+::: {.callout-tip collapse="true"}
+## Solution
 From @fig-ex-colinear we see that $|\V{AC}| = \lambda+ \mu$. What is $\alpha$?
 
 Now $| \V{AB} | = \alpha |\V{AC}|$, so that
@@ -175,6 +180,7 @@ Now $| \V{AB} | = \alpha |\V{AC}|$, so that
 \lambda = \alpha ( \lambda+ \mu) \qquad{\rm or}\qquad \alpha = \frac{\lambda}{ \lambda + \mu}.
 \end{displaymath}
 Thus $\V{AB}= \left(\frac{\lambda}{\lambda+ \mu}\right) \V{AC}$. Similary $\V{BC}= \left(\frac{\mu}{\lambda+ \mu}\right) \V{AC}$.
+:::
 
 #### Example: Parallelogram
 
@@ -184,9 +190,12 @@ Prove that $C$ is the midpoint of $SA$.
 
 ![](vf6.png){width=50% fig-alt="A parallelogram with vertices labelled anticlockwise from bottom left as R, S, T and U. The top line is split in two with the label C halfway between U and T. There is an extra point A above U on the straight line through R and U." #fig-ex-parallelogram}
 
+::: {.callout-tip collapse="true"}
+## Solution
 
 We have
 $$\V{SA} = \V{SR} + \V{RA} = \V{TU} + \V{RA} = 2\,\V{CU} + 2\, \V{UA} = 2 (\V{CU}+\V{UA})= 2\, \V{CA}.
 $$
 Thus $S,C,A$ are colinear, and $C$ is the mid-point of $SA$.
+:::
 

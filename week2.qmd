@@ -6,6 +6,10 @@ title: "Week 2: General Vectors"
 
  \newcommand{\V}[1]{{\overrightarrow{#1}}}
  \newcommand{\vc}[1]{{\mathbf{#1}}}
+ \newcommand{\hc}[1]{\hat{\vc{#1}}}
+ \newcommand{\cv}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}}
+ \newcommand{\cvv}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}
+
 
 ::: 
 
@@ -26,9 +30,169 @@ For vectors (specifically a *normed vector space*, but you don't need to know th
 - $|\vc{a}|\geq 0$: the magnitude can't be negative
 - $|\vc{a}|=0$ if and only if $\vc{a}=\vc{0}$: there is only one vector with magnitude 0.
 - $|\lambda\vc{a}| = |\lambda| |\vc{a}|$: multiplying by a scalar just multiplies the magnitude by that amount (removing the minus sign if necessary).
-- $|\vc{a}+\vc{b}|\leq |\vc{a}+\vc{b}|$: the triangle inequality.
+- $|\vc{a}+\vc{b}|\leq |\vc{a}|+|\vc{b}|$: the triangle inequality.
 
 That's a long list! Try not to memorise these by rote, but instead learn the rules through practicing with example questions. Most of them are very intuitive. The last rule, the triangle inequality, isn't so intuitive to me.
 
 ## Unit vectors
-A *unit vector* is a vector with magnitude equal to 1. We sometimes use a little hat to denote unit vectors, like $\hat{\vc{a}}$. So $|\hat{\vc{a}}| = 1$.
+A *unit vector* is a vector with magnitude equal to 1. We sometimes use a little hat to denote unit vectors, like $\hc{a}$. So $|\hc{a}| = 1$.
+
+Suppose you want to find a unit vector *in the direction of* another vector $\vc{a}$. Well $\vc{b} = \lambda \vc{a}$ is a vector in the right direction. Using the rules above, it has magnitude $|\vc{b}|=|\lambda\vc{a}| = |\lambda| |\vc{a}|$. So if we choose $\lambda = \frac{1}{|\vc{a}|}$, we have $|\vc{b}| = \frac{1}{|\vc{a}|} |\vc{a}| = 1$. So $\vc{b}$ is a unit vector in the direction of $\vc{a}$.
+
+:::{.callout-note}
+To turn any vector into a unit vector, multiply it by *one divided by the magnitude*.
+:::
+
+## Position vectors
+
+So far we've discussed points in space. If we choose a special point, called the origin $O$, then we can define the position of any other point relative to this.
+
+So given points $A$ and $B$, instead of just thinking about the displacement between them, if we choose an origin we can use vectos $\vc{a}$ and $\vc{b}$ to denote their positions
+relative to the origin.
+
+![](vf8.png){}
+
+:::{.callout-note}
+The position vector of a point is just its displacement from the origin, $\vc{a}=\V{OA}$.
+:::
+
+**Think:** what is the displacement vector $\V{AB}$ in terms of the position vectors $\vc{a}$ and $\vc{b}$?
+
+::: {.callout-tip collapse="true"}
+## Solution
+We know that $\vc{a}=\V{OA}$ and $\vc{b} = \V{OB}$. Remember from our rules for displacements that $\V{AB} = \V{AO}+\V{OB} = -\V{OA} + \V{OB}$.
+So $\V{OA} = -\vc{a} + \vc{b} = \vc{b} - \vc{a}$.
+:::
+
+:::{.callout-note}
+To get the displacement vector in terms of position vectors, subtract the position vector of the start from the position vector of the end.
+:::
+
+Later in the module, we'll want to talk about a position vector for a general point in space.
+For historical reasons, this is usually written as $\vc{r}$. 
+Think of $\vc{r}$ as an arrow pointing from the origin $O$ to wherever you currently are.
+
+## Basis vectors
+In two dimensions, you can write any vector as a *linear combination* of any two other vectors that aren't parallel.^[In three dimensions, we need to choose three vectors and so on.]
+
+That means, if we have $\vc{a}$ and $\vc{b}$ and these aren't parallel, so there is no $\lambda$ such that $\vc{a}=\lambda\vc{b}$, then for *any* vector $\vc{c}$, we can find $\alpha$ and $\beta$ such that $\vc{c}=\alpha\vc{a}+\beta\vc{b}$.
+
+:::{.callout-note}
+When doing vector problems, choose two non-parallel vectors and write all the other vectors in terms of these.
+:::
+
+It's extra helpful if we choose two vectors that are orthogonal (at right angles) and unit vectors. Normally we choose a vector of length 1 in the horizontal direction and call this $\hc{x}$ and a vector of length 1 in the vertical direction and call this $\hc{y}$.
+
+Then for any vector $\vc{a}$, we can find unique scalar numbers $a_1$ and $a_2$ such that
+$\vc{a} = a_1 \hc{x} + a_2 \hc{y}$.
+
+In fact, we do this so often that we introduce a new notation:
+$$\vc{a} = \cv{a_1}{a_2}.$$ ^[Different people write these vectors vertically or horizontally, with round or square brackets. It doesn't really matter but it's good to be consistent.]
+
+And the unit basis vectors are simply
+$$\hc{x} = \cv{1}{0}$$
+and
+$$\hc{y} = \cv{0}{1}.$$
+
+In three dimensions we write
+$$\vc{b} = b_1 \hc{x} + b_2 \hc{z} + b_3 \hc{y} = \cvv{b_1}{b_2}{b_3}.$$
+
+:::{.callout-note}
+Vectors are not the same as coordinates! They are related but conceptually different. The position vector for the coordinates $(3,4,5)$ is $\cvv{3}{4}{5}$, and we use the two different notations to distinguish them.
+:::
+
+For the general position vector, the position in 3D space is given by the coordinates $(x,y,z)$
+so $\vc{r} = \cvv{x}{y}{z}$.
+
+## Column vectors
+With this new notation, everything behaves exactly as you would expect:
+
+$$\cv{5}{2} + \cv{1}{-3} = \cv{5+1}{2-3} = \cv{6}{-1}.$$
+
+$$4\cv{5}{2} = \cv{4\times5}{4\times2} = \cv{20}{8}.$$
+
+If you're unsure about any of these rules, you can rewrite $\cv{5}{2}$ as $5\hc{x}+2\hc{y}$ etc. and apply the list of rules above.
+
+Often we use the mathematical notation that
+$$\cvv{-1}{3}{-3}\in\mathbb{R}^3.$$
+This says that the vector lives in the set of obejcts which can be written as three real numbers. Obviously for 2D we write $\mathbb{R}^2$ instead.
+
+## Pythagoras's rule
+We haven't yet defined the magnitude of a general vector. What is the magnitude of $\cv{5}{2}$?
+
+From the rules so far, we know that
+$$ \left|\cv{5}{2}\right| = \left|5\hc{x}+2\hc{y}\right| \leq |5\hc{x}| + |2\hc{y}| = 5|\hc{x}| + 2|\hc{y} = 5\times1 + 2\times1 = 7$$
+but that just tells us that $\left|\cv{5}{2}\right|\leq 7$. This isn't enough.
+
+Actually there are lots of possible choices. In this module, we focus on normal, 'flat', *Euclidean* space:
+$$\left|\cv{5}{2}\right| = \sqrt{5^2 + 2^2} = \sqrt{29}$$
+which is less than 7, as expected.
+
+Then general rule is:
+$$|\vc{a}| = \sqrt{a_1^2 + a_2^2}$$
+and in 3D
+$$|\vc{b}| = \sqrt{b_1^2 + b_2^2 + b_3^2}$$.
+
+To convince yourself these are good definition, draw a diagram and use Pythagoras's theorem.
+
+:::{.callout-note}
+The magnitude of a vector is the square root of the components squared and added up.
+:::
+
+
+**Think:** what is the magnitude of the vector $\cvv{2}{-6}{-3}$?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$\sqrt{2^2 + (-6)^2 + (-3)^2} = \sqrt{4 + 36 + 9} = \sqrt{49} = 7.$$
+
+Don't let the negatives confuse you!
+:::
+
+
+## Examples for general vectors
+### Example 1
+Let $ABCDEF$ be a regular hexagon with sides of length 1.
+Let $\hc{v}$ and $\hc{w}$ correspond to 2 adjacent sides,
+$\V{AB} = \hc{v}$, $\V{AF} = \hc{w}$ (where $A$ is the bottom left point, and $A,B,C....$ proceed anti-clockwise.)
+
+Express all other sides and the diagonals in terms of $\hc{v}$ and $\hc{w}$.
+Also, find a unit vector in the direction $\hc{w}-\hc{v}$.
+
+![](vf7.png){}
+
+::: {.callout-tip collapse="true"}
+## Solution
+
+Sides: $\V{AB}=\V{ED}=\hc{v}$, $\qquad\V{AF}= \V{CD}=\hc{w}$, $\qquad\V{BC}= \V{FE}=\hc{v} + \hc{w}$.
+
+Diagonals:  $\V{FC}=2\hc{v}$, $\qquad\V{BE}=2\hc{w}$, $\qquad\V{AD}=2(\hc{v} + \hc{w})$. 
+
+We have
+$\hc{w} - \hc{v} = \V{BF} = \V{CE}$. 
+
+The length of $\hc{w} - \hc{v}$ is $\sqrt{3}$, which can be obtained from triangle $AFB$. Thus a unit vector in direction of $\hc{w} - \hc{v}$ is
+$$\frac{1}{\sqrt{3}} ( \hc{w} - \hc{v}).$$
+:::
+
+### Example 2
+Let the points $A$ and $B$ have position vectors $\vc{a}$ and $\vc{b}$. Find the position vector of the midpoint of $A$ and $B$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+
+The midpoint of $A$ and $B$ is halfway along the line $AB$. 
+Call this point $C$, and it must satisfy $\V{AC}=\frac{1}{2}\V{AB}$.
+
+To get to C from the origin, we can go via $A$.
+So the position vector is 
+$$\V{OC} =\V{OA} + \V{AC} = \vc{a} + \frac{1}{2}\V{AB}.$$
+
+Recall that $\V{AB} = \vc{b}-\vc{a}$ (remember this rule!),
+so finally 
+$$\V{OC} = \vc{a} + \frac{1}{2}\left(\vc{b}-\vc{a}\right) = \frac{1}{2}\vc{a} + \frac{1}{2}\vc{b}.$$
+:::
+
+:::{.callout-note}
+The position vector of the midpoint of two points is the average of the position vectors of the two points.
+:::

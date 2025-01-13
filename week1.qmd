@@ -84,7 +84,7 @@ In mathematics we use special words to describe different operations. An operati
 Multiplication is commutative, but subtraction and division are not: $3-2=1$ but $2-3=-1$ and $10\div2 = 5$ but $2\div10 = 0.2$.
 :::
 
-In @fig-parallelogram, $\V{AD} + \V{DC} = \V{AC}$, and using the fact that $\V{DC} = \V{AB}$ and $\V{AD} = \V{BC}$, we see that $\V{DC} + \V{AD} = \V{AB} + \V{BC} = \V{AC}$, so we have proven that $\V{AD} + \V{DC} = \V{DC} + \V{AB}$.
+In @fig-parallelogram, $\V{AD} + \V{DC} = \V{AC}$, and using the fact that $\V{DC} = \V{AB}$ and $\V{AD} = \V{BC}$, we see that $\V{DC} + \V{AD} = \V{AB} + \V{BC} = \V{AC}$, so we have proven that $\V{AD} + \V{DC} = \V{DC} + \V{AD}$.
 
 ### Addition is associative
 An operation is _associative_ if it doesn't matter where we write brackets. For example, $(3+2) + 5 = 3 + (2+5)$. For associative operations, we don't need to write the brackets at all, and it's unambiguous to say "three plus five plus two". (This isn't true of subtraction. If someone said "ten minus two minus one" would the answer be 7 or 9? $(10-2)-1$ is not the same as $10-(2-1)$.)

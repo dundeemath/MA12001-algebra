@@ -106,7 +106,7 @@ and
 $$\hc{y} = \cv{0}{1}.$$
 
 In three dimensions we write
-$$\vc{b} = b_1 \hc{x} + b_2 \hc{z} + b_3 \hc{y} = \cvv{b_1}{b_2}{b_3}.$$
+$$\vc{b} = b_1 \hc{x} + b_2 \hc{y} + b_3 \hc{z} = \cvv{b_1}{b_2}{b_3}.$$
 
 :::{.callout-note}
 Vectors are not the same as coordinates! They are related but conceptually different. The position vector for the coordinates $(3,4,5)$ is $\cvv{3}{4}{5}$, and we use the two different notations to distinguish them.

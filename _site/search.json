@@ -1,100 +1,24 @@
 [
   {
-    "objectID": "week2.html#unit-vectors",
-    "href": "week2.html#unit-vectors",
-    "title": "Week 2: General Vectors",
-    "section": "Unit vectors",
-    "text": "Unit vectors\nA unit vector is a vector with magnitude equal to 1. We sometimes use a little hat to denote unit vectors, like \\(\\hat{{\\mathbf{a}}}\\). So \\(|\\hat{{\\mathbf{a}}}| = 1\\).\nSuppose you want to find a unit vector in the direction of another vector \\({\\mathbf{a}}\\). Well \\({\\mathbf{b}} = \\lambda {\\mathbf{a}}\\) is a vector in the right direction. Using the rules above, it has magnitude \\(|{\\mathbf{b}}|=|\\lambda{\\mathbf{a}}| = |\\lambda| |{\\mathbf{a}}|\\). So if we choose \\(\\lambda = \\frac{1}{|{\\mathbf{a}}|}\\), we have \\(|{\\mathbf{b}}| = \\frac{1}{|{\\mathbf{a}}|} |{\\mathbf{a}}| = 1\\). So \\({\\mathbf{b}}\\) is a unit vector in the direction of \\({\\mathbf{a}}\\).\n\n\n\n\n\n\nNote\n\n\n\nTo turn any vector into a unit vector, multiply it by one divided by the magnitude.",
-    "crumbs": [
-      "Chapter 1: Vectors",
-      "Week 2: General Vectors"
-    ]
+    "objectID": "week3.html#the-dot-product",
+    "href": "week3.html#the-dot-product",
+    "title": "Week 3: Dot and cross products",
+    "section": "The dot product",
+    "text": "The dot product\nThe first type of multiplication is called the scalar product, because the result is a scalar. We will usually call it the dot product and you might also see inner product.\nThis operation is defined for \\(\\mathbb{R}^n\\) for all \\(n\\) as follows:\n\\[{\\mathbf{a}}\\cdot{\\mathbf{b}} = |{\\mathbf{a}}|\\,|{\\mathbf{b}}|\\,\\cos\\theta,\\]\nwhere \\(\\theta\\) is the angle between the two vectors.\n\n\nProperties\nFollowing the definition above and the set of rules for vectors, you can prove the following rules:\n\nIf \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\) are perpendicular, \\({\\mathbf{a}}\\cdot{\\mathbf{b}}=0\\).\n\\({\\mathbf{a}}\\cdot{\\mathbf{b}} = 0\\) tells us that the vectors are perpendicular, or one of \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\) is \\({\\mathbf{0}}\\);\n\\({\\mathbf{a}}\\cdot{\\mathbf{a}} = |{\\mathbf{a}}|^2\\);\n\\({\\mathbf{a}}\\cdot(\\lambda{\\mathbf{b}}) = \\lambda ({\\mathbf{a}}\\cdot{\\mathbf{b}})\\);\n\\({\\mathbf{a}}\\cdot{\\mathbf{b}} = {\\mathbf{b}}\\cdot{\\mathbf{a}}\\): the dot product is commutative;\n\\({\\mathbf{a}}\\cdot({\\mathbf{b}}+{\\mathbf{c}}) = {\\mathbf{a}}\\cdot{\\mathbf{b}} + {\\mathbf{a}}\\cdot{\\mathbf{c}}\\): the dot product is distributive over addition1.\n\n\n\nThe dot product with components\nA particularly important property becomes apparent when we find the dot product of vectors in components \\({\\mathbf{a}}=\\begin{bmatrix} a_1 \\\\ a_2 \\\\ a_3\\end{bmatrix}\\) and \\({\\mathbf{b}}=\\begin{bmatrix} b_1 \\\\ b_2 \\\\ b_3\\end{bmatrix}\\) using the rules above:\n\\[\n\\begin{aligned}\n{\\mathbf{a}}\\cdot{\\mathbf{b}} &= \\left(a_1 \\hat{{\\mathbf{x}}} + a_2 \\hat{{\\mathbf{y}}} + a_3\\hat{{\\mathbf{z}}}\\right)\\cdot\\left(b_1 \\hat{{\\mathbf{x}}} + b_2 \\hat{{\\mathbf{y}}} + b_3\\hat{{\\mathbf{z}}}\\right) \\\\\n&= a_1b_1 \\hat{{\\mathbf{x}}}\\cdot\\hat{{\\mathbf{x}}} + a_1b_2 \\hat{{\\mathbf{x}}}\\cdot\\hat{{\\mathbf{y}}} + a_1b_3 \\hat{{\\mathbf{x}}}\\cdot\\hat{{\\mathbf{z}}} +\na_2b_1 \\hat{{\\mathbf{y}}}\\cdot\\hat{{\\mathbf{x}}} + a_2b_2 \\hat{{\\mathbf{y}}}\\cdot\\hat{{\\mathbf{y}}} + a_2b_3 \\hat{{\\mathbf{y}}}\\cdot\\hat{{\\mathbf{z}}} \\\\ &\\;+\na_3b_1 \\hat{{\\mathbf{z}}}\\cdot\\hat{{\\mathbf{x}}} + a_3b_2 \\hat{{\\mathbf{z}}}\\cdot\\hat{{\\mathbf{y}}} + a_3b_3 \\hat{{\\mathbf{z}}}\\cdot\\hat{{\\mathbf{z}}} \\\\\n&= a_1b_1 + a_2b_2 + a_3b_3,\n\\end{aligned}\n\\]\nwhere we have used the facts that \\(\\hat{{\\mathbf{x}}}\\cdot\\hat{{\\mathbf{x}}}=\\hat{{\\mathbf{y}}}\\cdot\\hat{{\\mathbf{y}}}=\\hat{{\\mathbf{z}}}\\cdot\\hat{{\\mathbf{z}}}=1\\) and \\(\\hat{{\\mathbf{x}}}\\cdot\\hat{{\\mathbf{y}}}=\\hat{{\\mathbf{x}}}\\cdot\\hat{{\\mathbf{z}}}=\\hat{{\\mathbf{y}}}\\cdot\\hat{{\\mathbf{z}}}=0\\).\n\n\n\n\n\n\nNote\n\n\n\nTo calculate the dot product of two vectors, multiply the components together and add them up.\n\n\nThink: if \\({\\mathbf{a}}=\\begin{bmatrix} 2 \\\\ 1 \\\\ -1\\end{bmatrix}\\) and \\({\\mathbf{b}}=\\begin{bmatrix} 0 \\\\ 1 \\\\ 1\\end{bmatrix}\\), what is \\({\\mathbf{a}}\\cdot{\\mathbf{b}}\\)? What do you deduce about the vectors?\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\\(2\\times0 + 1\\times1 + (-1)\\times1 = 0\\).\nThe dot product is zero and neither of the vectors is \\({\\mathbf{0}}\\) so the vectors are perpendicular.\n\n\n\n\n\n\n\n\n\nCommon mistake\n\n\n\nVery often people do something like \\(\\begin{bmatrix} 1 \\\\ 2 \\\\ 3\\end{bmatrix}\\cdot\\begin{bmatrix} 3 \\\\ 2 \\\\ 4\\end{bmatrix} = \\begin{bmatrix} 1\\times 3 \\\\ 2\\times 2 \\\\ 3\\times 4\\end{bmatrix}\\). This is WRONG because the result of the dot product must be a scalar, not a vector.\n\n\n\n\nExample for dot products\nShow that the diagonals of a rhombus are perpendicular.\n\n\n\n\n\n\nSolution\n\n\n\n\n\nLet the corners of the rhombus be \\(A\\), \\(B\\), \\(C\\) and \\(D\\).\n\nIt’s a paralellogram, so \\({\\overrightarrow{AB}}={\\overrightarrow{DC}}\\) - let’s call this \\({\\mathbf{a}}\\) - and \\({\\overrightarrow{BC}}={\\overrightarrow{AD}}={\\mathbf{b}}\\).\nFuthermore, for a rhombus we know the side lengths are the same, so \\(|{\\mathbf{a}}| = |{\\mathbf{b}}|\\).\nWe want to show that \\({\\overrightarrow{AC}}\\cdot{\\overrightarrow{BD}} = 0\\).\nWe see from the diagram that \\({\\overrightarrow{AC}} = {\\mathbf{a}}+{\\mathbf{b}}\\) and \\({\\overrightarrow{BD}} = {\\mathbf{b}}-{\\mathbf{a}}\\). Then\n\\[\n{\\overrightarrow{AC}}\\cdot{\\overrightarrow{BD}} = ({\\mathbf{a}}+{\\mathbf{b}})\\cdot({\\mathbf{b}}-{\\mathbf{a}}) = {\\mathbf{a}}\\cdot{\\mathbf{b}} - {\\mathbf{a}}\\cdot{\\mathbf{a}} + {\\mathbf{b}}\\cdot{\\mathbf{b}} - {\\mathbf{b}}\\cdot{\\mathbf{a}} = |{\\mathbf{b}}|^2-|{\\mathbf{a}}|^2 = 0.\n\\]"
   },
   {
-    "objectID": "week2.html#position-vectors",
-    "href": "week2.html#position-vectors",
-    "title": "Week 2: General Vectors",
-    "section": "Position vectors",
-    "text": "Position vectors\nSo far we’ve discussed points in space. If we choose a special point, called the origin \\(O\\), then we can define the position of any other point relative to this.\nSo given points \\(A\\) and \\(B\\), instead of just thinking about the displacement between them, if we choose an origin we can use vectos \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\) to denote their positions relative to the origin.\n\n\n\n\n\n\n\nNote\n\n\n\nThe position vector of a point is just its displacement from the origin, \\({\\mathbf{a}}={\\overrightarrow{OA}}\\).\n\n\nThink: what is the displacement vector \\({\\overrightarrow{AB}}\\) in terms of the position vectors \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\)?\n\n\n\n\n\n\nSolution\n\n\n\n\n\nWe know that \\({\\mathbf{a}}={\\overrightarrow{OA}}\\) and \\({\\mathbf{b}} = {\\overrightarrow{OB}}\\). Remember from our rules for displacements that \\({\\overrightarrow{AB}} = {\\overrightarrow{AO}}+{\\overrightarrow{OB}} = -{\\overrightarrow{OA}} + {\\overrightarrow{OB}}\\). So \\({\\overrightarrow{OA}} = -{\\mathbf{a}} + {\\mathbf{b}} = {\\mathbf{b}} - {\\mathbf{a}}\\).\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nTo get the displacement vector in terms of position vectors, subtract the position vector of the start from the position vector of the end.\n\n\nLater in the module, we’ll want to talk about a position vector for a general point in space. For historical reasons, this is usually written as \\({\\mathbf{r}}\\). Think of \\({\\mathbf{r}}\\) as an arrow pointing from the origin \\(O\\) to wherever you currently are.",
-    "crumbs": [
-      "Chapter 1: Vectors",
-      "Week 2: General Vectors"
-    ]
+    "objectID": "week3.html#the-cross-product",
+    "href": "week3.html#the-cross-product",
+    "title": "Week 3: Dot and cross products",
+    "section": "The cross product",
+    "text": "The cross product\nUnlike the dot product, which is valid in any dimensions, the cross product is only defined in three dimensions.2 Also unlike the dot product, the cross product of two vectors is a vector. For this reason it’s called the vector product. It’s written with a cross \\(\\times\\).3\nThe geometric definition is as follows:\n\nIf either \\({\\mathbf{a}}\\) or \\({\\mathbf{b}}\\) is \\({\\mathbf{0}}\\), or they’re parallel, then \\({\\mathbf{a}}\\times{\\mathbf{b}}={\\mathbf{0}}\\).\nOtherwise, find a vector the is perpendicular to both \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\) using the right-hand rule:\n\n\n\n\nFigure by Izaak Neutelings, from https://tikz.net.\n\n\n\nThe magnitude of the result \\(|{\\mathbf{a}}\\times{\\mathbf{b}}| = |{\\mathbf{a}}||{\\mathbf{b}}|\\sin\\theta\\).\n\nNote the similarity to the dot product, but with sine instead of cosine, and the fact it’s a vector.\n\nProperties\nThe following properties have similarities and differences with the corresponding ones for the dot product:\n\nIf \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\) are parallel, \\({\\mathbf{a}}\\times{\\mathbf{b}}={\\mathbf{0}}\\).\n\\({\\mathbf{a}}\\times{\\mathbf{b}} = {\\mathbf{0}}\\) tells us that the vectors are parallel, or one of \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\) is \\({\\mathbf{0}}\\);\n\\({\\mathbf{a}}\\times{\\mathbf{a}} = {\\mathbf{0}}\\);\n\\({\\mathbf{a}}\\times(\\lambda{\\mathbf{b}}) = \\lambda ({\\mathbf{a}}\\times{\\mathbf{b}})\\);\n\\({\\mathbf{a}}\\times{\\mathbf{b}} = -{\\mathbf{b}}\\times{\\mathbf{a}}\\): the dot product is anticommutative;\n\\({\\mathbf{a}}\\times({\\mathbf{b}}+{\\mathbf{c}}) = {\\mathbf{a}}\\times{\\mathbf{b}} + {\\mathbf{a}}\\times{\\mathbf{c}}\\): the cross product is distributive over addition.\n\n\n\nThe cross product with components\nIf you apply the rules above, using the fact that \\(\\hat{{\\mathbf{x}}}\\times\\hat{{\\mathbf{y}}}=\\hat{{\\mathbf{z}}}\\) - which is called a right-handed coordinate system - you can prove the following important formula:\n\\[\n\\begin{bmatrix} a_1 \\\\ a_2 \\\\ a_3\\end{bmatrix} \\times \\begin{bmatrix} b_1 \\\\ b_2 \\\\ b_3\\end{bmatrix} = \\begin{bmatrix} a_2b_3-a_3b_2 \\\\ a_3b_1-a_1b_3 \\\\ a_1b_2 - a_2b_1\\end{bmatrix}.\n\\]\nThis ugly formula is one of the only things in this module I recommend you learn by heart. There are patterns which can help you memorise it; try to find something that works for you.\n\n\n\n\n\n\nCommon mistake\n\n\n\nPeople mess up the second component of the cross product. It might be the negative of what you intuitively think it should be.\n\n\n\n\n\n\n\n\nNote\n\n\n\nMany people like to write the cross product as the determinant of a matrix, as in\n\\[\n\\begin{bmatrix} a_1 \\\\ a_2 \\\\ a_3\\end{bmatrix} \\times \\begin{bmatrix} b_1 \\\\ b_2 \\\\ b_3\\end{bmatrix} = \\left|\\begin{matrix} \\hat{{\\mathbf{x}}} & \\hat{{\\mathbf{y}}} & \\hat{{\\mathbf{z}}} \\\\\na_1 & a_2 & a_3 \\\\\nb_1 & b_2 & b_3\n\\end{matrix}\\right|.\n\\]\nDon’t worry if you’re not familiar with determinants (or matrices), we’ll see them in a couple of weeks.\nI think this formula is stupid anyway because you can’t put vectors inside a matrix like that. But if it works for you, feel free to use it.\n\n\nThink: if \\({\\mathbf{a}}=\\begin{bmatrix} 2 \\\\ 1 \\\\ -1\\end{bmatrix}\\) and \\({\\mathbf{b}}=\\begin{bmatrix} 0 \\\\ 1 \\\\ 1\\end{bmatrix}\\), what is \\({\\mathbf{a}}\\times{\\mathbf{b}}\\)?\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\\[\\begin{bmatrix} 1\\times 1-(-1)\\times 1 \\\\ -1\\times 0-2\\times 1 \\\\ 2\\times 1 - 1\\times 0\\end{bmatrix} = \\begin{bmatrix} 2 \\\\ -2 \\\\ 2\\end{bmatrix}.\\]\n\n\n\n\n\nApplications\nYou may remember the formula for the area of a triangle as \\(\\frac{1}{2} b c \\sin \\alpha\\) where \\(\\alpha\\) is the angle between the sides of length \\(b\\) and \\(c\\). Looking at the definition of the cross product, we see that\n\\[\\frac{1}{2}|{\\mathbf{a}}\\times{\\mathbf{b}}|\\]\nis the area of the triangle between \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\). Similarly, \\(|{\\mathbf{a}}\\times{\\mathbf{b}}|\\) is the area of the parallelogram with sides \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\):\n\n\n\nExample for cross products\nFind a unit vector that is perpendicular to both \\({\\mathbf{a}}=\\begin{bmatrix} 3 \\\\ 1 \\\\ 2\\end{bmatrix}\\) and \\({\\mathbf{b}}=\\begin{bmatrix} 1 \\\\ 1 \\\\ -1\\end{bmatrix}\\).\n\n\n\n\n\n\nSolution\n\n\n\n\n\nWe know that the result of the cross product \\({\\mathbf{a}}\\times{\\mathbf{b}}\\) is perpendicular to both of them:\n\\[\\begin{bmatrix} 3 \\\\ 1 \\\\ 2\\end{bmatrix}\\times\\begin{bmatrix} 1 \\\\ 1 \\\\ -1\\end{bmatrix} = \\begin{bmatrix} -3 \\\\ 5 \\\\ 2\\end{bmatrix}.\\]\nThe question asks for a unit vector, so we need to divide this vector by its own magnitude. The magnitude is\n\\[\\sqrt{(-3)^2+5^2+2^2} = \\sqrt{38}\\]\nand so the final answer is\n\\[\\begin{bmatrix} \\frac{-3}{\\sqrt{38}} \\\\ \\frac{5}{\\sqrt{38}} \\\\ \\frac{2}{\\sqrt{38}}\\end{bmatrix}.\\]\nThe vector opposite to this, i.e. \\(\\begin{bmatrix} \\frac{3}{\\sqrt{38}} \\\\ \\frac{-5}{\\sqrt{38}} \\\\ \\frac{-2}{\\sqrt{38}}\\end{bmatrix}\\), would also satisfy the requirements."
   },
   {
-    "objectID": "week2.html#basis-vectors",
-    "href": "week2.html#basis-vectors",
-    "title": "Week 2: General Vectors",
-    "section": "Basis vectors",
-    "text": "Basis vectors\nIn two dimensions, you can write any vector as a linear combination of any two other vectors that aren’t parallel.2\nThat means, if we have \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\) and these aren’t parallel, so there is no \\(\\lambda\\) such that \\({\\mathbf{a}}=\\lambda{\\mathbf{b}}\\), then for any vector \\({\\mathbf{c}}\\), we can find \\(\\alpha\\) and \\(\\beta\\) such that \\({\\mathbf{c}}=\\alpha{\\mathbf{a}}+\\beta{\\mathbf{b}}\\).\n\n\n\n\n\n\nNote\n\n\n\nWhen doing vector problems, choose two non-parallel vectors and write all the other vectors in terms of these.\n\n\nIt’s extra helpful if we choose two vectors that are orthogonal (at right angles) and unit vectors. Normally we choose a vector of length 1 in the horizontal direction and call this \\(\\hat{{\\mathbf{x}}}\\) and a vector of length 1 in the vertical direction and call this \\(\\hat{{\\mathbf{y}}}\\).\nThen for any vector \\({\\mathbf{a}}\\), we can find unique scalar numbers \\(a_1\\) and \\(a_2\\) such that \\({\\mathbf{a}} = a_1 \\hat{{\\mathbf{x}}} + a_2 \\hat{{\\mathbf{y}}}\\).\nIn fact, we do this so often that we introduce a new notation: \\[{\\mathbf{a}} = \\begin{bmatrix} a_1 \\\\ a_2 \\end{bmatrix}.\\] 3\nAnd the unit basis vectors are simply \\[\\hat{{\\mathbf{x}}} = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}\\] and \\[\\hat{{\\mathbf{y}}} = \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}.\\]\nIn three dimensions we write \\[{\\mathbf{b}} = b_1 \\hat{{\\mathbf{x}}} + b_2 \\hat{{\\mathbf{z}}} + b_3 \\hat{{\\mathbf{y}}} = \\begin{bmatrix} b_1 \\\\ b_2 \\\\ b_3\\end{bmatrix}.\\]\n\n\n\n\n\n\nNote\n\n\n\nVectors are not the same as coordinates! They are related but conceptually different. The position vector for the coordinates \\((3,4,5)\\) is \\(\\begin{bmatrix} 3 \\\\ 4 \\\\ 5\\end{bmatrix}\\), and we use the two different notations to distinguish them.\n\n\nFor the general position vector, the position in 3D space is given by the coordinates \\((x,y,z)\\) so \\({\\mathbf{r}} = \\begin{bmatrix} x \\\\ y \\\\ z\\end{bmatrix}\\).",
-    "crumbs": [
-      "Chapter 1: Vectors",
-      "Week 2: General Vectors"
-    ]
-  },
-  {
-    "objectID": "week2.html#column-vectors",
-    "href": "week2.html#column-vectors",
-    "title": "Week 2: General Vectors",
-    "section": "Column vectors",
-    "text": "Column vectors\nWith this new notation, everything behaves exactly as you would expect:\n\\[\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix} + \\begin{bmatrix} 1 \\\\ -3 \\end{bmatrix} = \\begin{bmatrix} 5+1 \\\\ 2-3 \\end{bmatrix} = \\begin{bmatrix} 6 \\\\ -1 \\end{bmatrix}.\\]\n\\[4\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix} = \\begin{bmatrix} 4\\times 5 \\\\ 4\\times 2 \\end{bmatrix} = \\begin{bmatrix} 20 \\\\ 8 \\end{bmatrix}.\\]\nIf you’re unsure about any of these rules, you can rewrite \\(\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix}\\) as \\(5\\hat{{\\mathbf{x}}}+2\\hat{{\\mathbf{y}}}\\) etc. and apply the list of rules above.\nOften we use the mathematical notation that \\[\\begin{bmatrix} -1 \\\\ 3 \\\\ -3\\end{bmatrix}\\in\\mathbb{R}^3.\\] This says that the vector lives in the set of obejcts which can be written as three real numbers. Obviously for 2D we write \\(\\mathbb{R}^2\\) instead.",
-    "crumbs": [
-      "Chapter 1: Vectors",
-      "Week 2: General Vectors"
-    ]
-  },
-  {
-    "objectID": "week2.html#pythagorass-rule",
-    "href": "week2.html#pythagorass-rule",
-    "title": "Week 2: General Vectors",
-    "section": "Pythagoras’s rule",
-    "text": "Pythagoras’s rule\nWe haven’t yet defined the magnitude of a general vector. What is the magnitude of \\(\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix}\\)?\nFrom the rules so far, we know that \\[ \\left|\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix}\\right| = \\left|5\\hat{{\\mathbf{x}}}+2\\hat{{\\mathbf{y}}}\\right| \\leq |5\\hat{{\\mathbf{x}}}| + |2\\hat{{\\mathbf{y}}}| = 5|\\hat{{\\mathbf{x}}}| + 2|\\hat{{\\mathbf{y}}} = 5\\times1 + 2\\times1 = 7\\] but that just tells us that \\(\\left|\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix}\\right|\\leq 7\\). This isn’t enough.\nActually there are lots of possible choices. In this module, we focus on normal, ‘flat’, Euclidean space: \\[\\left|\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix}\\right| = \\sqrt{5^2 + 2^2} = \\sqrt{29}\\] which is less than 7, as expected.\nThen general rule is: \\[|{\\mathbf{a}}| = \\sqrt{a_1^2 + a_2^2}\\] and in 3D \\[|{\\mathbf{b}}| = \\sqrt{b_1^2 + b_2^2 + b_3^2}\\].\nTo convince yourself these are good definition, draw a diagram and use Pythagoras’s theorem.\n\n\n\n\n\n\nNote\n\n\n\nThe magnitude of a vector is the square root of the components squared and added up.\n\n\nThink: what is the magnitude of the vector \\(\\begin{bmatrix} 2 \\\\ -6 \\\\ -3\\end{bmatrix}\\)?\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\\[\\sqrt{2^2 + (-6)^2 + (-3)^2} = \\sqrt{4 + 36 + 9} = \\sqrt{49} = 7.\\]\nDon’t let the negatives confuse you!",
-    "crumbs": [
-      "Chapter 1: Vectors",
-      "Week 2: General Vectors"
-    ]
-  },
-  {
-    "objectID": "week2.html#examples-for-general-vectors",
-    "href": "week2.html#examples-for-general-vectors",
-    "title": "Week 2: General Vectors",
-    "section": "Examples for general vectors",
-    "text": "Examples for general vectors\n\nExample 1\nLet \\(ABCDEF\\) be a regular hexagon with sides of length 1. Let \\(\\hat{{\\mathbf{v}}}\\) and \\(\\hat{{\\mathbf{w}}}\\) correspond to 2 adjacent sides, \\({\\overrightarrow{AB}} = \\hat{{\\mathbf{v}}}\\), \\({\\overrightarrow{AF}} = \\hat{{\\mathbf{w}}}\\) (where \\(A\\) is the bottom left point, and \\(A,B,C....\\) proceed anti-clockwise.)\nExpress all other sides and the diagonals in terms of \\(\\hat{{\\mathbf{v}}}\\) and \\(\\hat{{\\mathbf{w}}}\\). Also, find a unit vector in the direction \\(\\hat{{\\mathbf{w}}}-\\hat{{\\mathbf{v}}}\\).\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\nSides: \\({\\overrightarrow{AB}}={\\overrightarrow{ED}}=\\hat{{\\mathbf{v}}}\\), \\(\\qquad{\\overrightarrow{AF}}= {\\overrightarrow{CD}}=\\hat{{\\mathbf{w}}}\\), \\(\\qquad{\\overrightarrow{BC}}= {\\overrightarrow{FE}}=\\hat{{\\mathbf{v}}} + \\hat{{\\mathbf{w}}}\\).\nDiagonals: \\({\\overrightarrow{FC}}=2\\hat{{\\mathbf{v}}}\\), \\(\\qquad{\\overrightarrow{BE}}=2\\hat{{\\mathbf{w}}}\\), \\(\\qquad{\\overrightarrow{AD}}=2(\\hat{{\\mathbf{v}}} + \\hat{{\\mathbf{w}}})\\).\nWe have \\(\\hat{{\\mathbf{w}}} - \\hat{{\\mathbf{v}}} = {\\overrightarrow{BF}} = {\\overrightarrow{CE}}\\).\nThe length of \\(\\hat{{\\mathbf{w}}} - \\hat{{\\mathbf{v}}}\\) is \\(\\sqrt{3}\\), which can be obtained from triangle \\(AFB\\). Thus a unit vector in direction of \\(\\hat{{\\mathbf{w}}} - \\hat{{\\mathbf{v}}}\\) is \\[\\frac{1}{\\sqrt{3}} ( \\hat{{\\mathbf{w}}} - \\hat{{\\mathbf{v}}}).\\]\n\n\n\n\n\nExample 2\nLet the points \\(A\\) and \\(B\\) have position vectors \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\). Find the position vector of the midpoint of \\(A\\) and \\(B\\).\n\n\n\n\n\n\nSolution\n\n\n\n\n\nThe midpoint of \\(A\\) and \\(B\\) is halfway along the line \\(AB\\). Call this point \\(C\\), and it must satisfy \\({\\overrightarrow{AC}}=\\frac{1}{2}{\\overrightarrow{AB}}\\).\nTo get to C from the origin, we can go via \\(A\\). So the position vector is \\[{\\overrightarrow{OC}} ={\\overrightarrow{OA}} + {\\overrightarrow{AC}} = {\\mathbf{a}} + \\frac{1}{2}{\\overrightarrow{AB}}.\\]\nRecall that \\({\\overrightarrow{AB}} = {\\mathbf{b}}-{\\mathbf{a}}\\) (remember this rule!), so finally \\[{\\overrightarrow{OC}} = {\\mathbf{a}} + \\frac{1}{2}\\left({\\mathbf{b}}-{\\mathbf{a}}\\right) = \\frac{1}{2}{\\mathbf{a}} + \\frac{1}{2}{\\mathbf{b}}.\\]\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe position vector of the midpoint of two points is the average of the position vectors of the two points.",
-    "crumbs": [
-      "Chapter 1: Vectors",
-      "Week 2: General Vectors"
-    ]
-  },
-  {
-    "objectID": "week2.html#footnotes",
-    "href": "week2.html#footnotes",
-    "title": "Week 2: General Vectors",
+    "objectID": "week3.html#footnotes",
+    "href": "week3.html#footnotes",
+    "title": "Week 3: Dot and cross products",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nWhen writing vectors with pen and paper or on the board, bold is difficult, but there are various other possibilities and different people like different things. I use an underline. Whatever you choose, it’s very helpful to distinguish between vectors and scalars in your handwriting.↩︎\nIn three dimensions, we need to choose three vectors and so on.↩︎\nDifferent people write these vectors vertically or horizontally, with round or square brackets. It doesn’t really matter but it’s good to be consistent.↩︎",
-    "crumbs": [
-      "Chapter 1: Vectors",
-      "Week 2: General Vectors"
-    ]
-  },
-  {
-    "objectID": "links.html",
-    "href": "links.html",
-    "title": "Helpful links",
-    "section": "",
-    "text": "https://www.3blue1brown.com/topics/linear-algebra\nThese are great videos explaining a lot of the material in this module, along with some stuff you definitely don’t need.\nhttps://phet.colorado.edu/en/simulations/vector-addition\nSome interactive demos to play with vectors.\nhttps://www.youtube.com/playlist?list=PL49CF3715CB9EF31D\nClassic lectures from MIT which go deeper but are very relevant to the matrix part of this module.\nhttps://www.cs.ox.ac.uk/files/12921/book.pdf\nA free textbook covering a lot of the module.\nhttps://www.3blue1brown.com/lessons/ldm-complex-numbers and https://www.3blue1brown.com/lessons/ldm-eulers-formula\nLong-form videos relevant to the final part of the module.",
-    "crumbs": [
-      "Helpful links"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "MA12001 Algebra",
-    "section": "",
-    "text": "This webpage contains the lecture notes for the algebra half of the Mathematics 1B (MA12001) module for University of Dundee.\n\nIntroduction\nThe module MA12001 is split into two halves. This half, which we call “algebra” basically because it isn’t “calculus”, covers several areas. First we’ll see the idea of vectors, which will be familiar to many of you. Then we’ll talk about matrices, which are a way to discuss transformations of vectors. This is a first introduction to a large and important area of mathematics called linear algebra. In the final section of the module we’ll use what we’ve learnt to describe different geometric objects like lines, planes and spheres.\nThese notes contain all the examinable material within this half of the module, and maybe also some bonus stuff, which will be clearly marked as non-examinable. For details of the organisation of the module this year, please see My Dundee.\nI’ll be updating these notes weekly as we go through, and at the end of the semester I’ll make the full set of these notes available as a PDF. If you’d like to read ahead, last year’s full notes are available on MyDundee.",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Footnotes\n\n\nThis is easiest to prove using the component form of the dot product, but unfortunately that gives a circular proof. To prove it directly requires a lot of geometry and trigonometry.↩︎\nSometimes people define a cross product in two dimensions by imagining the 2d vectors on a plane in 3d space, but we won’t use that definition.↩︎\nOccasionally you see people use \\(\\wedge\\) instead. In modern maths this the exterior product, which is a related but different concept.↩︎"
   },
   {
     "objectID": "week1.html",
@@ -182,6 +106,103 @@
     "crumbs": [
       "Chapter 1: Vectors",
       "Week 1: Displacement Vectors"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MA12001 Algebra",
+    "section": "",
+    "text": "This webpage contains the lecture notes for the algebra half of the Mathematics 1B (MA12001) module for University of Dundee.\n\nIntroduction\nThe module MA12001 is split into two halves. This half, which we call “algebra” basically because it isn’t “calculus”, covers several areas. First we’ll see the idea of vectors, which will be familiar to many of you. Then we’ll talk about matrices, which are a way to discuss transformations of vectors. This is a first introduction to a large and important area of mathematics called linear algebra. In the final section of the module we’ll use what we’ve learnt to describe different geometric objects like lines, planes and spheres.\nThese notes contain all the examinable material within this half of the module, and maybe also some bonus stuff, which will be clearly marked as non-examinable. For details of the organisation of the module this year, please see My Dundee.\nI’ll be updating these notes weekly as we go through, and at the end of the semester I’ll make the full set of these notes available as a PDF. If you’d like to read ahead, last year’s full notes are available on MyDundee.\nIt’s very likely that there are mistakes in these notes. If you find one, please let me know ASAP at mailto:jparker002@dundee.ac.uk, no matter how trivial you think the mistake is.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "links.html",
+    "href": "links.html",
+    "title": "Helpful links",
+    "section": "",
+    "text": "https://www.3blue1brown.com/topics/linear-algebra\nThese are great videos explaining a lot of the material in this module, along with some stuff you definitely don’t need.\nhttps://phet.colorado.edu/en/simulations/vector-addition\nSome interactive demos to play with vectors.\nhttps://www.youtube.com/playlist?list=PL49CF3715CB9EF31D\nClassic lectures from MIT which go deeper but are very relevant to the matrix part of this module.\nhttps://www.cs.ox.ac.uk/files/12921/book.pdf\nA free textbook covering a lot of the module.\nhttps://www.3blue1brown.com/lessons/ldm-complex-numbers and https://www.3blue1brown.com/lessons/ldm-eulers-formula\nLong-form videos relevant to the final part of the module.",
+    "crumbs": [
+      "Helpful links"
+    ]
+  },
+  {
+    "objectID": "week2.html#unit-vectors",
+    "href": "week2.html#unit-vectors",
+    "title": "Week 2: General Vectors",
+    "section": "Unit vectors",
+    "text": "Unit vectors\nA unit vector is a vector with magnitude equal to 1. We sometimes use a little hat to denote unit vectors, like \\(\\hat{{\\mathbf{a}}}\\). So \\(|\\hat{{\\mathbf{a}}}| = 1\\).\nSuppose you want to find a unit vector in the direction of another vector \\({\\mathbf{a}}\\). Well \\({\\mathbf{b}} = \\lambda {\\mathbf{a}}\\) is a vector in the right direction. Using the rules above, it has magnitude \\(|{\\mathbf{b}}|=|\\lambda{\\mathbf{a}}| = |\\lambda| |{\\mathbf{a}}|\\). So if we choose \\(\\lambda = \\frac{1}{|{\\mathbf{a}}|}\\), we have \\(|{\\mathbf{b}}| = \\frac{1}{|{\\mathbf{a}}|} |{\\mathbf{a}}| = 1\\). So \\({\\mathbf{b}}\\) is a unit vector in the direction of \\({\\mathbf{a}}\\).\n\n\n\n\n\n\nNote\n\n\n\nTo turn any vector into a unit vector, multiply it by one divided by the magnitude.",
+    "crumbs": [
+      "Chapter 1: Vectors",
+      "Week 2: General Vectors"
+    ]
+  },
+  {
+    "objectID": "week2.html#position-vectors",
+    "href": "week2.html#position-vectors",
+    "title": "Week 2: General Vectors",
+    "section": "Position vectors",
+    "text": "Position vectors\nSo far we’ve discussed points in space. If we choose a special point, called the origin \\(O\\), then we can define the position of any other point relative to this.\nSo given points \\(A\\) and \\(B\\), instead of just thinking about the displacement between them, if we choose an origin we can use vectos \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\) to denote their positions relative to the origin.\n\n\n\n\n\n\n\nNote\n\n\n\nThe position vector of a point is just its displacement from the origin, \\({\\mathbf{a}}={\\overrightarrow{OA}}\\).\n\n\nThink: what is the displacement vector \\({\\overrightarrow{AB}}\\) in terms of the position vectors \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\)?\n\n\n\n\n\n\nSolution\n\n\n\n\n\nWe know that \\({\\mathbf{a}}={\\overrightarrow{OA}}\\) and \\({\\mathbf{b}} = {\\overrightarrow{OB}}\\). Remember from our rules for displacements that \\({\\overrightarrow{AB}} = {\\overrightarrow{AO}}+{\\overrightarrow{OB}} = -{\\overrightarrow{OA}} + {\\overrightarrow{OB}}\\). So \\({\\overrightarrow{OA}} = -{\\mathbf{a}} + {\\mathbf{b}} = {\\mathbf{b}} - {\\mathbf{a}}\\).\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nTo get the displacement vector in terms of position vectors, subtract the position vector of the start from the position vector of the end.\n\n\n\n\n\n\n\n\nCommon mistake\n\n\n\nFor some reason people like to say that \\({\\overrightarrow{AB}}={\\mathbf{a}}+{\\mathbf{b}}\\). This is clearly wrong. Remember that \\({\\overrightarrow{BA}}=-{\\overrightarrow{AB}}\\).\n\n\nLater in the module, we’ll want to talk about a position vector for a general point in space. For historical reasons, this is usually written as \\({\\mathbf{r}}\\). Think of \\({\\mathbf{r}}\\) as an arrow pointing from the origin \\(O\\) to wherever you currently are.",
+    "crumbs": [
+      "Chapter 1: Vectors",
+      "Week 2: General Vectors"
+    ]
+  },
+  {
+    "objectID": "week2.html#basis-vectors",
+    "href": "week2.html#basis-vectors",
+    "title": "Week 2: General Vectors",
+    "section": "Basis vectors",
+    "text": "Basis vectors\nIn two dimensions, you can write any vector as a linear combination of any two other vectors that aren’t parallel.2\nThat means, if we have \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\) and these aren’t parallel, so there is no \\(\\lambda\\) such that \\({\\mathbf{a}}=\\lambda{\\mathbf{b}}\\), then for any vector \\({\\mathbf{c}}\\), we can find \\(\\alpha\\) and \\(\\beta\\) such that \\({\\mathbf{c}}=\\alpha{\\mathbf{a}}+\\beta{\\mathbf{b}}\\).\n\n\n\n\n\n\nNote\n\n\n\nWhen doing vector problems, choose two non-parallel vectors and write all the other vectors in terms of these.\n\n\nIt’s extra helpful if we choose two vectors that are orthogonal (at right angles) and unit vectors. Normally we choose a vector of length 1 in the horizontal direction and call this \\(\\hat{{\\mathbf{x}}}\\) and a vector of length 1 in the vertical direction and call this \\(\\hat{{\\mathbf{y}}}\\).\nThen for any vector \\({\\mathbf{a}}\\), we can find unique scalar numbers \\(a_1\\) and \\(a_2\\) such that \\({\\mathbf{a}} = a_1 \\hat{{\\mathbf{x}}} + a_2 \\hat{{\\mathbf{y}}}\\).\nIn fact, we do this so often that we introduce a new notation: \\[{\\mathbf{a}} = \\begin{bmatrix} a_1 \\\\ a_2 \\end{bmatrix}.\\] 3\nAnd the unit basis vectors are simply \\[\\hat{{\\mathbf{x}}} = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}\\] and \\[\\hat{{\\mathbf{y}}} = \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}.\\]\nIn three dimensions we write \\[{\\mathbf{b}} = b_1 \\hat{{\\mathbf{x}}} + b_2 \\hat{{\\mathbf{z}}} + b_3 \\hat{{\\mathbf{y}}} = \\begin{bmatrix} b_1 \\\\ b_2 \\\\ b_3\\end{bmatrix}.\\]\n\n\n\n\n\n\nNote\n\n\n\nVectors are not the same as coordinates! They are related but conceptually different. The position vector for the coordinates \\((3,4,5)\\) is \\(\\begin{bmatrix} 3 \\\\ 4 \\\\ 5\\end{bmatrix}\\), and we use the two different notations to distinguish them.\n\n\nFor the general position vector, the position in 3D space is given by the coordinates \\((x,y,z)\\) so \\({\\mathbf{r}} = \\begin{bmatrix} x \\\\ y \\\\ z\\end{bmatrix}\\).",
+    "crumbs": [
+      "Chapter 1: Vectors",
+      "Week 2: General Vectors"
+    ]
+  },
+  {
+    "objectID": "week2.html#column-vectors",
+    "href": "week2.html#column-vectors",
+    "title": "Week 2: General Vectors",
+    "section": "Column vectors",
+    "text": "Column vectors\nWith this new notation, everything behaves exactly as you would expect:\n\\[\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix} + \\begin{bmatrix} 1 \\\\ -3 \\end{bmatrix} = \\begin{bmatrix} 5+1 \\\\ 2-3 \\end{bmatrix} = \\begin{bmatrix} 6 \\\\ -1 \\end{bmatrix}.\\]\n\\[4\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix} = \\begin{bmatrix} 4\\times 5 \\\\ 4\\times 2 \\end{bmatrix} = \\begin{bmatrix} 20 \\\\ 8 \\end{bmatrix}.\\]\nIf you’re unsure about any of these rules, you can rewrite \\(\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix}\\) as \\(5\\hat{{\\mathbf{x}}}+2\\hat{{\\mathbf{y}}}\\) etc. and apply the list of rules above.\nOften we use the mathematical notation that \\[\\begin{bmatrix} -1 \\\\ 3 \\\\ -3\\end{bmatrix}\\in\\mathbb{R}^3.\\] This says that the vector lives in the set of obejcts which can be written as three real numbers. Obviously for 2D we write \\(\\mathbb{R}^2\\) instead.",
+    "crumbs": [
+      "Chapter 1: Vectors",
+      "Week 2: General Vectors"
+    ]
+  },
+  {
+    "objectID": "week2.html#pythagorass-rule",
+    "href": "week2.html#pythagorass-rule",
+    "title": "Week 2: General Vectors",
+    "section": "Pythagoras’s rule",
+    "text": "Pythagoras’s rule\nWe haven’t yet defined the magnitude of a general vector. What is the magnitude of \\(\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix}\\)?\nFrom the rules so far, we know that \\[ \\left|\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix}\\right| = \\left|5\\hat{{\\mathbf{x}}}+2\\hat{{\\mathbf{y}}}\\right| \\leq |5\\hat{{\\mathbf{x}}}| + |2\\hat{{\\mathbf{y}}}| = 5|\\hat{{\\mathbf{x}}}| + 2|\\hat{{\\mathbf{y}}} = 5\\times1 + 2\\times1 = 7\\] but that just tells us that \\(\\left|\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix}\\right|\\leq 7\\). This isn’t enough.\nActually there are lots of possible choices. In this module, we focus on normal, ‘flat’, Euclidean space: \\[\\left|\\begin{bmatrix} 5 \\\\ 2 \\end{bmatrix}\\right| = \\sqrt{5^2 + 2^2} = \\sqrt{29}\\] which is less than 7, as expected.\nThen general rule is: \\[|{\\mathbf{a}}| = \\sqrt{a_1^2 + a_2^2}\\] and in 3D \\[|{\\mathbf{b}}| = \\sqrt{b_1^2 + b_2^2 + b_3^2}\\].\nTo convince yourself these are good definition, draw a diagram and use Pythagoras’s theorem.\n\n\n\n\n\n\nNote\n\n\n\nThe magnitude of a vector is the square root of the components squared and added up.\n\n\nThink: what is the magnitude of the vector \\(\\begin{bmatrix} 2 \\\\ -6 \\\\ -3\\end{bmatrix}\\)?\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\\[\\sqrt{2^2 + (-6)^2 + (-3)^2} = \\sqrt{4 + 36 + 9} = \\sqrt{49} = 7.\\]\nDon’t let the negatives confuse you!",
+    "crumbs": [
+      "Chapter 1: Vectors",
+      "Week 2: General Vectors"
+    ]
+  },
+  {
+    "objectID": "week2.html#examples-for-general-vectors",
+    "href": "week2.html#examples-for-general-vectors",
+    "title": "Week 2: General Vectors",
+    "section": "Examples for general vectors",
+    "text": "Examples for general vectors\n\nExample 1\nLet \\(ABCDEF\\) be a regular hexagon with sides of length 1. Let \\(\\hat{{\\mathbf{v}}}\\) and \\(\\hat{{\\mathbf{w}}}\\) correspond to 2 adjacent sides, \\({\\overrightarrow{AB}} = \\hat{{\\mathbf{v}}}\\), \\({\\overrightarrow{AF}} = \\hat{{\\mathbf{w}}}\\) (where \\(A\\) is the bottom left point, and \\(A,B,C....\\) proceed anti-clockwise.)\nExpress all other sides and the diagonals in terms of \\(\\hat{{\\mathbf{v}}}\\) and \\(\\hat{{\\mathbf{w}}}\\). Also, find a unit vector in the direction \\(\\hat{{\\mathbf{w}}}-\\hat{{\\mathbf{v}}}\\).\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\nSides: \\({\\overrightarrow{AB}}={\\overrightarrow{ED}}=\\hat{{\\mathbf{v}}}\\), \\(\\qquad{\\overrightarrow{AF}}= {\\overrightarrow{CD}}=\\hat{{\\mathbf{w}}}\\), \\(\\qquad{\\overrightarrow{BC}}= {\\overrightarrow{FE}}=\\hat{{\\mathbf{v}}} + \\hat{{\\mathbf{w}}}\\).\nDiagonals: \\({\\overrightarrow{FC}}=2\\hat{{\\mathbf{v}}}\\), \\(\\qquad{\\overrightarrow{BE}}=2\\hat{{\\mathbf{w}}}\\), \\(\\qquad{\\overrightarrow{AD}}=2(\\hat{{\\mathbf{v}}} + \\hat{{\\mathbf{w}}})\\).\nWe have \\(\\hat{{\\mathbf{w}}} - \\hat{{\\mathbf{v}}} = {\\overrightarrow{BF}} = {\\overrightarrow{CE}}\\).\nThe length of \\(\\hat{{\\mathbf{w}}} - \\hat{{\\mathbf{v}}}\\) is \\(\\sqrt{3}\\), which can be obtained from triangle \\(AFB\\). Thus a unit vector in direction of \\(\\hat{{\\mathbf{w}}} - \\hat{{\\mathbf{v}}}\\) is \\[\\frac{1}{\\sqrt{3}} ( \\hat{{\\mathbf{w}}} - \\hat{{\\mathbf{v}}}).\\]\n\n\n\n\n\nExample 2\nLet the points \\(A\\) and \\(B\\) have position vectors \\({\\mathbf{a}}\\) and \\({\\mathbf{b}}\\). Find the position vector of the midpoint of \\(A\\) and \\(B\\).\n\n\n\n\n\n\nSolution\n\n\n\n\n\nThe midpoint of \\(A\\) and \\(B\\) is halfway along the line \\(AB\\). Call this point \\(C\\), and it must satisfy \\({\\overrightarrow{AC}}=\\frac{1}{2}{\\overrightarrow{AB}}\\).\nTo get to C from the origin, we can go via \\(A\\). So the position vector is \\[{\\overrightarrow{OC}} ={\\overrightarrow{OA}} + {\\overrightarrow{AC}} = {\\mathbf{a}} + \\frac{1}{2}{\\overrightarrow{AB}}.\\]\nRecall that \\({\\overrightarrow{AB}} = {\\mathbf{b}}-{\\mathbf{a}}\\) (remember this rule!), so finally \\[{\\overrightarrow{OC}} = {\\mathbf{a}} + \\frac{1}{2}\\left({\\mathbf{b}}-{\\mathbf{a}}\\right) = \\frac{1}{2}{\\mathbf{a}} + \\frac{1}{2}{\\mathbf{b}}.\\]\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe position vector of the midpoint of two points is the average of the position vectors of the two points.",
+    "crumbs": [
+      "Chapter 1: Vectors",
+      "Week 2: General Vectors"
+    ]
+  },
+  {
+    "objectID": "week2.html#footnotes",
+    "href": "week2.html#footnotes",
+    "title": "Week 2: General Vectors",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nWhen writing vectors with pen and paper or on the board, bold is difficult, but there are various other possibilities and different people like different things. I use an underline. Whatever you choose, it’s very helpful to distinguish between vectors and scalars in your handwriting.↩︎\nIn three dimensions, we need to choose three vectors and so on.↩︎\nDifferent people write these vectors vertically or horizontally, with round or square brackets. It doesn’t really matter but it’s good to be consistent.↩︎",
+    "crumbs": [
+      "Chapter 1: Vectors",
+      "Week 2: General Vectors"
     ]
   }
 ]

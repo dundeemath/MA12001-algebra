@@ -13,7 +13,7 @@ website:
         contents:
           - href: week1.qmd
           - href: week2.qmd
-          - text: "Week 3: Dot and cross products"
+          - href: week3.wmq
       - section: "Chapter 2: Matrices"
       - section: "Chapter 3: Lines, planes and spheres"
       - section: "Chapter 4: Complex numbers"

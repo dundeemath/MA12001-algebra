@@ -1,0 +1,193 @@
+---
+title: "Week 3: Dot and cross products"
+---
+
+::: {.hidden}
+
+ \newcommand{\V}[1]{{\overrightarrow{#1}}}
+ \newcommand{\vc}[1]{{\mathbf{#1}}}
+ \newcommand{\hc}[1]{\hat{\vc{#1}}}
+ \newcommand{\cv}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}}
+ \newcommand{\cvv}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}
+
+
+::: 
+
+# Vector-vector multiplication 
+So far for vectors we have defined addition of two vectors, and the multiplication of a vector by a scalar. What about multiplying two vectors together?
+
+For vector addition, we add the components together to get a new vector. The obvious definition for vector multiplication would seem to be multiplying the components to get a new vector.
+However, this operation turns out to be somewhat meaningless and useless for mathematicians and physicists.
+
+Instead, we will see two types of 'multiplication', called the dot and cross product.
+
+## The dot product
+The first type of multiplication is called the *scalar product*, because the result is a scalar. We will usually call it the *dot product* and you might also see *inner product*.
+
+This operation is defined for $\mathbb{R}^n$ for all $n$ as follows:
+
+$$\vc{a}\cdot\vc{b} = |\vc{a}|\,|\vc{b}|\,\cos\theta,$$
+
+where $\theta$ is the angle between the two vectors.
+
+![](vf12.png){}
+
+### Properties
+Following the definition above and the set of [rules for vectors](week2.qmd#sec-vectors), you can prove the following rules:
+
+- If $\vc{a}$ and $\vc{b}$ are perpendicular, $\vc{a}\cdot\vc{b}=0$.
+- $\vc{a}\cdot\vc{b} = 0$ tells us that the vectors are perpendicular, or one of $\vc{a}$ and $\vc{b}$ is $\vc{0}$;
+- $\vc{a}\cdot\vc{a} = |\vc{a}|^2$;
+- $\vc{a}\cdot(\lambda\vc{b}) = \lambda (\vc{a}\cdot\vc{b})$;
+- $\vc{a}\cdot\vc{b} = \vc{b}\cdot\vc{a}$: the dot product is commutative;
+- $\vc{a}\cdot(\vc{b}+\vc{c}) = \vc{a}\cdot\vc{b} + \vc{a}\cdot\vc{c}$: the dot product is distributive over addition^[This is easiest to prove using the component form of the dot product, but unfortunately that gives a circular proof. To prove it directly requires a lot of geometry and trigonometry.].
+
+### The dot product with components
+A particularly important property becomes apparent when we find the dot product of vectors in components $\vc{a}=\cvv{a_1}{a_2}{a_3}$ and $\vc{b}=\cvv{b_1}{b_2}{b_3}$ using the rules above:
+
+$$
+\begin{aligned}
+\vc{a}\cdot\vc{b} &= \left(a_1 \hc{x} + a_2 \hc{y} + a_3\hc{z}\right)\cdot\left(b_1 \hc{x} + b_2 \hc{y} + b_3\hc{z}\right) \\
+&= a_1b_1 \hc{x}\cdot\hc{x} + a_1b_2 \hc{x}\cdot\hc{y} + a_1b_3 \hc{x}\cdot\hc{z} +
+a_2b_1 \hc{y}\cdot\hc{x} + a_2b_2 \hc{y}\cdot\hc{y} + a_2b_3 \hc{y}\cdot\hc{z} \\ &\;+
+a_3b_1 \hc{z}\cdot\hc{x} + a_3b_2 \hc{z}\cdot\hc{y} + a_3b_3 \hc{z}\cdot\hc{z} \\
+&= a_1b_1 + a_2b_2 + a_3b_3,
+\end{aligned}
+$$
+
+where we have used the facts that $\hc{x}\cdot\hc{x}=\hc{y}\cdot\hc{y}=\hc{z}\cdot\hc{z}=1$ and $\hc{x}\cdot\hc{y}=\hc{x}\cdot\hc{z}=\hc{y}\cdot\hc{z}=0$.
+
+:::{.callout-note}
+To calculate the dot product of two vectors, multiply the components together and add them up.
+:::
+
+**Think:** if $\vc{a}=\cvv{2}{1}{-1}$ and $\vc{b}=\cvv{0}{1}{1}$, what is $\vc{a}\cdot\vc{b}$? What do you deduce about the vectors?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$2\times0 + 1\times1 + (-1)\times1 = 0$.
+
+The dot product is zero and neither of the vectors is $\vc{0}$ so the vectors are perpendicular.
+:::
+
+
+::: {.callout-important title="Common mistake"}
+Very often people do something like $\cvv{1}{2}{3}\cdot\cvv{3}{2}{4} = \cvv{1\times 3}{2\times2}{3\times4}$. This is WRONG because the result of the dot product must be a scalar, not a vector.
+:::
+
+### Example for dot products
+Show that the diagonals of a rhombus are perpendicular.
+
+::: {.callout-tip collapse="true"}
+## Solution
+
+Let the corners of the rhombus be $A$, $B$, $C$ and $D$.
+
+![](vf13.png){}
+
+It's a paralellogram, so $\V{AB}=\V{DC}$ - let's call this $\vc{a}$ - and $\V{BC}=\V{AD}=\vc{b}$.
+
+Futhermore, for a rhombus we know the side lengths are the same, so $|\vc{a}| = |\vc{b}|$.
+
+We want to show that $\V{AC}\cdot\V{BD} = 0$. 
+
+We see from the diagram that $\V{AC} = \vc{a}+\vc{b}$ and $\V{BD} = \vc{b}-\vc{a}$.
+Then 
+
+$$
+\V{AC}\cdot\V{BD} = (\vc{a}+\vc{b})\cdot(\vc{b}-\vc{a}) = \vc{a}\cdot\vc{b} - \vc{a}\cdot\vc{a} + \vc{b}\cdot\vc{b} - \vc{b}\cdot\vc{a} = |\vc{b}|^2-|\vc{a}|^2 = 0.
+$$
+
+:::
+
+## The cross product
+Unlike the dot product, which is valid in any dimensions, the cross product is only defined in three dimensions.^[Sometimes people define a cross product in two dimensions by imagining the 2d vectors on a plane in 3d space, but we won't use that definition.] Also unlike the dot product, the cross product of two vectors is a *vector*. For this reason it's called the vector product. It's written with a cross $\times$.^[Occasionally you see people use $\wedge$ instead. In modern maths this the exterior product, which is a related but different concept.]
+
+The geometric definition is as follows:
+
+- If either $\vc{a}$ or $\vc{b}$ is $\vc{0}$, or they're parallel, then $\vc{a}\times\vc{b}=\vc{0}$.
+- Otherwise, find a vector the is perpendicular to both $\vc{a}$ and $\vc{b}$ using the *right-hand rule*:
+
+![Figure by Izaak Neutelings, from <https://tikz.net>.](righthand_rule-001.png){width=50%}
+
+- The magnitude of the result $|\vc{a}\times\vc{b}| = |\vc{a}||\vc{b}|\sin\theta$.
+
+Note the similarity to the dot product, but with sine instead of cosine, and the fact it's a vector.
+
+### Properties
+The following properties have similarities and differences with the corresponding ones for the dot product:
+
+- If $\vc{a}$ and $\vc{b}$ are parallel, $\vc{a}\times\vc{b}=\vc{0}$.
+- $\vc{a}\times\vc{b} = \vc{0}$ tells us that the vectors are parallel, or one of $\vc{a}$ and $\vc{b}$ is $\vc{0}$;
+- $\vc{a}\times\vc{a} = \vc{0}$;
+- $\vc{a}\times(\lambda\vc{b}) = \lambda (\vc{a}\times\vc{b})$;
+- $\vc{a}\times\vc{b} = -\vc{b}\times\vc{a}$: the dot product is **anti**commutative;
+- $\vc{a}\times(\vc{b}+\vc{c}) = \vc{a}\times\vc{b} + \vc{a}\times\vc{c}$: the cross product is distributive over addition.
+
+### The cross product with components
+If you apply the rules above, using the fact that $\hc{x}\times\hc{y}=\hc{z}$ - which is called a *right-handed coordinate system* - you can prove the following important formula:
+
+$$
+\cvv{a_1}{a_2}{a_3} \times \cvv{b_1}{b_2}{b_3} = \cvv{a_2b_3-a_3b_2}{a_3b_1-a_1b_3}{a_1b_2 - a_2b_1}.
+$$
+
+This ugly formula is one of the only things in this module I recommend you learn by heart. There are patterns which can help you memorise it; try to find something that works for you.
+
+::: {.callout-important title="Common mistake"}
+People mess up the second component of the cross product. It might be the negative of what you intuitively think it should be.
+:::
+
+:::{.callout-note}
+Many people like to write the cross product as the determinant of a matrix, as in
+
+$$
+\cvv{a_1}{a_2}{a_3} \times \cvv{b_1}{b_2}{b_3} = \left|\begin{matrix} \hc{x} & \hc{y} & \hc{z} \\
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3
+\end{matrix}\right|.
+$$
+
+Don't worry if you're not familiar with determinants (or matrices), we'll see them in a couple of weeks.
+
+I think this formula is stupid anyway because you can't put vectors inside a matrix like that. But if it works for you, feel free to use it.
+:::
+
+**Think:** if $\vc{a}=\cvv{2}{1}{-1}$ and $\vc{b}=\cvv{0}{1}{1}$, what is $\vc{a}\times\vc{b}$?
+
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$\cvv{1\times1-(-1)\times1}{-1\times0-2\times1}{2\times1 - 1\times 0} = \cvv{2}{-2}{2}.$$
+:::
+
+### Applications
+You may remember the formula for the area of a triangle as $\frac{1}{2} b c \sin \alpha$ where $\alpha$ is the angle between the sides of length $b$ and $c$. Looking at the definition of the cross product, we see that
+
+$$\frac{1}{2}|\vc{a}\times\vc{b}|$$
+
+is the area of the triangle between $\vc{a}$ and $\vc{b}$. Similarly, $|\vc{a}\times\vc{b}|$ is the area of the parallelogram with sides $\vc{a}$ and $\vc{b}$:
+
+![](vf16.png){}
+
+### Example for cross products
+
+Find a unit vector that is perpendicular to both $\vc{a}=\cvv{3}{1}{2}$ and $\vc{b}=\cvv{1}{1}{-1}$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+
+We know that the result of the cross product $\vc{a}\times\vc{b}$ is perpendicular to both of them:
+
+$$\cvv{3}{1}{2}\times\cvv{1}{1}{-1} = \cvv{-3}{5}{2}.$$
+
+The question asks for a unit vector, so we need to divide this vector by its own magnitude. The magnitude is
+
+$$\sqrt{(-3)^2+5^2+2^2} = \sqrt{38}$$
+
+and so the final answer is
+
+$$\cvv{\frac{-3}{\sqrt{38}}}{\frac{5}{\sqrt{38}}}{\frac{2}{\sqrt{38}}}.$$
+
+The vector opposite to this, i.e. $\cvv{\frac{3}{\sqrt{38}}}{\frac{-5}{\sqrt{38}}}{\frac{-2}{\sqrt{38}}}$, would also satisfy the requirements.
+
+:::

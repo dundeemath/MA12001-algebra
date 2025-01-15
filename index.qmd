@@ -10,3 +10,5 @@ The module MA12001 is split into two halves. This half, which we call "algebra" 
 These notes contain all the examinable material within this half of the module, and maybe also some bonus stuff, which will be clearly marked as non-examinable. For details of the organisation of the module this year, please see My Dundee.
 
 I'll be updating these notes weekly as we go through, and at the end of the semester I'll make the full set of these notes available as a PDF. If you'd like to read ahead, last year's full notes are available on MyDundee.
+
+It's very likely that there are mistakes in these notes. If you find one, please let me know ASAP at <mailto:jparker002@dundee.ac.uk>, no matter how trivial you think the mistake is.

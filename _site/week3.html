@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 2: General Vectors – MA12001 Algebra</title>
+<title>Week 3: Dot and cross products – MA12001 Algebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html">Chapter 1: Vectors</a></li><li class="breadcrumb-item"><a href="./week2.html">Week 2: General Vectors</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      MA12001 Algebra
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -157,7 +159,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2: General Vectors</span></a>
   </div>
 </li>
@@ -191,17 +193,20 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-vectors" id="toc-sec-vectors" class="nav-link active" data-scroll-target="#sec-vectors">General vectors</a>
+  <li><a href="#vector-vector-multiplication" id="toc-vector-vector-multiplication" class="nav-link active" data-scroll-target="#vector-vector-multiplication">Vector-vector multiplication</a>
   <ul class="collapse">
-  <li><a href="#unit-vectors" id="toc-unit-vectors" class="nav-link" data-scroll-target="#unit-vectors">Unit vectors</a></li>
-  <li><a href="#position-vectors" id="toc-position-vectors" class="nav-link" data-scroll-target="#position-vectors">Position vectors</a></li>
-  <li><a href="#basis-vectors" id="toc-basis-vectors" class="nav-link" data-scroll-target="#basis-vectors">Basis vectors</a></li>
-  <li><a href="#column-vectors" id="toc-column-vectors" class="nav-link" data-scroll-target="#column-vectors">Column vectors</a></li>
-  <li><a href="#pythagorass-rule" id="toc-pythagorass-rule" class="nav-link" data-scroll-target="#pythagorass-rule">Pythagoras’s rule</a></li>
-  <li><a href="#examples-for-general-vectors" id="toc-examples-for-general-vectors" class="nav-link" data-scroll-target="#examples-for-general-vectors">Examples for general vectors</a>
+  <li><a href="#the-dot-product" id="toc-the-dot-product" class="nav-link" data-scroll-target="#the-dot-product">The dot product</a>
   <ul class="collapse">
-  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example 1</a></li>
-  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example 2</a></li>
+  <li><a href="#properties" id="toc-properties" class="nav-link" data-scroll-target="#properties">Properties</a></li>
+  <li><a href="#the-dot-product-with-components" id="toc-the-dot-product-with-components" class="nav-link" data-scroll-target="#the-dot-product-with-components">The dot product with components</a></li>
+  <li><a href="#example-for-dot-products" id="toc-example-for-dot-products" class="nav-link" data-scroll-target="#example-for-dot-products">Example for dot products</a></li>
+  </ul></li>
+  <li><a href="#the-cross-product" id="toc-the-cross-product" class="nav-link" data-scroll-target="#the-cross-product">The cross product</a>
+  <ul class="collapse">
+  <li><a href="#properties-1" id="toc-properties-1" class="nav-link" data-scroll-target="#properties-1">Properties</a></li>
+  <li><a href="#the-cross-product-with-components" id="toc-the-cross-product-with-components" class="nav-link" data-scroll-target="#the-cross-product-with-components">The cross product with components</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
+  <li><a href="#example-for-cross-products" id="toc-example-for-cross-products" class="nav-link" data-scroll-target="#example-for-cross-products">Example for cross products</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -210,9 +215,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html">Chapter 1: Vectors</a></li><li class="breadcrumb-item"><a href="./week2.html">Week 2: General Vectors</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 2: General Vectors</h1>
+<h1 class="title">Week 3: Dot and cross products</h1>
 </div>
 
 
@@ -232,25 +237,74 @@ window.Quarto = {
 <div class="hidden">
 
 </div>
-<section id="sec-vectors" class="level1">
-<h1>General vectors</h1>
-<p>In the previous section, we worked out a set of rules that it makes sense for mathematical operations on displacements to obey. Mathematicians like to work the other way round: start from a list of rules, and see what we can deduce. This is how, for example, you might be introduced to the mathematical idea of groups.</p>
-<p>Firstly, let’s introduce some notation to make it clear what’s a vector and what’s not. We use bold lowercase letters for vectors, like <span class="math inline">\({\mathbf{a}}, {\mathbf{b}}, {\mathbf{x}}\)</span> etc. For scalars, we’ll use non-bold letters, and very often we’ll use Greek letters like <span class="math inline">\(\alpha, \beta, \lambda\)</span> and <span class="math inline">\(\mu\)</span>. We write the magnitude (length) of the vector <span class="math inline">\({\mathbf{a}}\)</span> as <span class="math inline">\(|{\mathbf{a}}|\)</span>. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>For vectors (specifically a <em>normed vector space</em>, but you don’t need to know that), the rules are as follows. For any vectors <span class="math inline">\({\mathbf{a}}\)</span>, <span class="math inline">\({\mathbf{b}}\)</span> and <span class="math inline">\({\mathbf{c}}\)</span> and any scalars <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(\mu\)</span>,</p>
+<section id="vector-vector-multiplication" class="level1">
+<h1>Vector-vector multiplication</h1>
+<p>So far for vectors we have defined addition of two vectors, and the multiplication of a vector by a scalar. What about multiplying two vectors together?</p>
+<p>For vector addition, we add the components together to get a new vector. The obvious definition for vector multiplication would seem to be multiplying the components to get a new vector. However, this operation turns out to be somewhat meaningless and useless for mathematicians and physicists.</p>
+<p>Instead, we will see two types of ‘multiplication’, called the dot and cross product.</p>
+<section id="the-dot-product" class="level2">
+<h2 class="anchored" data-anchor-id="the-dot-product">The dot product</h2>
+<p>The first type of multiplication is called the <em>scalar product</em>, because the result is a scalar. We will usually call it the <em>dot product</em> and you might also see <em>inner product</em>.</p>
+<p>This operation is defined for <span class="math inline">\(\mathbb{R}^n\)</span> for all <span class="math inline">\(n\)</span> as follows:</p>
+<p><span class="math display">\[{\mathbf{a}}\cdot{\mathbf{b}} = |{\mathbf{a}}|\,|{\mathbf{b}}|\,\cos\theta,\]</span></p>
+<p>where <span class="math inline">\(\theta\)</span> is the angle between the two vectors.</p>
+<p><img src="vf12.png" class="img-fluid"></p>
+<section id="properties" class="level3">
+<h3 class="anchored" data-anchor-id="properties">Properties</h3>
+<p>Following the definition above and the set of <a href="./week2.html#sec-vectors">rules for vectors</a>, you can prove the following rules:</p>
 <ul>
-<li><span class="math inline">\({\mathbf{a}}+({\mathbf{b}}+{\mathbf{c}}) = ({\mathbf{a}}+{\mathbf{b}})+{\mathbf{c}}\)</span>: associativity of vector addition.</li>
-<li><span class="math inline">\({\mathbf{a}}+{\mathbf{b}} = {\mathbf{b}} + {\mathbf{a}}\)</span>: commutativity of vector addition.</li>
-<li><span class="math inline">\({\mathbf{a}}+{\mathbf{0}}={\mathbf{a}}\)</span>: adding zero does nothing.</li>
-<li><span class="math inline">\({\mathbf{a}}+(-{\mathbf{a}}) = 0\)</span>: subtraction works as expected.</li>
-<li><span class="math inline">\(\lambda(\mu {\mathbf{a}}) = (\lambda \mu) {\mathbf{a}}\)</span>: multiplication by scalars works as expected.</li>
-<li><span class="math inline">\(\lambda({\mathbf{a}}+{\mathbf{b}}) = \lambda{\mathbf{a}}+\lambda{\mathbf{b}}\)</span>: distributivity of scalar multiplication over vector addition.</li>
-<li><span class="math inline">\((\lambda+\mu){\mathbf{a}} = \lambda {\mathbf{a}} + \mu {\mathbf{a}}\)</span>: distributivity of scalar multiplication over scalar addition.</li>
-<li><span class="math inline">\(|{\mathbf{a}}|\geq 0\)</span>: the magnitude can’t be negative</li>
-<li><span class="math inline">\(|{\mathbf{a}}|=0\)</span> if and only if <span class="math inline">\({\mathbf{a}}={\mathbf{0}}\)</span>: there is only one vector with magnitude 0.</li>
-<li><span class="math inline">\(|\lambda{\mathbf{a}}| = |\lambda| |{\mathbf{a}}|\)</span>: multiplying by a scalar just multiplies the magnitude by that amount (removing the minus sign if necessary).</li>
-<li><span class="math inline">\(|{\mathbf{a}}+{\mathbf{b}}|\leq |{\mathbf{a}}|+|{\mathbf{b}}|\)</span>: the triangle inequality.</li>
+<li>If <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> are perpendicular, <span class="math inline">\({\mathbf{a}}\cdot{\mathbf{b}}=0\)</span>.</li>
+<li><span class="math inline">\({\mathbf{a}}\cdot{\mathbf{b}} = 0\)</span> tells us that the vectors are perpendicular, or one of <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> is <span class="math inline">\({\mathbf{0}}\)</span>;</li>
+<li><span class="math inline">\({\mathbf{a}}\cdot{\mathbf{a}} = |{\mathbf{a}}|^2\)</span>;</li>
+<li><span class="math inline">\({\mathbf{a}}\cdot(\lambda{\mathbf{b}}) = \lambda ({\mathbf{a}}\cdot{\mathbf{b}})\)</span>;</li>
+<li><span class="math inline">\({\mathbf{a}}\cdot{\mathbf{b}} = {\mathbf{b}}\cdot{\mathbf{a}}\)</span>: the dot product is commutative;</li>
+<li><span class="math inline">\({\mathbf{a}}\cdot({\mathbf{b}}+{\mathbf{c}}) = {\mathbf{a}}\cdot{\mathbf{b}} + {\mathbf{a}}\cdot{\mathbf{c}}\)</span>: the dot product is distributive over addition<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
 </ul>
-<p>That’s a long list! Try not to memorise these by rote, but instead learn the rules through practicing with example questions. Most of them are very intuitive. The last rule, the triangle inequality, isn’t so intuitive to me.</p>
+</section>
+<section id="the-dot-product-with-components" class="level3">
+<h3 class="anchored" data-anchor-id="the-dot-product-with-components">The dot product with components</h3>
+<p>A particularly important property becomes apparent when we find the dot product of vectors in components <span class="math inline">\({\mathbf{a}}=\begin{bmatrix} a_1 \\ a_2 \\ a_3\end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{b}}=\begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix}\)</span> using the rules above:</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\mathbf{a}}\cdot{\mathbf{b}} &amp;= \left(a_1 \hat{{\mathbf{x}}} + a_2 \hat{{\mathbf{y}}} + a_3\hat{{\mathbf{z}}}\right)\cdot\left(b_1 \hat{{\mathbf{x}}} + b_2 \hat{{\mathbf{y}}} + b_3\hat{{\mathbf{z}}}\right) \\
+&amp;= a_1b_1 \hat{{\mathbf{x}}}\cdot\hat{{\mathbf{x}}} + a_1b_2 \hat{{\mathbf{x}}}\cdot\hat{{\mathbf{y}}} + a_1b_3 \hat{{\mathbf{x}}}\cdot\hat{{\mathbf{z}}} +
+a_2b_1 \hat{{\mathbf{y}}}\cdot\hat{{\mathbf{x}}} + a_2b_2 \hat{{\mathbf{y}}}\cdot\hat{{\mathbf{y}}} + a_2b_3 \hat{{\mathbf{y}}}\cdot\hat{{\mathbf{z}}} \\ &amp;\;+
+a_3b_1 \hat{{\mathbf{z}}}\cdot\hat{{\mathbf{x}}} + a_3b_2 \hat{{\mathbf{z}}}\cdot\hat{{\mathbf{y}}} + a_3b_3 \hat{{\mathbf{z}}}\cdot\hat{{\mathbf{z}}} \\
+&amp;= a_1b_1 + a_2b_2 + a_3b_3,
+\end{aligned}
+\]</span></p>
+<p>where we have used the facts that <span class="math inline">\(\hat{{\mathbf{x}}}\cdot\hat{{\mathbf{x}}}=\hat{{\mathbf{y}}}\cdot\hat{{\mathbf{y}}}=\hat{{\mathbf{z}}}\cdot\hat{{\mathbf{z}}}=1\)</span> and <span class="math inline">\(\hat{{\mathbf{x}}}\cdot\hat{{\mathbf{y}}}=\hat{{\mathbf{x}}}\cdot\hat{{\mathbf{z}}}=\hat{{\mathbf{y}}}\cdot\hat{{\mathbf{z}}}=0\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To calculate the dot product of two vectors, multiply the components together and add them up.</p>
+</div>
+</div>
+<p><strong>Think:</strong> if <span class="math inline">\({\mathbf{a}}=\begin{bmatrix} 2 \\ 1 \\ -1\end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{b}}=\begin{bmatrix} 0 \\ 1 \\ 1\end{bmatrix}\)</span>, what is <span class="math inline">\({\mathbf{a}}\cdot{\mathbf{b}}\)</span>? What do you deduce about the vectors?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(2\times0 + 1\times1 + (-1)\times1 = 0\)</span>.</p>
+<p>The dot product is zero and neither of the vectors is <span class="math inline">\({\mathbf{0}}\)</span> so the vectors are perpendicular.</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-important callout-titled" title="Common mistake">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -261,46 +315,13 @@ Common mistake
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>All too often I see people use the ‘rule’ that <span class="math inline">\(|{\mathbf{a}}+{\mathbf{b}}| = |{\mathbf{a}}| + |{\mathbf{b}}|\)</span>. This is only true if the vectors have the same direction.</p>
-</div>
-</div>
-<section id="unit-vectors" class="level2">
-<h2 class="anchored" data-anchor-id="unit-vectors">Unit vectors</h2>
-<p>A <em>unit vector</em> is a vector with magnitude equal to 1. We sometimes use a little hat to denote unit vectors, like <span class="math inline">\(\hat{{\mathbf{a}}}\)</span>. So <span class="math inline">\(|\hat{{\mathbf{a}}}| = 1\)</span>.</p>
-<p>Suppose you want to find a unit vector <em>in the direction of</em> another vector <span class="math inline">\({\mathbf{a}}\)</span>. Well <span class="math inline">\({\mathbf{b}} = \lambda {\mathbf{a}}\)</span> is a vector in the right direction. Using the rules above, it has magnitude <span class="math inline">\(|{\mathbf{b}}|=|\lambda{\mathbf{a}}| = |\lambda| |{\mathbf{a}}|\)</span>. So if we choose <span class="math inline">\(\lambda = \frac{1}{|{\mathbf{a}}|}\)</span>, we have <span class="math inline">\(|{\mathbf{b}}| = \frac{1}{|{\mathbf{a}}|} |{\mathbf{a}}| = 1\)</span>. So <span class="math inline">\({\mathbf{b}}\)</span> is a unit vector in the direction of <span class="math inline">\({\mathbf{a}}\)</span>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To turn any vector into a unit vector, multiply it by <em>one divided by the magnitude</em>.</p>
+<p>Very often people do something like <span class="math inline">\(\begin{bmatrix} 1 \\ 2 \\ 3\end{bmatrix}\cdot\begin{bmatrix} 3 \\ 2 \\ 4\end{bmatrix} = \begin{bmatrix} 1\times 3 \\ 2\times 2 \\ 3\times 4\end{bmatrix}\)</span>. This is WRONG because the result of the dot product must be a scalar, not a vector.</p>
 </div>
 </div>
 </section>
-<section id="position-vectors" class="level2">
-<h2 class="anchored" data-anchor-id="position-vectors">Position vectors</h2>
-<p>So far we’ve discussed points in space. If we choose a special point, called the origin <span class="math inline">\(O\)</span>, then we can define the position of any other point relative to this.</p>
-<p>So given points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, instead of just thinking about the displacement between them, if we choose an origin we can use vectos <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> to denote their positions relative to the origin.</p>
-<p><img src="vf8.png" class="img-fluid"></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The position vector of a point is just its displacement from the origin, <span class="math inline">\({\mathbf{a}}={\overrightarrow{OA}}\)</span>.</p>
-</div>
-</div>
-<p><strong>Think:</strong> what is the displacement vector <span class="math inline">\({\overrightarrow{AB}}\)</span> in terms of the position vectors <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>?</p>
+<section id="example-for-dot-products" class="level3">
+<h3 class="anchored" data-anchor-id="example-for-dot-products">Example for dot products</h3>
+<p>Show that the diagonals of a rhombus are perpendicular.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -313,23 +334,57 @@ Solution
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>We know that <span class="math inline">\({\mathbf{a}}={\overrightarrow{OA}}\)</span> and <span class="math inline">\({\mathbf{b}} = {\overrightarrow{OB}}\)</span>. Remember from our rules for displacements that <span class="math inline">\({\overrightarrow{AB}} = {\overrightarrow{AO}}+{\overrightarrow{OB}} = -{\overrightarrow{OA}} + {\overrightarrow{OB}}\)</span>. So <span class="math inline">\({\overrightarrow{OA}} = -{\mathbf{a}} + {\mathbf{b}} = {\mathbf{b}} - {\mathbf{a}}\)</span>.</p>
+<p>Let the corners of the rhombus be <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> and <span class="math inline">\(D\)</span>.</p>
+<p><img src="vf13.png" class="img-fluid"></p>
+<p>It’s a paralellogram, so <span class="math inline">\({\overrightarrow{AB}}={\overrightarrow{DC}}\)</span> - let’s call this <span class="math inline">\({\mathbf{a}}\)</span> - and <span class="math inline">\({\overrightarrow{BC}}={\overrightarrow{AD}}={\mathbf{b}}\)</span>.</p>
+<p>Futhermore, for a rhombus we know the side lengths are the same, so <span class="math inline">\(|{\mathbf{a}}| = |{\mathbf{b}}|\)</span>.</p>
+<p>We want to show that <span class="math inline">\({\overrightarrow{AC}}\cdot{\overrightarrow{BD}} = 0\)</span>.</p>
+<p>We see from the diagram that <span class="math inline">\({\overrightarrow{AC}} = {\mathbf{a}}+{\mathbf{b}}\)</span> and <span class="math inline">\({\overrightarrow{BD}} = {\mathbf{b}}-{\mathbf{a}}\)</span>. Then</p>
+<p><span class="math display">\[
+{\overrightarrow{AC}}\cdot{\overrightarrow{BD}} = ({\mathbf{a}}+{\mathbf{b}})\cdot({\mathbf{b}}-{\mathbf{a}}) = {\mathbf{a}}\cdot{\mathbf{b}} - {\mathbf{a}}\cdot{\mathbf{a}} + {\mathbf{b}}\cdot{\mathbf{b}} - {\mathbf{b}}\cdot{\mathbf{a}} = |{\mathbf{b}}|^2-|{\mathbf{a}}|^2 = 0.
+\]</span></p>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+</section>
+</section>
+<section id="the-cross-product" class="level2">
+<h2 class="anchored" data-anchor-id="the-cross-product">The cross product</h2>
+<p>Unlike the dot product, which is valid in any dimensions, the cross product is only defined in three dimensions.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Also unlike the dot product, the cross product of two vectors is a <em>vector</em>. For this reason it’s called the vector product. It’s written with a cross <span class="math inline">\(\times\)</span>.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>The geometric definition is as follows:</p>
+<ul>
+<li>If either <span class="math inline">\({\mathbf{a}}\)</span> or <span class="math inline">\({\mathbf{b}}\)</span> is <span class="math inline">\({\mathbf{0}}\)</span>, or they’re parallel, then <span class="math inline">\({\mathbf{a}}\times{\mathbf{b}}={\mathbf{0}}\)</span>.</li>
+<li>Otherwise, find a vector the is perpendicular to both <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> using the <em>right-hand rule</em>:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="righthand_rule-001.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Figure by Izaak Neutelings, from <a href="https://tikz.net" class="uri">https://tikz.net</a>.</figcaption>
+</figure>
 </div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To get the displacement vector in terms of position vectors, subtract the position vector of the start from the position vector of the end.</p>
-</div>
-</div>
+<ul>
+<li>The magnitude of the result <span class="math inline">\(|{\mathbf{a}}\times{\mathbf{b}}| = |{\mathbf{a}}||{\mathbf{b}}|\sin\theta\)</span>.</li>
+</ul>
+<p>Note the similarity to the dot product, but with sine instead of cosine, and the fact it’s a vector.</p>
+<section id="properties-1" class="level3">
+<h3 class="anchored" data-anchor-id="properties-1">Properties</h3>
+<p>The following properties have similarities and differences with the corresponding ones for the dot product:</p>
+<ul>
+<li>If <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> are parallel, <span class="math inline">\({\mathbf{a}}\times{\mathbf{b}}={\mathbf{0}}\)</span>.</li>
+<li><span class="math inline">\({\mathbf{a}}\times{\mathbf{b}} = {\mathbf{0}}\)</span> tells us that the vectors are parallel, or one of <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> is <span class="math inline">\({\mathbf{0}}\)</span>;</li>
+<li><span class="math inline">\({\mathbf{a}}\times{\mathbf{a}} = {\mathbf{0}}\)</span>;</li>
+<li><span class="math inline">\({\mathbf{a}}\times(\lambda{\mathbf{b}}) = \lambda ({\mathbf{a}}\times{\mathbf{b}})\)</span>;</li>
+<li><span class="math inline">\({\mathbf{a}}\times{\mathbf{b}} = -{\mathbf{b}}\times{\mathbf{a}}\)</span>: the dot product is <strong>anti</strong>commutative;</li>
+<li><span class="math inline">\({\mathbf{a}}\times({\mathbf{b}}+{\mathbf{c}}) = {\mathbf{a}}\times{\mathbf{b}} + {\mathbf{a}}\times{\mathbf{c}}\)</span>: the cross product is distributive over addition.</li>
+</ul>
+</section>
+<section id="the-cross-product-with-components" class="level3">
+<h3 class="anchored" data-anchor-id="the-cross-product-with-components">The cross product with components</h3>
+<p>If you apply the rules above, using the fact that <span class="math inline">\(\hat{{\mathbf{x}}}\times\hat{{\mathbf{y}}}=\hat{{\mathbf{z}}}\)</span> - which is called a <em>right-handed coordinate system</em> - you can prove the following important formula:</p>
+<p><span class="math display">\[
+\begin{bmatrix} a_1 \\ a_2 \\ a_3\end{bmatrix} \times \begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix} = \begin{bmatrix} a_2b_3-a_3b_2 \\ a_3b_1-a_1b_3 \\ a_1b_2 - a_2b_1\end{bmatrix}.
+\]</span></p>
+<p>This ugly formula is one of the only things in this module I recommend you learn by heart. There are patterns which can help you memorise it; try to find something that works for you.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Common mistake">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -340,15 +395,9 @@ Common mistake
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For some reason people like to say that <span class="math inline">\({\overrightarrow{AB}}={\mathbf{a}}+{\mathbf{b}}\)</span>. This is clearly wrong. Remember that <span class="math inline">\({\overrightarrow{BA}}=-{\overrightarrow{AB}}\)</span>.</p>
+<p>People mess up the second component of the cross product. It might be the negative of what you intuitively think it should be.</p>
 </div>
 </div>
-<p>Later in the module, we’ll want to talk about a position vector for a general point in space. For historical reasons, this is usually written as <span class="math inline">\({\mathbf{r}}\)</span>. Think of <span class="math inline">\({\mathbf{r}}\)</span> as an arrow pointing from the origin <span class="math inline">\(O\)</span> to wherever you currently are.</p>
-</section>
-<section id="basis-vectors" class="level2">
-<h2 class="anchored" data-anchor-id="basis-vectors">Basis vectors</h2>
-<p>In two dimensions, you can write any vector as a <em>linear combination</em> of any two other vectors that aren’t parallel.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<p>That means, if we have <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> and these aren’t parallel, so there is no <span class="math inline">\(\lambda\)</span> such that <span class="math inline">\({\mathbf{a}}=\lambda{\mathbf{b}}\)</span>, then for <em>any</em> vector <span class="math inline">\({\mathbf{c}}\)</span>, we can find <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> such that <span class="math inline">\({\mathbf{c}}=\alpha{\mathbf{a}}+\beta{\mathbf{b}}\)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -359,60 +408,20 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When doing vector problems, choose two non-parallel vectors and write all the other vectors in terms of these.</p>
+<p>Many people like to write the cross product as the determinant of a matrix, as in</p>
+<p><span class="math display">\[
+\begin{bmatrix} a_1 \\ a_2 \\ a_3\end{bmatrix} \times \begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix} = \left|\begin{matrix} \hat{{\mathbf{x}}} &amp; \hat{{\mathbf{y}}} &amp; \hat{{\mathbf{z}}} \\
+a_1 &amp; a_2 &amp; a_3 \\
+b_1 &amp; b_2 &amp; b_3
+\end{matrix}\right|.
+\]</span></p>
+<p>Don’t worry if you’re not familiar with determinants (or matrices), we’ll see them in a couple of weeks.</p>
+<p>I think this formula is stupid anyway because you can’t put vectors inside a matrix like that. But if it works for you, feel free to use it.</p>
 </div>
 </div>
-<p>It’s extra helpful if we choose two vectors that are orthogonal (at right angles) and unit vectors. Normally we choose a vector of length 1 in the horizontal direction and call this <span class="math inline">\(\hat{{\mathbf{x}}}\)</span> and a vector of length 1 in the vertical direction and call this <span class="math inline">\(\hat{{\mathbf{y}}}\)</span>.</p>
-<p>Then for any vector <span class="math inline">\({\mathbf{a}}\)</span>, we can find unique scalar numbers <span class="math inline">\(a_1\)</span> and <span class="math inline">\(a_2\)</span> such that <span class="math inline">\({\mathbf{a}} = a_1 \hat{{\mathbf{x}}} + a_2 \hat{{\mathbf{y}}}\)</span>.</p>
-<p>In fact, we do this so often that we introduce a new notation: <span class="math display">\[{\mathbf{a}} = \begin{bmatrix} a_1 \\ a_2 \end{bmatrix}.\]</span> <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<p>And the unit basis vectors are simply <span class="math display">\[\hat{{\mathbf{x}}} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\]</span> and <span class="math display">\[\hat{{\mathbf{y}}} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}.\]</span></p>
-<p>In three dimensions we write <span class="math display">\[{\mathbf{b}} = b_1 \hat{{\mathbf{x}}} + b_2 \hat{{\mathbf{z}}} + b_3 \hat{{\mathbf{y}}} = \begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix}.\]</span></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Vectors are not the same as coordinates! They are related but conceptually different. The position vector for the coordinates <span class="math inline">\((3,4,5)\)</span> is <span class="math inline">\(\begin{bmatrix} 3 \\ 4 \\ 5\end{bmatrix}\)</span>, and we use the two different notations to distinguish them.</p>
-</div>
-</div>
-<p>For the general position vector, the position in 3D space is given by the coordinates <span class="math inline">\((x,y,z)\)</span> so <span class="math inline">\({\mathbf{r}} = \begin{bmatrix} x \\ y \\ z\end{bmatrix}\)</span>.</p>
-</section>
-<section id="column-vectors" class="level2">
-<h2 class="anchored" data-anchor-id="column-vectors">Column vectors</h2>
-<p>With this new notation, everything behaves exactly as you would expect:</p>
-<p><span class="math display">\[\begin{bmatrix} 5 \\ 2 \end{bmatrix} + \begin{bmatrix} 1 \\ -3 \end{bmatrix} = \begin{bmatrix} 5+1 \\ 2-3 \end{bmatrix} = \begin{bmatrix} 6 \\ -1 \end{bmatrix}.\]</span></p>
-<p><span class="math display">\[4\begin{bmatrix} 5 \\ 2 \end{bmatrix} = \begin{bmatrix} 4\times 5 \\ 4\times 2 \end{bmatrix} = \begin{bmatrix} 20 \\ 8 \end{bmatrix}.\]</span></p>
-<p>If you’re unsure about any of these rules, you can rewrite <span class="math inline">\(\begin{bmatrix} 5 \\ 2 \end{bmatrix}\)</span> as <span class="math inline">\(5\hat{{\mathbf{x}}}+2\hat{{\mathbf{y}}}\)</span> etc. and apply the list of rules above.</p>
-<p>Often we use the mathematical notation that <span class="math display">\[\begin{bmatrix} -1 \\ 3 \\ -3\end{bmatrix}\in\mathbb{R}^3.\]</span> This says that the vector lives in the set of obejcts which can be written as three real numbers. Obviously for 2D we write <span class="math inline">\(\mathbb{R}^2\)</span> instead.</p>
-</section>
-<section id="pythagorass-rule" class="level2">
-<h2 class="anchored" data-anchor-id="pythagorass-rule">Pythagoras’s rule</h2>
-<p>We haven’t yet defined the magnitude of a general vector. What is the magnitude of <span class="math inline">\(\begin{bmatrix} 5 \\ 2 \end{bmatrix}\)</span>?</p>
-<p>From the rules so far, we know that <span class="math display">\[ \left|\begin{bmatrix} 5 \\ 2 \end{bmatrix}\right| = \left|5\hat{{\mathbf{x}}}+2\hat{{\mathbf{y}}}\right| \leq |5\hat{{\mathbf{x}}}| + |2\hat{{\mathbf{y}}}| = 5|\hat{{\mathbf{x}}}| + 2|\hat{{\mathbf{y}}} = 5\times1 + 2\times1 = 7\]</span> but that just tells us that <span class="math inline">\(\left|\begin{bmatrix} 5 \\ 2 \end{bmatrix}\right|\leq 7\)</span>. This isn’t enough.</p>
-<p>Actually there are lots of possible choices. In this module, we focus on normal, ‘flat’, <em>Euclidean</em> space: <span class="math display">\[\left|\begin{bmatrix} 5 \\ 2 \end{bmatrix}\right| = \sqrt{5^2 + 2^2} = \sqrt{29}\]</span> which is less than 7, as expected.</p>
-<p>Then general rule is: <span class="math display">\[|{\mathbf{a}}| = \sqrt{a_1^2 + a_2^2}\]</span> and in 3D <span class="math display">\[|{\mathbf{b}}| = \sqrt{b_1^2 + b_2^2 + b_3^2}\]</span>.</p>
-<p>To convince yourself these are good definition, draw a diagram and use Pythagoras’s theorem.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The magnitude of a vector is the square root of the components squared and added up.</p>
-</div>
-</div>
-<p><strong>Think:</strong> what is the magnitude of the vector <span class="math inline">\(\begin{bmatrix} 2 \\ -6 \\ -3\end{bmatrix}\)</span>?</p>
+<p><strong>Think:</strong> if <span class="math inline">\({\mathbf{a}}=\begin{bmatrix} 2 \\ 1 \\ -1\end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{b}}=\begin{bmatrix} 0 \\ 1 \\ 1\end{bmatrix}\)</span>, what is <span class="math inline">\({\mathbf{a}}\times{\mathbf{b}}\)</span>?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -421,23 +430,25 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[\sqrt{2^2 + (-6)^2 + (-3)^2} = \sqrt{4 + 36 + 9} = \sqrt{49} = 7.\]</span></p>
-<p>Don’t let the negatives confuse you!</p>
+<p><span class="math display">\[\begin{bmatrix} 1\times 1-(-1)\times 1 \\ -1\times 0-2\times 1 \\ 2\times 1 - 1\times 0\end{bmatrix} = \begin{bmatrix} 2 \\ -2 \\ 2\end{bmatrix}.\]</span></p>
 </div>
 </div>
 </div>
 </section>
-<section id="examples-for-general-vectors" class="level2">
-<h2 class="anchored" data-anchor-id="examples-for-general-vectors">Examples for general vectors</h2>
-<section id="example-1" class="level3">
-<h3 class="anchored" data-anchor-id="example-1">Example 1</h3>
-<p>Let <span class="math inline">\(ABCDEF\)</span> be a regular hexagon with sides of length 1. Let <span class="math inline">\(\hat{{\mathbf{v}}}\)</span> and <span class="math inline">\(\hat{{\mathbf{w}}}\)</span> correspond to 2 adjacent sides, <span class="math inline">\({\overrightarrow{AB}} = \hat{{\mathbf{v}}}\)</span>, <span class="math inline">\({\overrightarrow{AF}} = \hat{{\mathbf{w}}}\)</span> (where <span class="math inline">\(A\)</span> is the bottom left point, and <span class="math inline">\(A,B,C....\)</span> proceed anti-clockwise.)</p>
-<p>Express all other sides and the diagonals in terms of <span class="math inline">\(\hat{{\mathbf{v}}}\)</span> and <span class="math inline">\(\hat{{\mathbf{w}}}\)</span>. Also, find a unit vector in the direction <span class="math inline">\(\hat{{\mathbf{w}}}-\hat{{\mathbf{v}}}\)</span>.</p>
-<p><img src="vf7.png" class="img-fluid"></p>
+<section id="applications" class="level3">
+<h3 class="anchored" data-anchor-id="applications">Applications</h3>
+<p>You may remember the formula for the area of a triangle as <span class="math inline">\(\frac{1}{2} b c \sin \alpha\)</span> where <span class="math inline">\(\alpha\)</span> is the angle between the sides of length <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>. Looking at the definition of the cross product, we see that</p>
+<p><span class="math display">\[\frac{1}{2}|{\mathbf{a}}\times{\mathbf{b}}|\]</span></p>
+<p>is the area of the triangle between <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>. Similarly, <span class="math inline">\(|{\mathbf{a}}\times{\mathbf{b}}|\)</span> is the area of the parallelogram with sides <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>:</p>
+<p><img src="vf16.png" class="img-fluid"></p>
+</section>
+<section id="example-for-cross-products" class="level3">
+<h3 class="anchored" data-anchor-id="example-for-cross-products">Example for cross products</h3>
+<p>Find a unit vector that is perpendicular to both <span class="math inline">\({\mathbf{a}}=\begin{bmatrix} 3 \\ 1 \\ 2\end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{b}}=\begin{bmatrix} 1 \\ 1 \\ -1\end{bmatrix}\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -446,48 +457,16 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Sides: <span class="math inline">\({\overrightarrow{AB}}={\overrightarrow{ED}}=\hat{{\mathbf{v}}}\)</span>, <span class="math inline">\(\qquad{\overrightarrow{AF}}= {\overrightarrow{CD}}=\hat{{\mathbf{w}}}\)</span>, <span class="math inline">\(\qquad{\overrightarrow{BC}}= {\overrightarrow{FE}}=\hat{{\mathbf{v}}} + \hat{{\mathbf{w}}}\)</span>.</p>
-<p>Diagonals: <span class="math inline">\({\overrightarrow{FC}}=2\hat{{\mathbf{v}}}\)</span>, <span class="math inline">\(\qquad{\overrightarrow{BE}}=2\hat{{\mathbf{w}}}\)</span>, <span class="math inline">\(\qquad{\overrightarrow{AD}}=2(\hat{{\mathbf{v}}} + \hat{{\mathbf{w}}})\)</span>.</p>
-<p>We have <span class="math inline">\(\hat{{\mathbf{w}}} - \hat{{\mathbf{v}}} = {\overrightarrow{BF}} = {\overrightarrow{CE}}\)</span>.</p>
-<p>The length of <span class="math inline">\(\hat{{\mathbf{w}}} - \hat{{\mathbf{v}}}\)</span> is <span class="math inline">\(\sqrt{3}\)</span>, which can be obtained from triangle <span class="math inline">\(AFB\)</span>. Thus a unit vector in direction of <span class="math inline">\(\hat{{\mathbf{w}}} - \hat{{\mathbf{v}}}\)</span> is <span class="math display">\[\frac{1}{\sqrt{3}} ( \hat{{\mathbf{w}}} - \hat{{\mathbf{v}}}).\]</span></p>
+<p>We know that the result of the cross product <span class="math inline">\({\mathbf{a}}\times{\mathbf{b}}\)</span> is perpendicular to both of them:</p>
+<p><span class="math display">\[\begin{bmatrix} 3 \\ 1 \\ 2\end{bmatrix}\times\begin{bmatrix} 1 \\ 1 \\ -1\end{bmatrix} = \begin{bmatrix} -3 \\ 5 \\ 2\end{bmatrix}.\]</span></p>
+<p>The question asks for a unit vector, so we need to divide this vector by its own magnitude. The magnitude is</p>
+<p><span class="math display">\[\sqrt{(-3)^2+5^2+2^2} = \sqrt{38}\]</span></p>
+<p>and so the final answer is</p>
+<p><span class="math display">\[\begin{bmatrix} \frac{-3}{\sqrt{38}} \\ \frac{5}{\sqrt{38}} \\ \frac{2}{\sqrt{38}}\end{bmatrix}.\]</span></p>
+<p>The vector opposite to this, i.e.&nbsp;<span class="math inline">\(\begin{bmatrix} \frac{3}{\sqrt{38}} \\ \frac{-5}{\sqrt{38}} \\ \frac{-2}{\sqrt{38}}\end{bmatrix}\)</span>, would also satisfy the requirements.</p>
 </div>
-</div>
-</div>
-</section>
-<section id="example-2" class="level3">
-<h3 class="anchored" data-anchor-id="example-2">Example 2</h3>
-<p>Let the points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have position vectors <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>. Find the position vector of the midpoint of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>The midpoint of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is halfway along the line <span class="math inline">\(AB\)</span>. Call this point <span class="math inline">\(C\)</span>, and it must satisfy <span class="math inline">\({\overrightarrow{AC}}=\frac{1}{2}{\overrightarrow{AB}}\)</span>.</p>
-<p>To get to C from the origin, we can go via <span class="math inline">\(A\)</span>. So the position vector is <span class="math display">\[{\overrightarrow{OC}} ={\overrightarrow{OA}} + {\overrightarrow{AC}} = {\mathbf{a}} + \frac{1}{2}{\overrightarrow{AB}}.\]</span></p>
-<p>Recall that <span class="math inline">\({\overrightarrow{AB}} = {\mathbf{b}}-{\mathbf{a}}\)</span> (remember this rule!), so finally <span class="math display">\[{\overrightarrow{OC}} = {\mathbf{a}} + \frac{1}{2}\left({\mathbf{b}}-{\mathbf{a}}\right) = \frac{1}{2}{\mathbf{a}} + \frac{1}{2}{\mathbf{b}}.\]</span></p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The position vector of the midpoint of two points is the average of the position vectors of the two points.</p>
 </div>
 </div>
 
@@ -500,9 +479,9 @@ Note
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>When writing vectors with pen and paper or on the board, bold is difficult, but there are various other possibilities and different people like different things. I use an underline. Whatever you choose, it’s very helpful to distinguish between vectors and scalars in your handwriting.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>In three dimensions, we need to choose three vectors and so on.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Different people write these vectors vertically or horizontally, with round or square brackets. It doesn’t really matter but it’s good to be consistent.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>This is easiest to prove using the component form of the dot product, but unfortunately that gives a circular proof. To prove it directly requires a lot of geometry and trigonometry.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Sometimes people define a cross product in two dimensions by imagining the 2d vectors on a plane in 3d space, but we won’t use that definition.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Occasionally you see people use <span class="math inline">\(\wedge\)</span> instead. In modern maths this the exterior product, which is a related but different concept.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

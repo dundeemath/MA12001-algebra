@@ -13,7 +13,7 @@ title: "Week 2: General Vectors"
 
 ::: 
 
-# General vectors
+# General vectors {#sec-vectors}
 In the previous section, we worked out a set of rules that it makes sense for mathematical operations on displacements to obey. Mathematicians like to work the other way round: start from a list of rules, and see what we can deduce. This is how, for example, you might be introduced to the mathematical idea of groups.
 
 Firstly, let's introduce some notation to make it clear what's a vector and what's not. We use bold lowercase letters for vectors, like $\vc{a}, \vc{b}, \vc{x}$ etc. For scalars, we'll use non-bold letters, and very often we'll use Greek letters like $\alpha, \beta, \lambda$ and $\mu$. We write the magnitude (length) of the vector $\vc{a}$ as $|\vc{a}|$. ^[When writing vectors with pen and paper or on  the board, bold is difficult, but there are various other possibilities and different people like different things. I use an underline. Whatever you choose, it's very helpful to distinguish between vectors and scalars in your handwriting.]
@@ -33,6 +33,11 @@ For vectors (specifically a *normed vector space*, but you don't need to know th
 - $|\vc{a}+\vc{b}|\leq |\vc{a}|+|\vc{b}|$: the triangle inequality.
 
 That's a long list! Try not to memorise these by rote, but instead learn the rules through practicing with example questions. Most of them are very intuitive. The last rule, the triangle inequality, isn't so intuitive to me.
+
+::: {.callout-important title="Common mistake"}
+All too often I see people use the 'rule' that
+$|\vc{a}+\vc{b}| = |\vc{a}| + |\vc{b}|$. This is only true if the vectors have the same direction.
+:::
 
 ## Unit vectors
 A *unit vector* is a vector with magnitude equal to 1. We sometimes use a little hat to denote unit vectors, like $\hc{a}$. So $|\hc{a}| = 1$.
@@ -67,6 +72,12 @@ So $\V{OA} = -\vc{a} + \vc{b} = \vc{b} - \vc{a}$.
 :::{.callout-note}
 To get the displacement vector in terms of position vectors, subtract the position vector of the start from the position vector of the end.
 :::
+
+
+::: {.callout-important title="Common mistake"}
+For some reason people like to say that $\V{AB}=\vc{a}+\vc{b}$. This is clearly wrong. Remember that $\V{BA}=-\V{AB}$.
+:::
+
 
 Later in the module, we'll want to talk about a position vector for a general point in space.
 For historical reasons, this is usually written as $\vc{r}$. 
@@ -140,7 +151,9 @@ The magnitude of a vector is the square root of the components squared and added
 :::
 
 
+
 **Think:** what is the magnitude of the vector $\cvv{2}{-6}{-3}$?
+
 
 ::: {.callout-tip collapse="true"}
 ## Solution

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 2: General Vectors – MA12001 Algebra</title>
+<title>Week 4: Introduction to matrices – MA12001 Algebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html">Chapter 1: Vectors</a></li><li class="breadcrumb-item"><a href="./week2.html">Week 2: General Vectors</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html">Chapter 2: Matrices</a></li><li class="breadcrumb-item"><a href="./week4.html">Week 4: Introduction to matrices</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -157,7 +157,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2: General Vectors</span></a>
   </div>
 </li>
@@ -180,7 +180,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week4.html" class="sidebar-item-text sidebar-link">
+  <a href="./week4.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 4: Introduction to matrices</span></a>
   </div>
 </li>
@@ -210,18 +210,21 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-vectors" id="toc-sec-vectors" class="nav-link active" data-scroll-target="#sec-vectors">General vectors</a>
+  <li><a href="#special-matrices" id="toc-special-matrices" class="nav-link active" data-scroll-target="#special-matrices">Special matrices</a></li>
+  <li><a href="#basic-operations-for-matrices" id="toc-basic-operations-for-matrices" class="nav-link" data-scroll-target="#basic-operations-for-matrices">Basic operations for matrices</a>
   <ul class="collapse">
-  <li><a href="#unit-vectors" id="toc-unit-vectors" class="nav-link" data-scroll-target="#unit-vectors">Unit vectors</a></li>
-  <li><a href="#position-vectors" id="toc-position-vectors" class="nav-link" data-scroll-target="#position-vectors">Position vectors</a></li>
-  <li><a href="#basis-vectors" id="toc-basis-vectors" class="nav-link" data-scroll-target="#basis-vectors">Basis vectors</a></li>
-  <li><a href="#column-vectors" id="toc-column-vectors" class="nav-link" data-scroll-target="#column-vectors">Column vectors</a></li>
-  <li><a href="#pythagorass-rule" id="toc-pythagorass-rule" class="nav-link" data-scroll-target="#pythagorass-rule">Pythagoras’s rule</a></li>
-  <li><a href="#examples-for-general-vectors" id="toc-examples-for-general-vectors" class="nav-link" data-scroll-target="#examples-for-general-vectors">Examples for general vectors</a>
+  <li><a href="#the-transpose" id="toc-the-transpose" class="nav-link" data-scroll-target="#the-transpose">The transpose</a>
   <ul class="collapse">
-  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example 1</a></li>
-  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example 2</a></li>
+  <li><a href="#properties-of-the-transpose" id="toc-properties-of-the-transpose" class="nav-link" data-scroll-target="#properties-of-the-transpose">Properties of the transpose</a></li>
   </ul></li>
+  </ul></li>
+  <li><a href="#matrix-multiplication" id="toc-matrix-multiplication" class="nav-link" data-scroll-target="#matrix-multiplication">Matrix multiplication</a>
+  <ul class="collapse">
+  <li><a href="#properties-of-matrix-multiplication" id="toc-properties-of-matrix-multiplication" class="nav-link" data-scroll-target="#properties-of-matrix-multiplication">Properties of matrix multiplication</a></li>
+  </ul></li>
+  <li><a href="#inverses-for-2times2-matrices" id="toc-inverses-for-2times2-matrices" class="nav-link" data-scroll-target="#inverses-for-2times2-matrices">Inverses for <span class="math inline">\(2\times2\)</span> matrices</a>
+  <ul class="collapse">
+  <li><a href="#properties-of-the-inverse" id="toc-properties-of-the-inverse" class="nav-link" data-scroll-target="#properties-of-the-inverse">Properties of the inverse</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -229,9 +232,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html">Chapter 1: Vectors</a></li><li class="breadcrumb-item"><a href="./week2.html">Week 2: General Vectors</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html">Chapter 2: Matrices</a></li><li class="breadcrumb-item"><a href="./week4.html">Week 4: Introduction to matrices</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 2: General Vectors</h1>
+<h1 class="title">Week 4: Introduction to matrices</h1>
 </div>
 
 
@@ -251,61 +254,63 @@ window.Quarto = {
 <div class="hidden">
 
 </div>
-<section id="sec-vectors" class="level1">
-<h1>General vectors</h1>
-<p>In the previous section, we worked out a set of rules that it makes sense for mathematical operations on displacements to obey. Mathematicians like to work the other way round: start from a list of rules, and see what we can deduce. This is how, for example, you might be introduced to the mathematical idea of groups.</p>
-<p>Firstly, let’s introduce some notation to make it clear what’s a vector and what’s not. We use bold lowercase letters for vectors, like <span class="math inline">\({\mathbf{a}}, {\mathbf{b}}, {\mathbf{x}}\)</span> etc. For scalars, we’ll use non-bold letters, and very often we’ll use Greek letters like <span class="math inline">\(\alpha, \beta, \lambda\)</span> and <span class="math inline">\(\mu\)</span>. We write the magnitude (length) of the vector <span class="math inline">\({\mathbf{a}}\)</span> as <span class="math inline">\(|{\mathbf{a}}|\)</span>. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>For vectors (specifically a <em>normed vector space</em>, but you don’t need to know that), the rules are as follows. For any vectors <span class="math inline">\({\mathbf{a}}\)</span>, <span class="math inline">\({\mathbf{b}}\)</span> and <span class="math inline">\({\mathbf{c}}\)</span> and any scalars <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(\mu\)</span>,</p>
+<p>We previously saw that we can think of vectors as column vectors, that is, a series of numbers in a column: <span class="math display">\[
+\begin{bmatrix} 1 \\ 2 \\ 5\end{bmatrix}\in\mathbb{R}^3,
+\]</span> and with this idea we defined addition and scalar multiplication in the obvious ways. We can extend this idea to larger grids of numbers, for example <span class="math display">\[
+\begin{bmatrix} 1 &amp;0 &amp;-1\\3 &amp; 2 &amp; -2 \end{bmatrix} \in \mathbb{R}^{2\times3}.
+\]</span> This is called a <em>matrix</em>, in particular a <span class="math inline">\(2\times 3\)</span> real<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> matrix<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. There are two <em>rows</em> and three <em>columns</em>.</p>
+<p>We typically write matrices with the following notation<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>: <span class="math display">\[
+A = \begin{bmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{bmatrix},
+\]</span> <span class="math display">\[
+B = \begin{bmatrix} b_{11} &amp; b_{12} \\ b_{21} &amp; b_{22} \\ b_{31} &amp; b_{32} \end{bmatrix},
+\]</span> etc.</p>
+<p>Capital, non-bold letters for the matrix, and lowercase letters with row then column for the scalar entries of the matrix. The only exception to this is that when there is only one column, we usually revert to our old notation of <span class="math inline">\({\mathbf{c}} = \begin{bmatrix} c_1\\c_2\\c_3\\c_4 \end{bmatrix}\)</span>, because column vectors <em>are</em> matrices (sometimes called column matrices).</p>
+<p><strong>Think:</strong> what <em>shape</em> are the matrices <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\({\mathbf{c}}\)</span> above?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(A\)</span> is <span class="math inline">\(2\times 2\)</span>, <span class="math inline">\(B\)</span> is <span class="math inline">\(3\times 2\)</span> and <span class="math inline">\(\mathbf{c}\)</span> is <span class="math inline">\(4\times 1\)</span>.</p>
+</div>
+</div>
+</div>
+<p>Sometimes we call the shape of a matrix its <em>order</em>.</p>
+<section id="special-matrices" class="level1">
+<h1>Special matrices</h1>
+<p>There are literally hundreds of different classifications of matrices. Some of the most important, which we’ll use in this module, are:</p>
 <ul>
-<li><span class="math inline">\({\mathbf{a}}+({\mathbf{b}}+{\mathbf{c}}) = ({\mathbf{a}}+{\mathbf{b}})+{\mathbf{c}}\)</span>: associativity of vector addition.</li>
-<li><span class="math inline">\({\mathbf{a}}+{\mathbf{b}} = {\mathbf{b}} + {\mathbf{a}}\)</span>: commutativity of vector addition.</li>
-<li><span class="math inline">\({\mathbf{a}}+{\mathbf{0}}={\mathbf{a}}\)</span>: adding zero does nothing.</li>
-<li><span class="math inline">\({\mathbf{a}}+(-{\mathbf{a}}) = 0\)</span>: subtraction works as expected.</li>
-<li><span class="math inline">\(\lambda(\mu {\mathbf{a}}) = (\lambda \mu) {\mathbf{a}}\)</span>: multiplication by scalars works as expected.</li>
-<li><span class="math inline">\(\lambda({\mathbf{a}}+{\mathbf{b}}) = \lambda{\mathbf{a}}+\lambda{\mathbf{b}}\)</span>: distributivity of scalar multiplication over vector addition.</li>
-<li><span class="math inline">\((\lambda+\mu){\mathbf{a}} = \lambda {\mathbf{a}} + \mu {\mathbf{a}}\)</span>: distributivity of scalar multiplication over scalar addition.</li>
-<li><span class="math inline">\(|{\mathbf{a}}|\geq 0\)</span>: the magnitude can’t be negative</li>
-<li><span class="math inline">\(|{\mathbf{a}}|=0\)</span> if and only if <span class="math inline">\({\mathbf{a}}={\mathbf{0}}\)</span>: there is only one vector with magnitude 0.</li>
-<li><span class="math inline">\(|\lambda{\mathbf{a}}| = |\lambda| |{\mathbf{a}}|\)</span>: multiplying by a scalar just multiplies the magnitude by that amount (removing the minus sign if necessary).</li>
-<li><span class="math inline">\(|{\mathbf{a}}+{\mathbf{b}}|\leq |{\mathbf{a}}|+|{\mathbf{b}}|\)</span>: the triangle inequality.</li>
+<li><p><em>Square</em> matrices, where the number of rows is the same as the number of columns.</p></li>
+<li><p><em>Diagonal</em> matrices, square matrices where there zeros everywhere except the <span class="math inline">\(a_{11}\)</span>, <span class="math inline">\(a_{22}\)</span> entries as in: <span class="math display">\[
+\begin{bmatrix} 3 &amp; 0 &amp; 0\\ 0 &amp; -1 &amp; 0\\ 0 &amp; 0&amp; \frac{1}{5} \end{bmatrix}.
+\]</span></p></li>
+<li><p><em>Triangular</em> matrices, where all the elements above (lower triangular) or below (upper trianular) are zero. For example, this is a <span class="math inline">\(3\times3\)</span> upper triangular matrix: <span class="math display">\[
+\begin{bmatrix} 3 &amp; 1 &amp; 1\\ 0 &amp; -1 &amp; 2\\ 0 &amp; 0&amp; -4 \end{bmatrix}.
+\]</span></p></li>
+<li><p><em>Identity</em> matrices. This is a diagonal matrix with only ones on the diagonal. It will be very important later on. It is always called <span class="math inline">\(I\)</span>. This is the <span class="math inline">\(4\times4\)</span> identity matrix: <span class="math display">\[
+I=\begin{bmatrix} 1 &amp; 0 &amp; 0 &amp;0\\ 0 &amp; 1 &amp; 0 &amp; 0\\ 0 &amp; 0&amp; 1&amp;0\\0&amp;0&amp;0&amp;1 \end{bmatrix}.
+\]</span></p></li>
 </ul>
-<p>That’s a long list! Try not to memorise these by rote, but instead learn the rules through practicing with example questions. Most of them are very intuitive. The last rule, the triangle inequality, isn’t so intuitive to me.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Common mistake">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Common mistake
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>All too often I see people use the ‘rule’ that <span class="math inline">\(|{\mathbf{a}}+{\mathbf{b}}| = |{\mathbf{a}}| + |{\mathbf{b}}|\)</span>. This is only true if the vectors have the same direction.</p>
-</div>
-</div>
-<section id="unit-vectors" class="level2">
-<h2 class="anchored" data-anchor-id="unit-vectors">Unit vectors</h2>
-<p>A <em>unit vector</em> is a vector with magnitude equal to 1. We sometimes use a little hat to denote unit vectors, like <span class="math inline">\(\hat{{\mathbf{a}}}\)</span>. So <span class="math inline">\(|\hat{{\mathbf{a}}}| = 1\)</span>.</p>
-<p>Suppose you want to find a unit vector <em>in the direction of</em> another vector <span class="math inline">\({\mathbf{a}}\)</span>. Well <span class="math inline">\({\mathbf{b}} = \lambda {\mathbf{a}}\)</span> is a vector in the right direction. Using the rules above, it has magnitude <span class="math inline">\(|{\mathbf{b}}|=|\lambda{\mathbf{a}}| = |\lambda| |{\mathbf{a}}|\)</span>. So if we choose <span class="math inline">\(\lambda = \frac{1}{|{\mathbf{a}}|}\)</span>, we have <span class="math inline">\(|{\mathbf{b}}| = \frac{1}{|{\mathbf{a}}|} |{\mathbf{a}}| = 1\)</span>. So <span class="math inline">\({\mathbf{b}}\)</span> is a unit vector in the direction of <span class="math inline">\({\mathbf{a}}\)</span>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To turn any vector into a unit vector, multiply it by <em>one divided by the magnitude</em>.</p>
-</div>
-</div>
 </section>
-<section id="position-vectors" class="level2">
-<h2 class="anchored" data-anchor-id="position-vectors">Position vectors</h2>
-<p>So far we’ve discussed points in space. If we choose a special point, called the origin <span class="math inline">\(O\)</span>, then we can define the position of any other point relative to this.</p>
-<p>So given points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, instead of just thinking about the displacement between them, if we choose an origin we can use vectos <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> to denote their positions relative to the origin.</p>
-<p><img src="vf8.png" class="img-fluid"></p>
+<section id="basic-operations-for-matrices" class="level1">
+<h1>Basic operations for matrices</h1>
+<p>Addition, subtraction and scalar multiplication are exactly what you think:</p>
+<p><span class="math display">\[
+\begin{bmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{bmatrix} + \begin{bmatrix} b_{11} &amp; b_{12} \\ b_{21} &amp; b_{22} \end{bmatrix} = \begin{bmatrix} a_{11} + b_{11} &amp; a_{12} + b_{12} \\ a_{21} + b_{21} &amp; a_{22} + b_{22} \end{bmatrix},
+\]</span></p>
+<p><span class="math display">\[
+\begin{bmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23} \end{bmatrix} - \begin{bmatrix} b_{11} &amp; b_{12}&amp; b_{13} \\ b_{21} &amp; b_{22}&amp; b_{23} \end{bmatrix} = \begin{bmatrix} a_{11} - b_{11} &amp; a_{12} - b_{12} &amp; a_{13}-b_{13}\\ a_{21} - b_{21} &amp; a_{22} - b_{22} &amp; a_{23}-b_{23} \end{bmatrix},
+\]</span></p>
+<p><span class="math display">\[
+4\begin{bmatrix} 1 &amp; 0 &amp; 4\\2 &amp; 3&amp; 2 \\ 2 &amp; 1 &amp; 2 \end{bmatrix} =\begin{bmatrix} 4 &amp; 0 &amp; 16\\8 &amp; 12&amp; 8 \\ 8 &amp; 4 &amp; 8 \end{bmatrix}.
+\]</span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -316,12 +321,20 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The position vector of a point is just its displacement from the origin, <span class="math inline">\({\mathbf{a}}={\overrightarrow{OA}}\)</span>.</p>
+<p>We can only add or subtract matrices that have exactly the same shape. It doesn’t mean anything to add a 2D vector to a <span class="math inline">\(2\times2\)</span> matrix, or subtract a <span class="math inline">\(2\times2\)</span> matrix from a <span class="math inline">\(3\times3\)</span> matrix.</p>
 </div>
 </div>
-<p><strong>Think:</strong> what is the displacement vector <span class="math inline">\({\overrightarrow{AB}}\)</span> in terms of the position vectors <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>?</p>
+<section id="the-transpose" class="level2">
+<h2 class="anchored" data-anchor-id="the-transpose">The transpose</h2>
+<p>An extra operation we use for matrices, which we use a lot, is called the transpose, denoted with a little letter T. This takes a matrix and exchanges the rows with the columns. So the transpose of a <span class="math inline">\(5\times 2\)</span> matrix is a <span class="math inline">\(2\times 5\)</span> matrix.</p>
+<p>If <span class="math display">\[
+A=\begin{bmatrix} 1 &amp;3&amp;4\\2&amp;1&amp;1 \end{bmatrix}
+\]</span> its transpose is <span class="math display">\[
+A^T=\begin{bmatrix} 1 &amp;2\\3 &amp; 1\\4&amp;1 \end{bmatrix}.
+\]</span></p>
+<p><strong>Think:</strong> what’s the transpose of <span class="math inline">\(M=\begin{bmatrix} 1&amp; 2\\3&amp; 4 \end{bmatrix}\)</span>?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -330,23 +343,10 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>We know that <span class="math inline">\({\mathbf{a}}={\overrightarrow{OA}}\)</span> and <span class="math inline">\({\mathbf{b}} = {\overrightarrow{OB}}\)</span>. Remember from our rules for displacements that <span class="math inline">\({\overrightarrow{AB}} = {\overrightarrow{AO}}+{\overrightarrow{OB}} = -{\overrightarrow{OA}} + {\overrightarrow{OB}}\)</span>. So <span class="math inline">\({\overrightarrow{OA}} = -{\mathbf{a}} + {\mathbf{b}} = {\mathbf{b}} - {\mathbf{a}}\)</span>.</p>
+<p><span class="math inline">\(M^T=\begin{bmatrix} 1 &amp;3\\2&amp;4 \end{bmatrix}\)</span></p>
 </div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To get the displacement vector in terms of position vectors, subtract the position vector of the start from the position vector of the end.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled" title="Common mistake">
@@ -359,15 +359,26 @@ Common mistake
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For some reason people like to say that <span class="math inline">\({\overrightarrow{AB}}={\mathbf{a}}+{\mathbf{b}}\)</span>. This is clearly wrong. Remember that <span class="math inline">\({\overrightarrow{BA}}=-{\overrightarrow{AB}}\)</span>.</p>
+<p>Often people flip over the wrong diagonal. The diagonal that starts at the top left is THE diagonal of a matrix, and it doesn’t change when we transpose.</p>
 </div>
 </div>
-<p>Later in the module, we’ll want to talk about a position vector for a general point in space. For historical reasons, this is usually written as <span class="math inline">\({\mathbf{r}}\)</span>. Think of <span class="math inline">\({\mathbf{r}}\)</span> as an arrow pointing from the origin <span class="math inline">\(O\)</span> to wherever you currently are.</p>
+<section id="properties-of-the-transpose" class="level3">
+<h3 class="anchored" data-anchor-id="properties-of-the-transpose">Properties of the transpose</h3>
+<p>You can easily prove the following statements:</p>
+<ul>
+<li>The transpose of a square matrix is square.</li>
+<li>The transpose of the transpose is the original matrix: <span class="math inline">\(\left(A^T\right)^T=A\)</span>.</li>
+<li>The transpose of a product obeys <span class="math inline">\((AB)^T = B^TA^T\)</span>.</li>
+<li>The transpose of a sum obeys <span class="math inline">\((A+B)^T = A^T + B^T\)</span>.</li>
+</ul>
 </section>
-<section id="basis-vectors" class="level2">
-<h2 class="anchored" data-anchor-id="basis-vectors">Basis vectors</h2>
-<p>In two dimensions, you can write any vector as a <em>linear combination</em> of any two other vectors that aren’t parallel.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<p>That means, if we have <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> and these aren’t parallel, so there is no <span class="math inline">\(\lambda\)</span> such that <span class="math inline">\({\mathbf{a}}=\lambda{\mathbf{b}}\)</span>, then for <em>any</em> vector <span class="math inline">\({\mathbf{c}}\)</span>, we can find <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> such that <span class="math inline">\({\mathbf{c}}=\alpha{\mathbf{a}}+\beta{\mathbf{b}}\)</span>.</p>
+</section>
+</section>
+<section id="matrix-multiplication" class="level1">
+<h1>Matrix multiplication</h1>
+<p>The real power of matrices comes by the introduction of a new type of multiplication. It is <strong>not</strong> just multiplying the correponding entries. In fact, we <em>can</em> mutliply matrices with <em>different sizes</em>.</p>
+<p>We’ll first define the operation itself and see some properties, and then we’ll discuss why this is a useful definition.</p>
+<p>The first time to know is that we can only multiple matrices if the number of columns of the first matrix is equal to the number of rows of the second matrix. So we can multiply a <span class="math inline">\(4\times 2\)</span> matrix with a <span class="math inline">\(2\times 3\)</span> matrix, but we can’t multiply a <span class="math inline">\(4\times 3\)</span> matrix with a <span class="math inline">\(2\times 3\)</span> matrix.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -378,60 +389,26 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When doing vector problems, choose two non-parallel vectors and write all the other vectors in terms of these.</p>
+<p>Write the shapes of the matrices you want to multiply. If the middle numbers – the second number of the first shape and the first number of the second shape – are the same, you can multiply them.</p>
 </div>
 </div>
-<p>It’s extra helpful if we choose two vectors that are orthogonal (at right angles) and unit vectors. Normally we choose a vector of length 1 in the horizontal direction and call this <span class="math inline">\(\hat{{\mathbf{x}}}\)</span> and a vector of length 1 in the vertical direction and call this <span class="math inline">\(\hat{{\mathbf{y}}}\)</span>.</p>
-<p>Then for any vector <span class="math inline">\({\mathbf{a}}\)</span>, we can find unique scalar numbers <span class="math inline">\(a_1\)</span> and <span class="math inline">\(a_2\)</span> such that <span class="math inline">\({\mathbf{a}} = a_1 \hat{{\mathbf{x}}} + a_2 \hat{{\mathbf{y}}}\)</span>.</p>
-<p>In fact, we do this so often that we introduce a new notation: <span class="math display">\[{\mathbf{a}} = \begin{bmatrix} a_1 \\ a_2 \end{bmatrix}.\]</span> <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<p>And the unit basis vectors are simply <span class="math display">\[\hat{{\mathbf{x}}} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\]</span> and <span class="math display">\[\hat{{\mathbf{y}}} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}.\]</span></p>
-<p>In three dimensions we write <span class="math display">\[{\mathbf{b}} = b_1 \hat{{\mathbf{x}}} + b_2 \hat{{\mathbf{y}}} + b_3 \hat{{\mathbf{z}}} = \begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix}.\]</span></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Vectors are not the same as coordinates! They are related but conceptually different. The position vector for the coordinates <span class="math inline">\((3,4,5)\)</span> is <span class="math inline">\(\begin{bmatrix} 3 \\ 4 \\ 5\end{bmatrix}\)</span>, and we use the two different notations to distinguish them.</p>
-</div>
-</div>
-<p>For the general position vector, the position in 3D space is given by the coordinates <span class="math inline">\((x,y,z)\)</span> so <span class="math inline">\({\mathbf{r}} = \begin{bmatrix} x \\ y \\ z\end{bmatrix}\)</span>.</p>
-</section>
-<section id="column-vectors" class="level2">
-<h2 class="anchored" data-anchor-id="column-vectors">Column vectors</h2>
-<p>With this new notation, everything behaves exactly as you would expect:</p>
-<p><span class="math display">\[\begin{bmatrix} 5 \\ 2 \end{bmatrix} + \begin{bmatrix} 1 \\ -3 \end{bmatrix} = \begin{bmatrix} 5+1 \\ 2-3 \end{bmatrix} = \begin{bmatrix} 6 \\ -1 \end{bmatrix}.\]</span></p>
-<p><span class="math display">\[4\begin{bmatrix} 5 \\ 2 \end{bmatrix} = \begin{bmatrix} 4\times 5 \\ 4\times 2 \end{bmatrix} = \begin{bmatrix} 20 \\ 8 \end{bmatrix}.\]</span></p>
-<p>If you’re unsure about any of these rules, you can rewrite <span class="math inline">\(\begin{bmatrix} 5 \\ 2 \end{bmatrix}\)</span> as <span class="math inline">\(5\hat{{\mathbf{x}}}+2\hat{{\mathbf{y}}}\)</span> etc. and apply the list of rules above.</p>
-<p>Often we use the mathematical notation that <span class="math display">\[\begin{bmatrix} -1 \\ 3 \\ -3\end{bmatrix}\in\mathbb{R}^3.\]</span> This says that the vector lives in the set of obejcts which can be written as three real numbers. Obviously for 2D we write <span class="math inline">\(\mathbb{R}^2\)</span> instead.</p>
-</section>
-<section id="pythagorass-rule" class="level2">
-<h2 class="anchored" data-anchor-id="pythagorass-rule">Pythagoras’s rule</h2>
-<p>We haven’t yet defined the magnitude of a general vector. What is the magnitude of <span class="math inline">\(\begin{bmatrix} 5 \\ 2 \end{bmatrix}\)</span>?</p>
-<p>From the rules so far, we know that <span class="math display">\[ \left|\begin{bmatrix} 5 \\ 2 \end{bmatrix}\right| = \left|5\hat{{\mathbf{x}}}+2\hat{{\mathbf{y}}}\right| \leq |5\hat{{\mathbf{x}}}| + |2\hat{{\mathbf{y}}}| = 5|\hat{{\mathbf{x}}}| + 2|\hat{{\mathbf{y}}}| = 5\times1 + 2\times1 = 7\]</span> but that just tells us that <span class="math inline">\(\left|\begin{bmatrix} 5 \\ 2 \end{bmatrix}\right|\leq 7\)</span>. This isn’t enough.</p>
-<p>Actually there are lots of possible choices. In this module, we focus on normal, ‘flat’, <em>Euclidean</em> space: <span class="math display">\[\left|\begin{bmatrix} 5 \\ 2 \end{bmatrix}\right| = \sqrt{5^2 + 2^2} = \sqrt{29}\]</span> which is less than 7, as expected.</p>
-<p>Then general rule is: <span class="math display">\[|{\mathbf{a}}| = \sqrt{a_1^2 + a_2^2}\]</span> and in 3D <span class="math display">\[|{\mathbf{b}}| = \sqrt{b_1^2 + b_2^2 + b_3^2}\]</span>.</p>
-<p>To convince yourself these are good definition, draw a diagram and use Pythagoras’s theorem.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The magnitude of a vector is the square root of the components squared and added up.</p>
-</div>
-</div>
-<p><strong>Think:</strong> what is the magnitude of the vector <span class="math inline">\(\begin{bmatrix} 2 \\ -6 \\ -3\end{bmatrix}\)</span>?</p>
+<p>Suppose we want to multiple <span class="math inline">\(A\)</span>, which has shape <span class="math inline">\(m\times n\)</span> with <span class="math inline">\(B\)</span>, which has <span class="math inline">\(n\times p\)</span>. Then the product <span class="math inline">\(C=AB\)</span>, which has shape <span class="math inline">\(m\times p\)</span>, is formally defined as: <span class="math display">\[
+c_{ij} = \sum_{k=1}^n a_{ik}b_{kj}.
+\]</span></p>
+<p>What does this mean? It’s hard to explain in these notes. My method involves putting my fingers on the two matrices I’m multiplying together. There are loads of examples of it on YouTube, just seach for “matrix multiplication”.</p>
+<p>One way to say it is that the row <span class="math inline">\(i\)</span>, column <span class="math inline">\(j\)</span> entry of <span class="math inline">\(C\)</span> is the <strong>dot product</strong> of the <span class="math inline">\(i\)</span>th <em>row</em> of <span class="math inline">\(A\)</span> and the <span class="math inline">\(j\)</span>th <em>column</em> of <span class="math inline">\(B\)</span>.</p>
+<p>Here’s an example:</p>
+<p>Suppose <span class="math inline">\(A=\begin{bmatrix} 1 &amp;3\\2&amp;4 \end{bmatrix}\)</span> and <span class="math inline">\(B=\begin{bmatrix} 5 &amp;1 &amp;2\\-1&amp;0&amp;3 \end{bmatrix}\)</span>.</p>
+<p><span class="math inline">\(A\)</span> is <span class="math inline">\(2\times2\)</span> and <span class="math inline">\(B\)</span> is <span class="math inline">\(2\times 3\)</span>, so we can multiply them and the product <span class="math inline">\(AB\)</span> has shape <span class="math inline">\(2\times 3\)</span>. The result is <span class="math display">\[
+\begin{aligned}
+AB &amp;= \begin{bmatrix} 1 &amp;3\\2&amp;4 \end{bmatrix}\begin{bmatrix} 5 &amp;1 &amp;2\\-1&amp;0&amp;3 \end{bmatrix} \\
+&amp;= \begin{bmatrix} 1\times 5+3\times-1 &amp; 1\times 1+3\times 0 &amp; 1\times 2+3\times 3 \\ 2\times 5+4\times-1 &amp; 2\times 1+4\times 0 &amp; 2\times 2+4\times 3 \end{bmatrix} \\
+&amp;= \begin{bmatrix} 2&amp;1&amp;11\\6&amp;2&amp;16 \end{bmatrix}.
+\end{aligned}
+\]</span></p>
+<p><strong>Think:</strong> Calculate the product <span class="math inline">\(\begin{bmatrix} 1 &amp;2 &amp; -3\\0 &amp; 0 &amp; 1 \\ -1 &amp; -2 &amp; 0 \end{bmatrix}\begin{bmatrix} 5 \\ -4 \\ -1\end{bmatrix}\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -440,23 +417,18 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[\sqrt{2^2 + (-6)^2 + (-3)^2} = \sqrt{4 + 36 + 9} = \sqrt{49} = 7.\]</span></p>
-<p>Don’t let the negatives confuse you!</p>
+<p><span class="math display">\[
+\begin{bmatrix} 0 \\ -1 \\ 3\end{bmatrix}.
+\]</span></p>
 </div>
 </div>
 </div>
-</section>
-<section id="examples-for-general-vectors" class="level2">
-<h2 class="anchored" data-anchor-id="examples-for-general-vectors">Examples for general vectors</h2>
-<section id="example-1" class="level3">
-<h3 class="anchored" data-anchor-id="example-1">Example 1</h3>
-<p>Let <span class="math inline">\(ABCDEF\)</span> be a regular hexagon with sides of length 1. Let <span class="math inline">\(\hat{{\mathbf{v}}}\)</span> and <span class="math inline">\(\hat{{\mathbf{w}}}\)</span> correspond to 2 adjacent sides, <span class="math inline">\({\overrightarrow{AB}} = \hat{{\mathbf{v}}}\)</span>, <span class="math inline">\({\overrightarrow{AF}} = \hat{{\mathbf{w}}}\)</span> (where <span class="math inline">\(A\)</span> is the bottom left point, and <span class="math inline">\(A,B,C....\)</span> proceed anti-clockwise.)</p>
-<p>Express all other sides and the diagonals in terms of <span class="math inline">\(\hat{{\mathbf{v}}}\)</span> and <span class="math inline">\(\hat{{\mathbf{w}}}\)</span>. Also, find a unit vector in the direction <span class="math inline">\(\hat{{\mathbf{w}}}-\hat{{\mathbf{v}}}\)</span>.</p>
-<p><img src="vf7.png" class="img-fluid"></p>
+<p>This matrix-times-vector product is a particularly important special case of matrix multiplication, that we’ll see lots. Notice that the result is another vector.</p>
+<p><strong>Think:</strong> Calculate the product <span class="math inline">\(\begin{bmatrix} 1 &amp;2 &amp; -3\\0 &amp; 0 &amp; 1 \\ -1 &amp; -2 &amp; 0 \end{bmatrix}\begin{bmatrix} 1 &amp;3\\2&amp;4 \end{bmatrix}\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -465,21 +437,69 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Sides: <span class="math inline">\({\overrightarrow{AB}}={\overrightarrow{ED}}=\hat{{\mathbf{v}}}\)</span>, <span class="math inline">\(\qquad{\overrightarrow{AF}}= {\overrightarrow{CD}}=\hat{{\mathbf{w}}}\)</span>, <span class="math inline">\(\qquad{\overrightarrow{BC}}= {\overrightarrow{FE}}=\hat{{\mathbf{v}}} + \hat{{\mathbf{w}}}\)</span>.</p>
-<p>Diagonals: <span class="math inline">\({\overrightarrow{FC}}=2\hat{{\mathbf{v}}}\)</span>, <span class="math inline">\(\qquad{\overrightarrow{BE}}=2\hat{{\mathbf{w}}}\)</span>, <span class="math inline">\(\qquad{\overrightarrow{AD}}=2(\hat{{\mathbf{v}}} + \hat{{\mathbf{w}}})\)</span>.</p>
-<p>We have <span class="math inline">\(\hat{{\mathbf{w}}} - \hat{{\mathbf{v}}} = {\overrightarrow{BF}} = {\overrightarrow{CE}}\)</span>.</p>
-<p>The length of <span class="math inline">\(\hat{{\mathbf{w}}} - \hat{{\mathbf{v}}}\)</span> is <span class="math inline">\(\sqrt{3}\)</span>, which can be obtained from triangle <span class="math inline">\(AFB\)</span>. Thus a unit vector in direction of <span class="math inline">\(\hat{{\mathbf{w}}} - \hat{{\mathbf{v}}}\)</span> is <span class="math display">\[\frac{1}{\sqrt{3}} ( \hat{{\mathbf{w}}} - \hat{{\mathbf{v}}}).\]</span></p>
+<p>This is a trick question! The shapes are incompatible, you can’t do it.</p>
 </div>
 </div>
 </div>
+<section id="properties-of-matrix-multiplication" class="level2">
+<h2 class="anchored" data-anchor-id="properties-of-matrix-multiplication">Properties of matrix multiplication</h2>
+<p>It’s straightforward, if boring, to prove the following:</p>
+<ul>
+<li><span class="math inline">\(A(B+C) = AB+AC\)</span>: it’s distributive over addition</li>
+<li><span class="math inline">\((AB)C = A(BC)\)</span>: it’s associative.</li>
+<li>It’s <em>not</em> commutative. <span class="math inline">\(AB\)</span> is not the same as <span class="math inline">\(BA\)</span>. One may be possible and the other not possible.</li>
+<li>For any matrix <span class="math inline">\(A\)</span>, and the identity matrix <span class="math inline">\(I\)</span> (of the correct size for the multiplication to work) <span class="math inline">\(AI = A\)</span> and <span class="math inline">\(IA = A\)</span>.</li>
+</ul>
 </section>
-<section id="example-2" class="level3">
-<h3 class="anchored" data-anchor-id="example-2">Example 2</h3>
-<p>Let the points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have position vectors <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>. Find the position vector of the midpoint of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.</p>
+</section>
+<section id="inverses-for-2times2-matrices" class="level1">
+<h1>Inverses for <span class="math inline">\(2\times2\)</span> matrices</h1>
+<p>For normal multiplication, for every number except zero has an inverse. The inverse of <span class="math inline">\(4\)</span> is <span class="math inline">\(\frac{1}{4}\)</span>. And multiplying a number with its inverse gives 1. <span class="math inline">\(4\times \frac{1}{4} = \frac{1}{4} \times 4 = 1\)</span>.</p>
+<p>There is a direct equivalent, for <em>square</em> matrices. We denote the inverse of a matrix <span class="math inline">\(A\)</span> by <span class="math inline">\(A^{-1}\)</span>. But it’s very important to know that it doesn’t always exist, just like the number <span class="math inline">\(0\)</span> has no inverse in normal numbers.</p>
+<p>A matrix is either <em>invertible</em>, or it is called <em>singular</em>.</p>
+<p>How do we find the inverse? Consider a <span class="math inline">\(2\times 2\)</span> matrix <span class="math inline">\(A=\begin{bmatrix} a&amp;b\\c&amp;d \end{bmatrix}\)</span>.</p>
+<p>We want to find <span class="math inline">\(A^{-1}\)</span> such that <span class="math inline">\(AA^{-1} = I\)</span>, and let’s call <span class="math inline">\(A^{-1}=\begin{bmatrix} e&amp;f\\ g&amp;h \end{bmatrix}\)</span>.</p>
+<p><span class="math display">\[
+\begin{bmatrix} a&amp;b\\ c&amp;d \end{bmatrix}\begin{bmatrix} e&amp;f\\ g&amp;h \end{bmatrix} = \begin{bmatrix} 1&amp; 0\\ 0 &amp; 1 \end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\begin{bmatrix} ae+bg&amp; af+bh\\ ce+dg&amp;cf+dh \end{bmatrix} = \begin{bmatrix} 1&amp; 0\\ 0 &amp; 1 \end{bmatrix}
+\]</span></p>
+<p>Comparing the entries of the matrices on the right- and left-hand sides, we have four simultaneous equations: <span class="math display">\[
+\begin{aligned}
+ae+bg&amp;=1, \\
+cf+dh&amp;=1, \\
+af+bh&amp;=0,\\
+ce+dg&amp;=0,
+\end{aligned}
+\]</span> which, after some effort, can be solved to give <span class="math display">\[
+\begin{aligned}
+e &amp;= \frac{d}{ad-bc},\\
+f &amp;= \frac{-b}{ad-bc},\\
+g &amp;= \frac{-c}{ad-bc},\\
+h &amp;= \frac{a}{ad-bc},\\
+\end{aligned}
+\]</span> or in other words <span class="math display">\[
+A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d &amp;-b\\ -c &amp; a \end{bmatrix}.
+\]</span> This is the formula for the inverse of <span class="math inline">\(2\times2\)</span> matrices.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Learn this formula</p>
+</div>
+</div>
+<p><strong>Think:</strong> what’s the inverse of <span class="math inline">\(\begin{bmatrix} 1&amp;1\\0&amp;-3 \end{bmatrix}\)</span>?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -488,11 +508,11 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The midpoint of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is halfway along the line <span class="math inline">\(AB\)</span>. Call this point <span class="math inline">\(C\)</span>, and it must satisfy <span class="math inline">\({\overrightarrow{AC}}=\frac{1}{2}{\overrightarrow{AB}}\)</span>.</p>
-<p>To get to C from the origin, we can go via <span class="math inline">\(A\)</span>. So the position vector is <span class="math display">\[{\overrightarrow{OC}} ={\overrightarrow{OA}} + {\overrightarrow{AC}} = {\mathbf{a}} + \frac{1}{2}{\overrightarrow{AB}}.\]</span></p>
-<p>Recall that <span class="math inline">\({\overrightarrow{AB}} = {\mathbf{b}}-{\mathbf{a}}\)</span> (remember this rule!), so finally <span class="math display">\[{\overrightarrow{OC}} = {\mathbf{a}} + \frac{1}{2}\left({\mathbf{b}}-{\mathbf{a}}\right) = \frac{1}{2}{\mathbf{a}} + \frac{1}{2}{\mathbf{b}}.\]</span></p>
+<p><span class="math display">\[
+\frac{1}{1\times-3-1\times0}\begin{bmatrix} -3&amp;-1\\-0&amp;1 \end{bmatrix} = \frac{1}{-3}\begin{bmatrix} -3&amp;-1\\0&amp;1 \end{bmatrix}= \begin{bmatrix} 1&amp;\frac{1}{3}\\0&amp;-\frac{1}{3} \end{bmatrix}.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -506,12 +526,36 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The position vector of the midpoint of two points is the average of the position vectors of the two points.</p>
+<p>Once you’ve found an inverse, check your result by multiplying it with the matrix. It should give the identity.</p>
 </div>
 </div>
+<p>There’s a problem with the formula! What if <span class="math inline">\(ad-bc=0\)</span>? We can’t divide by zero. In this case, the inverse doesn’t exist, and the matrix is singular. We call <span class="math inline">\(ad-bc\)</span> the <em>determinant</em> of <span class="math inline">\(A\)</span>. More on this next week.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A <span class="math inline">\(2\times2\)</span> matrix is singular exactly when <span class="math inline">\(ad-bc=0\)</span>.</p>
+</div>
+</div>
+<section id="properties-of-the-inverse" class="level2">
+<h2 class="anchored" data-anchor-id="properties-of-the-inverse">Properties of the inverse</h2>
+<p>Using arguments similar to that above, you could prove the following for <span class="math inline">\(2\times2\)</span> inverses:<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<ul>
+<li>The inverse of a square matrix is square.</li>
+<li>If the inverse exists, it is both a right- and left- inverse, even though matrix multiplication is not commutation. So <span class="math inline">\(AA^{-1}=I\)</span> means <span class="math inline">\(A^{-1}A = I\)</span>.</li>
+<li>The inverse is unique. If <span class="math inline">\(AB=I\)</span>, then <span class="math inline">\(B=A^{-1}\)</span> and <span class="math inline">\(A=B^{-1}\)</span>.</li>
+<li>The inverse of the inverse is the original matrix: <span class="math inline">\(\left(A^{-1}\right)^{-1}=A\)</span>.</li>
+<li>The inverse of the transpose is the transpose of the inverse: <span class="math inline">\(\left(A^T\right)^{-1}=\left(A^{-1}\right)^T\)</span>.</li>
+<li>The inverse of a product obeys <span class="math inline">\((AB)^{-1} = B^{-1}A^{-1}\)</span>.</li>
+</ul>
 
 
-</section>
 </section>
 </section>
 
@@ -519,9 +563,10 @@ Note
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>When writing vectors with pen and paper or on the board, bold is difficult, but there are various other possibilities and different people like different things. I use an underline. Whatever you choose, it’s very helpful to distinguish between vectors and scalars in your handwriting.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>In three dimensions, we need to choose three vectors and so on.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Different people write these vectors vertically or horizontally, with round or square brackets. It doesn’t really matter but it’s good to be consistent.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Eventually you’ll see matrices with complex numbers inside.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Pronounced “two by three”.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Again, many authors use round brackets. You can too if you like.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>In fact they hold for any sized square matrix.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

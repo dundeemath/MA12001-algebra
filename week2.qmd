@@ -132,7 +132,7 @@ This says that the vector lives in the set of obejcts which can be written as th
 We haven't yet defined the magnitude of a general vector. What is the magnitude of $\cv{5}{2}$?
 
 From the rules so far, we know that
-$$ \left|\cv{5}{2}\right| = \left|5\hc{x}+2\hc{y}\right| \leq |5\hc{x}| + |2\hc{y}| = 5|\hc{x}| + 2|\hc{y} = 5\times1 + 2\times1 = 7$$
+$$ \left|\cv{5}{2}\right| = \left|5\hc{x}+2\hc{y}\right| \leq |5\hc{x}| + |2\hc{y}| = 5|\hc{x}| + 2|\hc{y}| = 5\times1 + 2\times1 = 7$$
 but that just tells us that $\left|\cv{5}{2}\right|\leq 7$. This isn't enough.
 
 Actually there are lots of possible choices. In this module, we focus on normal, 'flat', *Euclidean* space:

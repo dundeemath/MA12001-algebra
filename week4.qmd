@@ -1,0 +1,253 @@
+---
+title: "Week 4: Introduction to matrices"
+---
+
+::: {.hidden}
+
+ \newcommand{\V}[1]{{\overrightarrow{#1}}}
+ \newcommand{\vc}[1]{{\mathbf{#1}}}
+ \newcommand{\hc}[1]{\hat{\vc{#1}}}
+ \newcommand{\cv}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}}
+ \newcommand{\cvv}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}
+ \newcommand{\m}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+
+
+::: 
+
+We previously saw that we can think of vectors as column vectors, that is, a series of numbers in a column:
+$$
+\cvv{1}{2}{5}\in\mathbb{R}^3,
+$$
+and with this idea we defined addition and scalar multiplication in the obvious ways. We can extend this idea to larger grids of numbers, for example
+$$
+\m{1 &0 &-1\\3 & 2 & -2} \in \mathbb{R}^{2\times3}.
+$$
+This is called a _matrix_, in particular a $2\times 3$ real^[Eventually you'll see matrices with complex numbers inside.] matrix^[Pronounced "two by three".]. There are two *rows* and three *columns*.
+
+We typically write matrices with the following notation^[Again, many authors use round brackets. You can too if you like.]:
+$$
+A = \m{a_{11} & a_{12} \\ a_{21} & a_{22}},
+$$
+$$
+B = \m{b_{11} & b_{12} \\ b_{21} & b_{22} \\ b_{31} & b_{32}},
+$$
+etc. 
+
+Capital, non-bold letters for the matrix, and lowercase letters with row then column for the scalar entries of the matrix. The only exception to this is that when there is only one column, we usually revert to our old notation of $\vc{c} = \m{c_1\\c_2\\c_3\\c_4}$, because column vectors *are* matrices (sometimes called column matrices).
+
+**Think:** what *shape* are the matrices $A$, $B$ and $\vc{c}$ above?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$A$ is $2\times 2$, $B$ is $3\times 2$ and $\mathbf{c}$ is $4\times 1$.
+:::
+
+Sometimes we call the shape of a matrix its *order*.
+
+# Special matrices
+There are literally hundreds of different classifications of matrices. Some of the most important, which we'll use in this module, are:
+
+- *Square* matrices, where the number of rows is the same as the number of columns.
+
+- *Diagonal* matrices, square matrices where there zeros everywhere except the $a_{11}$, $a_{22}$ entries as in:
+$$
+\m{3 & 0 & 0\\ 0 & -1 & 0\\ 0 & 0& \frac{1}{5}}.
+$$
+
+- *Triangular* matrices, where all the elements above (lower triangular) or below (upper trianular) are zero. For example, this is a $3\times3$ upper triangular matrix:
+$$
+\m{3 & 1 & 1\\ 0 & -1 & 2\\ 0 & 0& -4}.
+$$
+
+- *Identity* matrices. This is a diagonal matrix with only ones on the diagonal. It will be very important later on. It is always called $I$. This is the $4\times4$ identity matrix:
+$$
+I=\m{1 & 0 & 0 &0\\ 0 & 1 & 0 & 0\\ 0 & 0& 1&0\\0&0&0&1}.
+$$
+
+# Basic operations for matrices
+Addition, subtraction and scalar multiplication are exactly what you think:
+
+$$
+\m{a_{11} & a_{12} \\ a_{21} & a_{22}} + \m{b_{11} & b_{12} \\ b_{21} & b_{22}} = \m{a_{11} + b_{11} & a_{12} + b_{12} \\ a_{21} + b_{21} & a_{22} + b_{22}},
+$$
+
+$$
+\m{a_{11} & a_{12} & a_{13}\\ a_{21} & a_{22} & a_{23}} - \m{b_{11} & b_{12}& b_{13} \\ b_{21} & b_{22}& b_{23}} = \m{a_{11} - b_{11} & a_{12} - b_{12} & a_{13}-b_{13}\\ a_{21} - b_{21} & a_{22} - b_{22} & a_{23}-b_{23}},
+$$
+
+$$
+4\m{1 & 0 & 4\\2 & 3& 2 \\ 2 & 1 & 2} =\m{4 & 0 & 16\\8 & 12& 8 \\ 8 & 4 & 8}.
+$$
+
+:::{.callout-note}
+We can only add or subtract matrices that have exactly the same shape. It doesn't mean anything to add a 2D vector to a $2\times2$ matrix, or subtract a $2\times2$ matrix from a $3\times3$ matrix.
+:::
+
+## The transpose
+An extra operation we use for matrices, which we use a lot, is called the transpose, denoted with a little letter T. This takes a matrix and exchanges the rows with the columns. So the transpose of a $5\times 2$ matrix is a $2\times 5$ matrix.
+
+If
+$$
+A=\m{1 &3&4\\2&1&1}
+$$
+its transpose is
+$$
+A^T=\m{1 &2\\3 & 1\\4&1}.
+$$
+
+**Think:** what's the transpose of $M=\m{1& 2\\3& 4}$?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$M^T=\m{1 &3\\2&4}$
+:::
+
+::: {.callout-important title="Common mistake"}
+Often people flip over the wrong diagonal. The diagonal that starts at the top left is THE diagonal of a matrix, and it doesn't change when we transpose.
+:::
+
+### Properties of the transpose
+You can easily prove the following statements:
+
+- The transpose of a square matrix is square.
+- The transpose of the transpose is the original matrix: $\left(A^T\right)^T=A$.
+- The transpose of a product obeys $(AB)^T = B^TA^T$.
+- The transpose of a sum obeys $(A+B)^T = A^T + B^T$.
+
+# Matrix multiplication
+The real power of matrices comes by the introduction of a new type of multiplication. It is **not** just multiplying the correponding entries. In fact, we *can* mutliply matrices with *different sizes*.
+
+We'll first define the operation itself and see some properties, and then we'll discuss why this is a useful definition.
+
+The first time to know is that we can only multiple matrices if the number of columns of the first matrix is equal to the number of rows of the second matrix. So we can multiply a $4\times 2$ matrix with a $2\times 3$ matrix, but we can't multiply a $4\times 3$ matrix with a $2\times 3$ matrix.
+
+:::{.callout-note}
+Write the shapes of the matrices you want to multiply. If the middle numbers -- the second number of the first shape and the first number of the second shape -- are the same, you can multiply them.
+:::
+
+Suppose we want to multiple $A$, which has shape $m\times n$ with $B$, which has $n\times p$. Then the product $C=AB$, which has shape $m\times p$, is formally defined as:
+$$
+c_{ij} = \sum_{k=1}^n a_{ik}b_{kj}.
+$$
+
+What does this mean? It's hard to explain in these notes. My method involves putting my fingers on the two matrices I'm multiplying together. There are loads of examples of it on YouTube, just seach for "matrix multiplication".
+
+One way to say it is that the row $i$, column $j$ entry of $C$ is the **dot product** of the $i$th *row* of $A$ and the $j$th *column* of $B$.
+
+Here's an example:
+
+Suppose $A=\m{1 &3\\2&4}$ and $B=\m{5 &1 &2\\-1&0&3}$.
+
+$A$ is $2\times2$ and $B$ is $2\times 3$, so we can multiply them and the product $AB$ has shape $2\times 3$. The result is
+$$
+\begin{aligned}
+AB &= \m{1 &3\\2&4}\m{5 &1 &2\\-1&0&3} \\
+&= \m{1\times5+3\times-1 & 1\times1+3\times0 & 1\times2+3\times3 \\ 2\times5+4\times-1 & 2\times1+4\times0 & 2\times2+4\times3} \\
+&= \m{2&1&11\\6&2&16}.
+\end{aligned}
+$$
+
+**Think:** Calculate the product $\m{1 &2 & -3\\0 & 0 & 1 \\ -1 & -2 & 0}\cvv{5}{-4}{-1}$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\cvv{0}{-1}{3}.
+$$
+:::
+
+This matrix-times-vector product is a particularly important special case of matrix multiplication, that we'll see lots. Notice that the result is another vector.
+
+**Think:** Calculate the product  $\m{1 &2 & -3\\0 & 0 & 1 \\ -1 & -2 & 0}\m{1 &3\\2&4}$.
+
+::: {.callout-tip collapse="true"}
+## Solution
+This is a trick question! The shapes are incompatible, you can't do it.
+:::
+
+## Properties of matrix multiplication
+
+It's straightforward, if boring, to prove the following:
+
+- $A(B+C) = AB+AC$: it's distributive over addition
+- $(AB)C = A(BC)$: it's associative.
+- It's *not* commutative. $AB$ is not the same as $BA$. One may be possible and the other not possible.
+- For any matrix $A$, and the identity matrix $I$ (of the correct size for the multiplication to work) $AI = A$ and $IA = A$.
+
+# Inverses for $2\times2$ matrices
+For normal multiplication, for every number except zero has an inverse. The inverse of $4$ is $\frac{1}{4}$. And multiplying a number with its inverse gives 1. $4\times \frac{1}{4} = \frac{1}{4} \times 4 = 1$.
+
+There is a direct equivalent, for _square_ matrices. We denote the inverse of a matrix $A$ by $A^{-1}$. But it's very important to know that it doesn't always exist, just like the number $0$ has no inverse in normal numbers.
+
+A matrix is either _invertible_, or it is called _singular_.
+
+How do we find the inverse? Consider a $2\times 2$ matrix $A=\m{a&b\\c&d}$.
+
+We want to find $A^{-1}$ such that $AA^{-1} = I$, and let's call $A^{-1}=\m{e&f\\ g&h}$.
+
+$$
+\m{a&b\\ c&d}\m{e&f\\ g&h} = \m{1& 0\\ 0 & 1}
+$$
+
+$$
+\m{ae+bg& af+bh\\ ce+dg&cf+dh} = \m{1& 0\\ 0 & 1}
+$$
+
+Comparing the entries of the matrices on the right- and left-hand sides, we have four simultaneous equations:
+$$
+\begin{aligned}
+ae+bg&=1, \\
+cf+dh&=1, \\
+af+bh&=0,\\
+ce+dg&=0,
+\end{aligned}
+$$
+which, after some effort, can be solved to give
+$$
+\begin{aligned}
+e &= \frac{d}{ad-bc},\\
+f &= \frac{-b}{ad-bc},\\
+g &= \frac{-c}{ad-bc},\\
+h &= \frac{a}{ad-bc},\\
+\end{aligned}
+$$
+or in other words
+$$
+A^{-1} = \frac{1}{ad-bc} \m{d &-b\\ -c & a}.
+$$
+This is the formula for the inverse of $2\times2$ matrices.
+
+:::{.callout-note}
+Learn this formula
+:::
+
+**Think:** what's the inverse of $\m{1&1\\0&-3}$?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\frac{1}{1\times-3-1\times0}\m{-3&-1\\-0&1} = \frac{1}{-3}\m{-3&-1\\0&1}= \m{1&\frac{1}{3}\\0&-\frac{1}{3}}.
+$$
+:::
+
+:::{.callout-note}
+Once you've found an inverse, check your result by multiplying it with the matrix. It should give the identity.
+:::
+
+There's a problem with the formula! What if $ad-bc=0$? We can't divide by zero. In this case, the inverse doesn't exist, and the matrix
+is singular. We call $ad-bc$ the _determinant_ of $A$. More on this next week.
+
+:::{.callout-note}
+A $2\times2$ matrix is singular exactly when $ad-bc=0$.
+:::
+
+
+## Properties of the inverse
+Using arguments similar to that above, you could prove the following for $2\times2$ inverses:^[In fact they hold for any sized square matrix.]
+
+- The inverse of a square matrix is square.
+- If the inverse exists, it is both a right- and left- inverse, even though matrix multiplication is not commutation. So $AA^{-1}=I$ means $A^{-1}A = I$.
+- The inverse is unique. If $AB=I$, then $B=A^{-1}$ and $A=B^{-1}$.
+- The inverse of the inverse is the original matrix: $\left(A^{-1}\right)^{-1}=A$.
+- The inverse of the transpose is the transpose of the inverse: $\left(A^T\right)^{-1}=\left(A^{-1}\right)^T$.
+- The inverse of a product obeys $(AB)^{-1} = B^{-1}A^{-1}$.

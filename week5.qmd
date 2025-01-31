@@ -1,0 +1,284 @@
+---
+title: "Week 5: Determinants and inverses of $3\\times 3$ matrices"
+---
+
+::: {.hidden}
+
+ \newcommand{\V}[1]{{\overrightarrow{#1}}}
+ \newcommand{\vc}[1]{{\mathbf{#1}}}
+ \newcommand{\hc}[1]{\hat{\vc{#1}}}
+ \newcommand{\cv}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}}
+ \newcommand{\cvv}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}}
+ \newcommand{\m}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+
+$$
+ \newenvironment{amatrix}[1]{%
+  \left[\begin{array}{#1}
+}{%
+  \end{array}\right]
+}
+$$
+::: 
+
+Last week, we saw that for a matrix
+$$
+A = \m{a&b\\c&d},
+$$
+the inverse is
+$$
+A^{-1} = \frac{1}{ad-bc} \m{d &-b\\ -c & a}.
+$$
+
+This inverse exists if and only if $ad-bc\neq 0$. We call this quantity $ad-bc$ the _determinant_, and write
+$$\det{A}=ad-bc.$$
+You can think of the determinant as a bit like the discriminant for quadratic equations. It _determines_ whether the matrix is _invertible_ or _singular_.
+
+Sometimes we also write the determinant as $|A|$, but I'll avoid this notation because it's different from the absolute value of a scalar or magnitude of a vector. The determinant **can** be negative.
+
+# Determinants for square matrices
+The determinant is defined for any sized square matrix. In this module, you'll only be asked to calculate it for $2\times2$ and $3\times3$ matrices. You've already seen $2\times2$. Before we see $3\times3$, let's introduce the rules it follows, which define it:
+
+- $\det{(AB)} = \det{A}\det{B}$.
+- $\det{I} = 1$.
+- $\det{\lambda A} = \lambda^n \det A$ for an $n\times n$ matrix.
+- The determinant of a matrix is equal to the entries of the top row multiplied by the determinants of the submatrix excluding that row. I can't explain this easily here and it's not necessary for the exam, but I'll go over this is lectures.
+
+You should be able to prove these for $2\times2$ matrices.
+
+Applying this to $3\times 3$ matrices, the result is this:
+$$
+\det \m{a&b&c\\d&e&f\\g&h&i} = aei+bfg+cdh - ceg - bdi - afh
+$$
+This is called the _Leibniz formula_ or the _rule of Sarrus_. We multiply over the rightwards diagonals, add them, and subtract the negative diagonals. Here's an example: <https://www.youtube.com/watch?v=x2vWqtYwZ1g>.
+
+:::{.callout-note}
+Learn the rule of Sarrus.
+:::
+
+**Think:** what is the determinant of
+$$
+\m{5 &2&1\\1&-1&1\\2&3&4}
+$$
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\begin{split}
+5\times-1\times4 + 2\times1\times2+1\times1\times3 - 1\times-1\times2 - 2\times1\times4 - 5\times1\times3 
+\\
+=  -20 + 4+3+2-8-15 = -34.
+\end{split}
+$$
+:::
+
+## Example
+Is the matrix 
+$$
+A=\m{1&2&3\\3&6&9\\2&1&1}
+$$
+invertible? Justify your answer.
+
+::: {.callout-tip collapse="true"}
+## Solution
+If we do the full determinant calculation we find that
+$$
+\det A = 0,
+$$
+so it is singular, it is not invertible.
+:::
+
+
+# Row operations on matrices
+
+We limit ourselves to three specific types of _row operations_. Each of these can be considered to be "left mutliplying" by a specific type of matrix.
+
+## Swapping two rows in a matrix
+If we left-multiply a $3\times3$ matrix by the matrix $\m{1 & 0 &0 \\ 0 & 0 & 1 \\ 0 & 1 & 0}$, the result is that the second and third rows get swapped:
+$$
+\m{1 & 0 &0 \\ 0 & 0 & 1 \\ 0 & 1 & 0}\m{1 & 2 & 3\\4&5&6\\7&8&9} = \m{1 & 2 & 3\\7&8&9\\4&5&6}.
+$$
+Go through this multiplication slowly to convince yourself.
+
+**Think:** what matrix would swap the first and third rows and leave the second row as it is?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\m{0&0&1\\0 & 1 & 0\\1&0&0}.
+$$
+:::
+
+## Multiplying a row by a scalar
+If we left-multiply a $3\times3$ matrix by the matrix $\m{1 & 0 &0 \\ 0 & 1 & 0 \\ 0 & 0 & 0.5}$, the result is that the third row is multiplied by $0.5$:
+$$
+\m{1 & 0 &0 \\ 0 &1 & 0 \\ 0 & 0 & 0.5}\m{1 & 2 & 3\\4&5&6\\7&8&9} = \m{1 & 2 & 3\\4&5&6\\3.5&4&4.5}.
+$$
+Go through this multiplication slowly to convince yourself.
+
+**Think:** what matrix would multiply the first row by 3?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\m{3&0&0\\0&1&0\\0&0&1}.
+$$
+:::
+
+## Adding a multiple of one row to another row
+If we left-multiply a $3\times3$ matrix by the matrix $\m{1 & 0 &0 \\ 0 & 1 & 0 \\ 2 & 0 & 1}$, the result is that we add $2\times$ the first row to the third row:
+$$
+\m{1 & 0 &0 \\ 0 &1 & 0 \\ 1 & 0 & 1}\m{1 & 2 & 3\\4&5&6\\7&8&9} = \m{1 & 2 & 3\\4&5&6\\9&12&15}.
+$$
+Go through this multiplication slowly to convince yourself.
+
+**Think:** what matrix would add $4\times$ the first row to the second row?
+
+::: {.callout-tip collapse="true"}
+## Solution
+$$
+\m{1&0&0\\4&1&0\\0&0&1}.
+$$
+:::
+
+## The bigger picture
+Why is this interesting? Firstly, notice that to get the matrix that performs these row oeprations, you just need to do the row operation to the identity matrix.
+
+Secondly suppose you have a series of row operation matrices, let's call them $P_1$, $P_2$, etc., and you perform them one after another on a matrix $A$:
+
+$$
+P_5 P_4 P_3 P_2 P_1 A.
+$$
+(Because we're left multiplying, the order is reversed!)
+
+If the result of this is the identity, then we have found the inverse of A!
+$$
+(P_5 P_4 P_3 P_2 P_1) A = I
+$$
+means that
+$$
+A^{-1}=(P_5 P_4 P_3 P_2 P_1).
+$$
+Remember that inverses are _unique_ for square matrices, so if $BA=I$ then $B=A^{-1}$.
+
+# Inverses of $3\times3$ matrices
+
+This is our strategy for finding $3\times 3$ inverses: find a series of row operations to transform a matrix into the identity matrix, and then these row operations performed on the identity matrix give us the inverse.
+
+ In fact, this works for any square matrices. (You may have seen different methods for $3\times 3$ inverses, which don't generalise to higher dimensions and we won't see those in this module.)
+
+## Augmented matrices
+
+In order to compute $3\times3$ matrix inverses, we need to introduce a new notation, called _augmented_ matrices. This is just two matrices with the same number of rows, stuck side-by-side:
+
+If $A=\m{1&2&3\\4&5&6\\7&8&9}$ and $B=\m{0&9&8\\7&6&5\\4&3&2}$ then the augmented matrix $[A|B]$ is
+$$
+[A|B]=\begin{amatrix}{ccc|ccc}
+1&2&3&0&9&8\\4&5&6&7&6&5\\7&8&9&4&3&2
+\end{amatrix}.
+$$
+
+What this notation does is allow us to manipulate two different matrices at the same time using the same row operations, and it simplifies the whole procedure.
+
+For example, taking the above matrix and subtracting $2\times$ the first row from the second row, we have
+
+$$
+\begin{aligned}
+&\begin{amatrix}{ccc|ccc}
+1&2&3&0&9&8\\4&5&6&7&6&5\\7&8&9&4&3&2
+\end{amatrix}
+\\
+&\hookrightarrow\begin{amatrix}{ccc|ccc}
+1&2&3&0&9&8\\2&1&0&7&-12&-11\\7&8&9&4&3&2
+\end{amatrix} \qquad R_2 \to R_2 - 2 R_1
+\end{aligned}
+$$
+
+Please make a point of writing out explicitly what row operation you're doing so whoever's marking your work can follow it.
+
+## How it works
+Here are the steps for finding the inverse of a $3\times3$ matrix $A$:
+
+1. Write an augmented matrix with the identity, i.e. $[A|I]$
+2. Perform a series of row operations to get zeros below the diagonal and ones on the diagonal on the left hand side.
+3. Perform more row operations to get zeros above the diagonal.
+4. Now the left side of the augmented matrix should be the identity, and the right side is your inverse, $[I|A^{-1}]$.
+
+Remember that not all matrices have inverses. If you get stuck, it's probably because the matrix is _singular_, and the determinant of the matrix will be zero. (But you could also have made a mistake, like forgetting to swap rows.)
+
+:::{.callout-note}
+Calculate the determinant of a matrix before trying to find the inverse. If the determinant is zero, no inverse exists. If the determinant is not zero, this method will give you the inverse.
+:::
+
+## Example
+
+Following the steps above, let's find the inverse of
+$$
+A=\m{5 &1 &0\\5&5&-3\\-10&3&\frac{9}{4}}.
+$$
+(First find the determinant to check it's invertible!)
+
+$$
+\begin{aligned}
+&\begin{amatrix}{ccc|ccc}
+5 &1 &0&1&0&0\\5&5&-3&0&1&0\\-10&3&\frac{9}{4}&0&0&1
+\end{amatrix}
+\\
+&\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &\frac{1}{5} &0&\frac{1}{5}&0&0\\5&5&-3&0&1&0\\-10&3&\frac{9}{4}&0&0&1
+\end{amatrix} \qquad R_1 \to \frac{1}{5}R_1 \qquad \text{(to get a 1 on the diagonal entry)}
+\\
+&\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &\frac{1}{5} &0&\frac{1}{5}&0&0\\0&4&-3&-1&1&0\\-10&3&\frac{9}{4}&0&0&1
+\end{amatrix} \qquad R_2 \to R_2-5R_1 \qquad \text{(to get 0 below the diagonal)}
+\\
+&\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &\frac{1}{5} &0&\frac{1}{5}&0&0\\0&4&-3&-1&1&0\\0&5&\frac{9}{4}&2&0&1
+\end{amatrix} \qquad R_3 \to R_3+10R_1 \qquad \text{(to get 0 in the bottom left)}
+\\
+&\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &\frac{1}{5} &0&\frac{1}{5}&0&0\\0&1&-\frac{3}{4}&-\frac{1}{4}&\frac{1}{4}&0\\0&5&\frac{9}{4}&2&0&1
+\end{amatrix} \qquad R_2 \to \frac{1}{4}R_2 \qquad \text{(to get 1 on the diagonal)}
+\\
+&\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &\frac{1}{5} &0&\frac{1}{5}&0&0\\0&1&-\frac{3}{4}&-\frac{1}{4}&\frac{1}{4}&0\\0&0&6&\frac{13}{4}&-\frac{5}{4}&1
+\end{amatrix} \qquad R_3 \to R_3-5R_2 \qquad \text{(to get 0 below the diagonal)}
+\\
+&\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &\frac{1}{5} &0&\frac{1}{5}&0&0\\0&1&-\frac{3}{4}&-\frac{1}{4}&\frac{1}{4}&0\\0&0&1&\frac{13}{24}&-\frac{5}{24}&\frac{1}{6}
+\end{amatrix} \qquad R_3 \to \frac{1}{6} R_3 \qquad \text{(to get 1 on the diagonal)}
+\end{aligned}
+$$
+
+We've now completed the second step above. We've worked down from the top to get ones on the diagonal and zeros below. Now for the third step we work back upwards to get zeros above the diagonal:
+
+$$
+\begin{aligned}
+&\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &\frac{1}{5} &0&\frac{1}{5}&0&0\\
+0&1&0&\frac{5}{32}&\frac{3}{32}&\frac{1}{8}\\
+0&0&1&\frac{13}{24}&-\frac{5}{24}&\frac{1}{6}
+\end{amatrix} \qquad R_2 \to R_2 + \frac{3}{4}R_3 \qquad \text{(to get 0 middle right)}\\
+&\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &0 &0&\frac{27}{160}&-\frac{3}{160}&-\frac{1}{40}\\
+0&1&0&\frac{5}{32}&\frac{3}{32}&\frac{1}{8}\\
+0&0&1&\frac{13}{24}&-\frac{5}{24}&\frac{1}{6}
+\end{amatrix} \qquad R_1 \to R_1 - \frac{1}{5}R_2 \qquad \text{(to get 0 top middle)}\\
+\end{aligned}
+$$
+
+We already have a zero in the top right, so we're done! The left hand side is the identity, and the right hand side is the inverse.
+
+$$
+A^{-1}=\m{\frac{27}{160}&-\frac{3}{160}&-\frac{1}{40}\\
+\frac{5}{32}&\frac{3}{32}&\frac{1}{8}\\
+\frac{13}{24}&-\frac{5}{24}&\frac{1}{6}}.
+$$
+
+Does it work? Calculate $A A^{-1}$ and $A^{-1} A$ to check.
+
+There's a general procedure here to get do divisions to get ones on the diagonal and subtraction/addition to get zeros. The problem comes when you have a zero where you need a one. In this case you have to swap rows. We'll see examples of this in class and on the worksheets.
+
+:::{.callout-note}
+This process of finding the inverse is long and boring, but it's straightforward if you take your time. Most of the marks are for understanding the method, because it's very easy to make an arithmetic mistake.
+:::
+

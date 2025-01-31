@@ -17,6 +17,7 @@ website:
       - section: "Chapter 2: Matrices"
         contents:
           - href: week4.qmd
+          - href: week5.qmd
       - section: "Chapter 3: Lines, planes and spheres"
       - section: "Chapter 4: Complex numbers"
       - href: links.qmd

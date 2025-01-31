@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 3: Dot and cross products – MA12001 Algebra</title>
+<title>Week 5: Determinants and inverses of 3\times 3 matrices – MA12001 Algebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html">Chapter 1: Vectors</a></li><li class="breadcrumb-item"><a href="./week3.html">Week 3: Dot and cross products</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html">Chapter 2: Matrices</a></li><li class="breadcrumb-item"><a href="./week5.html">Week 5: Determinants and inverses of <span class="math inline">\(3\times 3\)</span> matrices</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -163,7 +163,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week3.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3: Dot and cross products</span></a>
   </div>
 </li>
@@ -186,7 +186,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link">
+  <a href="./week5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 5: Determinants and inverses of <span class="math inline">\(3\times 3\)</span> matrices</span></a>
   </div>
 </li>
@@ -216,21 +216,22 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#vector-vector-multiplication" id="toc-vector-vector-multiplication" class="nav-link active" data-scroll-target="#vector-vector-multiplication">Vector-vector multiplication</a>
+  <li><a href="#determinants-for-square-matrices" id="toc-determinants-for-square-matrices" class="nav-link active" data-scroll-target="#determinants-for-square-matrices">Determinants for square matrices</a>
   <ul class="collapse">
-  <li><a href="#the-dot-product" id="toc-the-dot-product" class="nav-link" data-scroll-target="#the-dot-product">The dot product</a>
-  <ul class="collapse">
-  <li><a href="#properties" id="toc-properties" class="nav-link" data-scroll-target="#properties">Properties</a></li>
-  <li><a href="#the-dot-product-with-components" id="toc-the-dot-product-with-components" class="nav-link" data-scroll-target="#the-dot-product-with-components">The dot product with components</a></li>
-  <li><a href="#example-for-dot-products" id="toc-example-for-dot-products" class="nav-link" data-scroll-target="#example-for-dot-products">Example for dot products</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
   </ul></li>
-  <li><a href="#the-cross-product" id="toc-the-cross-product" class="nav-link" data-scroll-target="#the-cross-product">The cross product</a>
+  <li><a href="#row-operations-on-matrices" id="toc-row-operations-on-matrices" class="nav-link" data-scroll-target="#row-operations-on-matrices">Row operations on matrices</a>
   <ul class="collapse">
-  <li><a href="#properties-1" id="toc-properties-1" class="nav-link" data-scroll-target="#properties-1">Properties</a></li>
-  <li><a href="#the-cross-product-with-components" id="toc-the-cross-product-with-components" class="nav-link" data-scroll-target="#the-cross-product-with-components">The cross product with components</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
-  <li><a href="#example-for-cross-products" id="toc-example-for-cross-products" class="nav-link" data-scroll-target="#example-for-cross-products">Example for cross products</a></li>
+  <li><a href="#swapping-two-rows-in-a-matrix" id="toc-swapping-two-rows-in-a-matrix" class="nav-link" data-scroll-target="#swapping-two-rows-in-a-matrix">Swapping two rows in a matrix</a></li>
+  <li><a href="#multiplying-a-row-by-a-scalar" id="toc-multiplying-a-row-by-a-scalar" class="nav-link" data-scroll-target="#multiplying-a-row-by-a-scalar">Multiplying a row by a scalar</a></li>
+  <li><a href="#adding-a-multiple-of-one-row-to-another-row" id="toc-adding-a-multiple-of-one-row-to-another-row" class="nav-link" data-scroll-target="#adding-a-multiple-of-one-row-to-another-row">Adding a multiple of one row to another row</a></li>
+  <li><a href="#the-bigger-picture" id="toc-the-bigger-picture" class="nav-link" data-scroll-target="#the-bigger-picture">The bigger picture</a></li>
   </ul></li>
+  <li><a href="#inverses-of-3times3-matrices" id="toc-inverses-of-3times3-matrices" class="nav-link" data-scroll-target="#inverses-of-3times3-matrices">Inverses of <span class="math inline">\(3\times3\)</span> matrices</a>
+  <ul class="collapse">
+  <li><a href="#augmented-matrices" id="toc-augmented-matrices" class="nav-link" data-scroll-target="#augmented-matrices">Augmented matrices</a></li>
+  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How it works</a></li>
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -238,9 +239,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html">Chapter 1: Vectors</a></li><li class="breadcrumb-item"><a href="./week3.html">Week 3: Dot and cross products</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html">Chapter 2: Matrices</a></li><li class="breadcrumb-item"><a href="./week5.html">Week 5: Determinants and inverses of <span class="math inline">\(3\times 3\)</span> matrices</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 3: Dot and cross products</h1>
+<h1 class="title">Week 5: Determinants and inverses of <span class="math inline">\(3\times 3\)</span> matrices</h1>
 </div>
 
 
@@ -258,45 +259,34 @@ window.Quarto = {
 
 
 <div class="hidden">
-
-</div>
-<section id="vector-vector-multiplication" class="level1">
-<h1>Vector-vector multiplication</h1>
-<p>So far for vectors we have defined addition of two vectors, and the multiplication of a vector by a scalar. What about multiplying two vectors together?</p>
-<p>For vector addition, we add the components together to get a new vector. The obvious definition for vector multiplication would seem to be multiplying the components to get a new vector. However, this operation turns out to be somewhat meaningless and useless for mathematicians and physicists.</p>
-<p>Instead, we will see two types of ‘multiplication’, called the dot and cross product.</p>
-<section id="the-dot-product" class="level2">
-<h2 class="anchored" data-anchor-id="the-dot-product">The dot product</h2>
-<p>The first type of multiplication is called the <em>scalar product</em>, because the result is a scalar. We will usually call it the <em>dot product</em> and you might also see <em>inner product</em>.</p>
-<p>This operation is defined for <span class="math inline">\(\mathbb{R}^n\)</span> for all <span class="math inline">\(n\)</span> as follows:</p>
-<p><span class="math display">\[{\mathbf{a}}\cdot{\mathbf{b}} = |{\mathbf{a}}|\,|{\mathbf{b}}|\,\cos\theta,\]</span></p>
-<p>where <span class="math inline">\(\theta\)</span> is the angle between the two vectors.</p>
-<p><img src="vf12.png" class="img-fluid"></p>
-<section id="properties" class="level3">
-<h3 class="anchored" data-anchor-id="properties">Properties</h3>
-<p>Following the definition above and the set of <a href="./week2.html#sec-vectors">rules for vectors</a>, you can prove the following rules:</p>
-<ul>
-<li>If <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> are perpendicular, <span class="math inline">\({\mathbf{a}}\cdot{\mathbf{b}}=0\)</span>.</li>
-<li><span class="math inline">\({\mathbf{a}}\cdot{\mathbf{b}} = 0\)</span> tells us that the vectors are perpendicular, or one of <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> is <span class="math inline">\({\mathbf{0}}\)</span>;</li>
-<li><span class="math inline">\({\mathbf{a}}\cdot{\mathbf{a}} = |{\mathbf{a}}|^2\)</span>;</li>
-<li><span class="math inline">\({\mathbf{a}}\cdot(\lambda{\mathbf{b}}) = \lambda ({\mathbf{a}}\cdot{\mathbf{b}})\)</span>;</li>
-<li><span class="math inline">\({\mathbf{a}}\cdot{\mathbf{b}} = {\mathbf{b}}\cdot{\mathbf{a}}\)</span>: the dot product is commutative;</li>
-<li><span class="math inline">\({\mathbf{a}}\cdot({\mathbf{b}}+{\mathbf{c}}) = {\mathbf{a}}\cdot{\mathbf{b}} + {\mathbf{a}}\cdot{\mathbf{c}}\)</span>: the dot product is distributive over addition<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
-</ul>
-</section>
-<section id="the-dot-product-with-components" class="level3">
-<h3 class="anchored" data-anchor-id="the-dot-product-with-components">The dot product with components</h3>
-<p>A particularly important property becomes apparent when we find the dot product of vectors in components <span class="math inline">\({\mathbf{a}}=\begin{bmatrix} a_1 \\ a_2 \\ a_3\end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{b}}=\begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix}\)</span> using the rules above:</p>
 <p><span class="math display">\[
-\begin{aligned}
-{\mathbf{a}}\cdot{\mathbf{b}} &amp;= \left(a_1 \hat{{\mathbf{x}}} + a_2 \hat{{\mathbf{y}}} + a_3\hat{{\mathbf{z}}}\right)\cdot\left(b_1 \hat{{\mathbf{x}}} + b_2 \hat{{\mathbf{y}}} + b_3\hat{{\mathbf{z}}}\right) \\
-&amp;= a_1b_1 \hat{{\mathbf{x}}}\cdot\hat{{\mathbf{x}}} + a_1b_2 \hat{{\mathbf{x}}}\cdot\hat{{\mathbf{y}}} + a_1b_3 \hat{{\mathbf{x}}}\cdot\hat{{\mathbf{z}}} +
-a_2b_1 \hat{{\mathbf{y}}}\cdot\hat{{\mathbf{x}}} + a_2b_2 \hat{{\mathbf{y}}}\cdot\hat{{\mathbf{y}}} + a_2b_3 \hat{{\mathbf{y}}}\cdot\hat{{\mathbf{z}}} \\ &amp;\;+
-a_3b_1 \hat{{\mathbf{z}}}\cdot\hat{{\mathbf{x}}} + a_3b_2 \hat{{\mathbf{z}}}\cdot\hat{{\mathbf{y}}} + a_3b_3 \hat{{\mathbf{z}}}\cdot\hat{{\mathbf{z}}} \\
-&amp;= a_1b_1 + a_2b_2 + a_3b_3,
-\end{aligned}
+\newenvironment{amatrix}[1]{%
+  \left[\begin{array}{#1}
+}{%
+  \end{array}\right]
+}
 \]</span></p>
-<p>where we have used the facts that <span class="math inline">\(\hat{{\mathbf{x}}}\cdot\hat{{\mathbf{x}}}=\hat{{\mathbf{y}}}\cdot\hat{{\mathbf{y}}}=\hat{{\mathbf{z}}}\cdot\hat{{\mathbf{z}}}=1\)</span> and <span class="math inline">\(\hat{{\mathbf{x}}}\cdot\hat{{\mathbf{y}}}=\hat{{\mathbf{x}}}\cdot\hat{{\mathbf{z}}}=\hat{{\mathbf{y}}}\cdot\hat{{\mathbf{z}}}=0\)</span>.</p>
+</div>
+<p>Last week, we saw that for a matrix <span class="math display">\[
+A = \begin{bmatrix} a&amp;b\\c&amp;d \end{bmatrix},
+\]</span> the inverse is <span class="math display">\[
+A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d &amp;-b\\ -c &amp; a \end{bmatrix}.
+\]</span></p>
+<p>This inverse exists if and only if <span class="math inline">\(ad-bc\neq 0\)</span>. We call this quantity <span class="math inline">\(ad-bc\)</span> the <em>determinant</em>, and write <span class="math display">\[\det{A}=ad-bc.\]</span> You can think of the determinant as a bit like the discriminant for quadratic equations. It <em>determines</em> whether the matrix is <em>invertible</em> or <em>singular</em>.</p>
+<p>Sometimes we also write the determinant as <span class="math inline">\(|A|\)</span>, but I’ll avoid this notation because it’s different from the absolute value of a scalar or magnitude of a vector. The determinant <strong>can</strong> be negative.</p>
+<section id="determinants-for-square-matrices" class="level1">
+<h1>Determinants for square matrices</h1>
+<p>The determinant is defined for any sized square matrix. In this module, you’ll only be asked to calculate it for <span class="math inline">\(2\times2\)</span> and <span class="math inline">\(3\times3\)</span> matrices. You’ve already seen <span class="math inline">\(2\times2\)</span>. Before we see <span class="math inline">\(3\times3\)</span>, let’s introduce the rules it follows, which define it:</p>
+<ul>
+<li><span class="math inline">\(\det{(AB)} = \det{A}\det{B}\)</span>.</li>
+<li><span class="math inline">\(\det{I} = 1\)</span>.</li>
+<li><span class="math inline">\(\det{\lambda A} = \lambda^n \det A\)</span> for an <span class="math inline">\(n\times n\)</span> matrix.</li>
+<li>The determinant of a matrix is equal to the entries of the top row multiplied by the determinants of the submatrix excluding that row. I can’t explain this easily here and it’s not necessary for the exam, but I’ll go over this is lectures.</li>
+</ul>
+<p>You should be able to prove these for <span class="math inline">\(2\times2\)</span> matrices.</p>
+<p>Applying this to <span class="math inline">\(3\times 3\)</span> matrices, the result is this: <span class="math display">\[
+\det \begin{bmatrix} a&amp;b&amp;c\\d&amp;e&amp;f\\g&amp;h&amp;i \end{bmatrix} = aei+bfg+cdh - ceg - bdi - afh
+\]</span> This is called the <em>Leibniz formula</em> or the <em>rule of Sarrus</em>. We multiply over the rightwards diagonals, add them, and subtract the negative diagonals. Here’s an example: <a href="https://www.youtube.com/watch?v=x2vWqtYwZ1g" class="uri">https://www.youtube.com/watch?v=x2vWqtYwZ1g</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -307,10 +297,12 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To calculate the dot product of two vectors, multiply the components together and add them up.</p>
+<p>Learn the rule of Sarrus.</p>
 </div>
 </div>
-<p><strong>Think:</strong> if <span class="math inline">\({\mathbf{a}}=\begin{bmatrix} 2 \\ 1 \\ -1\end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{b}}=\begin{bmatrix} 0 \\ 1 \\ 1\end{bmatrix}\)</span>, what is <span class="math inline">\({\mathbf{a}}\cdot{\mathbf{b}}\)</span>? What do you deduce about the vectors?</p>
+<p><strong>Think:</strong> what is the determinant of <span class="math display">\[
+\begin{bmatrix} 5 &amp;2&amp;1\\1&amp;-1&amp;1\\2&amp;3&amp;4 \end{bmatrix}
+\]</span></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -323,28 +315,50 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(2\times0 + 1\times1 + (-1)\times1 = 0\)</span>.</p>
-<p>The dot product is zero and neither of the vectors is <span class="math inline">\({\mathbf{0}}\)</span> so the vectors are perpendicular.</p>
+<p><span class="math display">\[
+\begin{split}
+5\times-1\times4 + 2\times1\times2+1\times1\times3 - 1\times-1\times2 - 2\times1\times4 - 5\times1\times3
+\\
+=  -20 + 4+3+2-8-15 = -34.
+\end{split}
+\]</span></p>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-important callout-titled" title="Common mistake">
-<div class="callout-header d-flex align-content-center">
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>Is the matrix <span class="math display">\[
+A=\begin{bmatrix} 1&amp;2&amp;3\\3&amp;6&amp;9\\2&amp;1&amp;1 \end{bmatrix}
+\]</span> invertible? Justify your answer.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Common mistake
+Solution
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Very often people do something like <span class="math inline">\(\begin{bmatrix} 1 \\ 2 \\ 3\end{bmatrix}\cdot\begin{bmatrix} 3 \\ 2 \\ 4\end{bmatrix} = \begin{bmatrix} 1\times 3 \\ 2\times 2 \\ 3\times 4\end{bmatrix}\)</span>. This is WRONG because the result of the dot product must be a scalar, not a vector.</p>
+<p>If we do the full determinant calculation we find that <span class="math display">\[
+\det A = 0,
+\]</span> so it is singular, it is not invertible.</p>
+</div>
 </div>
 </div>
 </section>
-<section id="example-for-dot-products" class="level3">
-<h3 class="anchored" data-anchor-id="example-for-dot-products">Example for dot products</h3>
-<p>Show that the diagonals of a rhombus are perpendicular.</p>
+</section>
+<section id="row-operations-on-matrices" class="level1">
+<h1>Row operations on matrices</h1>
+<p>We limit ourselves to three specific types of <em>row operations</em>. Each of these can be considered to be “left mutliplying” by a specific type of matrix.</p>
+<section id="swapping-two-rows-in-a-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="swapping-two-rows-in-a-matrix">Swapping two rows in a matrix</h2>
+<p>If we left-multiply a <span class="math inline">\(3\times3\)</span> matrix by the matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp;0 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \end{bmatrix}\)</span>, the result is that the second and third rows get swapped: <span class="math display">\[
+\begin{bmatrix} 1 &amp; 0 &amp;0 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \end{bmatrix}\begin{bmatrix} 1 &amp; 2 &amp; 3\\4&amp;5&amp;6\\7&amp;8&amp;9 \end{bmatrix} = \begin{bmatrix} 1 &amp; 2 &amp; 3\\7&amp;8&amp;9\\4&amp;5&amp;6 \end{bmatrix}.
+\]</span> Go through this multiplication slowly to convince yourself.</p>
+<p><strong>Think:</strong> what matrix would swap the first and third rows and leave the second row as it is?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -357,70 +371,114 @@ Solution
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Let the corners of the rhombus be <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> and <span class="math inline">\(D\)</span>.</p>
-<p><img src="vf13.png" class="img-fluid"></p>
-<p>It’s a paralellogram, so <span class="math inline">\({\overrightarrow{AB}}={\overrightarrow{DC}}\)</span> - let’s call this <span class="math inline">\({\mathbf{a}}\)</span> - and <span class="math inline">\({\overrightarrow{BC}}={\overrightarrow{AD}}={\mathbf{b}}\)</span>.</p>
-<p>Futhermore, for a rhombus we know the side lengths are the same, so <span class="math inline">\(|{\mathbf{a}}| = |{\mathbf{b}}|\)</span>.</p>
-<p>We want to show that <span class="math inline">\({\overrightarrow{AC}}\cdot{\overrightarrow{BD}} = 0\)</span>.</p>
-<p>We see from the diagram that <span class="math inline">\({\overrightarrow{AC}} = {\mathbf{a}}+{\mathbf{b}}\)</span> and <span class="math inline">\({\overrightarrow{BD}} = {\mathbf{b}}-{\mathbf{a}}\)</span>. Then</p>
 <p><span class="math display">\[
-{\overrightarrow{AC}}\cdot{\overrightarrow{BD}} = ({\mathbf{a}}+{\mathbf{b}})\cdot({\mathbf{b}}-{\mathbf{a}}) = {\mathbf{a}}\cdot{\mathbf{b}} - {\mathbf{a}}\cdot{\mathbf{a}} + {\mathbf{b}}\cdot{\mathbf{b}} - {\mathbf{b}}\cdot{\mathbf{a}} = |{\mathbf{b}}|^2-|{\mathbf{a}}|^2 = 0.
+\begin{bmatrix} 0&amp;0&amp;1\\0 &amp; 1 &amp; 0\\1&amp;0&amp;0 \end{bmatrix}.
 \]</span></p>
 </div>
 </div>
 </div>
 </section>
-</section>
-<section id="the-cross-product" class="level2">
-<h2 class="anchored" data-anchor-id="the-cross-product">The cross product</h2>
-<p>Unlike the dot product, which is valid in any dimensions, the cross product is only defined in three dimensions.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Also unlike the dot product, the cross product of two vectors is a <em>vector</em>. For this reason it’s called the vector product. It’s written with a cross <span class="math inline">\(\times\)</span>.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<p>The geometric definition is as follows:</p>
-<ul>
-<li>If either <span class="math inline">\({\mathbf{a}}\)</span> or <span class="math inline">\({\mathbf{b}}\)</span> is <span class="math inline">\({\mathbf{0}}\)</span>, or they’re parallel, then <span class="math inline">\({\mathbf{a}}\times{\mathbf{b}}={\mathbf{0}}\)</span>.</li>
-<li>Otherwise, find a vector the is perpendicular to both <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> using the <em>right-hand rule</em>:</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="righthand_rule-001.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Figure by Izaak Neutelings, from <a href="https://tikz.net" class="uri">https://tikz.net</a>.</figcaption>
-</figure>
-</div>
-<ul>
-<li>The magnitude of the result <span class="math inline">\(|{\mathbf{a}}\times{\mathbf{b}}| = |{\mathbf{a}}||{\mathbf{b}}|\sin\theta\)</span>.</li>
-</ul>
-<p>Note the similarity to the dot product, but with sine instead of cosine, and the fact it’s a vector.</p>
-<section id="properties-1" class="level3">
-<h3 class="anchored" data-anchor-id="properties-1">Properties</h3>
-<p>The following properties have similarities and differences with the corresponding ones for the dot product:</p>
-<ul>
-<li>If <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> are parallel, <span class="math inline">\({\mathbf{a}}\times{\mathbf{b}}={\mathbf{0}}\)</span>.</li>
-<li><span class="math inline">\({\mathbf{a}}\times{\mathbf{b}} = {\mathbf{0}}\)</span> tells us that the vectors are parallel, or one of <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> is <span class="math inline">\({\mathbf{0}}\)</span>;</li>
-<li><span class="math inline">\({\mathbf{a}}\times{\mathbf{a}} = {\mathbf{0}}\)</span>;</li>
-<li><span class="math inline">\({\mathbf{a}}\times(\lambda{\mathbf{b}}) = \lambda ({\mathbf{a}}\times{\mathbf{b}})\)</span>;</li>
-<li><span class="math inline">\({\mathbf{a}}\times{\mathbf{b}} = -{\mathbf{b}}\times{\mathbf{a}}\)</span>: the dot product is <strong>anti</strong>commutative;</li>
-<li><span class="math inline">\({\mathbf{a}}\times({\mathbf{b}}+{\mathbf{c}}) = {\mathbf{a}}\times{\mathbf{b}} + {\mathbf{a}}\times{\mathbf{c}}\)</span>: the cross product is distributive over addition.</li>
-</ul>
-</section>
-<section id="the-cross-product-with-components" class="level3">
-<h3 class="anchored" data-anchor-id="the-cross-product-with-components">The cross product with components</h3>
-<p>If you apply the rules above, using the fact that <span class="math inline">\(\hat{{\mathbf{x}}}\times\hat{{\mathbf{y}}}=\hat{{\mathbf{z}}}\)</span> - which is called a <em>right-handed coordinate system</em> - you can prove the following important formula:</p>
-<p><span class="math display">\[
-\begin{bmatrix} a_1 \\ a_2 \\ a_3\end{bmatrix} \times \begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix} = \begin{bmatrix} a_2b_3-a_3b_2 \\ a_3b_1-a_1b_3 \\ a_1b_2 - a_2b_1\end{bmatrix}.
-\]</span></p>
-<p>This ugly formula is one of the only things in this module I recommend you learn by heart. There are patterns which can help you memorise it; try to find something that works for you.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Common mistake">
-<div class="callout-header d-flex align-content-center">
+<section id="multiplying-a-row-by-a-scalar" class="level2">
+<h2 class="anchored" data-anchor-id="multiplying-a-row-by-a-scalar">Multiplying a row by a scalar</h2>
+<p>If we left-multiply a <span class="math inline">\(3\times3\)</span> matrix by the matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp;0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0.5 \end{bmatrix}\)</span>, the result is that the third row is multiplied by <span class="math inline">\(0.5\)</span>: <span class="math display">\[
+\begin{bmatrix} 1 &amp; 0 &amp;0 \\ 0 &amp;1 &amp; 0 \\ 0 &amp; 0 &amp; 0.5 \end{bmatrix}\begin{bmatrix} 1 &amp; 2 &amp; 3\\4&amp;5&amp;6\\7&amp;8&amp;9 \end{bmatrix} = \begin{bmatrix} 1 &amp; 2 &amp; 3\\4&amp;5&amp;6\\3.5&amp;4&amp;4.5 \end{bmatrix}.
+\]</span> Go through this multiplication slowly to convince yourself.</p>
+<p><strong>Think:</strong> what matrix would multiply the first row by 3?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Common mistake
+Solution
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>People mess up the second component of the cross product. It might be the negative of what you intuitively think it should be.</p>
+<p><span class="math display">\[
+\begin{bmatrix} 3&amp;0&amp;0\\0&amp;1&amp;0\\0&amp;0&amp;1 \end{bmatrix}.
+\]</span></p>
 </div>
 </div>
+</div>
+</section>
+<section id="adding-a-multiple-of-one-row-to-another-row" class="level2">
+<h2 class="anchored" data-anchor-id="adding-a-multiple-of-one-row-to-another-row">Adding a multiple of one row to another row</h2>
+<p>If we left-multiply a <span class="math inline">\(3\times3\)</span> matrix by the matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp;0 \\ 0 &amp; 1 &amp; 0 \\ 2 &amp; 0 &amp; 1 \end{bmatrix}\)</span>, the result is that we add <span class="math inline">\(2\times\)</span> the first row to the third row: <span class="math display">\[
+\begin{bmatrix} 1 &amp; 0 &amp;0 \\ 0 &amp;1 &amp; 0 \\ 1 &amp; 0 &amp; 1 \end{bmatrix}\begin{bmatrix} 1 &amp; 2 &amp; 3\\4&amp;5&amp;6\\7&amp;8&amp;9 \end{bmatrix} = \begin{bmatrix} 1 &amp; 2 &amp; 3\\4&amp;5&amp;6\\9&amp;12&amp;15 \end{bmatrix}.
+\]</span> Go through this multiplication slowly to convince yourself.</p>
+<p><strong>Think:</strong> what matrix would add <span class="math inline">\(4\times\)</span> the first row to the second row?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{bmatrix} 1&amp;0&amp;0\\4&amp;1&amp;0\\0&amp;0&amp;1 \end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-bigger-picture" class="level2">
+<h2 class="anchored" data-anchor-id="the-bigger-picture">The bigger picture</h2>
+<p>Why is this interesting? Firstly, notice that to get the matrix that performs these row oeprations, you just need to do the row operation to the identity matrix.</p>
+<p>Secondly suppose you have a series of row operation matrices, let’s call them <span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span>, etc., and you perform them one after another on a matrix <span class="math inline">\(A\)</span>:</p>
+<p><span class="math display">\[
+P_5 P_4 P_3 P_2 P_1 A.
+\]</span> (Because we’re left multiplying, the order is reversed!)</p>
+<p>If the result of this is the identity, then we have found the inverse of A! <span class="math display">\[
+(P_5 P_4 P_3 P_2 P_1) A = I
+\]</span> means that <span class="math display">\[
+A^{-1}=(P_5 P_4 P_3 P_2 P_1).
+\]</span> Remember that inverses are <em>unique</em> for square matrices, so if <span class="math inline">\(BA=I\)</span> then <span class="math inline">\(B=A^{-1}\)</span>.</p>
+</section>
+</section>
+<section id="inverses-of-3times3-matrices" class="level1">
+<h1>Inverses of <span class="math inline">\(3\times3\)</span> matrices</h1>
+<p>This is our strategy for finding <span class="math inline">\(3\times 3\)</span> inverses: find a series of row operations to transform a matrix into the identity matrix, and then these row operations performed on the identity matrix give us the inverse.</p>
+<p>In fact, this works for any square matrices. (You may have seen different methods for <span class="math inline">\(3\times 3\)</span> inverses, which don’t generalise to higher dimensions and we won’t see those in this module.)</p>
+<section id="augmented-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="augmented-matrices">Augmented matrices</h2>
+<p>In order to compute <span class="math inline">\(3\times3\)</span> matrix inverses, we need to introduce a new notation, called <em>augmented</em> matrices. This is just two matrices with the same number of rows, stuck side-by-side:</p>
+<p>If <span class="math inline">\(A=\begin{bmatrix} 1&amp;2&amp;3\\4&amp;5&amp;6\\7&amp;8&amp;9 \end{bmatrix}\)</span> and <span class="math inline">\(B=\begin{bmatrix} 0&amp;9&amp;8\\7&amp;6&amp;5\\4&amp;3&amp;2 \end{bmatrix}\)</span> then the augmented matrix <span class="math inline">\([A|B]\)</span> is <span class="math display">\[
+[A|B]=\begin{amatrix}{ccc|ccc}
+1&amp;2&amp;3&amp;0&amp;9&amp;8\\4&amp;5&amp;6&amp;7&amp;6&amp;5\\7&amp;8&amp;9&amp;4&amp;3&amp;2
+\end{amatrix}.
+\]</span></p>
+<p>What this notation does is allow us to manipulate two different matrices at the same time using the same row operations, and it simplifies the whole procedure.</p>
+<p>For example, taking the above matrix and subtracting <span class="math inline">\(2\times\)</span> the first row from the second row, we have</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\begin{amatrix}{ccc|ccc}
+1&amp;2&amp;3&amp;0&amp;9&amp;8\\4&amp;5&amp;6&amp;7&amp;6&amp;5\\7&amp;8&amp;9&amp;4&amp;3&amp;2
+\end{amatrix}
+\\
+&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
+1&amp;2&amp;3&amp;0&amp;9&amp;8\\2&amp;1&amp;0&amp;7&amp;-12&amp;-11\\7&amp;8&amp;9&amp;4&amp;3&amp;2
+\end{amatrix} \qquad R_2 \to R_2 - 2 R_1
+\end{aligned}
+\]</span></p>
+<p>Please make a point of writing out explicitly what row operation you’re doing so whoever’s marking your work can follow it.</p>
+</section>
+<section id="how-it-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-works">How it works</h2>
+<p>Here are the steps for finding the inverse of a <span class="math inline">\(3\times3\)</span> matrix <span class="math inline">\(A\)</span>:</p>
+<ol type="1">
+<li>Write an augmented matrix with the identity, i.e.&nbsp;<span class="math inline">\([A|I]\)</span></li>
+<li>Perform a series of row operations to get zeros below the diagonal and ones on the diagonal on the left hand side.</li>
+<li>Perform more row operations to get zeros above the diagonal.</li>
+<li>Now the left side of the augmented matrix should be the identity, and the right side is your inverse, <span class="math inline">\([I|A^{-1}]\)</span>.</li>
+</ol>
+<p>Remember that not all matrices have inverses. If you get stuck, it’s probably because the matrix is <em>singular</em>, and the determinant of the matrix will be zero. (But you could also have made a mistake, like forgetting to swap rows.)</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -431,82 +489,88 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Many people like to write the cross product as the determinant of a matrix, as in</p>
+<p>Calculate the determinant of a matrix before trying to find the inverse. If the determinant is zero, no inverse exists. If the determinant is not zero, this method will give you the inverse.</p>
+</div>
+</div>
+</section>
+<section id="example-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-1">Example</h2>
+<p>Following the steps above, let’s find the inverse of <span class="math display">\[
+A=\begin{bmatrix} 5 &amp;1 &amp;0\\5&amp;5&amp;-3\\-10&amp;3&amp;\frac{9}{4} \end{bmatrix}.
+\]</span> (First find the determinant to check it’s invertible!)</p>
 <p><span class="math display">\[
-\begin{bmatrix} a_1 \\ a_2 \\ a_3\end{bmatrix} \times \begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix} = \left|\begin{matrix} \hat{{\mathbf{x}}} &amp; \hat{{\mathbf{y}}} &amp; \hat{{\mathbf{z}}} \\
-a_1 &amp; a_2 &amp; a_3 \\
-b_1 &amp; b_2 &amp; b_3
-\end{matrix}\right|.
+\begin{aligned}
+&amp;\begin{amatrix}{ccc|ccc}
+5 &amp;1 &amp;0&amp;1&amp;0&amp;0\\5&amp;5&amp;-3&amp;0&amp;1&amp;0\\-10&amp;3&amp;\frac{9}{4}&amp;0&amp;0&amp;1
+\end{amatrix}
+\\
+&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\5&amp;5&amp;-3&amp;0&amp;1&amp;0\\-10&amp;3&amp;\frac{9}{4}&amp;0&amp;0&amp;1
+\end{amatrix} \qquad R_1 \to \frac{1}{5}R_1 \qquad \text{(to get a 1 on the diagonal entry)}
+\\
+&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\0&amp;4&amp;-3&amp;-1&amp;1&amp;0\\-10&amp;3&amp;\frac{9}{4}&amp;0&amp;0&amp;1
+\end{amatrix} \qquad R_2 \to R_2-5R_1 \qquad \text{(to get 0 below the diagonal)}
+\\
+&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\0&amp;4&amp;-3&amp;-1&amp;1&amp;0\\0&amp;5&amp;\frac{9}{4}&amp;2&amp;0&amp;1
+\end{amatrix} \qquad R_3 \to R_3+10R_1 \qquad \text{(to get 0 in the bottom left)}
+\\
+&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\0&amp;1&amp;-\frac{3}{4}&amp;-\frac{1}{4}&amp;\frac{1}{4}&amp;0\\0&amp;5&amp;\frac{9}{4}&amp;2&amp;0&amp;1
+\end{amatrix} \qquad R_2 \to \frac{1}{4}R_2 \qquad \text{(to get 1 on the diagonal)}
+\\
+&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\0&amp;1&amp;-\frac{3}{4}&amp;-\frac{1}{4}&amp;\frac{1}{4}&amp;0\\0&amp;0&amp;6&amp;\frac{13}{4}&amp;-\frac{5}{4}&amp;1
+\end{amatrix} \qquad R_3 \to R_3-5R_2 \qquad \text{(to get 0 below the diagonal)}
+\\
+&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\0&amp;1&amp;-\frac{3}{4}&amp;-\frac{1}{4}&amp;\frac{1}{4}&amp;0\\0&amp;0&amp;1&amp;\frac{13}{24}&amp;-\frac{5}{24}&amp;\frac{1}{6}
+\end{amatrix} \qquad R_3 \to \frac{1}{6} R_3 \qquad \text{(to get 1 on the diagonal)}
+\end{aligned}
 \]</span></p>
-<p>Don’t worry if you’re not familiar with determinants (or matrices), we’ll see them in a couple of weeks.</p>
-<p>I think this formula is stupid anyway because you can’t put vectors inside a matrix like that. But if it works for you, feel free to use it.</p>
-</div>
-</div>
-<p><strong>Think:</strong> if <span class="math inline">\({\mathbf{a}}=\begin{bmatrix} 2 \\ 1 \\ -1\end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{b}}=\begin{bmatrix} 0 \\ 1 \\ 1\end{bmatrix}\)</span>, what is <span class="math inline">\({\mathbf{a}}\times{\mathbf{b}}\)</span>?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<p>We’ve now completed the second step above. We’ve worked down from the top to get ones on the diagonal and zeros below. Now for the third step we work back upwards to get zeros above the diagonal:</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\
+0&amp;1&amp;0&amp;\frac{5}{32}&amp;\frac{3}{32}&amp;\frac{1}{8}\\
+0&amp;0&amp;1&amp;\frac{13}{24}&amp;-\frac{5}{24}&amp;\frac{1}{6}
+\end{amatrix} \qquad R_2 \to R_2 + \frac{3}{4}R_3 \qquad \text{(to get 0 middle right)}\\
+&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
+1 &amp;0 &amp;0&amp;\frac{27}{160}&amp;-\frac{3}{160}&amp;-\frac{1}{40}\\
+0&amp;1&amp;0&amp;\frac{5}{32}&amp;\frac{3}{32}&amp;\frac{1}{8}\\
+0&amp;0&amp;1&amp;\frac{13}{24}&amp;-\frac{5}{24}&amp;\frac{1}{6}
+\end{amatrix} \qquad R_1 \to R_1 - \frac{1}{5}R_2 \qquad \text{(to get 0 top middle)}\\
+\end{aligned}
+\]</span></p>
+<p>We already have a zero in the top right, so we’re done! The left hand side is the identity, and the right hand side is the inverse.</p>
+<p><span class="math display">\[
+A^{-1}=\begin{bmatrix} \frac{27}{160}&amp;-\frac{3}{160}&amp;-\frac{1}{40}\\
+\frac{5}{32}&amp;\frac{3}{32}&amp;\frac{1}{8}\\
+\frac{13}{24}&amp;-\frac{5}{24}&amp;\frac{1}{6} \end{bmatrix}.
+\]</span></p>
+<p>Does it work? Calculate <span class="math inline">\(A A^{-1}\)</span> and <span class="math inline">\(A^{-1} A\)</span> to check.</p>
+<p>There’s a general procedure here to get do divisions to get ones on the diagonal and subtraction/addition to get zeros. The problem comes when you have a zero where you need a one. In this case you have to swap rows. We’ll see examples of this in class and on the worksheets.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solution
+Note
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[\begin{bmatrix} 1\times 1-(-1)\times 1 \\ -1\times 0-2\times 1 \\ 2\times 1 - 1\times 0\end{bmatrix} = \begin{bmatrix} 2 \\ -2 \\ 2\end{bmatrix}.\]</span></p>
-</div>
-</div>
-</div>
-</section>
-<section id="applications" class="level3">
-<h3 class="anchored" data-anchor-id="applications">Applications</h3>
-<p>You may remember the formula for the area of a triangle as <span class="math inline">\(\frac{1}{2} b c \sin \alpha\)</span> where <span class="math inline">\(\alpha\)</span> is the angle between the sides of length <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>. Looking at the definition of the cross product, we see that</p>
-<p><span class="math display">\[\frac{1}{2}|{\mathbf{a}}\times{\mathbf{b}}|\]</span></p>
-<p>is the area of the triangle between <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>. Similarly, <span class="math inline">\(|{\mathbf{a}}\times{\mathbf{b}}|\)</span> is the area of the parallelogram with sides <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>:</p>
-<p><img src="vf16.png" class="img-fluid"></p>
-</section>
-<section id="example-for-cross-products" class="level3">
-<h3 class="anchored" data-anchor-id="example-for-cross-products">Example for cross products</h3>
-<p>Find a unit vector that is perpendicular to both <span class="math inline">\({\mathbf{a}}=\begin{bmatrix} 3 \\ 1 \\ 2\end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{b}}=\begin{bmatrix} 1 \\ 1 \\ -1\end{bmatrix}\)</span>.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>We know that the result of the cross product <span class="math inline">\({\mathbf{a}}\times{\mathbf{b}}\)</span> is perpendicular to both of them:</p>
-<p><span class="math display">\[\begin{bmatrix} 3 \\ 1 \\ 2\end{bmatrix}\times\begin{bmatrix} 1 \\ 1 \\ -1\end{bmatrix} = \begin{bmatrix} -3 \\ 5 \\ 2\end{bmatrix}.\]</span></p>
-<p>The question asks for a unit vector, so we need to divide this vector by its own magnitude. The magnitude is</p>
-<p><span class="math display">\[\sqrt{(-3)^2+5^2+2^2} = \sqrt{38}\]</span></p>
-<p>and so the final answer is</p>
-<p><span class="math display">\[\begin{bmatrix} \frac{-3}{\sqrt{38}} \\ \frac{5}{\sqrt{38}} \\ \frac{2}{\sqrt{38}}\end{bmatrix}.\]</span></p>
-<p>The vector opposite to this, i.e.&nbsp;<span class="math inline">\(\begin{bmatrix} \frac{3}{\sqrt{38}} \\ \frac{-5}{\sqrt{38}} \\ \frac{-2}{\sqrt{38}}\end{bmatrix}\)</span>, would also satisfy the requirements.</p>
-</div>
+<p>This process of finding the inverse is long and boring, but it’s straightforward if you take your time. Most of the marks are for understanding the method, because it’s very easy to make an arithmetic mistake.</p>
 </div>
 </div>
 
 
 </section>
 </section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>This is easiest to prove using the component form of the dot product, but unfortunately that gives a circular proof. To prove it directly requires a lot of geometry and trigonometry.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Sometimes people define a cross product in two dimensions by imagining the 2d vectors on a plane in 3d space, but we won’t use that definition.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Occasionally you see people use <span class="math inline">\(\wedge\)</span> instead. In modern maths this the exterior product, which is a related but different concept.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

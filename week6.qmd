@@ -79,7 +79,7 @@ applied to any vector is just a reflection over the $y$-axis.
 
 ::: {.callout-tip collapse="true"}
 ## Solution
-$1\times-1 - 0 = -1
+$1\times-1 - 0 = -1$
 :::
 
 All reflections have determinant $-1$, and all rotations have determinant $+1$. You can think of the determinant as a scale factor for areas: rotations don't change the area, and reflections flip it.

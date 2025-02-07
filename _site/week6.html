@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 5: Determinants and inverses of 3\times 3 matrices – MA12001 Algebra</title>
+<title>Week 6: Applications of matrices, and Gaussian elimination – MA12001 Algebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html">Chapter 2: Matrices</a></li><li class="breadcrumb-item"><a href="./week5.html">Week 5: Determinants and inverses of <span class="math inline">\(3\times 3\)</span> matrices</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html">Chapter 2: Matrices</a></li><li class="breadcrumb-item"><a href="./week6.html">Week 6: Applications of matrices, and Gaussian elimination</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -186,13 +186,13 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5: Determinants and inverses of <span class="math inline">\(3\times 3\)</span> matrices</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link">
+  <a href="./week6.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 6: Applications of matrices, and Gaussian elimination</span></a>
   </div>
 </li>
@@ -222,22 +222,20 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#determinants-for-square-matrices" id="toc-determinants-for-square-matrices" class="nav-link active" data-scroll-target="#determinants-for-square-matrices">Determinants for square matrices</a>
+  <li><a href="#matrices-as-transformations" id="toc-matrices-as-transformations" class="nav-link active" data-scroll-target="#matrices-as-transformations">Matrices as transformations</a>
   <ul class="collapse">
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#rotation-matrices" id="toc-rotation-matrices" class="nav-link" data-scroll-target="#rotation-matrices">Rotation matrices</a></li>
+  <li><a href="#reflection-matrices" id="toc-reflection-matrices" class="nav-link" data-scroll-target="#reflection-matrices">Reflection matrices</a></li>
   </ul></li>
-  <li><a href="#row-operations-on-matrices" id="toc-row-operations-on-matrices" class="nav-link" data-scroll-target="#row-operations-on-matrices">Row operations on matrices</a>
+  <li><a href="#linear-systems-of-equations" id="toc-linear-systems-of-equations" class="nav-link" data-scroll-target="#linear-systems-of-equations">Linear systems of equations</a>
   <ul class="collapse">
-  <li><a href="#swapping-two-rows-in-a-matrix" id="toc-swapping-two-rows-in-a-matrix" class="nav-link" data-scroll-target="#swapping-two-rows-in-a-matrix">Swapping two rows in a matrix</a></li>
-  <li><a href="#multiplying-a-row-by-a-scalar" id="toc-multiplying-a-row-by-a-scalar" class="nav-link" data-scroll-target="#multiplying-a-row-by-a-scalar">Multiplying a row by a scalar</a></li>
-  <li><a href="#adding-a-multiple-of-one-row-to-another-row" id="toc-adding-a-multiple-of-one-row-to-another-row" class="nav-link" data-scroll-target="#adding-a-multiple-of-one-row-to-another-row">Adding a multiple of one row to another row</a></li>
-  <li><a href="#the-bigger-picture" id="toc-the-bigger-picture" class="nav-link" data-scroll-target="#the-bigger-picture">The bigger picture</a></li>
+  <li><a href="#gaussian-elimination" id="toc-gaussian-elimination" class="nav-link" data-scroll-target="#gaussian-elimination">Gaussian elimination</a>
+  <ul class="collapse">
+  <li><a href="#row-echelon-form" id="toc-row-echelon-form" class="nav-link" data-scroll-target="#row-echelon-form">Row-echelon form</a></li>
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example 1</a></li>
+  <li><a href="#zero-rows" id="toc-zero-rows" class="nav-link" data-scroll-target="#zero-rows">Zero rows</a></li>
+  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example 2</a></li>
   </ul></li>
-  <li><a href="#inverses-of-3times3-matrices" id="toc-inverses-of-3times3-matrices" class="nav-link" data-scroll-target="#inverses-of-3times3-matrices">Inverses of <span class="math inline">\(3\times3\)</span> matrices</a>
-  <ul class="collapse">
-  <li><a href="#augmented-matrices" id="toc-augmented-matrices" class="nav-link" data-scroll-target="#augmented-matrices">Augmented matrices</a></li>
-  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How it works</a></li>
-  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -245,9 +243,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html">Chapter 2: Matrices</a></li><li class="breadcrumb-item"><a href="./week5.html">Week 5: Determinants and inverses of <span class="math inline">\(3\times 3\)</span> matrices</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html">Chapter 2: Matrices</a></li><li class="breadcrumb-item"><a href="./week6.html">Week 6: Applications of matrices, and Gaussian elimination</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 5: Determinants and inverses of <span class="math inline">\(3\times 3\)</span> matrices</h1>
+<h1 class="title">Week 6: Applications of matrices, and Gaussian elimination</h1>
 </div>
 
 
@@ -273,42 +271,53 @@ window.Quarto = {
 }
 \]</span></p>
 </div>
-<p>Last week, we saw that for a matrix <span class="math display">\[
-A = \begin{bmatrix} a&amp;b\\c&amp;d \end{bmatrix},
-\]</span> the inverse is <span class="math display">\[
-A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d &amp;-b\\ -c &amp; a \end{bmatrix}.
+<section id="matrices-as-transformations" class="level1">
+<h1>Matrices as transformations</h1>
+<p>One of the key reasons that we see matrices in this module is that they can act as transformations of vectors. Thinking of a 3D vector <span class="math inline">\({\mathbf{x}}\)</span> as a matrix <span class="math inline">\(\begin{bmatrix} x_1 \\ x_2 \\ x_3\end{bmatrix}\)</span>, we can left-multiply the vector by a <span class="math inline">\(3\times3\)</span> matrix to give another vector <span class="math display">\[
+A{\mathbf{x}}.
 \]</span></p>
-<p>This inverse exists if and only if <span class="math inline">\(ad-bc\neq 0\)</span>. We call this quantity <span class="math inline">\(ad-bc\)</span> the <em>determinant</em>, and write <span class="math display">\[\det{A}=ad-bc.\]</span> You can think of the determinant as a bit like the discriminant for quadratic equations. It <em>determines</em> whether the matrix is <em>invertible</em> or <em>singular</em>.</p>
-<p>Sometimes we also write the determinant as <span class="math inline">\(|A|\)</span>, but I’ll avoid this notation because it’s different from the absolute value of a scalar or magnitude of a vector. The determinant <strong>can</strong> be negative.</p>
-<section id="determinants-for-square-matrices" class="level1">
-<h1>Determinants for square matrices</h1>
-<p>The determinant is defined for any sized square matrix. In this module, you’ll only be asked to calculate it for <span class="math inline">\(2\times2\)</span> and <span class="math inline">\(3\times3\)</span> matrices. You’ve already seen <span class="math inline">\(2\times2\)</span>. Before we see <span class="math inline">\(3\times3\)</span>, let’s introduce the rules it follows, which define it:</p>
-<ul>
-<li><span class="math inline">\(\det{(AB)} = \det{A}\det{B}\)</span>.</li>
-<li><span class="math inline">\(\det{I} = 1\)</span>.</li>
-<li><span class="math inline">\(\det{\lambda A} = \lambda^n \det A\)</span> for an <span class="math inline">\(n\times n\)</span> matrix.</li>
-<li>The determinant of a matrix is equal to the entries of the top row multiplied by the determinants of the submatrix excluding that row. I can’t explain this easily here and it’s not necessary for the exam, but I’ll go over this is lectures.</li>
-</ul>
-<p>You should be able to prove these for <span class="math inline">\(2\times2\)</span> matrices.</p>
-<p>Applying this to <span class="math inline">\(3\times 3\)</span> matrices, the result is this: <span class="math display">\[
-\det \begin{bmatrix} a&amp;b&amp;c\\d&amp;e&amp;f\\g&amp;h&amp;i \end{bmatrix} = aei+bfg+cdh - ceg - bdi - afh
-\]</span> This is called the <em>Leibniz formula</em> or the <em>rule of Sarrus</em>. We multiply over the rightwards diagonals, add them, and subtract the negative diagonals. Here’s an example: <a href="https://www.youtube.com/watch?v=x2vWqtYwZ1g" class="uri">https://www.youtube.com/watch?v=x2vWqtYwZ1g</a>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<p>For instance, if the matrix is <span class="math display">\[
+A=\begin{bmatrix} 3&amp;0&amp;0\\0&amp;3&amp;0\\0&amp;0&amp;3 \end{bmatrix},
+\]</span> then for any vector <span class="math inline">\({\mathbf{x}}\)</span>, <span class="math display">\[
+A{\mathbf{x}}=\begin{bmatrix} 3x_1 \\ 3x_2 \\ 3x_3\end{bmatrix} = 3{\mathbf{x}}
+\]</span> which is another vector in the same direction, with <span class="math inline">\(3\times\)</span> the length.</p>
+<p>That’s a general rule: if <span class="math inline">\(A=\lambda I\)</span> for some scalar <span class="math inline">\(\lambda\)</span>, then <span class="math inline">\(A\)</span> will just multiply the magnitude for <span class="math inline">\(\lambda\)</span> when applied to any vector. This is called a scaling matrix.</p>
+<p>What other transformations are there? We’ll just focus on 2D because it’s easier to sketch.</p>
+<section id="rotation-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="rotation-matrices">Rotation matrices</h2>
+<p>The following matrix rotates vectors around the origin by an angle <span class="math inline">\(\theta\)</span> <em>anticlockwise</em>: <span class="math display">\[
+R_\theta = \begin{bmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta \end{bmatrix}
+\]</span> Why? Consider a position vector <span class="math inline">\(\mathbf{a}=\begin{bmatrix} r\cos\alpha \\ r\sin\alpha \end{bmatrix}\)</span>. This is <span class="math inline">\(\begin{bmatrix} x \\ y \end{bmatrix}\)</span> at polar coordinates <span class="math inline">\((r,\alpha)\)</span>, which hopefully you’ve seen before.</p>
+<p>Then applying the matrix, <span class="math display">\[
+{\mathbf{b}} = R_\theta \mathbf{r} = \begin{bmatrix} r\cos\alpha\cos\theta - r \sin\alpha\sin\theta \\ r\cos\alpha\sin\theta + r\sin\alpha\cos\theta \end{bmatrix} = \begin{bmatrix} r\cos{(\alpha+\theta)} \\ r\sin(\alpha+\theta) \end{bmatrix}
+\]</span> which is the position vector with polar coordinates <span class="math inline">\((r,\alpha+\theta)\)</span>. This diagram might help: <img src="mf1.png" class="img-fluid" style="width:50.0%"></p>
+<p><strong>Think:</strong> What’s the determinant of the rotation matrix <span class="math inline">\(R_\theta\)</span>?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Solution
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Learn the rule of Sarrus.</p>
+<p><span class="math inline">\(\cos\theta\cos\theta - (-\sin\theta)\sin\theta = \cos^2 \theta + \sin^2\theta = 1\)</span>.</p>
 </div>
 </div>
-<p><strong>Think:</strong> what is the determinant of <span class="math display">\[
-\begin{bmatrix} 5 &amp;2&amp;1\\1&amp;-1&amp;1\\2&amp;3&amp;4 \end{bmatrix}
-\]</span></p>
+</div>
+</section>
+<section id="reflection-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-matrices">Reflection matrices</h2>
+<p>Consider the matrix <span class="math display">\[
+P=\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}.
+\]</span> Then <span class="math inline">\(P{\mathbf{x}} = [x_1,-x_2]\)</span>. All it’s done is reversed the <span class="math inline">\(y\)</span> component. In other words, we’ve reflected over the <span class="math inline">\(x\)</span>-axis.</p>
+<p>Similarly, <span class="math display">\[
+Q=\begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
+\]</span> applied to any vector is just a reflection over the <span class="math inline">\(y\)</span>-axis.</p>
+<p><strong>Think:</strong> What’s the determinant of the reflection matrix <span class="math inline">\(P\)</span>?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -321,21 +330,63 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-\begin{split}
-5\times-1\times4 + 2\times1\times2+1\times1\times3 - 1\times-1\times2 - 2\times1\times4 - 5\times1\times3
-\\
-=  -20 + 4+3+2-8-15 = -34.
-\end{split}
+<p>$1 - 0 = -1</p>
+</div>
+</div>
+</div>
+<p>All reflections have determinant <span class="math inline">\(-1\)</span>, and all rotations have determinant <span class="math inline">\(+1\)</span>. You can think of the determinant as a scale factor for areas: rotations don’t change the area, and reflections flip it.</p>
+<p>To get a reflection through a different line, you can always use a combination of rotations and reflections.</p>
+<p>The matrix given by <span class="math display">\[
+R_{\theta} P R_{-\theta}
+\]</span> reflects in the line which makes angle <span class="math inline">\(\theta\)</span> with the <span class="math inline">\(x\)</span>-axis: first we rotate by <span class="math inline">\(-\theta\)</span>, then reflect over the <span class="math inline">\(x\)</span>-axis, then rotate back.</p>
+<p>Many more transformations exist, such as shear and projection. In 3D they get much more complicated. This sort of matrix is used extensively in the development of video games and computer graphics.</p>
+</section>
+</section>
+<section id="linear-systems-of-equations" class="level1">
+<h1>Linear systems of equations</h1>
+<p>A linear system of equations is a set of simultaneous equations where every unknown variable is multiplied by a number and they’re all added. So it might look something like this: <span class="math display">\[
+\begin{aligned}
+5+3x-z &amp;= 20,\\
+y-x+3z &amp;= 2,\\
+5&amp;=x,
+\end{aligned}
+\]</span> but we can always rewrite that in a more consistent form <span class="math display">\[
+\begin{aligned}
+3x + 0y +(-1)z &amp;= 15,\\
+(-1)x + 1y + 3z &amp;= 2,\\
+1x+0y+0z&amp;=5,
+\end{aligned}
+\]</span> and then this can be written as a matrix equation: <span class="math display">\[
+\begin{bmatrix} 3&amp;0&amp;-1\\-1&amp;1&amp;3\\1&amp;0&amp;0 \end{bmatrix}\begin{bmatrix} x\\ y\\ z \end{bmatrix} = \begin{bmatrix} 3x + 0y +(-1)z\\(-1)x + 1y + 3z\\x \end{bmatrix} = \begin{bmatrix} 15\\2\\5 \end{bmatrix}.
 \]</span></p>
-</div>
-</div>
-</div>
-<section id="example" class="level2">
-<h2 class="anchored" data-anchor-id="example">Example</h2>
-<p>Is the matrix <span class="math display">\[
-A=\begin{bmatrix} 1&amp;2&amp;3\\3&amp;6&amp;9\\2&amp;1&amp;1 \end{bmatrix}
-\]</span> invertible? Justify your answer.</p>
+<p>This is in the form <span class="math inline">\(AX=B\)</span>, where we know the matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> and we want to find <span class="math inline">\(X\)</span>, so we could use the inverse of <span class="math inline">\(A\)</span>: <span class="math display">\[
+\begin{aligned}
+AX&amp;=B\\
+\implies A^{-1}(AX) &amp;= A^{-1}B\\
+\implies (A^{-1}A)X &amp;= A^{-1}B\\
+\implies I X &amp;= A^{-1}B\\
+\implies X &amp;= A^{-1}B
+\end{aligned}
+\]</span> For <span class="math inline">\(2\times2\)</span> matrices you can easily find the inverse. However, for <span class="math inline">\(3\times3\)</span> matrices this is inefficient, and we can solve the system without explicitly calculating the inverse of the matrix using a method called Gaussian elimination.</p>
+<section id="gaussian-elimination" class="level2">
+<h2 class="anchored" data-anchor-id="gaussian-elimination">Gaussian elimination</h2>
+<p>We’ve actually already seen Gaussian elimination, for calculating the inverse of <span class="math inline">\(3\times3\)</span> matrices. The principle here is the same: perform a series of row operations to simplify the matrix:</p>
+<ol type="1">
+<li>Start with a linear system of equations.</li>
+<li>Write this as a matrix equation <span class="math inline">\(A{\mathbf{x}}={\mathbf{b}}\)</span> where <span class="math inline">\(A\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> are known, and we want to find <span class="math inline">\({\mathbf{x}}\)</span>.</li>
+<li>Write an augmented matrix <span class="math inline">\([A|{\mathbf{b}}]\)</span>.</li>
+<li>Perform a series of row operations to reduce <span class="math inline">\(A\)</span> to <strong>row-echelon form</strong>.</li>
+<li>Transform back to a series of equations.</li>
+<li>Use this form to read off the solution.</li>
+</ol>
+<p>These steps should become clear when we see an example. First we need to know what row-echelon form means.</p>
+<section id="row-echelon-form" class="level3">
+<h3 class="anchored" data-anchor-id="row-echelon-form">Row-echelon form</h3>
+<p>A matrix is in row-echelon form if each row has more zeros at the start than the preceding row (unless they’re all zero). It is always possible to convert a matrix into this form.</p>
+<p><strong>Think:</strong> which of the following matrices are in row-echelon form?</p>
+<p><span class="math display">\[
+A = \begin{bmatrix} 1 &amp; 2 &amp; 3\\0 &amp; 5 &amp; 6\\0&amp;0&amp;1 \end{bmatrix}, B=\begin{bmatrix} 1 &amp; 0 &amp;0\\0 &amp; 0 &amp;0 \\ 0 &amp; 0 &amp;0 \end{bmatrix}, C=\begin{bmatrix} 1 &amp; 0 &amp; 0\\0 &amp; 0 &amp;-4\\ 0 &amp; 0 &amp;1 \end{bmatrix}
+\]</span></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -348,231 +399,101 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>If we do the full determinant calculation we find that <span class="math display">\[
-\det A = 0,
-\]</span> so it is singular, it is not invertible.</p>
+<p><span class="math inline">\(A\)</span> is very standard row-echelon form. <span class="math inline">\(B\)</span> <em>is</em> in row echelon form, but <span class="math inline">\(C\)</span> is not because the final row doesn’t have more leading zeros than the previous one.</p>
 </div>
 </div>
 </div>
 </section>
-</section>
-<section id="row-operations-on-matrices" class="level1">
-<h1>Row operations on matrices</h1>
-<p>We limit ourselves to three specific types of <em>row operations</em>. Each of these can be considered to be “left mutliplying” by a specific type of matrix.</p>
-<section id="swapping-two-rows-in-a-matrix" class="level2">
-<h2 class="anchored" data-anchor-id="swapping-two-rows-in-a-matrix">Swapping two rows in a matrix</h2>
-<p>If we left-multiply a <span class="math inline">\(3\times3\)</span> matrix by the matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp;0 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \end{bmatrix}\)</span>, the result is that the second and third rows get swapped: <span class="math display">\[
-\begin{bmatrix} 1 &amp; 0 &amp;0 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \end{bmatrix}\begin{bmatrix} 1 &amp; 2 &amp; 3\\4&amp;5&amp;6\\7&amp;8&amp;9 \end{bmatrix} = \begin{bmatrix} 1 &amp; 2 &amp; 3\\7&amp;8&amp;9\\4&amp;5&amp;6 \end{bmatrix}.
-\]</span> Go through this multiplication slowly to convince yourself.</p>
-<p><strong>Think:</strong> what matrix would swap the first and third rows and leave the second row as it is?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example 1</h3>
+<p>Let’s solve the following system via Gaussian elimination:^{The two 8s in the final equation are deliberate, otherwise it would have been singular}</p>
 <p><span class="math display">\[
-\begin{bmatrix} 0&amp;0&amp;1\\0 &amp; 1 &amp; 0\\1&amp;0&amp;0 \end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-</div>
-</section>
-<section id="multiplying-a-row-by-a-scalar" class="level2">
-<h2 class="anchored" data-anchor-id="multiplying-a-row-by-a-scalar">Multiplying a row by a scalar</h2>
-<p>If we left-multiply a <span class="math inline">\(3\times3\)</span> matrix by the matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp;0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0.5 \end{bmatrix}\)</span>, the result is that the third row is multiplied by <span class="math inline">\(0.5\)</span>: <span class="math display">\[
-\begin{bmatrix} 1 &amp; 0 &amp;0 \\ 0 &amp;1 &amp; 0 \\ 0 &amp; 0 &amp; 0.5 \end{bmatrix}\begin{bmatrix} 1 &amp; 2 &amp; 3\\4&amp;5&amp;6\\7&amp;8&amp;9 \end{bmatrix} = \begin{bmatrix} 1 &amp; 2 &amp; 3\\4&amp;5&amp;6\\3.5&amp;4&amp;4.5 \end{bmatrix}.
-\]</span> Go through this multiplication slowly to convince yourself.</p>
-<p><strong>Think:</strong> what matrix would multiply the first row by 3?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><span class="math display">\[
-\begin{bmatrix} 3&amp;0&amp;0\\0&amp;1&amp;0\\0&amp;0&amp;1 \end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-</div>
-</section>
-<section id="adding-a-multiple-of-one-row-to-another-row" class="level2">
-<h2 class="anchored" data-anchor-id="adding-a-multiple-of-one-row-to-another-row">Adding a multiple of one row to another row</h2>
-<p>If we left-multiply a <span class="math inline">\(3\times3\)</span> matrix by the matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp;0 \\ 0 &amp; 1 &amp; 0 \\ 2 &amp; 0 &amp; 1 \end{bmatrix}\)</span>, the result is that we add <span class="math inline">\(2\times\)</span> the first row to the third row: <span class="math display">\[
-\begin{bmatrix} 1 &amp; 0 &amp;0 \\ 0 &amp;1 &amp; 0 \\ 1 &amp; 0 &amp; 1 \end{bmatrix}\begin{bmatrix} 1 &amp; 2 &amp; 3\\4&amp;5&amp;6\\7&amp;8&amp;9 \end{bmatrix} = \begin{bmatrix} 1 &amp; 2 &amp; 3\\4&amp;5&amp;6\\9&amp;12&amp;15 \end{bmatrix}.
-\]</span> Go through this multiplication slowly to convince yourself.</p>
-<p><strong>Think:</strong> what matrix would add <span class="math inline">\(4\times\)</span> the first row to the second row?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><span class="math display">\[
-\begin{bmatrix} 1&amp;0&amp;0\\4&amp;1&amp;0\\0&amp;0&amp;1 \end{bmatrix}.
-\]</span></p>
-</div>
-</div>
-</div>
-</section>
-<section id="the-bigger-picture" class="level2">
-<h2 class="anchored" data-anchor-id="the-bigger-picture">The bigger picture</h2>
-<p>Why is this interesting? Firstly, notice that to get the matrix that performs these row oeprations, you just need to do the row operation to the identity matrix.</p>
-<p>Secondly suppose you have a series of row operation matrices, let’s call them <span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span>, etc., and you perform them one after another on a matrix <span class="math inline">\(A\)</span>:</p>
-<p><span class="math display">\[
-P_5 P_4 P_3 P_2 P_1 A.
-\]</span> (Because we’re left multiplying, the order is reversed!)</p>
-<p>If the result of this is the identity, then we have found the inverse of A! <span class="math display">\[
-(P_5 P_4 P_3 P_2 P_1) A = I
-\]</span> means that <span class="math display">\[
-A^{-1}=(P_5 P_4 P_3 P_2 P_1).
-\]</span> Remember that inverses are <em>unique</em> for square matrices, so if <span class="math inline">\(BA=I\)</span> then <span class="math inline">\(B=A^{-1}\)</span>.</p>
-</section>
-</section>
-<section id="inverses-of-3times3-matrices" class="level1">
-<h1>Inverses of <span class="math inline">\(3\times3\)</span> matrices</h1>
-<p>This is our strategy for finding <span class="math inline">\(3\times 3\)</span> inverses: find a series of row operations to transform a matrix into the identity matrix, and then these row operations performed on the identity matrix give us the inverse.</p>
-<p>In fact, this works for any square matrices. (You may have seen different methods for <span class="math inline">\(3\times 3\)</span> inverses, which don’t generalise to higher dimensions and we won’t see those in this module.)</p>
-<section id="augmented-matrices" class="level2">
-<h2 class="anchored" data-anchor-id="augmented-matrices">Augmented matrices</h2>
-<p>In order to compute <span class="math inline">\(3\times3\)</span> matrix inverses, we need to introduce a new notation, called <em>augmented</em> matrices. This is just two matrices with the same number of rows, stuck side-by-side:</p>
-<p>If <span class="math inline">\(A=\begin{bmatrix} 1&amp;2&amp;3\\4&amp;5&amp;6\\7&amp;8&amp;9 \end{bmatrix}\)</span> and <span class="math inline">\(B=\begin{bmatrix} 0&amp;9&amp;8\\7&amp;6&amp;5\\4&amp;3&amp;2 \end{bmatrix}\)</span> then the augmented matrix <span class="math inline">\([A|B]\)</span> is <span class="math display">\[
-[A|B]=\begin{amatrix}{ccc|ccc}
-1&amp;2&amp;3&amp;0&amp;9&amp;8\\4&amp;5&amp;6&amp;7&amp;6&amp;5\\7&amp;8&amp;9&amp;4&amp;3&amp;2
+\begin{aligned}
+x_1 + 2x_2 + 3x_3 &amp;= 1,\\
+4x_1+5x_2+6x_3 &amp;= 2,\\
+7x_1+8x_2+8x_3 &amp;= 3.
+\end{aligned}
+\]</span> First we rewrite this as a matrix equation: <span class="math display">\[
+\begin{bmatrix} 1&amp;2&amp;3\\4&amp;5&amp;6\\7&amp;8&amp;8 \end{bmatrix} {\mathbf{x}} = \begin{bmatrix} 1\\2\\3 \end{bmatrix}
+\]</span> and then this can be represented with an augmented matrix as <span class="math display">\[
+\begin{amatrix}{ccc|c}
+1&amp;2&amp;3&amp;1\\
+4&amp;5&amp;6&amp;2\\
+7&amp;8&amp;8&amp;3
 \end{amatrix}.
-\]</span></p>
-<p>What this notation does is allow us to manipulate two different matrices at the same time using the same row operations, and it simplifies the whole procedure.</p>
-<p>For example, taking the above matrix and subtracting <span class="math inline">\(2\times\)</span> the first row from the second row, we have</p>
-<p><span class="math display">\[
+\]</span> Now let’s put it in row echelon form using row operations, just like last week. We need a zero at the start of the second row: <span class="math display">\[
+\hookrightarrow\begin{amatrix}{ccc|c}
+1&amp;2&amp;3&amp;1\\
+0&amp;-3&amp;-6&amp;-2\\
+7&amp;8&amp;8&amp;3
+\end{amatrix} \qquad R_2 \to R_2 - 4 R_1,
+\]</span> a zero at the start of the third row: <span class="math display">\[
+\hookrightarrow\begin{amatrix}{ccc|c}
+1&amp;2&amp;3&amp;1\\
+0&amp;-3&amp;-6&amp;-2\\
+0&amp;-6&amp;-13&amp;-4
+\end{amatrix} \qquad R_3 \to R_3 - 7 R_1,
+\]</span> and another zero at the start of the third row <span class="math display">\[
+\hookrightarrow\begin{amatrix}{ccc|c}
+1&amp;2&amp;3&amp;1\\
+0&amp;-3&amp;-6&amp;-2\\
+0&amp;0&amp;-1&amp;0
+\end{amatrix} \qquad R_3 \to R_3 - 2 R_2,
+\]</span> This is now in row echelon form. How does this help us? Well, if we write this back as a system of equations we now have <span class="math display">\[
 \begin{aligned}
-&amp;\begin{amatrix}{ccc|ccc}
-1&amp;2&amp;3&amp;0&amp;9&amp;8\\4&amp;5&amp;6&amp;7&amp;6&amp;5\\7&amp;8&amp;9&amp;4&amp;3&amp;2
-\end{amatrix}
-\\
-&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
-1&amp;2&amp;3&amp;0&amp;9&amp;8\\2&amp;1&amp;0&amp;7&amp;-12&amp;-11\\7&amp;8&amp;9&amp;4&amp;3&amp;2
-\end{amatrix} \qquad R_2 \to R_2 - 2 R_1
+x_1 + 2x_2 + 3x_3 &amp;= 1,\\
+-3x_2-6x_3 &amp;= -2,\\
+-x_3&amp;=0.
 \end{aligned}
-\]</span></p>
-<p>Please make a point of writing out explicitly what row operation you’re doing so whoever’s marking your work can follow it.</p>
+\]</span> So immediately we know that we must have <span class="math inline">\(x_3=0\)</span>. Then the second of these equations gives us <span class="math inline">\(-3x_2=-2\)</span>, so <span class="math inline">\(x_2=\frac{2}{3}\)</span>, and finally plugging this into the first equation we find <span class="math inline">\(x_1=-\frac{1}{3}\)</span>.</p>
+<p>Basically, this method formalises techniques you may have seen before for solving simultaneous equations. It’s particularly useful because it allows us to deal with singular matrices too:</p>
 </section>
-<section id="how-it-works" class="level2">
-<h2 class="anchored" data-anchor-id="how-it-works">How it works</h2>
-<p>Here are the steps for finding the inverse of a <span class="math inline">\(3\times3\)</span> matrix <span class="math inline">\(A\)</span>:</p>
-<ol type="1">
-<li>Write an augmented matrix with the identity, i.e.&nbsp;<span class="math inline">\([A|I]\)</span></li>
-<li>Perform a series of row operations to get zeros below the diagonal and ones on the diagonal on the left hand side.</li>
-<li>Perform more row operations to get zeros above the diagonal.</li>
-<li>Now the left side of the augmented matrix should be the identity, and the right side is your inverse, <span class="math inline">\([I|A^{-1}]\)</span>.</li>
-</ol>
-<p>Remember that not all matrices have inverses. If you get stuck, it’s probably because the matrix is <em>singular</em>, and the determinant of the matrix will be zero. (But you could also have made a mistake, like forgetting to swap rows.)</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Calculate the determinant of a matrix before trying to find the inverse. If the determinant is zero, no inverse exists. If the determinant is not zero, this method will give you the inverse.</p>
-</div>
-</div>
+<section id="zero-rows" class="level3">
+<h3 class="anchored" data-anchor-id="zero-rows">Zero rows</h3>
+<p>What if we perform Gaussian elimination and get to a point where the final row is all zeros? This happens exactly when the initial matrix is singular, and it means we can’t follow the above procedure to find a unique solution to the system. Instead, we either have no solutions or an infinite number of solutions, depending on whether the final row gives us <span class="math inline">\(0=0\)</span> or <span class="math inline">\(0=1\)</span>. The second case is impossible, so we have no solutions, whereas if we get <span class="math inline">\(0=0\)</span> then we have only 2 equations for 3 unknowns, so there are infinitely many solutions.</p>
 </section>
-<section id="example-1" class="level2">
-<h2 class="anchored" data-anchor-id="example-1">Example</h2>
-<p>Following the steps above, let’s find the inverse of <span class="math display">\[
-A=\begin{bmatrix} 5 &amp;1 &amp;0\\5&amp;5&amp;-3\\-10&amp;3&amp;\frac{9}{4} \end{bmatrix}.
-\]</span> (First find the determinant to check it’s invertible!)</p>
-<p><span class="math display">\[
+<section id="example-2" class="level3">
+<h3 class="anchored" data-anchor-id="example-2">Example 2</h3>
+<p>Similar to the previous example, let’s consider: <span class="math display">\[
 \begin{aligned}
-&amp;\begin{amatrix}{ccc|ccc}
-5 &amp;1 &amp;0&amp;1&amp;0&amp;0\\5&amp;5&amp;-3&amp;0&amp;1&amp;0\\-10&amp;3&amp;\frac{9}{4}&amp;0&amp;0&amp;1
-\end{amatrix}
-\\
-&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
-1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\5&amp;5&amp;-3&amp;0&amp;1&amp;0\\-10&amp;3&amp;\frac{9}{4}&amp;0&amp;0&amp;1
-\end{amatrix} \qquad R_1 \to \frac{1}{5}R_1 \qquad \text{(to get a 1 on the diagonal entry)}
-\\
-&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
-1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\0&amp;4&amp;-3&amp;-1&amp;1&amp;0\\-10&amp;3&amp;\frac{9}{4}&amp;0&amp;0&amp;1
-\end{amatrix} \qquad R_2 \to R_2-5R_1 \qquad \text{(to get 0 below the diagonal)}
-\\
-&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
-1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\0&amp;4&amp;-3&amp;-1&amp;1&amp;0\\0&amp;5&amp;\frac{9}{4}&amp;2&amp;0&amp;1
-\end{amatrix} \qquad R_3 \to R_3+10R_1 \qquad \text{(to get 0 in the bottom left)}
-\\
-&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
-1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\0&amp;1&amp;-\frac{3}{4}&amp;-\frac{1}{4}&amp;\frac{1}{4}&amp;0\\0&amp;5&amp;\frac{9}{4}&amp;2&amp;0&amp;1
-\end{amatrix} \qquad R_2 \to \frac{1}{4}R_2 \qquad \text{(to get 1 on the diagonal)}
-\\
-&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
-1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\0&amp;1&amp;-\frac{3}{4}&amp;-\frac{1}{4}&amp;\frac{1}{4}&amp;0\\0&amp;0&amp;6&amp;\frac{13}{4}&amp;-\frac{5}{4}&amp;1
-\end{amatrix} \qquad R_3 \to R_3-5R_2 \qquad \text{(to get 0 below the diagonal)}
-\\
-&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
-1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\0&amp;1&amp;-\frac{3}{4}&amp;-\frac{1}{4}&amp;\frac{1}{4}&amp;0\\0&amp;0&amp;1&amp;\frac{13}{24}&amp;-\frac{5}{24}&amp;\frac{1}{6}
-\end{amatrix} \qquad R_3 \to \frac{1}{6} R_3 \qquad \text{(to get 1 on the diagonal)}
+x_1 + 2x_2 + 3x_3 &amp;= 1,\\
+4x_1+5x_2+6x_3 &amp;= 2,\\
+7x_1+8x_2+9x_3 &amp;= 3.
 \end{aligned}
-\]</span></p>
-<p>We’ve now completed the second step above. We’ve worked down from the top to get ones on the diagonal and zeros below. Now for the third step we work back upwards to get zeros above the diagonal:</p>
-<p><span class="math display">\[
+\]</span> Proceeding as before, we have <span class="math display">\[
 \begin{aligned}
-&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
-1 &amp;\frac{1}{5} &amp;0&amp;\frac{1}{5}&amp;0&amp;0\\
-0&amp;1&amp;0&amp;\frac{5}{32}&amp;\frac{3}{32}&amp;\frac{1}{8}\\
-0&amp;0&amp;1&amp;\frac{13}{24}&amp;-\frac{5}{24}&amp;\frac{1}{6}
-\end{amatrix} \qquad R_2 \to R_2 + \frac{3}{4}R_3 \qquad \text{(to get 0 middle right)}\\
-&amp;\hookrightarrow\begin{amatrix}{ccc|ccc}
-1 &amp;0 &amp;0&amp;\frac{27}{160}&amp;-\frac{3}{160}&amp;-\frac{1}{40}\\
-0&amp;1&amp;0&amp;\frac{5}{32}&amp;\frac{3}{32}&amp;\frac{1}{8}\\
-0&amp;0&amp;1&amp;\frac{13}{24}&amp;-\frac{5}{24}&amp;\frac{1}{6}
-\end{amatrix} \qquad R_1 \to R_1 - \frac{1}{5}R_2 \qquad \text{(to get 0 top middle)}\\
+&amp;\begin{amatrix}{ccc|c}
+1&amp;2&amp;3&amp;1\\
+4&amp;5&amp;6&amp;2\\
+7&amp;8&amp;9&amp;3
+\end{amatrix}\\
+&amp;\hookrightarrow\begin{amatrix}{ccc|c}
+1&amp;2&amp;3&amp;1\\
+0&amp;-3&amp;-6&amp;-2\\
+7&amp;8&amp;9&amp;3
+\end{amatrix} \qquad R_2 \to R_2 - 4 R_1,\\
+&amp;\hookrightarrow\begin{amatrix}{ccc|c}
+1&amp;2&amp;3&amp;1\\
+0&amp;-3&amp;-6&amp;-2\\
+0&amp;-6&amp;-12&amp;-4
+\end{amatrix} \qquad R_3 \to R_3 - 7 R_1,\\
+&amp;\hookrightarrow\begin{amatrix}{ccc|c}
+1&amp;2&amp;3&amp;1\\
+0&amp;-3&amp;-6&amp;-2\\
+0&amp;0&amp;0&amp;0
+\end{amatrix} \qquad R_3 \to R_3 - 2 R_2,\\
 \end{aligned}
-\]</span></p>
-<p>We already have a zero in the top right, so we’re done! The left hand side is the identity, and the right hand side is the inverse.</p>
-<p><span class="math display">\[
-A^{-1}=\begin{bmatrix} \frac{27}{160}&amp;-\frac{3}{160}&amp;-\frac{1}{40}\\
-\frac{5}{32}&amp;\frac{3}{32}&amp;\frac{1}{8}\\
-\frac{13}{24}&amp;-\frac{5}{24}&amp;\frac{1}{6} \end{bmatrix}.
-\]</span></p>
-<p>Does it work? Calculate <span class="math inline">\(A A^{-1}\)</span> and <span class="math inline">\(A^{-1} A\)</span> to check.</p>
-<p>There’s a general procedure here to get do divisions to get ones on the diagonal and subtraction/addition to get zeros. The problem comes when you have a zero where you need a one. In this case you have to swap rows. We’ll see examples of this in class and on the worksheets.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This process of finding the inverse is long and boring, but it’s straightforward if you take your time. Most of the marks are for understanding the method, because it’s very easy to make an arithmetic mistake.</p>
-</div>
-</div>
+\]</span> This is in row echelon form. Now the system of equations is <span class="math display">\[
+\begin{aligned}
+x_1 + 2x_2 + 3x_3 &amp;= 1,\\
+-3x_2-6x_3 &amp;= -2,\\
+0&amp;=0.
+\end{aligned}
+\]</span> The final row doesn’t tell us anything, so there are infinitely many solutions. To proceed, and follow the usual process of working backwards to first find <span class="math inline">\(x_3\)</span>, then <span class="math inline">\(x_2\)</span> and then <span class="math inline">\(x_1\)</span>, let’s say that <span class="math inline">\(x_3=\alpha\)</span>, some number that we don’t know.</p>
+<p>Then the second equation says <span class="math inline">\(x_2 = \frac{2}{3} - 2x_3 = \frac{2}{3}-2\alpha\)</span>, and the first equation gives <span class="math inline">\(x_1 = 1-2x_2-3x_3=-\frac{1}{3}+\alpha\)</span>. This is a solution for <strong>any</strong> value of <span class="math inline">\(\alpha\)</span>, and thus there are infinitely many solutions.</p>
 
 
+</section>
 </section>
 </section>
 

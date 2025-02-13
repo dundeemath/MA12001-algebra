@@ -159,7 +159,7 @@ $A$ is very standard row-echelon form. $B$ _is_ in row echelon form, but $C$ is 
 :::
 
 ### Example 1
-Let's solve the following system via Gaussian elimination:^{The two 8s in the final equation are deliberate, otherwise it would have been singular}
+Let's solve the following system via Gaussian elimination:^[The two 8s in the final equation are deliberate, otherwise it would have been singular.]
 
 $$
 \begin{aligned}

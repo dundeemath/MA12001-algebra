@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 6: Applications of matrices, and Gaussian elimination – MA12001 Algebra</title>
+<title>Week 7: Lines – MA12001 Algebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html">Chapter 2: Matrices</a></li><li class="breadcrumb-item"><a href="./week6.html">Week 6: Applications of matrices, and Gaussian elimination</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week7.html">Chapter 3: Lines, planes and spheres</a></li><li class="breadcrumb-item"><a href="./week7.html">Week 7: Lines</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -192,7 +192,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 6: Applications of matrices, and Gaussian elimination</span></a>
   </div>
 </li>
@@ -209,7 +209,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week7.html" class="sidebar-item-text sidebar-link">
+  <a href="./week7.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 7: Lines</span></a>
   </div>
 </li>
@@ -241,20 +241,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#matrices-as-transformations" id="toc-matrices-as-transformations" class="nav-link active" data-scroll-target="#matrices-as-transformations">Matrices as transformations</a>
+  <li><a href="#equations-for-lines" id="toc-equations-for-lines" class="nav-link active" data-scroll-target="#equations-for-lines">Equations for lines</a>
   <ul class="collapse">
-  <li><a href="#rotation-matrices" id="toc-rotation-matrices" class="nav-link" data-scroll-target="#rotation-matrices">Rotation matrices</a></li>
-  <li><a href="#reflection-matrices" id="toc-reflection-matrices" class="nav-link" data-scroll-target="#reflection-matrices">Reflection matrices</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
   </ul></li>
-  <li><a href="#linear-systems-of-equations" id="toc-linear-systems-of-equations" class="nav-link" data-scroll-target="#linear-systems-of-equations">Linear systems of equations</a>
+  <li><a href="#the-distance-from-a-point-to-a-line" id="toc-the-distance-from-a-point-to-a-line" class="nav-link" data-scroll-target="#the-distance-from-a-point-to-a-line">The distance from a point to a line</a>
   <ul class="collapse">
-  <li><a href="#gaussian-elimination" id="toc-gaussian-elimination" class="nav-link" data-scroll-target="#gaussian-elimination">Gaussian elimination</a>
-  <ul class="collapse">
-  <li><a href="#row-echelon-form" id="toc-row-echelon-form" class="nav-link" data-scroll-target="#row-echelon-form">Row-echelon form</a></li>
-  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example 1</a></li>
-  <li><a href="#zero-rows" id="toc-zero-rows" class="nav-link" data-scroll-target="#zero-rows">Zero rows</a></li>
-  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example 2</a></li>
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example</a></li>
   </ul></li>
+  <li><a href="#intersections-of-lines" id="toc-intersections-of-lines" class="nav-link" data-scroll-target="#intersections-of-lines">Intersections of lines</a>
+  <ul class="collapse">
+  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -262,9 +259,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html">Chapter 2: Matrices</a></li><li class="breadcrumb-item"><a href="./week6.html">Week 6: Applications of matrices, and Gaussian elimination</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week7.html">Chapter 3: Lines, planes and spheres</a></li><li class="breadcrumb-item"><a href="./week7.html">Week 7: Lines</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 6: Applications of matrices, and Gaussian elimination</h1>
+<h1 class="title">Week 7: Lines</h1>
 </div>
 
 
@@ -290,53 +287,34 @@ window.Quarto = {
 }
 \]</span></p>
 </div>
-<section id="matrices-as-transformations" class="level1">
-<h1>Matrices as transformations</h1>
-<p>One of the key reasons that we see matrices in this module is that they can act as transformations of vectors. Thinking of a 3D vector <span class="math inline">\({\mathbf{x}}\)</span> as a matrix <span class="math inline">\(\begin{bmatrix} x_1 \\ x_2 \\ x_3\end{bmatrix}\)</span>, we can left-multiply the vector by a <span class="math inline">\(3\times3\)</span> matrix to give another vector <span class="math display">\[
-A{\mathbf{x}}.
-\]</span></p>
-<p>For instance, if the matrix is <span class="math display">\[
-A=\begin{bmatrix} 3&amp;0&amp;0\\0&amp;3&amp;0\\0&amp;0&amp;3 \end{bmatrix},
-\]</span> then for any vector <span class="math inline">\({\mathbf{x}}\)</span>, <span class="math display">\[
-A{\mathbf{x}}=\begin{bmatrix} 3x_1 \\ 3x_2 \\ 3x_3\end{bmatrix} = 3{\mathbf{x}}
-\]</span> which is another vector in the same direction, with <span class="math inline">\(3\times\)</span> the length.</p>
-<p>That’s a general rule: if <span class="math inline">\(A=\lambda I\)</span> for some scalar <span class="math inline">\(\lambda\)</span>, then <span class="math inline">\(A\)</span> will just multiply the magnitude for <span class="math inline">\(\lambda\)</span> when applied to any vector. This is called a scaling matrix.</p>
-<p>What other transformations are there? We’ll just focus on 2D because it’s easier to sketch.</p>
-<section id="rotation-matrices" class="level2">
-<h2 class="anchored" data-anchor-id="rotation-matrices">Rotation matrices</h2>
-<p>The following matrix rotates vectors around the origin by an angle <span class="math inline">\(\theta\)</span> <em>anticlockwise</em>: <span class="math display">\[
-R_\theta = \begin{bmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta \end{bmatrix}
-\]</span> Why? Consider a position vector <span class="math inline">\(\mathbf{a}=\begin{bmatrix} r\cos\alpha \\ r\sin\alpha \end{bmatrix}\)</span>. This is <span class="math inline">\(\begin{bmatrix} x \\ y \end{bmatrix}\)</span> at polar coordinates <span class="math inline">\((r,\alpha)\)</span>, which hopefully you’ve seen before.</p>
-<p>Then applying the matrix, <span class="math display">\[
-{\mathbf{b}} = R_\theta \mathbf{r} = \begin{bmatrix} r\cos\alpha\cos\theta - r \sin\alpha\sin\theta \\ r\cos\alpha\sin\theta + r\sin\alpha\cos\theta \end{bmatrix} = \begin{bmatrix} r\cos{(\alpha+\theta)} \\ r\sin(\alpha+\theta) \end{bmatrix}
-\]</span> which is the position vector with polar coordinates <span class="math inline">\((r,\alpha+\theta)\)</span>. This diagram might help: <img src="mf1.png" class="img-fluid" style="width:50.0%"></p>
-<p><strong>Think:</strong> What’s the determinant of the rotation matrix <span class="math inline">\(R_\theta\)</span>?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<p>This next section of the module uses vectors to think about geometry. We’ll describe lines, planes and spheres in terms of a general point with position vector <span class="math inline">\({\mathbf{r}}\)</span>. Whenever you see <span class="math inline">\({\mathbf{r}}\)</span>, you should think of a generic point that satisfies some conditions (like being on a plane), rather than <span class="math inline">\({\mathbf{a}}\)</span>, <span class="math inline">\({\mathbf{b}}\)</span>, <span class="math inline">\({\mathbf{c}}\)</span> which are usually particular points in space.</p>
+<section id="equations-for-lines" class="level1">
+<h1>Equations for lines</h1>
+<p>In mathematics, a line is a straight line which extends infinitely in both directions<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. How can we describe this in terms of an equation?</p>
+<p>Suppose you start at a point with position vector <span class="math inline">\({\mathbf{a}}\)</span>, and then you move by a displacement <span class="math inline">\({\mathbf{s}}\)</span>. You’re now at <span class="math inline">\({\mathbf{a}}+{\mathbf{s}}\)</span>.</p>
+<p>Do it again. You’re at <span class="math inline">\({\mathbf{a}}+2{\mathbf{s}}\)</span>.</p>
+<p>You’re moving in a straight line.</p>
+<p>The points <span class="math display">\[
+{\mathbf{r}} = {\mathbf{a}}+\lambda{\mathbf{s}}
+\]</span> all lie on a straight line, for any value of <span class="math inline">\(\lambda\)</span>. Here <span class="math inline">\({\mathbf{a}}\)</span> is a <em>particular point</em> on the line, and the vector <span class="math inline">\({\mathbf{s}}\)</span> tells you the <em>direction</em> of the line. This is the general equation of a line.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Common mistake">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solution
+Common mistake
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(\cos\theta\cos\theta - (-\sin\theta)\sin\theta = \cos^2 \theta + \sin^2\theta = 1\)</span>.</p>
+<p>The equation of a line is not unique. <span class="math display">\[{\mathbf{r}} = {\mathbf{a}} + \lambda {\mathbf{s}}
+\]</span> and <span class="math display">\[{\mathbf{r}} = ({\mathbf{a}}+3{\mathbf{s}}) + \lambda \frac{1}{2}{\mathbf{s}}
+\]</span> both describe the same line. But the value of <span class="math inline">\(\lambda\)</span> is different for any given point.</p>
 </div>
 </div>
-</div>
-</section>
-<section id="reflection-matrices" class="level2">
-<h2 class="anchored" data-anchor-id="reflection-matrices">Reflection matrices</h2>
-<p>Consider the matrix <span class="math display">\[
-P=\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}.
-\]</span> Then <span class="math inline">\(P{\mathbf{x}} = [x_1,-x_2]\)</span>. All it’s done is reversed the <span class="math inline">\(y\)</span> component. In other words, we’ve reflected over the <span class="math inline">\(x\)</span>-axis.</p>
-<p>Similarly, <span class="math display">\[
-Q=\begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
-\]</span> applied to any vector is just a reflection over the <span class="math inline">\(y\)</span>-axis.</p>
-<p><strong>Think:</strong> What’s the determinant of the reflection matrix <span class="math inline">\(P\)</span>?</p>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>Find an equation for the line going through the points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> with position vectors <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -349,62 +327,41 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(1\times-1 - 0 = -1\)</span></p>
-</div>
-</div>
-</div>
-<p>All reflections have determinant <span class="math inline">\(-1\)</span>, and all rotations have determinant <span class="math inline">\(+1\)</span>. You can think of the determinant as a scale factor for areas: rotations don’t change the area, and reflections flip it.</p>
-<p>To get a reflection through a different line, you can always use a combination of rotations and reflections.</p>
-<p>The matrix given by <span class="math display">\[
-R_{\theta} P R_{-\theta}
-\]</span> reflects in the line which makes angle <span class="math inline">\(\theta\)</span> with the <span class="math inline">\(x\)</span>-axis: first we rotate by <span class="math inline">\(-\theta\)</span>, then reflect over the <span class="math inline">\(x\)</span>-axis, then rotate back.</p>
-<p>Many more transformations exist, such as shear and projection. In 3D they get much more complicated. This sort of matrix is used extensively in the development of video games and computer graphics.</p>
-</section>
-</section>
-<section id="linear-systems-of-equations" class="level1">
-<h1>Linear systems of equations</h1>
-<p>A linear system of equations is a set of simultaneous equations where every unknown variable is multiplied by a number and they’re all added. So it might look something like this: <span class="math display">\[
-\begin{aligned}
-5+3x-z &amp;= 20,\\
-y-x+3z &amp;= 2,\\
-5&amp;=x,
-\end{aligned}
-\]</span> but we can always rewrite that in a more consistent form <span class="math display">\[
-\begin{aligned}
-3x + 0y +(-1)z &amp;= 15,\\
-(-1)x + 1y + 3z &amp;= 2,\\
-1x+0y+0z&amp;=5,
-\end{aligned}
-\]</span> and then this can be written as a matrix equation: <span class="math display">\[
-\begin{bmatrix} 3&amp;0&amp;-1\\-1&amp;1&amp;3\\1&amp;0&amp;0 \end{bmatrix}\begin{bmatrix} x\\ y\\ z \end{bmatrix} = \begin{bmatrix} 3x + 0y +(-1)z\\(-1)x + 1y + 3z\\x \end{bmatrix} = \begin{bmatrix} 15\\2\\5 \end{bmatrix}.
-\]</span></p>
-<p>This is in the form <span class="math inline">\(AX=B\)</span>, where we know the matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> and we want to find <span class="math inline">\(X\)</span>, so we could use the inverse of <span class="math inline">\(A\)</span>: <span class="math display">\[
-\begin{aligned}
-AX&amp;=B\\
-\implies A^{-1}(AX) &amp;= A^{-1}B\\
-\implies (A^{-1}A)X &amp;= A^{-1}B\\
-\implies I X &amp;= A^{-1}B\\
-\implies X &amp;= A^{-1}B
-\end{aligned}
-\]</span> For <span class="math inline">\(2\times2\)</span> matrices you can easily find the inverse. However, for <span class="math inline">\(3\times3\)</span> matrices this is inefficient, and we can solve the system without explicitly calculating the inverse of the matrix using a method called Gaussian elimination.</p>
-<section id="gaussian-elimination" class="level2">
-<h2 class="anchored" data-anchor-id="gaussian-elimination">Gaussian elimination</h2>
-<p>We’ve actually already seen Gaussian elimination, for calculating the inverse of <span class="math inline">\(3\times3\)</span> matrices. The principle here is the same: perform a series of row operations to simplify the matrix:</p>
-<ol type="1">
-<li>Start with a linear system of equations.</li>
-<li>Write this as a matrix equation <span class="math inline">\(A{\mathbf{x}}={\mathbf{b}}\)</span> where <span class="math inline">\(A\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> are known, and we want to find <span class="math inline">\({\mathbf{x}}\)</span>.</li>
-<li>Write an augmented matrix <span class="math inline">\([A|{\mathbf{b}}]\)</span>.</li>
-<li>Perform a series of row operations to reduce <span class="math inline">\(A\)</span> to <strong>row-echelon form</strong>.</li>
-<li>Transform back to a series of equations.</li>
-<li>Use this form to read off the solution.</li>
-</ol>
-<p>These steps should become clear when we see an example. First we need to know what row-echelon form means.</p>
-<section id="row-echelon-form" class="level3">
-<h3 class="anchored" data-anchor-id="row-echelon-form">Row-echelon form</h3>
-<p>A matrix is in row-echelon form if each row has more zeros at the start than the preceding row (unless they’re all zero). It is always possible to convert a matrix into this form.</p>
-<p><strong>Think:</strong> which of the following matrices are in row-echelon form?</p>
+<p><img src="lpsf1.png" class="img-fluid" style="width:60.0%"></p>
+<p>Now we don’t know the direction of the line, but we can easily find it as the displacement vector <span class="math inline">\({\overrightarrow{AB}}={\mathbf{b}}-{\mathbf{a}}\)</span>.</p>
+<p>We already know two points on the line. Picking <span class="math inline">\({\mathbf{a}}\)</span> gives the final answer</p>
 <p><span class="math display">\[
-A = \begin{bmatrix} 1 &amp; 2 &amp; 3\\0 &amp; 5 &amp; 6\\0&amp;0&amp;1 \end{bmatrix}, B=\begin{bmatrix} 1 &amp; 0 &amp;0\\0 &amp; 0 &amp;0 \\ 0 &amp; 0 &amp;0 \end{bmatrix}, C=\begin{bmatrix} 1 &amp; 0 &amp; 0\\0 &amp; 0 &amp;-4\\ 0 &amp; 0 &amp;1 \end{bmatrix}
+{\mathbf{r}} = {\mathbf{a}}+ \lambda \left({\mathbf{b}}-{\mathbf{a}}\right).
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="the-distance-from-a-point-to-a-line" class="level1">
+<h1>The distance from a point to a line</h1>
+<p>One particular and interesting problem we can think about is to find the distance of a point in space from a line.</p>
+<p>If you think about this a bit you’ll realise it is a well-defined question, and it comes down to finding a straight line segment that connects the point to a point on the line such that the line segment is perpendicular to the original line:</p>
+<p><img src="linetopoint.png" class="img-fluid" style="width:60.0%"></p>
+<p>This diagram is for the distance between a point <span class="math inline">\(B\)</span> with position vector <span class="math inline">\({\mathbf{b}}\)</span>, and a line given by <span class="math display">\[
+{\mathbf{r}} = {\mathbf{a}} + \lambda{\mathbf{s}}.
+\]</span></p>
+<p>We want to find a point <span class="math inline">\({\mathbf{r}}\)</span> (and hence a value of <span class="math inline">\(\lambda\)</span>) such that the displacement of the point <span class="math inline">\(B\)</span> from this point on the line, i.e.&nbsp;<span class="math inline">\({\mathbf{b}}-{\mathbf{r}}\)</span>, is perpendicular to the line.</p>
+<p>Remember that perpendicular means the dot product of the vectors is zero. So we need <span class="math display">\[
+\left({\mathbf{b}}-{\mathbf{r}}\right)\cdot{\mathbf{s}} = 0,
+\]</span> i.e. <span class="math display">\[
+\left({\mathbf{b}}-{\mathbf{a}} - \lambda{\mathbf{s}}\right)\cdot{\mathbf{s}} = 0.
+\]</span> The only unknown thing in this equation is <span class="math inline">\(\lambda\)</span>. Rearranging we find <span class="math display">\[
+\lambda = \frac{\left({\mathbf{b}}-{\mathbf{a}}\right)\cdot{\mathbf{s}}}{|{\mathbf{s}}|^2},
+\]</span> and so the position on the line nearest the point <span class="math inline">\(B\)</span> is given by <span class="math display">\[
+{\mathbf{r}} = {\mathbf{a}} + \frac{\left({\mathbf{b}}-{\mathbf{a}}\right)\cdot{\mathbf{s}}}{|{\mathbf{s}}|^2}{\mathbf{s}}.
+\]</span> Finally, we can calculate the distance of the point from the line as <span class="math display">\[
+\left|{\mathbf{b}}-{\mathbf{r}}\right| = \left|{\mathbf{b}}-{\mathbf{a}} - \frac{\left({\mathbf{b}}-{\mathbf{a}}\right)\cdot{\mathbf{s}}}{|{\mathbf{s}}|^2}{\mathbf{s}}\right|.
+\]</span> Everything here is known, so you can compute this. You could learn this as a formula, but it’s better to understand the process.</p>
+<section id="example-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-1">Example</h2>
+<p>Find the distance of the point <span class="math inline">\((1,1,0)\)</span> from the line <span class="math display">\[
+{\mathbf{r}} = [0,0,1] + \lambda [1,1,1].
 \]</span></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -418,101 +375,70 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(A\)</span> is very standard row-echelon form. <span class="math inline">\(B\)</span> <em>is</em> in row echelon form, but <span class="math inline">\(C\)</span> is not because the final row doesn’t have more leading zeros than the previous one.</p>
+<p>Following the above method, the nearest point on the line is when <span class="math display">\[
+\left([1,1,0] - [0,0,1] - \lambda [1,1,1]\right)\cdot [1,1,1] = 0,
+\]</span> which gives <span class="math display">\[
+1 - 3\lambda  = 0,
+\]</span> so <span class="math inline">\(\lambda = 1/3\)</span>.</p>
+<p>The point is <span class="math inline">\({\mathbf{r}} = [0,0,1] +  [1,1,1]/3 = [1/3,1/3,4/3]\)</span>, and so the distance between this and the original point is <span class="math display">\[
+\left| [1,1,0] - [1/3,1/3,4/3]\right| = \sqrt{4/9 + 4/9 + 16/9} = 4\sqrt{2}/3.
+\]</span></p>
 </div>
 </div>
 </div>
 </section>
-<section id="example-1" class="level3">
-<h3 class="anchored" data-anchor-id="example-1">Example 1</h3>
-<p>Let’s solve the following system via Gaussian elimination:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p><span class="math display">\[
-\begin{aligned}
-x_1 + 2x_2 + 3x_3 &amp;= 1,\\
-4x_1+5x_2+6x_3 &amp;= 2,\\
-7x_1+8x_2+8x_3 &amp;= 3.
-\end{aligned}
-\]</span> First we rewrite this as a matrix equation: <span class="math display">\[
-\begin{bmatrix} 1&amp;2&amp;3\\4&amp;5&amp;6\\7&amp;8&amp;8 \end{bmatrix} {\mathbf{x}} = \begin{bmatrix} 1\\2\\3 \end{bmatrix}
-\]</span> and then this can be represented with an augmented matrix as <span class="math display">\[
-\begin{amatrix}{ccc|c}
-1&amp;2&amp;3&amp;1\\
-4&amp;5&amp;6&amp;2\\
-7&amp;8&amp;8&amp;3
-\end{amatrix}.
-\]</span> Now let’s put it in row echelon form using row operations, just like last week. We need a zero at the start of the second row: <span class="math display">\[
-\hookrightarrow\begin{amatrix}{ccc|c}
-1&amp;2&amp;3&amp;1\\
-0&amp;-3&amp;-6&amp;-2\\
-7&amp;8&amp;8&amp;3
-\end{amatrix} \qquad R_2 \to R_2 - 4 R_1,
-\]</span> a zero at the start of the third row: <span class="math display">\[
-\hookrightarrow\begin{amatrix}{ccc|c}
-1&amp;2&amp;3&amp;1\\
-0&amp;-3&amp;-6&amp;-2\\
-0&amp;-6&amp;-13&amp;-4
-\end{amatrix} \qquad R_3 \to R_3 - 7 R_1,
-\]</span> and another zero at the start of the third row <span class="math display">\[
-\hookrightarrow\begin{amatrix}{ccc|c}
-1&amp;2&amp;3&amp;1\\
-0&amp;-3&amp;-6&amp;-2\\
-0&amp;0&amp;-1&amp;0
-\end{amatrix} \qquad R_3 \to R_3 - 2 R_2,
-\]</span> This is now in row echelon form. How does this help us? Well, if we write this back as a system of equations we now have <span class="math display">\[
-\begin{aligned}
-x_1 + 2x_2 + 3x_3 &amp;= 1,\\
--3x_2-6x_3 &amp;= -2,\\
--x_3&amp;=0.
-\end{aligned}
-\]</span> So immediately we know that we must have <span class="math inline">\(x_3=0\)</span>. Then the second of these equations gives us <span class="math inline">\(-3x_2=-2\)</span>, so <span class="math inline">\(x_2=\frac{2}{3}\)</span>, and finally plugging this into the first equation we find <span class="math inline">\(x_1=-\frac{1}{3}\)</span>.</p>
-<p>Basically, this method formalises techniques you may have seen before for solving simultaneous equations. It’s particularly useful because it allows us to deal with singular matrices too:</p>
 </section>
-<section id="zero-rows" class="level3">
-<h3 class="anchored" data-anchor-id="zero-rows">Zero rows</h3>
-<p>What if we perform Gaussian elimination and get to a point where the final row is all zeros? This happens exactly when the initial matrix is singular, and it means we can’t follow the above procedure to find a unique solution to the system. Instead, we either have no solutions or an infinite number of solutions, depending on whether the final row gives us <span class="math inline">\(0=0\)</span> or <span class="math inline">\(0=1\)</span>. The second case is impossible, so we have no solutions, whereas if we get <span class="math inline">\(0=0\)</span> then we have only 2 equations for 3 unknowns, so there are infinitely many solutions.</p>
-</section>
-<section id="example-2" class="level3">
-<h3 class="anchored" data-anchor-id="example-2">Example 2</h3>
-<p>Similar to the previous example, let’s consider: <span class="math display">\[
+<section id="intersections-of-lines" class="level1">
+<h1>Intersections of lines</h1>
+<p>In general, two lines in 3D space don’t intersect. This is actually quite a rare occurrence. But if they do intersect, it’s easy to find out where.</p>
+<p>Suppose we have two lines with equations <span class="math display">\[
+{\mathbf{r}} = {\mathbf{a}} + \lambda{\mathbf{b}}
+\]</span> and <span class="math display">\[
+{\mathbf{r}} = {\mathbf{c}} + \mu{\mathbf{d}}.
+\]</span> Here <span class="math inline">\({\mathbf{a}}\)</span>, <span class="math inline">\({\mathbf{b}}\)</span>, <span class="math inline">\({\mathbf{c}}\)</span> and <span class="math inline">\({\mathbf{d}}\)</span> are some vectors that we know, and <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(\mu\)</span> are arbitrary scalars, different for each point on the line. We need to use different letters for <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(\mu\)</span><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> because they could be different values for the same point in space.</p>
+<p>If the lines intersect, then the point where they meet satisfies <strong>both</strong> of these equations. So we must have <span class="math display">\[
+{\mathbf{a}} + \lambda{\mathbf{b}} = {\mathbf{c}} + \mu{\mathbf{d}}.
+\]</span> This looks like one equation for two unknown variables <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(\mu\)</span>, but remember that this is a vector equation, so really it’s three equations<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> so it’s okay.</p>
+<p>How do we solve this? Well, it’s just a linear system: <span class="math display">\[
 \begin{aligned}
-x_1 + 2x_2 + 3x_3 &amp;= 1,\\
-4x_1+5x_2+6x_3 &amp;= 2,\\
-7x_1+8x_2+9x_3 &amp;= 3.
+b_1 \lambda - d_1 \mu &amp;= c_1 - a_1,\\
+b_2 \lambda - d_2 \mu &amp;= c_2 - a_2,\\
+b_3 \lambda - d_3 \mu &amp;= c_3 - a_3.
 \end{aligned}
-\]</span> Proceeding as before, we have <span class="math display">\[
+\]</span> You can solve these via Gaussian elimination. In general, this won’t have a solution, but it may do, and you’ll find out by whether the Gaussian elimination proceeds.</p>
+<p>If there is no solution, the lines don’t intersect.</p>
+<p>If there is a solution, the lines do intersect, and the value of <span class="math inline">\(\lambda\)</span> or <span class="math inline">\(\mu\)</span> will tell you where when you substitute it back into the line equation.</p>
+<p>We could also have infinitely many solutions, if the lines are exactly the same. This will have if they are paralell and exactly line on each other. Remember that Gaussian elimination tells us when we have infinitely many solutions.</p>
+<section id="example-2" class="level2">
+<h2 class="anchored" data-anchor-id="example-2">Example</h2>
+<p>Find the point of intersection of the lines <span class="math display">\[
+\mathbf{r} = [0,0,1] + \lambda[1,1,0]\]</span> and <span class="math display">\[
+\mathbf{r} = [2,0,1] + \mu[1,0,0].\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Equating the two lines and rewriting as simulatenous equations givesa <span class="math display">\[
 \begin{aligned}
-&amp;\begin{amatrix}{ccc|c}
-1&amp;2&amp;3&amp;1\\
-4&amp;5&amp;6&amp;2\\
-7&amp;8&amp;9&amp;3
-\end{amatrix}\\
-&amp;\hookrightarrow\begin{amatrix}{ccc|c}
-1&amp;2&amp;3&amp;1\\
-0&amp;-3&amp;-6&amp;-2\\
-7&amp;8&amp;9&amp;3
-\end{amatrix} \qquad R_2 \to R_2 - 4 R_1,\\
-&amp;\hookrightarrow\begin{amatrix}{ccc|c}
-1&amp;2&amp;3&amp;1\\
-0&amp;-3&amp;-6&amp;-2\\
-0&amp;-6&amp;-12&amp;-4
-\end{amatrix} \qquad R_3 \to R_3 - 7 R_1,\\
-&amp;\hookrightarrow\begin{amatrix}{ccc|c}
-1&amp;2&amp;3&amp;1\\
-0&amp;-3&amp;-6&amp;-2\\
-0&amp;0&amp;0&amp;0
-\end{amatrix} \qquad R_3 \to R_3 - 2 R_2,\\
+\lambda &amp;= 2+\mu,\\
+\lambda &amp;= 0,\\
+1 &amp;= 1.
 \end{aligned}
-\]</span> This is in row echelon form. Now the system of equations is <span class="math display">\[
-\begin{aligned}
-x_1 + 2x_2 + 3x_3 &amp;= 1,\\
--3x_2-6x_3 &amp;= -2,\\
-0&amp;=0.
-\end{aligned}
-\]</span> The final row doesn’t tell us anything, so there are infinitely many solutions. To proceed, and follow the usual process of working backwards to first find <span class="math inline">\(x_3\)</span>, then <span class="math inline">\(x_2\)</span> and then <span class="math inline">\(x_1\)</span>, let’s say that <span class="math inline">\(x_3=\alpha\)</span>, some number that we don’t know.</p>
-<p>Then the second equation says <span class="math inline">\(x_2 = \frac{2}{3} - 2x_3 = \frac{2}{3}-2\alpha\)</span>, and the first equation gives <span class="math inline">\(x_1 = 1-2x_2-3x_3=-\frac{1}{3}+\alpha\)</span>. This is a solution for <strong>any</strong> value of <span class="math inline">\(\alpha\)</span>, and thus there are infinitely many solutions.</p>
+\]</span> The final equation is automatically true, and the second equation just gives you the value of <span class="math inline">\(\lambda=0\)</span>, so the first one tells us that <span class="math inline">\(\mu=-2\)</span>.</p>
+<p>Then the intersection point is just <span class="math inline">\([2,0,1] - 2[1,0,0]=[0,0,1]\)</span>, which is indeed a point on both lines.</p>
+</div>
+</div>
+</div>
 
 
-</section>
 </section>
 </section>
 
@@ -520,7 +446,9 @@ x_1 + 2x_2 + 3x_3 &amp;= 1,\\
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>The two 8s in the final equation are deliberate, otherwise it would have been singular.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>otherwise we talk about “curves”, “half lines” and “line segments”<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>But don’t feel like you need to use Greek letters if you’d be more comfortable with <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> or whatever.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>For 3D vectors.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

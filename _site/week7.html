@@ -214,8 +214,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">Week 8: Planes</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8: Planes</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
  <span class="menu-text">Week 9: Spheres</span>
   </li>
@@ -252,6 +255,10 @@ window.Quarto = {
   <li><a href="#intersections-of-lines" id="toc-intersections-of-lines" class="nav-link" data-scroll-target="#intersections-of-lines">Intersections of lines</a>
   <ul class="collapse">
   <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example</a></li>
+  <li><a href="#the-distance-between-two-lines" id="toc-the-distance-between-two-lines" class="nav-link" data-scroll-target="#the-distance-between-two-lines">The distance between two lines</a>
+  <ul class="collapse">
+  <li><a href="#example-3" id="toc-example-3" class="nav-link" data-scroll-target="#example-3">Example</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -426,7 +433,7 @@ Solution
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Equating the two lines and rewriting as simulatenous equations givesa <span class="math display">\[
+<p>Equating the two lines and rewriting as simulatenous equations gives <span class="math display">\[
 \begin{aligned}
 \lambda &amp;= 2+\mu,\\
 \lambda &amp;= 0,\\
@@ -437,8 +444,66 @@ Solution
 </div>
 </div>
 </div>
+</section>
+<section id="the-distance-between-two-lines" class="level2">
+<h2 class="anchored" data-anchor-id="the-distance-between-two-lines">The distance between two lines</h2>
+<p>We saw that two lines in 3D don’t generally intersect. If they don’t, is there a well defined distance between them? If the lines are parallel, it’s kind of intuitively obvious that there’s a fixed distance between them.</p>
+<p>If lines aren’t parallel (which we sometimes describe as the lines being <em>skew</em>) then in fact we can find a <strong>minimum</strong> distance between them. If the lines intersect, this is zero, but otherwise it’s some positive number.</p>
+<p>Suppose we have two lines with equations <span class="math display">\[
+{\mathbf{r}} = {\mathbf{a}} + \lambda{\mathbf{b}}
+\]</span> and <span class="math display">\[
+{\mathbf{r}} = {\mathbf{c}} + \mu{\mathbf{d}}.
+\]</span></p>
+<p>Think about the displacement vector between a point <span class="math inline">\(P\)</span> on the first line, with parameter value <span class="math inline">\(\lambda\)</span>, and a point <span class="math inline">\(Q\)</span> on the second line with parameter <span class="math inline">\(\mu\)</span>: <span class="math display">\[
+{\overrightarrow{PQ}} = ({\mathbf{c}} + \mu{\mathbf{d}}) - ({\mathbf{a}} + \lambda{\mathbf{b}}).
+\]</span></p>
+<p>Hopefully you can convince yourself that the distance between the lines – the magnitude of this displacement vector <span class="math inline">\(|{\overrightarrow{PQ}}|\)</span> – is shortest when this displacement is perpendicular to both lines.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>So then we must have <span class="math display">\[
+{\mathbf{b}}\cdot{\overrightarrow{PQ}}=0
+\]</span> and <span class="math display">\[
+{\mathbf{d}}\cdot{\overrightarrow{PQ}}=0.
+\]</span></p>
+<p>Expanding these out gives <span class="math display">\[
+0={\mathbf{b}}\cdot({\mathbf{c}} + \mu{\mathbf{d}} - {\mathbf{a}} - \lambda{\mathbf{b}})
+\]</span> and <span class="math display">\[
+0={\mathbf{d}}\cdot({\mathbf{c}} + \mu{\mathbf{d}} - {\mathbf{a}} - \lambda{\mathbf{b}}).
+\]</span> These are two equations for two unknowns, so we can solve for <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(\mu\)</span> and hence find the shortest distance <span class="math inline">\(|{\overrightarrow{PQ}}|\)</span>.</p>
+<section id="example-3" class="level3">
+<h3 class="anchored" data-anchor-id="example-3">Example</h3>
+<p>What is the shortest distance between the lines <span class="math inline">\({\mathbf{r}} = [1,1,5]+\lambda[1,-1,2]\)</span> and <span class="math inline">\({\mathbf{r}}=[4,2,-7]+\mu[1,1,4]\)</span>?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The displacement is <span class="math display">\[
+{\overrightarrow{PQ}} = [3,1,-12] +\mu[1,1,4]+\lambda[-1,1,-2].
+\]</span> If this vector is perpedicular to both <span class="math inline">\([1,1,4]\)</span> and <span class="math inline">\([1,-1,2]\)</span> then <span class="math display">\[
+0 = [1,1,4]\cdot[3,1,-12] + \mu [1,1,4]\cdot[1,1,4]+\lambda[1,1,4]\cdot[-1,1,-2] = -44 + 18\mu -8\lambda
+\]</span> and <span class="math display">\[
+0 = [1,-1,2]\cdot[3,1,-12] + \mu [1,-1,2]\cdot[1,1,4]+\lambda[1,-1,2]\cdot[-1,1,-2] = -22 + 8\mu -6\lambda
+\]</span> i.e.&nbsp;the linear system of equations <span class="math display">\[
+\begin{aligned}
+18\mu-8\lambda &amp;= 44,\\
+8\mu-6\lambda&amp;=22,
+\end{aligned}
+\]</span> which has the unique solution <span class="math inline">\(\lambda=-1\)</span>, <span class="math inline">\(\mu=2\)</span>.</p>
+<p>So finally the distance between the lines is <span class="math display">\[
+|{\overrightarrow{PQ}}| = \left| [3,1,-12] +2[1,1,4]-1[-1,1,-2]\right| = \left|[6,2,-2]\right| = \sqrt{36+4+4} = \sqrt{44}.
+\]</span></p>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 </section>
 
@@ -449,6 +514,7 @@ Solution
 <li id="fn1"><p>otherwise we talk about “curves”, “half lines” and “line segments”<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>But don’t feel like you need to use Greek letters if you’d be more comfortable with <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> or whatever.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>For 3D vectors.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>If this doesn’t seem obvious to you, it turns into a calculus exercise to find the minimum of a function of two variables, which is a bit too messy to show here.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

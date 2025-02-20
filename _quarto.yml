@@ -22,7 +22,7 @@ website:
       - section: "Chapter 3: Lines, planes and spheres"
         contents:
           - href: week7.qmd
-          - text: "Week 8: Planes"
+          - href: week8.qmd
           - text: "Week 9: Spheres"
       - section: "Chapter 4: Complex numbers"
       - href: links.qmd

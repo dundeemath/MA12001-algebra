@@ -176,7 +176,7 @@ $$
 ::: {.callout-tip collapse="true"}
 ## Solution
 
-Equating the two lines and rewriting as simulatenous equations givesa
+Equating the two lines and rewriting as simulatenous equations gives
 $$
 \begin{aligned}
 \lambda &= 2+\mu,\\
@@ -188,4 +188,77 @@ The final equation is automatically true, and the second equation just gives you
 
 Then the intersection point is just $[2,0,1] - 2[1,0,0]=[0,0,1]$, which is indeed a point on both lines.
 
+:::
+
+
+## The distance between two lines
+We saw that two lines in 3D don't generally intersect. If they don't, is there a well defined distance between them? If the lines are parallel, it's kind of intuitively obvious that there's a fixed distance between them.
+
+If lines aren't parallel (which we sometimes describe as the lines being _skew_) then in fact we can find a __minimum__ distance between them. If the lines intersect, this is zero, but otherwise it's some positive number.
+
+Suppose we have two lines with equations
+$$
+\vc{r} = \vc{a} + \lambda\vc{b}
+$$
+and
+$$
+\vc{r} = \vc{c} + \mu\vc{d}.
+$$
+
+Think about the displacement vector between a point $P$ on the first line, with parameter value $\lambda$, and a point $Q$ on the second line with parameter $\mu$:
+$$
+\V{PQ} = (\vc{c} + \mu\vc{d}) - (\vc{a} + \lambda\vc{b}).
+$$
+
+Hopefully you can convince yourself that the distance between the lines -- the magnitude of this displacement vector $|\V{PQ}|$ -- is shortest when this displacement is perpendicular to both lines.^[If this doesn't seem obvious to you, it turns into a calculus exercise to find the minimum of a function of two variables, which is a bit too messy to show here.]
+
+So then we must have
+$$
+\vc{b}\cdot\V{PQ}=0
+$$
+and
+$$
+\vc{d}\cdot\V{PQ}=0.
+$$
+
+Expanding these out gives
+$$
+0=\vc{b}\cdot(\vc{c} + \mu\vc{d} - \vc{a} - \lambda\vc{b})
+$$
+and
+$$
+0=\vc{d}\cdot(\vc{c} + \mu\vc{d} - \vc{a} - \lambda\vc{b}).
+$$
+These are two equations for two unknowns, so we can solve for $\lambda$ and $\mu$ and hence find the shortest distance $|\V{PQ}|$.
+
+### Example
+What is the shortest distance between the lines $\vc{r} = [1,1,5]+\lambda[1,-1,2]$ and $\vc{r}=[4,2,-7]+\mu[1,1,4]$?
+
+::: {.callout-tip collapse="true"}
+## Solution
+The displacement is
+$$
+\V{PQ} = [3,1,-12] +\mu[1,1,4]+\lambda[-1,1,-2].
+$$
+If this vector is perpedicular to both $[1,1,4]$ and $[1,-1,2]$ then
+$$
+0 = [1,1,4]\cdot[3,1,-12] + \mu [1,1,4]\cdot[1,1,4]+\lambda[1,1,4]\cdot[-1,1,-2] = -44 + 18\mu -8\lambda
+$$
+and
+$$
+0 = [1,-1,2]\cdot[3,1,-12] + \mu [1,-1,2]\cdot[1,1,4]+\lambda[1,-1,2]\cdot[-1,1,-2] = -22 + 8\mu -6\lambda
+$$
+i.e. the linear system of equations
+$$
+\begin{aligned}
+18\mu-8\lambda &= 44,\\
+8\mu-6\lambda&=22,
+\end{aligned}
+$$
+which has the unique solution $\lambda=-1$, $\mu=2$.
+
+So finally the distance between the lines is
+$$
+|\V{PQ}| = \left| [3,1,-12] +2[1,1,4]-1[-1,1,-2]\right| = \left|[6,2,-2]\right| = \sqrt{36+4+4} = \sqrt{44}.
+$$
 :::

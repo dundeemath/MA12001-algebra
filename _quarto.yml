@@ -23,7 +23,7 @@ website:
         contents:
           - href: week7.qmd
           - href: week8.qmd
-          - text: "Week 9: Spheres"
+          - href: week9.qmd
       - section: "Chapter 4: Complex numbers"
       - href: links.qmd
 

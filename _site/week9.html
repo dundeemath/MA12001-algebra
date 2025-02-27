@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 3: Dot and cross products – MA12001 Algebra</title>
+<title>Week 9: Spheres – MA12001 Algebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html">Chapter 1: Vectors</a></li><li class="breadcrumb-item"><a href="./week3.html">Week 3: Dot and cross products</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week7.html">Chapter 3: Lines, planes and spheres</a></li><li class="breadcrumb-item"><a href="./week9.html">Week 9: Spheres</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -163,7 +163,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week3.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3: Dot and cross products</span></a>
   </div>
 </li>
@@ -221,7 +221,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week9.html" class="sidebar-item-text sidebar-link">
+  <a href="./week9.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 9: Spheres</span></a>
   </div>
 </li>
@@ -247,31 +247,24 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#vector-vector-multiplication" id="toc-vector-vector-multiplication" class="nav-link active" data-scroll-target="#vector-vector-multiplication">Vector-vector multiplication</a>
+  <li><a href="#example" id="toc-example" class="nav-link active" data-scroll-target="#example">Example</a></li>
+  <li><a href="#the-distance-between-a-sphere-and-a-point-line-or-plane." id="toc-the-distance-between-a-sphere-and-a-point-line-or-plane." class="nav-link" data-scroll-target="#the-distance-between-a-sphere-and-a-point-line-or-plane.">The distance between a sphere and a point, line or plane.</a></li>
+  <li><a href="#the-intersection-of-a-line-and-a-sphere" id="toc-the-intersection-of-a-line-and-a-sphere" class="nav-link" data-scroll-target="#the-intersection-of-a-line-and-a-sphere">The intersection of a line and a sphere</a>
   <ul class="collapse">
-  <li><a href="#the-dot-product" id="toc-the-dot-product" class="nav-link" data-scroll-target="#the-dot-product">The dot product</a>
-  <ul class="collapse">
-  <li><a href="#properties" id="toc-properties" class="nav-link" data-scroll-target="#properties">Properties</a></li>
-  <li><a href="#the-dot-product-with-components" id="toc-the-dot-product-with-components" class="nav-link" data-scroll-target="#the-dot-product-with-components">The dot product with components</a></li>
-  <li><a href="#example-for-dot-products" id="toc-example-for-dot-products" class="nav-link" data-scroll-target="#example-for-dot-products">Example for dot products</a></li>
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example</a></li>
   </ul></li>
-  <li><a href="#the-cross-product" id="toc-the-cross-product" class="nav-link" data-scroll-target="#the-cross-product">The cross product</a>
-  <ul class="collapse">
-  <li><a href="#properties-1" id="toc-properties-1" class="nav-link" data-scroll-target="#properties-1">Properties</a></li>
-  <li><a href="#the-cross-product-with-components" id="toc-the-cross-product-with-components" class="nav-link" data-scroll-target="#the-cross-product-with-components">The cross product with components</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
-  <li><a href="#example-for-cross-products" id="toc-example-for-cross-products" class="nav-link" data-scroll-target="#example-for-cross-products">Example for cross products</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#the-intersection-of-a-plane-and-a-sphere" id="toc-the-intersection-of-a-plane-and-a-sphere" class="nav-link" data-scroll-target="#the-intersection-of-a-plane-and-a-sphere">The intersection of a plane and a sphere</a></li>
+  <li><a href="#the-intersection-of-two-spheres" id="toc-the-intersection-of-two-spheres" class="nav-link" data-scroll-target="#the-intersection-of-two-spheres">The intersection of two spheres</a></li>
+  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html">Chapter 1: Vectors</a></li><li class="breadcrumb-item"><a href="./week3.html">Week 3: Dot and cross products</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week7.html">Chapter 3: Lines, planes and spheres</a></li><li class="breadcrumb-item"><a href="./week9.html">Week 9: Spheres</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 3: Dot and cross products</h1>
+<h1 class="title">Week 9: Spheres</h1>
 </div>
 
 
@@ -289,59 +282,46 @@ window.Quarto = {
 
 
 <div class="hidden">
-
-</div>
-<section id="vector-vector-multiplication" class="level1">
-<h1>Vector-vector multiplication</h1>
-<p>So far for vectors we have defined addition of two vectors, and the multiplication of a vector by a scalar. What about multiplying two vectors together?</p>
-<p>For vector addition, we add the components together to get a new vector. The obvious definition for vector multiplication would seem to be multiplying the components to get a new vector. However, this operation turns out to be somewhat meaningless and useless for mathematicians and physicists.</p>
-<p>Instead, we will see two types of ‘multiplication’, called the dot and cross product.</p>
-<section id="the-dot-product" class="level2">
-<h2 class="anchored" data-anchor-id="the-dot-product">The dot product</h2>
-<p>The first type of multiplication is called the <em>scalar product</em>, because the result is a scalar. We will usually call it the <em>dot product</em> and you might also see <em>inner product</em>.</p>
-<p>This operation is defined for <span class="math inline">\(\mathbb{R}^n\)</span> for all <span class="math inline">\(n\)</span> as follows:</p>
-<p><span class="math display">\[{\mathbf{a}}\cdot{\mathbf{b}} = |{\mathbf{a}}|\,|{\mathbf{b}}|\,\cos\theta,\]</span></p>
-<p>where <span class="math inline">\(\theta\)</span> is the angle between the two vectors.</p>
-<p><img src="vf12.png" class="img-fluid"></p>
-<section id="properties" class="level3">
-<h3 class="anchored" data-anchor-id="properties">Properties</h3>
-<p>Following the definition above and the set of <a href="./week2.html#sec-vectors">rules for vectors</a>, you can prove the following rules:</p>
-<ul>
-<li>If <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> are perpendicular, <span class="math inline">\({\mathbf{a}}\cdot{\mathbf{b}}=0\)</span>.</li>
-<li><span class="math inline">\({\mathbf{a}}\cdot{\mathbf{b}} = 0\)</span> tells us that the vectors are perpendicular, or one of <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> is <span class="math inline">\({\mathbf{0}}\)</span>;</li>
-<li><span class="math inline">\({\mathbf{a}}\cdot{\mathbf{a}} = |{\mathbf{a}}|^2\)</span>;</li>
-<li><span class="math inline">\({\mathbf{a}}\cdot(\lambda{\mathbf{b}}) = \lambda ({\mathbf{a}}\cdot{\mathbf{b}})\)</span>;</li>
-<li><span class="math inline">\({\mathbf{a}}\cdot{\mathbf{b}} = {\mathbf{b}}\cdot{\mathbf{a}}\)</span>: the dot product is commutative;</li>
-<li><span class="math inline">\({\mathbf{a}}\cdot({\mathbf{b}}+{\mathbf{c}}) = {\mathbf{a}}\cdot{\mathbf{b}} + {\mathbf{a}}\cdot{\mathbf{c}}\)</span>: the dot product is distributive over addition<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
-</ul>
-</section>
-<section id="the-dot-product-with-components" class="level3">
-<h3 class="anchored" data-anchor-id="the-dot-product-with-components">The dot product with components</h3>
-<p>A particularly important property becomes apparent when we find the dot product of vectors in components <span class="math inline">\({\mathbf{a}}=\begin{bmatrix} a_1 \\ a_2 \\ a_3\end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{b}}=\begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix}\)</span> using the rules above:</p>
 <p><span class="math display">\[
-\begin{aligned}
-{\mathbf{a}}\cdot{\mathbf{b}} &amp;= \left(a_1 \hat{{\mathbf{x}}} + a_2 \hat{{\mathbf{y}}} + a_3\hat{{\mathbf{z}}}\right)\cdot\left(b_1 \hat{{\mathbf{x}}} + b_2 \hat{{\mathbf{y}}} + b_3\hat{{\mathbf{z}}}\right) \\
-&amp;= a_1b_1 \hat{{\mathbf{x}}}\cdot\hat{{\mathbf{x}}} + a_1b_2 \hat{{\mathbf{x}}}\cdot\hat{{\mathbf{y}}} + a_1b_3 \hat{{\mathbf{x}}}\cdot\hat{{\mathbf{z}}} +
-a_2b_1 \hat{{\mathbf{y}}}\cdot\hat{{\mathbf{x}}} + a_2b_2 \hat{{\mathbf{y}}}\cdot\hat{{\mathbf{y}}} + a_2b_3 \hat{{\mathbf{y}}}\cdot\hat{{\mathbf{z}}} \\ &amp;\;+
-a_3b_1 \hat{{\mathbf{z}}}\cdot\hat{{\mathbf{x}}} + a_3b_2 \hat{{\mathbf{z}}}\cdot\hat{{\mathbf{y}}} + a_3b_3 \hat{{\mathbf{z}}}\cdot\hat{{\mathbf{z}}} \\
-&amp;= a_1b_1 + a_2b_2 + a_3b_3,
-\end{aligned}
+\newenvironment{amatrix}[1]{%
+  \left[\begin{array}{#1}
+}{%
+  \end{array}\right]
+}
 \]</span></p>
-<p>where we have used the facts that <span class="math inline">\(\hat{{\mathbf{x}}}\cdot\hat{{\mathbf{x}}}=\hat{{\mathbf{y}}}\cdot\hat{{\mathbf{y}}}=\hat{{\mathbf{z}}}\cdot\hat{{\mathbf{z}}}=1\)</span> and <span class="math inline">\(\hat{{\mathbf{x}}}\cdot\hat{{\mathbf{y}}}=\hat{{\mathbf{x}}}\cdot\hat{{\mathbf{z}}}=\hat{{\mathbf{y}}}\cdot\hat{{\mathbf{z}}}=0\)</span>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+</div>
+<p>A final object which is particularly easy to describe in three dimensions is a sphere. Unlike lines and planes, these are not <em>linear</em>: you cannot add a vector to a point on a sphere to get another point on the sphere.</p>
+<p>Instead, we define a sphere in terms of its centre, with a position vector <span class="math inline">\({\mathbf{a}}\)</span> say, and a radius <span class="math inline">\(R&gt;0\)</span>. Then the sphere is the set of all points whose distance from the centre is equal to the radius, that is <span class="math display">\[
+|{\mathbf{r}}-{\mathbf{a}}| = R.
+\]</span> It’s normal to square this, because the magnitude <span class="math inline">\(|\cdot|\)</span> adds an ugly square root otherwise, giving <span class="math display">\[
+|{\mathbf{r}}-{\mathbf{a}}|^2 = R^2
+\]</span> or expanding this out <span class="math display">\[
+(x-a_1)^2 + (y-a_2)^2 + (z-a_3)^2 = R^2.
+\]</span></p>
+<p><strong>Think:</strong> what’s the equation for a sphere of radius 2 centred on the origin?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Solution
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>To calculate the dot product of two vectors, multiply the components together and add them up.</p>
+<p>Now <span class="math inline">\({\mathbf{a}}={\mathbf{0}}\)</span> in the above equations, so they simplify to <span class="math display">\[
+|{\mathbf{r}}|^2 = 4
+\]</span> or <span class="math display">\[
+x^2+y^2+z^2 = 4.
+\]</span></p>
 </div>
 </div>
-<p><strong>Think:</strong> if <span class="math inline">\({\mathbf{a}}=\begin{bmatrix} 2 \\ 1 \\ -1\end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{b}}=\begin{bmatrix} 0 \\ 1 \\ 1\end{bmatrix}\)</span>, what is <span class="math inline">\({\mathbf{a}}\cdot{\mathbf{b}}\)</span>? What do you deduce about the vectors?</p>
+</div>
+<p><strong>Think:</strong> what is the centre and radius of the sphere given by <span class="math display">\[
+(x-2)^2 + y^2 + (z+1)^2 = 9?
+\]</span></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -354,28 +334,48 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(2\times0 + 1\times1 + (-1)\times1 = 0\)</span>.</p>
-<p>The dot product is zero and neither of the vectors is <span class="math inline">\({\mathbf{0}}\)</span> so the vectors are perpendicular.</p>
+<p><span class="math inline">\({\mathbf{a}}=[2,0,-1]\)</span> and <span class="math inline">\(R=3\)</span>.</p>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-important callout-titled" title="Common mistake">
-<div class="callout-header d-flex align-content-center">
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>Find the centre and radius of the sphere described by the equation <span class="math display">\[
+x^2  + y^2 + z^2 - 6x -4y   + 2z - 4 = 0.
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Common mistake
+Solution
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Very often people do something like <span class="math inline">\(\begin{bmatrix} 1 \\ 2 \\ 3\end{bmatrix}\cdot\begin{bmatrix} 3 \\ 2 \\ 4\end{bmatrix} = \begin{bmatrix} 1\times 3 \\ 2\times 2 \\ 3\times 4\end{bmatrix}\)</span>. This is WRONG because the result of the dot product must be a scalar, not a vector.</p>
+<p>This isn’t currently in the general form we saw above, so we need to manipulate this equation until it looks like we want. In particular, we need to use <strong>completeing the square</strong>: <span class="math display">\[
+\begin{aligned}
+0&amp;=x^2  + y^2 + z^2 - 6x -4y   + 2z - 4 \\
+&amp;= \left(x-\frac{6}{2}\right)^2 - \frac{6^2}{2^2} + \left(y-\frac{4}{2}\right)^2 - \frac{4^2}{2^2} + \left(z+\frac{2}{2}\right)^2 - \frac{2^2}{2^2} - 4\\
+&amp;= (x-3)^2 + (y-2)^2 + (z+1)^2 - 9 - 4 - 1 - 4
+\end{aligned}
+\]</span> so <span class="math display">\[
+(x-3)^2 + (y-2)^2 + (z+1)^2 = 16 = 4^2.
+\]</span> Finally this gives a centre of <span class="math inline">\((3,2,-1)\)</span> and a radius of <span class="math inline">\(4\)</span>.</p>
+</div>
 </div>
 </div>
 </section>
-<section id="example-for-dot-products" class="level3">
-<h3 class="anchored" data-anchor-id="example-for-dot-products">Example for dot products</h3>
-<p>Show that the diagonals of a rhombus are perpendicular.</p>
+<section id="the-distance-between-a-sphere-and-a-point-line-or-plane." class="level2">
+<h2 class="anchored" data-anchor-id="the-distance-between-a-sphere-and-a-point-line-or-plane.">The distance between a sphere and a point, line or plane.</h2>
+<p>This sounds hard but it’s actually very easy:</p>
+<ol type="1">
+<li>Find the distance from the point/line/plane and the centre of the sphere (a point)</li>
+<li>Substract the sphere’s radius from this distance</li>
+</ol>
+<p><strong>Think:</strong> what’s the distance between the sphere of radius 5 centred at <span class="math inline">\((4,1,8)\)</span> and the origin?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -388,70 +388,23 @@ Solution
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Let the corners of the rhombus be <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> and <span class="math inline">\(D\)</span>.</p>
-<p><img src="vf13.png" class="img-fluid"></p>
-<p>It’s a paralellogram, so <span class="math inline">\({\overrightarrow{AB}}={\overrightarrow{DC}}\)</span> - let’s call this <span class="math inline">\({\mathbf{a}}\)</span> - and <span class="math inline">\({\overrightarrow{BC}}={\overrightarrow{AD}}={\mathbf{b}}\)</span>.</p>
-<p>Futhermore, for a rhombus we know the side lengths are the same, so <span class="math inline">\(|{\mathbf{a}}| = |{\mathbf{b}}|\)</span>.</p>
-<p>We want to show that <span class="math inline">\({\overrightarrow{AC}}\cdot{\overrightarrow{BD}} = 0\)</span>.</p>
-<p>We see from the diagram that <span class="math inline">\({\overrightarrow{AC}} = {\mathbf{a}}+{\mathbf{b}}\)</span> and <span class="math inline">\({\overrightarrow{BD}} = {\mathbf{b}}-{\mathbf{a}}\)</span>. Then</p>
-<p><span class="math display">\[
-{\overrightarrow{AC}}\cdot{\overrightarrow{BD}} = ({\mathbf{a}}+{\mathbf{b}})\cdot({\mathbf{b}}-{\mathbf{a}}) = {\mathbf{a}}\cdot{\mathbf{b}} - {\mathbf{a}}\cdot{\mathbf{a}} + {\mathbf{b}}\cdot{\mathbf{b}} - {\mathbf{b}}\cdot{\mathbf{a}} = |{\mathbf{b}}|^2-|{\mathbf{a}}|^2 = 0.
+<p>The distance between the centre of the sphere and the origin is <span class="math inline">\(\sqrt{4^2+1^2+8^2}=\sqrt{81}=9\)</span>, so the distance of the sphere from the origin is <span class="math inline">\(9-5=4\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-intersection-of-a-line-and-a-sphere" class="level2">
+<h2 class="anchored" data-anchor-id="the-intersection-of-a-line-and-a-sphere">The intersection of a line and a sphere</h2>
+<p>Following similar things in the previous weeks, to find intersections we just take the two equations and solve them together.</p>
+<p>The crucial thing is to think (geometrically) about how many solutions to expect. A line can intersect a sphere at two points, or it can not intersect, or the line can just touch the sphere at one point.</p>
+<p>A general line is (going through <span class="math inline">\({\mathbf{a}}\)</span> with direction <span class="math inline">\({\mathbf{s}}\)</span>) <span class="math display">\[
+{\mathbf{r}} = {\mathbf{a}} + \lambda{\mathbf{s}}
+\]</span> and a general sphere is (radius <span class="math inline">\(R\)</span>, centre <span class="math inline">\({\mathbf{c}}\)</span>) <span class="math display">\[
+|{\mathbf{r}}-{\mathbf{c}}|^2 = R^2.
 \]</span></p>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="the-cross-product" class="level2">
-<h2 class="anchored" data-anchor-id="the-cross-product">The cross product</h2>
-<p>Unlike the dot product, which is valid in any dimensions, the cross product is only defined in three dimensions.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Also unlike the dot product, the cross product of two vectors is a <em>vector</em>. For this reason it’s called the vector product. It’s written with a cross <span class="math inline">\(\times\)</span>.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<p>The geometric definition is as follows:</p>
-<ul>
-<li>If either <span class="math inline">\({\mathbf{a}}\)</span> or <span class="math inline">\({\mathbf{b}}\)</span> is <span class="math inline">\({\mathbf{0}}\)</span>, or they’re parallel, then <span class="math inline">\({\mathbf{a}}\times{\mathbf{b}}={\mathbf{0}}\)</span>.</li>
-<li>Otherwise, find a vector the is perpendicular to both <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> using the <em>right-hand rule</em>:</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="righthand_rule-001.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Figure by Izaak Neutelings, from <a href="https://tikz.net" class="uri">https://tikz.net</a>.</figcaption>
-</figure>
-</div>
-<ul>
-<li>The magnitude of the result <span class="math inline">\(|{\mathbf{a}}\times{\mathbf{b}}| = |{\mathbf{a}}||{\mathbf{b}}|\sin\theta\)</span>.</li>
-</ul>
-<p>Note the similarity to the dot product, but with sine instead of cosine, and the fact it’s a vector.</p>
-<section id="properties-1" class="level3">
-<h3 class="anchored" data-anchor-id="properties-1">Properties</h3>
-<p>The following properties have similarities and differences with the corresponding ones for the dot product:</p>
-<ul>
-<li>If <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> are parallel, <span class="math inline">\({\mathbf{a}}\times{\mathbf{b}}={\mathbf{0}}\)</span>.</li>
-<li><span class="math inline">\({\mathbf{a}}\times{\mathbf{b}} = {\mathbf{0}}\)</span> tells us that the vectors are parallel, or one of <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span> is <span class="math inline">\({\mathbf{0}}\)</span>;</li>
-<li><span class="math inline">\({\mathbf{a}}\times{\mathbf{a}} = {\mathbf{0}}\)</span>;</li>
-<li><span class="math inline">\({\mathbf{a}}\times(\lambda{\mathbf{b}}) = \lambda ({\mathbf{a}}\times{\mathbf{b}})\)</span>;</li>
-<li><span class="math inline">\({\mathbf{a}}\times{\mathbf{b}} = -{\mathbf{b}}\times{\mathbf{a}}\)</span>: the dot product is <strong>anti</strong>commutative;</li>
-<li><span class="math inline">\({\mathbf{a}}\times({\mathbf{b}}+{\mathbf{c}}) = {\mathbf{a}}\times{\mathbf{b}} + {\mathbf{a}}\times{\mathbf{c}}\)</span>: the cross product is distributive over addition.</li>
-</ul>
-</section>
-<section id="the-cross-product-with-components" class="level3">
-<h3 class="anchored" data-anchor-id="the-cross-product-with-components">The cross product with components</h3>
-<p>If you apply the rules above, using the fact that <span class="math inline">\(\hat{{\mathbf{x}}}\times\hat{{\mathbf{y}}}=\hat{{\mathbf{z}}}\)</span> - which is called a <em>right-handed coordinate system</em> - you can prove the following important formula:</p>
-<p><span class="math display">\[
-\begin{bmatrix} a_1 \\ a_2 \\ a_3\end{bmatrix} \times \begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix} = \begin{bmatrix} a_2b_3-a_3b_2 \\ a_3b_1-a_1b_3 \\ a_1b_2 - a_2b_1\end{bmatrix}.
-\]</span></p>
-<p>This ugly formula is one of the only things in this module I recommend you learn by heart. There are patterns which can help you memorise it; try to find something that works for you.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Common mistake">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Common mistake
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>People mess up the second component of the cross product. It might be the negative of what you intuitively think it should be.</p>
-</div>
-</div>
+<p>Substituting the first into the second gives <span class="math display">\[
+|{\mathbf{a}} + \lambda{\mathbf{s}}-{\mathbf{c}}|^2 = R^2,
+\]</span> which is just a quadratic equation for <span class="math inline">\(\lambda\)</span> which we can solve. Quadratic equations have 0, 1 or 2 (real) solutions, so this makes sense.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -462,18 +415,75 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Many people like to write the cross product as the determinant of a matrix, as in</p>
-<p><span class="math display">\[
-\begin{bmatrix} a_1 \\ a_2 \\ a_3\end{bmatrix} \times \begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix} = \left|\begin{matrix} \hat{{\mathbf{x}}} &amp; \hat{{\mathbf{y}}} &amp; \hat{{\mathbf{z}}} \\
-a_1 &amp; a_2 &amp; a_3 \\
-b_1 &amp; b_2 &amp; b_3
-\end{matrix}\right|.
+<p>The number of solutions of the quadratic tells us the number of intersection points.</p>
+</div>
+</div>
+<p>Then we can use the value(s) of <span class="math inline">\(\lambda\)</span> to find the points from the line equation.</p>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example</h3>
+<p>Find the intersection points of the line <span class="math display">\[
+{\mathbf{r}} = [1,0,0] + \lambda[0,1,0]
+\]</span> with the sphere <span class="math display">\[
+x^2+y^2+(z-1)^2 = 4.
 \]</span></p>
-<p>Don’t worry if you’re not familiar with determinants (or matrices), we’ll see them in a couple of weeks.</p>
-<p>I think this formula is stupid anyway because you can’t put vectors inside a matrix like that. But if it works for you, feel free to use it.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The components of the line equation are <span class="math display">\[
+\begin{aligned}
+x&amp;=1,\\
+y&amp;=\lambda,\\
+z&amp;=0.
+\end{aligned}
+\]</span> Substituting these into the sphere equation gives <span class="math display">\[
+1 + \lambda^2 + (-1)^2 = 4
+\]</span> so <span class="math inline">\(\lambda^2 = 2\)</span>.</p>
+<p>This means our two parameter values are <span class="math inline">\(\lambda=\pm\sqrt{2}\)</span>, and so the points are <span class="math inline">\((1,\sqrt{2},0)\)</span> and <span class="math inline">\((1,-\sqrt{2},0)\)</span>.</p>
+<p>(Now check these points satisfy both our line and sphere equations.)</p>
 </div>
 </div>
-<p><strong>Think:</strong> if <span class="math inline">\({\mathbf{a}}=\begin{bmatrix} 2 \\ 1 \\ -1\end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{b}}=\begin{bmatrix} 0 \\ 1 \\ 1\end{bmatrix}\)</span>, what is <span class="math inline">\({\mathbf{a}}\times{\mathbf{b}}\)</span>?</p>
+</div>
+</section>
+</section>
+<section id="the-intersection-of-a-plane-and-a-sphere" class="level2">
+<h2 class="anchored" data-anchor-id="the-intersection-of-a-plane-and-a-sphere">The intersection of a plane and a sphere</h2>
+<p>This one’s a bit different. Now there are either no intersection points, exactly one point (if the plane just touches the sphere), or <strong>the plane and the sphere intersect on a circle</strong>.</p>
+<p><img src="lpsf4.png" class="img-fluid" style="width:60.0%"></p>
+<p>Suppose we have a sphere <span class="math inline">\(|{\mathbf{r}}-{\mathbf{a}}|^2=R^2\)</span> and a plane <span class="math inline">\({\mathbf{r}}\cdot{\mathbf{n}} = d\)</span>.</p>
+<p>What we want to find is the radius <span class="math inline">\(\alpha\)</span> of the circle, and its centre <span class="math inline">\({\mathbf{c}}\)</span>: <img src="lpsf5.png" class="img-fluid" style="width:60.0%"></p>
+<p>We do this as follows: 1. Find the nearest point on the plane to the centre of the sphere <span class="math inline">\({\mathbf{a}}\)</span>. This is <span class="math inline">\({\mathbf{c}}\)</span>, the centre of the circle. 2. Find the distance between <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{c}}\)</span>. 3. By Pythogoras’s theorem, since this is a right-angled triangle, <span class="math inline">\(\alpha^2+|{\mathbf{c}}-{\mathbf{a}}|^2 = R^2\)</span>, so we can find <span class="math inline">\(\alpha\)</span>.</p>
+<p>The first two steps are exactly the same as finding the distance between a plane and a point – see last week’s notes.</p>
+</section>
+<section id="the-intersection-of-two-spheres" class="level2">
+<h2 class="anchored" data-anchor-id="the-intersection-of-two-spheres">The intersection of two spheres</h2>
+<p>This case is hard to visualise, but hopefully you can imagine that two spheres intersect on a circle, just as in the case of a sphere with a plane. In fact, the easiest way to do this is to first find the plane the circle lives on, and then do exactly the same method as before.</p>
+<p>Say we have spheres <span class="math display">\[
+|{\mathbf{r}}-{\mathbf{a}}_1|^2 = R_1^2\]</span> and <span class="math display">\[
+|{\mathbf{r}}-{\mathbf{a}}_2|^2 = R_2^2.\]</span></p>
+<p>Remembering that <span class="math inline">\(|{\mathbf{r}}|^2 = {\mathbf{r}}\cdot{\mathbf{r}}\)</span>, we can expand these out as <span class="math display">\[
+{\mathbf{r}}\cdot{\mathbf{r}}-2{\mathbf{r}}\cdot{\mathbf{a}}_1 + {\mathbf{a}}_1\cdot{\mathbf{a}}_1 = R_1^2\]</span> and <span class="math display">\[
+{\mathbf{r}}\cdot{\mathbf{r}}-2{\mathbf{r}}\cdot{\mathbf{a}}_2 + {\mathbf{a}}_2\cdot{\mathbf{a}}_2 = R_2^2\]</span> and then subtract these equations to get rid of the <span class="math inline">\({\mathbf{r}}\cdot{\mathbf{r}}\)</span> terms: <span class="math display">\[
+-2{\mathbf{r}}\cdot{\mathbf{a}}_1 + {\mathbf{a}}_1\cdot{\mathbf{a}}_1+2{\mathbf{r}}\cdot{\mathbf{a}}_2 - {\mathbf{a}}_2\cdot{\mathbf{a}}_2 = R_1^2 - R_2^2.\]</span> This simplifies to <span class="math display">\[
+{\mathbf{r}}\cdot\left(2{\mathbf{a}}_2-2{\mathbf{a}}_1 \right) = R_1^2-R_2^2 + {\mathbf{a}}_2\cdot{\mathbf{a}}_2 - {\mathbf{a}}_1\cdot{\mathbf{a}}_1
+\]</span> which is exactly in the form <span class="math inline">\({\mathbf{r}}\cdot{\mathbf{n}} = d\)</span>, so this is the equation of the plane!</p>
+<p>Let’s put all of this together in a final example:</p>
+</section>
+<section id="example-2" class="level2">
+<h2 class="anchored" data-anchor-id="example-2">Example</h2>
+<p>Find the radius and centre of the circle of intersection of the spheres <span class="math display">\[
+(x-1)^2 + y^2 + (z+1)^2 = 4
+\]</span> and <span class="math display">\[
+(x+3)^2 + y^2 + z^2 = 5.
+\]</span></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -486,58 +496,35 @@ Solution
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[\begin{bmatrix} 1\times 1-(-1)\times 1 \\ -1\times 0-2\times 1 \\ 2\times 1 - 1\times 0\end{bmatrix} = \begin{bmatrix} 2 \\ -2 \\ 2\end{bmatrix}.\]</span></p>
-</div>
-</div>
-</div>
-</section>
-<section id="applications" class="level3">
-<h3 class="anchored" data-anchor-id="applications">Applications</h3>
-<p>You may remember the formula for the area of a triangle as <span class="math inline">\(\frac{1}{2} b c \sin \alpha\)</span> where <span class="math inline">\(\alpha\)</span> is the angle between the sides of length <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>. Looking at the definition of the cross product, we see that</p>
-<p><span class="math display">\[\frac{1}{2}|{\mathbf{a}}\times{\mathbf{b}}|\]</span></p>
-<p>is the area of the triangle between <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>. Similarly, <span class="math inline">\(|{\mathbf{a}}\times{\mathbf{b}}|\)</span> is the area of the parallelogram with sides <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{b}}\)</span>:</p>
-<p><img src="vf16.png" class="img-fluid"></p>
-</section>
-<section id="example-for-cross-products" class="level3">
-<h3 class="anchored" data-anchor-id="example-for-cross-products">Example for cross products</h3>
-<p>Find a unit vector that is perpendicular to both <span class="math inline">\({\mathbf{a}}=\begin{bmatrix} 3 \\ 1 \\ 2\end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{b}}=\begin{bmatrix} 1 \\ 1 \\ -1\end{bmatrix}\)</span>.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>We know that the result of the cross product <span class="math inline">\({\mathbf{a}}\times{\mathbf{b}}\)</span> is perpendicular to both of them:</p>
-<p><span class="math display">\[\begin{bmatrix} 3 \\ 1 \\ 2\end{bmatrix}\times\begin{bmatrix} 1 \\ 1 \\ -1\end{bmatrix} = \begin{bmatrix} -3 \\ 5 \\ 2\end{bmatrix}.\]</span></p>
-<p>The question asks for a unit vector, so we need to divide this vector by its own magnitude. The magnitude is</p>
-<p><span class="math display">\[\sqrt{(-3)^2+5^2+2^2} = \sqrt{38}\]</span></p>
-<p>and so the final answer is</p>
-<p><span class="math display">\[\begin{bmatrix} \frac{-3}{\sqrt{38}} \\ \frac{5}{\sqrt{38}} \\ \frac{2}{\sqrt{38}}\end{bmatrix}.\]</span></p>
-<p>The vector opposite to this, i.e.&nbsp;<span class="math inline">\(\begin{bmatrix} \frac{3}{\sqrt{38}} \\ \frac{-5}{\sqrt{38}} \\ \frac{-2}{\sqrt{38}}\end{bmatrix}\)</span>, would also satisfy the requirements.</p>
+<p>First we expand out the equations: <span class="math display">\[
+x^2 + y^2 + z^2 -2x + 2z - 2 = 0
+\]</span> and <span class="math display">\[
+x^2+y^2+z^2 +6x + 4 = 0.
+\]</span> Subtracting these (cancelling out the quadratic terms): <span class="math display">\[
+-8x +2z - 6 = 0
+\]</span> which simplifies to <span class="math display">\[
+4x - z = -3.
+\]</span></p>
+<p>So the plane of intersection is <span class="math inline">\(4x - z = -3\)</span>, with normal <span class="math inline">\([4,0,-1]\)</span>.</p>
+<p>Next, we need to find the centre of the circle of intersection. This is the point <span class="math inline">\((c_1,c_2,c_3)\)</span> which is in a direction <span class="math inline">\([4,0,-1]\)</span> from the centre of the first sphere <span class="math inline">\((1,0,-1)\)</span>.</p>
+<p>So <span class="math display">\[
+[c_1,c_2,c_3] = [1,0,-1] + \lambda[4,0,-1]
+\]</span> for some <span class="math inline">\(\lambda\)</span>.</p>
+<p>Plugging these into the plane equation <span class="math inline">\(4x-z=-3\)</span> gives <span class="math display">\[
+4(1+4\lambda) - (-1-\lambda)=-3
+\]</span> so <span class="math inline">\(\lambda = -8/17\)</span>, which means the centre of the circle is is <span class="math inline">\({\mathbf{c}} = [-15/17, 0, -9/17]\)</span>.</p>
+<p>The distance of the centre of the circle from the centre of the first sphere is <span class="math display">\[
+|{\mathbf{c}}-[1,0,-1]| = \sqrt{(-32/17)^2+0^2+(8/17)^2} = \sqrt{1088}/17\]</span></p>
+<p>Then finally using Pythagoras we know that the radius of the circle <span class="math inline">\(\alpha\)</span> satisfies <span class="math display">\[
+\alpha^2 + (\sqrt{1088}/17)^2 = 2^2\]</span> because the radius of the first sphere is 2, so <span class="math inline">\(\alpha = \sqrt{4- 1088/289} = 2/\sqrt{17}\)</span>.</p>
 </div>
 </div>
 </div>
 
 
 </section>
-</section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>This is easiest to prove using the component form of the dot product, but unfortunately that gives a circular proof. To prove it directly requires a lot of geometry and trigonometry.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Sometimes people define a cross product in two dimensions by imagining the 2d vectors on a plane in 3d space, but we won’t use that definition.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Occasionally you see people use <span class="math inline">\(\wedge\)</span> instead. In modern maths this the exterior product, which is a related but different concept.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

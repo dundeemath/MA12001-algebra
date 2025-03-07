@@ -25,6 +25,8 @@ website:
           - href: week8.qmd
           - href: week9.qmd
       - section: "Chapter 4: Complex numbers"
+        contents:
+          - href: week10.qmd
       - href: links.qmd
 
 format:

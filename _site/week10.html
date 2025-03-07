@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 9: Spheres – MA12001 Algebra</title>
+<title>Week 10: Complex numbers – MA12001 Algebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week7.html">Chapter 3: Lines, planes and spheres</a></li><li class="breadcrumb-item"><a href="./week9.html">Week 9: Spheres</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week10.html">Chapter 4: Complex numbers</a></li><li class="breadcrumb-item"><a href="./week10.html">Week 10: Complex numbers</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -221,7 +221,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week9.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week9.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 9: Spheres</span></a>
   </div>
 </li>
@@ -238,7 +238,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week10.html" class="sidebar-item-text sidebar-link">
+  <a href="./week10.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 10: Complex numbers</span></a>
   </div>
 </li>
@@ -260,24 +260,36 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#example" id="toc-example" class="nav-link active" data-scroll-target="#example">Example</a></li>
-  <li><a href="#the-distance-between-a-sphere-and-a-point-line-or-plane." id="toc-the-distance-between-a-sphere-and-a-point-line-or-plane." class="nav-link" data-scroll-target="#the-distance-between-a-sphere-and-a-point-line-or-plane.">The distance between a sphere and a point, line or plane.</a></li>
-  <li><a href="#the-intersection-of-a-line-and-a-sphere" id="toc-the-intersection-of-a-line-and-a-sphere" class="nav-link" data-scroll-target="#the-intersection-of-a-line-and-a-sphere">The intersection of a line and a sphere</a>
+  <li><a href="#a-historical-note" id="toc-a-historical-note" class="nav-link active" data-scroll-target="#a-historical-note">A historical note</a></li>
+  <li><a href="#polar-form-for-complex-numbers" id="toc-polar-form-for-complex-numbers" class="nav-link" data-scroll-target="#polar-form-for-complex-numbers">Polar form for complex numbers</a>
+  <ul class="collapse">
+  <li><a href="#complex-conjugates" id="toc-complex-conjugates" class="nav-link" data-scroll-target="#complex-conjugates">Complex conjugates</a></li>
+  <li><a href="#trigonometic-form" id="toc-trigonometic-form" class="nav-link" data-scroll-target="#trigonometic-form">Trigonometic form</a>
+  <ul class="collapse">
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  </ul></li>
+  <li><a href="#exponential-form" id="toc-exponential-form" class="nav-link" data-scroll-target="#exponential-form">Exponential form</a>
+  <ul class="collapse">
+  <li><a href="#demonstration-of-the-fact" id="toc-demonstration-of-the-fact" class="nav-link" data-scroll-target="#demonstration-of-the-fact">Demonstration of the fact</a></li>
+  </ul></li>
+  <li><a href="#de-moivres-theorem" id="toc-de-moivres-theorem" class="nav-link" data-scroll-target="#de-moivres-theorem">De Moivre’s theorem</a>
   <ul class="collapse">
   <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example</a></li>
   </ul></li>
-  <li><a href="#the-intersection-of-a-plane-and-a-sphere" id="toc-the-intersection-of-a-plane-and-a-sphere" class="nav-link" data-scroll-target="#the-intersection-of-a-plane-and-a-sphere">The intersection of a plane and a sphere</a></li>
-  <li><a href="#the-intersection-of-two-spheres" id="toc-the-intersection-of-two-spheres" class="nav-link" data-scroll-target="#the-intersection-of-two-spheres">The intersection of two spheres</a></li>
+  </ul></li>
+  <li><a href="#complex-equations" id="toc-complex-equations" class="nav-link" data-scroll-target="#complex-equations">Complex equations</a>
+  <ul class="collapse">
   <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week7.html">Chapter 3: Lines, planes and spheres</a></li><li class="breadcrumb-item"><a href="./week9.html">Week 9: Spheres</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week10.html">Chapter 4: Complex numbers</a></li><li class="breadcrumb-item"><a href="./week10.html">Week 10: Complex numbers</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 9: Spheres</h1>
+<h1 class="title">Week 10: Complex numbers</h1>
 </div>
 
 
@@ -303,59 +315,75 @@ window.Quarto = {
 }
 \]</span></p>
 </div>
-<p>A final object which is particularly easy to describe in three dimensions is a sphere. Unlike lines and planes, these are not <em>linear</em>: you cannot add a vector to a point on a sphere to get another point on the sphere.</p>
-<p>Instead, we define a sphere in terms of its centre, with a position vector <span class="math inline">\({\mathbf{a}}\)</span> say, and a radius <span class="math inline">\(R&gt;0\)</span>. Then the sphere is the set of all points whose distance from the centre is equal to the radius, that is <span class="math display">\[
-|{\mathbf{r}}-{\mathbf{a}}| = R.
-\]</span> It’s normal to square this, because the magnitude <span class="math inline">\(|\cdot|\)</span> adds an ugly square root otherwise, giving <span class="math display">\[
-|{\mathbf{r}}-{\mathbf{a}}|^2 = R^2
-\]</span> or expanding this out <span class="math display">\[
-(x-a_1)^2 + (y-a_2)^2 + (z-a_3)^2 = R^2.
+<p>This last bit of the module is a bit disconnected from the rest, and builds on complex numbers that you’ve seen before.</p>
+<section id="a-historical-note" class="level1">
+<h1>A historical note</h1>
+<p>It seems like complex numbers are just 2D vectors. Actually, complex numbers were invented first, and vectors afterwards. Also, adding imaginary numbers does a lot more than adding an extra dimension, because it allows us to solve equations like <span class="math inline">\(z^4=-1\)</span>. We’ll see how this week.</p>
+<p>I suggest that you <em>don’t</em> imagine complex numbers as 2D vectors. In fact in maths, physics and engineering we regularly see vectors of complex numbers, and when you start thinking about functions and calculus of complex numbers it really breaks down. They’re they’re own thing.</p>
+</section>
+<section id="polar-form-for-complex-numbers" class="level1">
+<h1>Polar form for complex numbers</h1>
+<p>Hopefully now you’re used to the idea of complex numbers like <span class="math inline">\(z=1-2i\)</span>. Here <span class="math inline">\(1\)</span> is the <em>real part</em> and <span class="math inline">\(-2\)</span> is the <em>imaginary part</em>.</p>
+<p>A different way of writing down complex numbers is to measure the angle anticlockwise from the real axis, which we call the <em>argument</em> of the complex number, and also its distance away from <span class="math inline">\(0\)</span>, which we call its <em>modulus</em>.</p>
+<p>Suppose <span class="math inline">\(z=a+ib\)</span> is some complex number. Often we write <span class="math inline">\(r\)</span> for the modulus <span class="math display">\[
+r = |z| = \sqrt{a^2+b^2}
+\]</span> and <span class="math inline">\(\theta\)</span> for the argument <span class="math display">\[
+\theta = \arg z = \tan^{-1} \frac{b}{a}.
 \]</span></p>
-<p><strong>Think:</strong> what’s the equation for a sphere of radius 2 centred on the origin?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div id="fig-argand" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-argand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cf1.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-argand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: An <em>Argand diagram</em> for a complex number, showing the modulus <span class="math inline">\(r\)</span> and argument <span class="math inline">\(\theta\)</span>. The horizotal axis is the <em>real axis</em> and the vertical axis is the <em>imaginary axis</em>.
+</figcaption>
+</figure>
+</div>
+<p>Note that <span class="math inline">\(|z|\geq0\)</span> and we choose <span class="math inline">\(\pi&lt;\arg z\leq\pi\)</span>.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Common mistake">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solution
+Common mistake
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Now <span class="math inline">\({\mathbf{a}}={\mathbf{0}}\)</span> in the above equations, so they simplify to <span class="math display">\[
-|{\mathbf{r}}|^2 = 4
-\]</span> or <span class="math display">\[
-x^2+y^2+z^2 = 4.
-\]</span></p>
+<p>The formula <span class="math inline">\(\arg z = \tan^{-1} \frac{b}{a}\)</span> doesn’t work if both <span class="math inline">\(a&lt;0\)</span>. You need to add or subtract <span class="math inline">\(\pi\)</span> to get the right answer. It’s best to draw a diagram and think carefully.</p>
 </div>
 </div>
-</div>
-<p><strong>Think:</strong> what is the centre and radius of the sphere given by <span class="math display">\[
-(x-2)^2 + y^2 + (z+1)^2 = 9?
-\]</span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<section id="complex-conjugates" class="level2">
+<h2 class="anchored" data-anchor-id="complex-conjugates">Complex conjugates</h2>
+<p>We define the conjugate of a complex number <span class="math inline">\(z=a+ib\)</span> to be <span class="math inline">\(\overline{z}=a-ib\)</span>. This is the complex number with the same real part but opposite imaginary part, or equivalently with the same modulus but opposite argument.</p>
+<p>Note that <span class="math display">\[
+z\overline{z} = (a+ib)(a-ib) = a^2 + iba + a(-ib) + (ib)(-ib) = a^2 + b^2 = |z|^2.
+\]</span> This is a bit like how <span class="math inline">\({\mathbf{a}}\cdot{\mathbf{a}} = |{\mathbf{a}}|^2\)</span> for vectors. But <span class="math inline">\(z^2 \neq |z|^2\)</span>, unless <span class="math inline">\(z\)</span> is real.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solution
+Note
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\({\mathbf{a}}=[2,0,-1]\)</span> and <span class="math inline">\(R=3\)</span>.</p>
-</div>
-</div>
-</div>
-<section id="example" class="level2">
-<h2 class="anchored" data-anchor-id="example">Example</h2>
-<p>Find the centre and radius of the sphere described by the equation <span class="math display">\[
-x^2  + y^2 + z^2 - 6x -4y   + 2z - 4 = 0.
+<p><span class="math display">\[
+z\overline{z} = |z|^2.
 \]</span></p>
+</div>
+</div>
+</section>
+<section id="trigonometic-form" class="level2">
+<h2 class="anchored" data-anchor-id="trigonometic-form">Trigonometic form</h2>
+<p>Looking at <a href="#fig-argand" class="quarto-xref">Figure&nbsp;1</a> and use some simple triognometry, we see that <span class="math inline">\(a=r\cos\theta\)</span> and <span class="math inline">\(b=r\sin\theta\)</span>. This gives the full trigonometric form for a complex number: <span class="math display">\[
+z = r\left(\cos\theta+i\sin\theta\right).
+\]</span></p>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Write the complex number <span class="math inline">\(z=-2-2i\)</span> in polar form.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -368,56 +396,43 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This isn’t currently in the general form we saw above, so we need to manipulate this equation until it looks like we want. In particular, we need to use <strong>completeing the square</strong>: <span class="math display">\[
-\begin{aligned}
-0&amp;=x^2  + y^2 + z^2 - 6x -4y   + 2z - 4 \\
-&amp;= \left(x-\frac{6}{2}\right)^2 - \frac{6^2}{2^2} + \left(y-\frac{4}{2}\right)^2 - \frac{4^2}{2^2} + \left(z+\frac{2}{2}\right)^2 - \frac{2^2}{2^2} - 4\\
-&amp;= (x-3)^2 + (y-2)^2 + (z+1)^2 - 9 - 4 - 1 - 4
-\end{aligned}
-\]</span> so <span class="math display">\[
-(x-3)^2 + (y-2)^2 + (z+1)^2 = 16 = 4^2.
-\]</span> Finally this gives a centre of <span class="math inline">\((3,2,-1)\)</span> and a radius of <span class="math inline">\(4\)</span>.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="the-distance-between-a-sphere-and-a-point-line-or-plane." class="level2">
-<h2 class="anchored" data-anchor-id="the-distance-between-a-sphere-and-a-point-line-or-plane.">The distance between a sphere and a point, line or plane.</h2>
-<p>This sounds hard but it’s actually very easy:</p>
-<ol type="1">
-<li>Find the distance from the point/line/plane and the centre of the sphere (a point)</li>
-<li>Substract the sphere’s radius from this distance</li>
-</ol>
-<p><strong>Think:</strong> what’s the distance between the sphere of radius 5 centred at <span class="math inline">\((4,1,8)\)</span> and the origin?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>The distance between the centre of the sphere and the origin is <span class="math inline">\(\sqrt{4^2+1^2+8^2}=\sqrt{81}=9\)</span>, so the distance of the sphere from the origin is <span class="math inline">\(9-5=4\)</span>.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="the-intersection-of-a-line-and-a-sphere" class="level2">
-<h2 class="anchored" data-anchor-id="the-intersection-of-a-line-and-a-sphere">The intersection of a line and a sphere</h2>
-<p>Following similar things in the previous weeks, to find intersections we just take the two equations and solve them together.</p>
-<p>The crucial thing is to think (geometrically) about how many solutions to expect. A line can intersect a sphere at two points, or it can not intersect, or the line can just touch the sphere at one point.</p>
-<p>A general line is (going through <span class="math inline">\({\mathbf{a}}\)</span> with direction <span class="math inline">\({\mathbf{s}}\)</span>) <span class="math display">\[
-{\mathbf{r}} = {\mathbf{a}} + \lambda{\mathbf{s}}
-\]</span> and a general sphere is (radius <span class="math inline">\(R\)</span>, centre <span class="math inline">\({\mathbf{c}}\)</span>) <span class="math display">\[
-|{\mathbf{r}}-{\mathbf{c}}|^2 = R^2.
+<p>First, draw an Argand diagram. We see that we must have <span class="math inline">\(-\pi &lt; \arg z &lt; -\pi/2\)</span>, because it’s in the lower left quadrant. <span class="math inline">\(\tan^{-1} \frac{-2}{-2} = \tan^{-1} 1 = \pi/4\)</span>, but this doesn’t fit the right range, so we have to subtract <span class="math inline">\(\pi\)</span> to get <span class="math inline">\(\arg z = -3\pi/4\)</span>.</p>
+<p>Even better: just spot that <span class="math inline">\(\arg z = -3\pi/4\)</span> from the diagram.</p>
+<p>Second, <span class="math inline">\(|z| = \sqrt{(-2)^2+(-2)^2} = \sqrt{8} = 2\sqrt{2}\)</span>.</p>
+<p>Putting this together, we get the answer: <span class="math display">\[
+z = 2\sqrt{2}\left(\cos(-3\pi/4) + \sin(-3\pi/4)\right).
 \]</span></p>
-<p>Substituting the first into the second gives <span class="math display">\[
-|{\mathbf{a}} + \lambda{\mathbf{s}}-{\mathbf{c}}|^2 = R^2,
-\]</span> which is just a quadratic equation for <span class="math inline">\(\lambda\)</span> which we can solve. Quadratic equations have 0, 1 or 2 (real) solutions, so this makes sense.</p>
+</div>
+</div>
+</div>
+<p>Usually, once you’ve written it in polar form, it’s easy to work out the cosine and sine and check it matches the original number.</p>
+</section>
+</section>
+<section id="exponential-form" class="level2">
+<h2 class="anchored" data-anchor-id="exponential-form">Exponential form</h2>
+<p>Fact: <span class="math display">\[e^{i\theta} = \cos\theta + i\sin\theta.
+\]</span></p>
+<p>But then we can substitute this straight into the trigonometric formula for complex numbers to give <span class="math display">\[
+z = re^{i\theta}.
+\]</span> Again, <span class="math inline">\(r=|z|\)</span> is the modulus and <span class="math inline">\(\theta=\arg z\)</span> is the argument.</p>
+<section id="demonstration-of-the-fact" class="level3">
+<h3 class="anchored" data-anchor-id="demonstration-of-the-fact">Demonstration of the fact</h3>
+<p>The proper mathematical definitions of the exponential function, sine and cosine are through the power series: <span class="math display">\[
+\exp x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \dots
+\]</span> <span class="math display">\[
+\cos \theta = 1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!} + \dots
+\]</span> <span class="math display">\[
+\sin \theta = \frac{\theta}{1!} - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} + \dots
+\]</span> Put <span class="math inline">\(x=i\theta\)</span> into the first one and you’ll see the result.</p>
+</section>
+</section>
+<section id="de-moivres-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="de-moivres-theorem">De Moivre’s theorem</h2>
+<p>Using exponential form, we can take powers of a complex number. <span class="math display">\[
+z^n = \left(re^{i\theta}\right)^n = r^n e^{in\theta}.
+\]</span> So in trig form, <span class="math display">\[
+z^n = r^n\left(\cos n\theta+i\sin n\theta\right).
+\]</span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -428,17 +443,58 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The number of solutions of the quadratic tells us the number of intersection points.</p>
+<p>This is the main thing to take away from this week.</p>
 </div>
 </div>
-<p>Then we can use the value(s) of <span class="math inline">\(\lambda\)</span> to find the points from the line equation.</p>
+<p>This is one way to find formulas for <span class="math inline">\(\sin n\theta\)</span> etc. We don’t even need <span class="math inline">\(n\)</span> to be an integer.</p>
 <section id="example-1" class="level3">
 <h3 class="anchored" data-anchor-id="example-1">Example</h3>
-<p>Find the intersection points of the line <span class="math display">\[
-{\mathbf{r}} = [1,0,0] + \lambda[0,1,0]
-\]</span> with the sphere <span class="math display">\[
-x^2+y^2+(z-1)^2 = 4.
+<p>If <span class="math inline">\(z=1+i\)</span>, what is <span class="math inline">\(z^5\)</span>?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Of course you could just multiply it by itself 4 times, but that would be very tedious and error-prone.</p>
+<p>Instead, we can transform it to polar form and then use de Moivre’s theorem to find the answer.</p>
+<p><span class="math inline">\(|z| = \sqrt{1^2+1^2} = \sqrt{2}\)</span>.</p>
+<p>From a sketch or from the formula, <span class="math inline">\(\arg z = \pi/4\)</span>.</p>
+<p>So that means <span class="math inline">\(z = \sqrt{2}\left(\cos\pi/4 + i \sin\pi/4\right)\)</span>, and then de Movire tells us <span class="math display">\[
+z^5 =  \sqrt{2}^5 \left(\cos5\pi/4 + i \sin5\pi/4\right) = 4\sqrt{2} \left(-1/\sqrt{2} - i/\sqrt{2}\right) = -4 -4i.
 \]</span></p>
+<p>To get the values of <span class="math inline">\(\cos 5\pi/4\)</span> you might find a little sketch of <span class="math inline">\(\cos x\)</span> helpful, and similarly for <span class="math inline">\(\sin\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="complex-equations" class="level1">
+<h1>Complex equations</h1>
+<p>Now we have all the pieces to solve an equation like <span class="math inline">\(z^5 = -4 -4i\)</span>. (This is just the example from above, but it has more than one solution!)</p>
+<p>There’s a general rule you need to know: When <span class="math inline">\(z\)</span> is a complex number, <span class="math inline">\(z^n = a\)</span> always has <span class="math inline">\(n\)</span> solutions (except if <span class="math inline">\(a=0\)</span>).</p>
+<p>For example, <span class="math inline">\(z^2=1\)</span> has two solutions, <span class="math inline">\(z=1\)</span> and <span class="math inline">\(z=-1\)</span>. Similarly <span class="math inline">\(z^2=-1\)</span> gives <span class="math inline">\(z=i\)</span> and <span class="math inline">\(z=-i\)</span>.</p>
+<p>For a quadratic, you can just use the normal quadratic formula, remembering that <span class="math inline">\(\sqrt{-1}=i\)</span>. What about when <span class="math inline">\(n\neq2\)</span>?</p>
+<p>We use de Moivre’s theorem backwards, and remember that we need <span class="math inline">\(n\)</span> solutions:</p>
+<p>For instance, suppose we want to find all <span class="math inline">\(z\)</span> such that <span class="math inline">\(z^3=1\)</span>. These are called the complex <em>roots of unity</em>.</p>
+<p>We can write <span class="math inline">\(1\)</span> in polar form as <span class="math inline">\(1 = 1 \left(\cos 0 + i \sin 0\right)\)</span>.</p>
+<p>But we could also write it as <span class="math inline">\(1 = 1 \left(\cos 2\pi + i \sin 2\pi\right)\)</span>, <span class="math inline">\(1 = 1 \left(\cos 4\pi + i \sin 4\pi\right)\)</span>, etc.</p>
+<p>Use de Moivre:</p>
+<p><span class="math inline">\(z = 1^{1/3} = 1^{1/3} \left(\cos 0 + i \sin 0\right) = 1\)</span></p>
+<p><span class="math inline">\(z = 1^{1/3} = 1^{1/3} \left(\cos 2\pi/3 + i \sin 2\pi/3\right) = -\frac{1}{2} + \frac{\sqrt{3}}{2} i\)</span>.</p>
+<p><span class="math inline">\(z = 1^{1/3} = 1^{1/3} \left(\cos 4\pi/3 + i \sin 4\pi/3\right) = -\frac{1}{2} - \frac{\sqrt{3}}{2} i\)</span>.</p>
+<p>With <span class="math inline">\(6\pi\)</span> we just get back to where we started, so there are three solutions.</p>
+<p>The solutions always evenly divide the unit circle: <img src="roots.png" class="img-fluid" style="width:60.0%"></p>
+<section id="example-2" class="level2">
+<h2 class="anchored" data-anchor-id="example-2">Example</h2>
+<p>Find all the solutions to the complex equation <span class="math inline">\(z^4 = 16i\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -451,90 +507,37 @@ Solution
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The components of the line equation are <span class="math display">\[
-\begin{aligned}
-x&amp;=1,\\
-y&amp;=\lambda,\\
-z&amp;=0.
-\end{aligned}
-\]</span> Substituting these into the sphere equation gives <span class="math display">\[
-1 + \lambda^2 + (-1)^2 = 4
-\]</span> so <span class="math inline">\(\lambda^2 = 2\)</span>.</p>
-<p>This means our two parameter values are <span class="math inline">\(\lambda=\pm\sqrt{2}\)</span>, and so the points are <span class="math inline">\((1,\sqrt{2},0)\)</span> and <span class="math inline">\((1,-\sqrt{2},0)\)</span>.</p>
-<p>(Now check these points satisfy both our line and sphere equations.)</p>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="the-intersection-of-a-plane-and-a-sphere" class="level2">
-<h2 class="anchored" data-anchor-id="the-intersection-of-a-plane-and-a-sphere">The intersection of a plane and a sphere</h2>
-<p>This one’s a bit different. Now there are either no intersection points, exactly one point (if the plane just touches the sphere), or <strong>the plane and the sphere intersect on a circle</strong>.</p>
-<p><img src="lpsf4.png" class="img-fluid" style="width:60.0%"></p>
-<p>Suppose we have a sphere <span class="math inline">\(|{\mathbf{r}}-{\mathbf{a}}|^2=R^2\)</span> and a plane <span class="math inline">\({\mathbf{r}}\cdot{\mathbf{n}} = d\)</span>.</p>
-<p>What we want to find is the radius <span class="math inline">\(\alpha\)</span> of the circle, and its centre <span class="math inline">\({\mathbf{c}}\)</span>: <img src="lpsf5.png" class="img-fluid" style="width:60.0%"></p>
-<p>We do this as follows: 1. Find the nearest point on the plane to the centre of the sphere <span class="math inline">\({\mathbf{a}}\)</span>. This is <span class="math inline">\({\mathbf{c}}\)</span>, the centre of the circle. 2. Find the distance between <span class="math inline">\({\mathbf{a}}\)</span> and <span class="math inline">\({\mathbf{c}}\)</span>. 3. By Pythogoras’s theorem, since this is a right-angled triangle, <span class="math inline">\(\alpha^2+|{\mathbf{c}}-{\mathbf{a}}|^2 = R^2\)</span>, so we can find <span class="math inline">\(\alpha\)</span>.</p>
-<p>The first two steps are exactly the same as finding the distance between a plane and a point – see last week’s notes.</p>
-</section>
-<section id="the-intersection-of-two-spheres" class="level2">
-<h2 class="anchored" data-anchor-id="the-intersection-of-two-spheres">The intersection of two spheres</h2>
-<p>This case is hard to visualise, but hopefully you can imagine that two spheres intersect on a circle, just as in the case of a sphere with a plane. In fact, the easiest way to do this is to first find the plane the circle lives on, and then do exactly the same method as before.</p>
-<p>Say we have spheres <span class="math display">\[
-|{\mathbf{r}}-{\mathbf{a}}_1|^2 = R_1^2\]</span> and <span class="math display">\[
-|{\mathbf{r}}-{\mathbf{a}}_2|^2 = R_2^2.\]</span></p>
-<p>Remembering that <span class="math inline">\(|{\mathbf{r}}|^2 = {\mathbf{r}}\cdot{\mathbf{r}}\)</span>, we can expand these out as <span class="math display">\[
-{\mathbf{r}}\cdot{\mathbf{r}}-2{\mathbf{r}}\cdot{\mathbf{a}}_1 + {\mathbf{a}}_1\cdot{\mathbf{a}}_1 = R_1^2\]</span> and <span class="math display">\[
-{\mathbf{r}}\cdot{\mathbf{r}}-2{\mathbf{r}}\cdot{\mathbf{a}}_2 + {\mathbf{a}}_2\cdot{\mathbf{a}}_2 = R_2^2\]</span> and then subtract these equations to get rid of the <span class="math inline">\({\mathbf{r}}\cdot{\mathbf{r}}\)</span> terms: <span class="math display">\[
--2{\mathbf{r}}\cdot{\mathbf{a}}_1 + {\mathbf{a}}_1\cdot{\mathbf{a}}_1+2{\mathbf{r}}\cdot{\mathbf{a}}_2 - {\mathbf{a}}_2\cdot{\mathbf{a}}_2 = R_1^2 - R_2^2.\]</span> This simplifies to <span class="math display">\[
-{\mathbf{r}}\cdot\left(2{\mathbf{a}}_2-2{\mathbf{a}}_1 \right) = R_1^2-R_2^2 + {\mathbf{a}}_2\cdot{\mathbf{a}}_2 - {\mathbf{a}}_1\cdot{\mathbf{a}}_1
-\]</span> which is exactly in the form <span class="math inline">\({\mathbf{r}}\cdot{\mathbf{n}} = d\)</span>, so this is the equation of the plane!</p>
-<p>Let’s put all of this together in a final example:</p>
-</section>
-<section id="example-2" class="level2">
-<h2 class="anchored" data-anchor-id="example-2">Example</h2>
-<p>Find the radius and centre of the circle of intersection of the spheres <span class="math display">\[
-(x-1)^2 + y^2 + (z+1)^2 = 4
-\]</span> and <span class="math display">\[
-(x+3)^2 + y^2 + z^2 = 5.
+<p>First we find the modulus and argument of the right-hand side.</p>
+<p>In this case it’s purely imaginary, so it’s easy (think graphically):</p>
+<p><span class="math inline">\(\arg (16i) = \pi/2\)</span>, and <span class="math inline">\(|16i| = 16\)</span>.</p>
+<p>We look for solutions in modulus-argument form. If <span class="math inline">\(z=r\left(\cos \theta + i\sin\theta\right)\)</span> then we know</p>
+<p><span class="math display">\[
+z^4=r^4 \left(\cos 4\theta + i\sin4\theta\right)
+\]</span> but also <span class="math display">\[
+z^4=16 \left(\cos \pi/2 + i\sin\pi/2\right)
 \]</span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>First we expand out the equations: <span class="math display">\[
-x^2 + y^2 + z^2 -2x + 2z - 2 = 0
-\]</span> and <span class="math display">\[
-x^2+y^2+z^2 +6x + 4 = 0.
-\]</span> Subtracting these (cancelling out the quadratic terms): <span class="math display">\[
--8x +2z - 6 = 0
-\]</span> which simplifies to <span class="math display">\[
-4x - z = -3.
-\]</span></p>
-<p>So the plane of intersection is <span class="math inline">\(4x - z = -3\)</span>, with normal <span class="math inline">\([4,0,-1]\)</span>.</p>
-<p>Next, we need to find the centre of the circle of intersection. This is the point <span class="math inline">\((c_1,c_2,c_3)\)</span> which is in a direction <span class="math inline">\([4,0,-1]\)</span> from the centre of the first sphere <span class="math inline">\((1,0,-1)\)</span>.</p>
-<p>So <span class="math display">\[
-[c_1,c_2,c_3] = [1,0,-1] + \lambda[4,0,-1]
-\]</span> for some <span class="math inline">\(\lambda\)</span>.</p>
-<p>Plugging these into the plane equation <span class="math inline">\(4x-z=-3\)</span> gives <span class="math display">\[
-4(1+4\lambda) - (-1-\lambda)=-3
-\]</span> so <span class="math inline">\(\lambda = -8/17\)</span>, which means the centre of the circle is is <span class="math inline">\({\mathbf{c}} = [-15/17, 0, -9/17]\)</span>.</p>
-<p>The distance of the centre of the circle from the centre of the first sphere is <span class="math display">\[
-|{\mathbf{c}}-[1,0,-1]| = \sqrt{(-32/17)^2+0^2+(8/17)^2} = \sqrt{1088}/17\]</span></p>
-<p>Then finally using Pythagoras we know that the radius of the circle <span class="math inline">\(\alpha\)</span> satisfies <span class="math display">\[
-\alpha^2 + (\sqrt{1088}/17)^2 = 2^2\]</span> because the radius of the first sphere is 2, so <span class="math inline">\(\alpha = \sqrt{4- 1088/289} = 2/\sqrt{17}\)</span>.</p>
+<p>Since <span class="math inline">\(r\geq0\)</span> is a real number, we can only have <span class="math inline">\(r=2\)</span> to give <span class="math inline">\(r^4=16\)</span>.</p>
+<p>The key point is to find different <span class="math inline">\(\theta\)</span> for the different solutions, so that <span class="math display">\[
+\cos 4\theta=\cos \pi/2 = 0\]</span> and <span class="math display">\[
+\sin4\theta =\sin\pi/2 = 1\]</span>.</p>
+<p>The trick is remembering that we can always add <span class="math inline">\(2\pi\)</span> and not change the values of sine and cosine:</p>
+<p><span class="math inline">\(4\theta = \pi/2\)</span> gives <span class="math inline">\(\theta=\pi/8\)</span>.</p>
+<p><span class="math inline">\(4\theta+2\pi = \pi/2\)</span> gives <span class="math inline">\(\theta=-3\pi/8\)</span>.</p>
+<p><span class="math inline">\(4\theta+4\pi = \pi/2\)</span> gives <span class="math inline">\(\theta=-7\pi/8\)</span>.</p>
+<p><span class="math inline">\(4\theta+6\pi = \pi/2\)</span> gives <span class="math inline">\(\theta=-11\pi/8\)</span>.</p>
+<p><span class="math inline">\(4\theta+8\pi = \pi/2\)</span> gives <span class="math inline">\(\theta=-15\pi/8\)</span> BUT this is the same angle as <span class="math inline">\(\theta=\pi/8\)</span>, so we’ve already found all the solutions.</p>
+<p>Now we can write down all the possible answers:</p>
+<p><span class="math inline">\(z = 2 \left(\cos\pi/8 + i\sin\pi/8\right)\)</span></p>
+<p><span class="math inline">\(z = 2 \left(\cos-3\pi/8 + i\sin-3\pi/8\right)\)</span></p>
+<p><span class="math inline">\(z = 2 \left(\cos-7\pi/8 + i\sin-7\pi/8\right)\)</span></p>
+<p><span class="math inline">\(z = 2 \left(\cos-11\pi/8 + i\sin-11\pi/8\right)\)</span></p>
+<p>If these were simpler expressions, or if you have a calculator, you could now expand these out to the usual form <span class="math inline">\(z=a+ib\)</span>.</p>
 </div>
 </div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

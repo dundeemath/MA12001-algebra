@@ -275,6 +275,92 @@
     ]
   },
   {
+    "objectID": "week10.html",
+    "href": "week10.html",
+    "title": "Week 10: Complex numbers",
+    "section": "",
+    "text": "\\[\n\\newenvironment{amatrix}[1]{%\n  \\left[\\begin{array}{#1}\n}{%\n  \\end{array}\\right]\n}\n\\]\nThis last bit of the module is a bit disconnected from the rest, and builds on complex numbers that you’ve seen before.",
+    "crumbs": [
+      "Chapter 4: Complex numbers",
+      "Week 10: Complex numbers"
+    ]
+  },
+  {
+    "objectID": "week10.html#complex-conjugates",
+    "href": "week10.html#complex-conjugates",
+    "title": "Week 10: Complex numbers",
+    "section": "Complex conjugates",
+    "text": "Complex conjugates\nWe define the conjugate of a complex number \\(z=a+ib\\) to be \\(\\overline{z}=a-ib\\). This is the complex number with the same real part but opposite imaginary part, or equivalently with the same modulus but opposite argument.\nNote that \\[\nz\\overline{z} = (a+ib)(a-ib) = a^2 + iba + a(-ib) + (ib)(-ib) = a^2 + b^2 = |z|^2.\n\\] This is a bit like how \\({\\mathbf{a}}\\cdot{\\mathbf{a}} = |{\\mathbf{a}}|^2\\) for vectors. But \\(z^2 \\neq |z|^2\\), unless \\(z\\) is real.\n\n\n\n\n\n\nNote\n\n\n\n\\[\nz\\overline{z} = |z|^2.\n\\]",
+    "crumbs": [
+      "Chapter 4: Complex numbers",
+      "Week 10: Complex numbers"
+    ]
+  },
+  {
+    "objectID": "week10.html#trigonometic-form",
+    "href": "week10.html#trigonometic-form",
+    "title": "Week 10: Complex numbers",
+    "section": "Trigonometic form",
+    "text": "Trigonometic form\nLooking at Figure 1 and use some simple triognometry, we see that \\(a=r\\cos\\theta\\) and \\(b=r\\sin\\theta\\). This gives the full trigonometric form for a complex number: \\[\nz = r\\left(\\cos\\theta+i\\sin\\theta\\right).\n\\]\n\nExample\nWrite the complex number \\(z=-2-2i\\) in polar form.\n\n\n\n\n\n\nSolution\n\n\n\n\n\nFirst, draw an Argand diagram. We see that we must have \\(-\\pi &lt; \\arg z &lt; -\\pi/2\\), because it’s in the lower left quadrant. \\(\\tan^{-1} \\frac{-2}{-2} = \\tan^{-1} 1 = \\pi/4\\), but this doesn’t fit the right range, so we have to subtract \\(\\pi\\) to get \\(\\arg z = -3\\pi/4\\).\nEven better: just spot that \\(\\arg z = -3\\pi/4\\) from the diagram.\nSecond, \\(|z| = \\sqrt{(-2)^2+(-2)^2} = \\sqrt{8} = 2\\sqrt{2}\\).\nPutting this together, we get the answer: \\[\nz = 2\\sqrt{2}\\left(\\cos(-3\\pi/4) + \\sin(-3\\pi/4)\\right).\n\\]\n\n\n\nUsually, once you’ve written it in polar form, it’s easy to work out the cosine and sine and check it matches the original number.",
+    "crumbs": [
+      "Chapter 4: Complex numbers",
+      "Week 10: Complex numbers"
+    ]
+  },
+  {
+    "objectID": "week10.html#exponential-form",
+    "href": "week10.html#exponential-form",
+    "title": "Week 10: Complex numbers",
+    "section": "Exponential form",
+    "text": "Exponential form\nFact: \\[e^{i\\theta} = \\cos\\theta + i\\sin\\theta.\n\\]\nBut then we can substitute this straight into the trigonometric formula for complex numbers to give \\[\nz = re^{i\\theta}.\n\\] Again, \\(r=|z|\\) is the modulus and \\(\\theta=\\arg z\\) is the argument.\n\nDemonstration of the fact\nThe proper mathematical definitions of the exponential function, sine and cosine are through the power series: \\[\n\\exp x = 1 + \\frac{x}{1!} + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\dots\n\\] \\[\n\\cos \\theta = 1 - \\frac{\\theta^2}{2!} + \\frac{\\theta^4}{4!} + \\dots\n\\] \\[\n\\sin \\theta = \\frac{\\theta}{1!} - \\frac{\\theta^3}{3!} + \\frac{\\theta^5}{5!} + \\dots\n\\] Put \\(x=i\\theta\\) into the first one and you’ll see the result.",
+    "crumbs": [
+      "Chapter 4: Complex numbers",
+      "Week 10: Complex numbers"
+    ]
+  },
+  {
+    "objectID": "week10.html#de-moivres-theorem",
+    "href": "week10.html#de-moivres-theorem",
+    "title": "Week 10: Complex numbers",
+    "section": "De Moivre’s theorem",
+    "text": "De Moivre’s theorem\nUsing exponential form, we can take powers of a complex number. \\[\nz^n = \\left(re^{i\\theta}\\right)^n = r^n e^{in\\theta}.\n\\] So in trig form, \\[\nz^n = r^n\\left(\\cos n\\theta+i\\sin n\\theta\\right).\n\\]\n\n\n\n\n\n\nNote\n\n\n\nThis is the main thing to take away from this week.\n\n\nThis is one way to find formulas for \\(\\sin n\\theta\\) etc. We don’t even need \\(n\\) to be an integer.\n\nExample\nIf \\(z=1+i\\), what is \\(z^5\\)?\n\n\n\n\n\n\nSolution\n\n\n\n\n\nOf course you could just multiply it by itself 4 times, but that would be very tedious and error-prone.\nInstead, we can transform it to polar form and then use de Moivre’s theorem to find the answer.\n\\(|z| = \\sqrt{1^2+1^2} = \\sqrt{2}\\).\nFrom a sketch or from the formula, \\(\\arg z = \\pi/4\\).\nSo that means \\(z = \\sqrt{2}\\left(\\cos\\pi/4 + i \\sin\\pi/4\\right)\\), and then de Movire tells us \\[\nz^5 =  \\sqrt{2}^5 \\left(\\cos5\\pi/4 + i \\sin5\\pi/4\\right) = 4\\sqrt{2} \\left(-1/\\sqrt{2} - i/\\sqrt{2}\\right) = -4 -4i.\n\\]\nTo get the values of \\(\\cos 5\\pi/4\\) you might find a little sketch of \\(\\cos x\\) helpful, and similarly for \\(\\sin\\).",
+    "crumbs": [
+      "Chapter 4: Complex numbers",
+      "Week 10: Complex numbers"
+    ]
+  },
+  {
+    "objectID": "week10.html#example-2",
+    "href": "week10.html#example-2",
+    "title": "Week 10: Complex numbers",
+    "section": "Example",
+    "text": "Example\nFind all the solutions to the complex equation \\(z^4 = 16i\\).\n\n\n\n\n\n\nSolution\n\n\n\n\n\nFirst we find the modulus and argument of the right-hand side.\nIn this case it’s purely imaginary, so it’s easy (think graphically):\n\\(\\arg (16i) = \\pi/2\\), and \\(|16i| = 16\\).\nWe look for solutions in modulus-argument form. If \\(z=r\\left(\\cos \\theta + i\\sin\\theta\\right)\\) then we know\n\\[\nz^4=r^4 \\left(\\cos 4\\theta + i\\sin4\\theta\\right)\n\\] but also \\[\nz^4=16 \\left(\\cos \\pi/2 + i\\sin\\pi/2\\right)\n\\]\nSince \\(r\\geq0\\) is a real number, we can only have \\(r=2\\) to give \\(r^4=16\\).\nThe key point is to find different \\(\\theta\\) for the different solutions, so that \\[\n\\cos 4\\theta=\\cos \\pi/2 = 0\\] and \\[\n\\sin4\\theta =\\sin\\pi/2 = 1\\].\nThe trick is remembering that we can always add \\(2\\pi\\) and not change the values of sine and cosine:\n\\(4\\theta = \\pi/2\\) gives \\(\\theta=\\pi/8\\).\n\\(4\\theta+2\\pi = \\pi/2\\) gives \\(\\theta=-3\\pi/8\\).\n\\(4\\theta+4\\pi = \\pi/2\\) gives \\(\\theta=-7\\pi/8\\).\n\\(4\\theta+6\\pi = \\pi/2\\) gives \\(\\theta=-11\\pi/8\\).\n\\(4\\theta+8\\pi = \\pi/2\\) gives \\(\\theta=-15\\pi/8\\) BUT this is the same angle as \\(\\theta=\\pi/8\\), so we’ve already found all the solutions.\nNow we can write down all the possible answers:\n\\(z = 2 \\left(\\cos\\pi/8 + i\\sin\\pi/8\\right)\\)\n\\(z = 2 \\left(\\cos-3\\pi/8 + i\\sin-3\\pi/8\\right)\\)\n\\(z = 2 \\left(\\cos-7\\pi/8 + i\\sin-7\\pi/8\\right)\\)\n\\(z = 2 \\left(\\cos-11\\pi/8 + i\\sin-11\\pi/8\\right)\\)\nIf these were simpler expressions, or if you have a calculator, you could now expand these out to the usual form \\(z=a+ib\\).",
+    "crumbs": [
+      "Chapter 4: Complex numbers",
+      "Week 10: Complex numbers"
+    ]
+  },
+  {
+    "objectID": "links.html",
+    "href": "links.html",
+    "title": "Helpful links",
+    "section": "",
+    "text": "https://www.3blue1brown.com/topics/linear-algebra\nThese are great videos explaining a lot of the material in this module, along with some stuff you definitely don’t need.\nhttps://phet.colorado.edu/en/simulations/vector-addition\nSome interactive demos to play with vectors.\nhttps://www.youtube.com/playlist?list=PL49CF3715CB9EF31D\nClassic lectures from MIT which go deeper but are very relevant to the matrix part of this module.\nhttps://www.cs.ox.ac.uk/files/12921/book.pdf\nA free textbook covering a lot of the module.\nhttps://www.3blue1brown.com/lessons/ldm-complex-numbers and https://www.3blue1brown.com/lessons/ldm-eulers-formula\nLong-form videos relevant to the final part of the module.",
+    "crumbs": [
+      "Helpful links"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MA12001 Algebra",
+    "section": "",
+    "text": "This webpage contains the lecture notes for the algebra half of the Mathematics 1B (MA12001) module for University of Dundee.\n\nIntroduction\nThe module MA12001 is split into two halves. This half, which we call “algebra” basically because it isn’t “calculus”, covers several areas. First we’ll see the idea of vectors, which will be familiar to many of you. Then we’ll talk about matrices, which are a way to discuss transformations of vectors. This is a first introduction to a large and important area of mathematics called linear algebra. In the final section of the module we’ll use what we’ve learnt to describe different geometric objects like lines, planes and spheres.\nThese notes contain all the examinable material within this half of the module, and maybe also some bonus stuff, which will be clearly marked as non-examinable. For details of the organisation of the module this year, please see My Dundee.\nI’ll be updating these notes weekly as we go through, and at the end of the semester I’ll make the full set of these notes available as a PDF. If you’d like to read ahead, last year’s full notes are available on MyDundee.\nIt’s very likely that there are mistakes in these notes. If you find one, please let me know ASAP at mailto:jparker002@dundee.ac.uk, no matter how trivial you think the mistake is.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
     "objectID": "week1.html",
     "href": "week1.html",
     "title": "Week 1: Displacement Vectors",
@@ -360,26 +446,6 @@
     "crumbs": [
       "Chapter 1: Vectors",
       "Week 1: Displacement Vectors"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "MA12001 Algebra",
-    "section": "",
-    "text": "This webpage contains the lecture notes for the algebra half of the Mathematics 1B (MA12001) module for University of Dundee.\n\nIntroduction\nThe module MA12001 is split into two halves. This half, which we call “algebra” basically because it isn’t “calculus”, covers several areas. First we’ll see the idea of vectors, which will be familiar to many of you. Then we’ll talk about matrices, which are a way to discuss transformations of vectors. This is a first introduction to a large and important area of mathematics called linear algebra. In the final section of the module we’ll use what we’ve learnt to describe different geometric objects like lines, planes and spheres.\nThese notes contain all the examinable material within this half of the module, and maybe also some bonus stuff, which will be clearly marked as non-examinable. For details of the organisation of the module this year, please see My Dundee.\nI’ll be updating these notes weekly as we go through, and at the end of the semester I’ll make the full set of these notes available as a PDF. If you’d like to read ahead, last year’s full notes are available on MyDundee.\nIt’s very likely that there are mistakes in these notes. If you find one, please let me know ASAP at mailto:jparker002@dundee.ac.uk, no matter how trivial you think the mistake is.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "links.html",
-    "href": "links.html",
-    "title": "Helpful links",
-    "section": "",
-    "text": "https://www.3blue1brown.com/topics/linear-algebra\nThese are great videos explaining a lot of the material in this module, along with some stuff you definitely don’t need.\nhttps://phet.colorado.edu/en/simulations/vector-addition\nSome interactive demos to play with vectors.\nhttps://www.youtube.com/playlist?list=PL49CF3715CB9EF31D\nClassic lectures from MIT which go deeper but are very relevant to the matrix part of this module.\nhttps://www.cs.ox.ac.uk/files/12921/book.pdf\nA free textbook covering a lot of the module.\nhttps://www.3blue1brown.com/lessons/ldm-complex-numbers and https://www.3blue1brown.com/lessons/ldm-eulers-formula\nLong-form videos relevant to the final part of the module.",
-    "crumbs": [
-      "Helpful links"
     ]
   },
   {

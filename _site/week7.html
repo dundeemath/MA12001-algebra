@@ -228,8 +228,21 @@ window.Quarto = {
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Chapter 4: Complex numbers</span></span>
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Chapter 4: Complex numbers</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10: Complex numbers</span></a>
+  </div>
+</li>
+      </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -415,9 +428,9 @@ b_1 \lambda - d_1 \mu &amp;= c_1 - a_1,\\
 b_2 \lambda - d_2 \mu &amp;= c_2 - a_2,\\
 b_3 \lambda - d_3 \mu &amp;= c_3 - a_3.
 \end{aligned}
-\]</span> You can solve these via Gaussian elimination. In general, this won’t have a solution, but it may do, and you’ll find out by whether the Gaussian elimination proceeds.</p>
+\]</span> You can solve these via Gaussian elimination. In general, this won’t have a solution, but it may do, and you’ll find out by whether the Gaussian elimination succeeds.</p>
 <p>If there is no solution, the lines don’t intersect.</p>
-<p>If there is a solution, the lines do intersect, and the value of <span class="math inline">\(\lambda\)</span> or <span class="math inline">\(\mu\)</span> will tell you where when you substitute it back into the line equation.</p>
+<p>If there is a solution, the lines do intersect, and the value of <span class="math inline">\(\lambda\)</span> or <span class="math inline">\(\mu\)</span> will tell you where, after you substitute it back into the line equation.</p>
 <p>We could also have infinitely many solutions, if the lines are exactly the same. This will have if they are paralell and exactly line on each other. Remember that Gaussian elimination tells us when we have infinitely many solutions.</p>
 <section id="example-2" class="level2">
 <h2 class="anchored" data-anchor-id="example-2">Example</h2>

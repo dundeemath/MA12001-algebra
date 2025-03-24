@@ -263,7 +263,10 @@ window.Quarto = {
   <li><a href="#a-historical-note" id="toc-a-historical-note" class="nav-link active" data-scroll-target="#a-historical-note">A historical note</a></li>
   <li><a href="#polar-form-for-complex-numbers" id="toc-polar-form-for-complex-numbers" class="nav-link" data-scroll-target="#polar-form-for-complex-numbers">Polar form for complex numbers</a>
   <ul class="collapse">
-  <li><a href="#complex-conjugates" id="toc-complex-conjugates" class="nav-link" data-scroll-target="#complex-conjugates">Complex conjugates</a></li>
+  <li><a href="#complex-conjugates" id="toc-complex-conjugates" class="nav-link" data-scroll-target="#complex-conjugates">Complex conjugates</a>
+  <ul class="collapse">
+  <li><a href="#division-of-complex-numbers" id="toc-division-of-complex-numbers" class="nav-link" data-scroll-target="#division-of-complex-numbers">Division of complex numbers</a></li>
+  </ul></li>
   <li><a href="#trigonometic-form" id="toc-trigonometic-form" class="nav-link" data-scroll-target="#trigonometic-form">Trigonometic form</a>
   <ul class="collapse">
   <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
@@ -375,15 +378,12 @@ z\overline{z} = |z|^2.
 \]</span></p>
 </div>
 </div>
-</section>
-<section id="trigonometic-form" class="level2">
-<h2 class="anchored" data-anchor-id="trigonometic-form">Trigonometic form</h2>
-<p>Looking at <a href="#fig-argand" class="quarto-xref">Figure&nbsp;1</a> and use some simple triognometry, we see that <span class="math inline">\(a=r\cos\theta\)</span> and <span class="math inline">\(b=r\sin\theta\)</span>. This gives the full trigonometric form for a complex number: <span class="math display">\[
-z = r\left(\cos\theta+i\sin\theta\right).
+<section id="division-of-complex-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="division-of-complex-numbers">Division of complex numbers</h3>
+<p>Using the complex conjugate we can easily divide complex numbers using just the rules for multiplication: <span class="math display">\[
+\frac{z_1}{z_2} = \frac{z_1\times\overline{z_2}}{z_2\times\overline{z_2}} = \frac{z_1\times\overline{z_2}}{|z_2|^2}.
 \]</span></p>
-<section id="example" class="level3">
-<h3 class="anchored" data-anchor-id="example">Example</h3>
-<p>Write the complex number <span class="math inline">\(z=-2-2i\)</span> in polar form.</p>
+<p><strong>Think:</strong> what’s the equation for a sphere of radius 2 centred on the origin?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -395,6 +395,39 @@ Solution
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Now <span class="math inline">\({\mathbf{a}}={\mathbf{0}}\)</span> in the above equations, so they simplify to <span class="math display">\[
+|{\mathbf{r}}|^2 = 4
+\]</span> or <span class="math display">\[
+x^2+y^2+z^2 = 4.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>Think:</strong> what is <span class="math inline">\(3+2i\)</span> divided by <span class="math inline">\(2-i\)</span>? ::: {.callout-tip collapse=“true”} ## Solution <span class="math display">\[
+\frac{3+2i}{2-i} = \frac{(3+2i)(2+i)}{(2-i)(2+i)} = \frac{6+3i+4i-2}{4+2i-2i+1} = \frac{4+7i}{5} = \frac{4}{5} + \frac{7}{5} i.
+\]</span> :::</p>
+</section>
+</section>
+<section id="trigonometic-form" class="level2">
+<h2 class="anchored" data-anchor-id="trigonometic-form">Trigonometic form</h2>
+<p>Looking at <a href="#fig-argand" class="quarto-xref">Figure&nbsp;1</a> and use some simple triognometry, we see that <span class="math inline">\(a=r\cos\theta\)</span> and <span class="math inline">\(b=r\sin\theta\)</span>. This gives the full trigonometric form for a complex number: <span class="math display">\[
+z = r\left(\cos\theta+i\sin\theta\right).
+\]</span></p>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Write the complex number <span class="math inline">\(z=-2-2i\)</span> in polar form.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>First, draw an Argand diagram. We see that we must have <span class="math inline">\(-\pi &lt; \arg z &lt; -\pi/2\)</span>, because it’s in the lower left quadrant. <span class="math inline">\(\tan^{-1} \frac{-2}{-2} = \tan^{-1} 1 = \pi/4\)</span>, but this doesn’t fit the right range, so we have to subtract <span class="math inline">\(\pi\)</span> to get <span class="math inline">\(\arg z = -3\pi/4\)</span>.</p>
 <p>Even better: just spot that <span class="math inline">\(\arg z = -3\pi/4\)</span> from the diagram.</p>
@@ -451,7 +484,7 @@ Note
 <h3 class="anchored" data-anchor-id="example-1">Example</h3>
 <p>If <span class="math inline">\(z=1+i\)</span>, what is <span class="math inline">\(z^5\)</span>?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -460,7 +493,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Of course you could just multiply it by itself 4 times, but that would be very tedious and error-prone.</p>
 <p>Instead, we can transform it to polar form and then use de Moivre’s theorem to find the answer.</p>
@@ -496,7 +529,7 @@ z^5 =  \sqrt{2}^5 \left(\cos5\pi/4 + i \sin5\pi/4\right) = 4\sqrt{2} \left(-1/\s
 <h2 class="anchored" data-anchor-id="example-2">Example</h2>
 <p>Find all the solutions to the complex equation <span class="math inline">\(z^4 = 16i\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -505,7 +538,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>First we find the modulus and argument of the right-hand side.</p>
 <p>In this case it’s purely imaginary, so it’s easy (think graphically):</p>

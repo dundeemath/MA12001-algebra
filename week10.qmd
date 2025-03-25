@@ -74,21 +74,9 @@ $$
 \frac{z_1}{z_2} = \frac{z_1\times\overline{z_2}}{z_2\times\overline{z_2}} = \frac{z_1\times\overline{z_2}}{|z_2|^2}.
 $$
 
-**Think:** what's the equation for a sphere of radius 2 centred on the origin?
-
-::: {.callout-tip collapse="true"}
-## Solution
-Now $\vc{a}=\vc{0}$ in the above equations, so they simplify to
-$$
-|\vc{r}|^2 = 4
-$$
-or
-$$
-x^2+y^2+z^2 = 4.
-$$
-:::
 
 **Think:** what is $3+2i$ divided by $2-i$?
+
 ::: {.callout-tip collapse="true"}
 ## Solution
 $$
